@@ -1,0 +1,38 @@
+
+double_buffer yes
+draw_shades no
+update_interval 2.0
+
+maximum_width 640
+minimum_size 640
+
+alignment bottom_left
+gap_x 2
+gap_y 2
+
+background yes
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+uppercase yes
+override_utf8_locale yes
+use_xft yes
+xftfont 28 Days Later:size=9
+xftalpha 1
+
+color1 5E5E5E
+color2 ffffff
+
+#mpd_host localhost
+#mpd_port 6600
+
+#${if_mpd_playing}${color1}${font 28 Days Later:size=35}${mpd_artist}${font 28 Days Later:size=9} 
+#   ${voffset -16}${color2}${font 28 Days Later:size=11}${mpd_title}${font 28 Days Later:size=9} 
+#   ${color2}${font 28 Days Later:size=11}${mpd_album}${font 28 Days Later:size=9}${endif}
+
+TEXT
+${color1}${font 28 Days Later:size=35}${mpd_artist}${font 28 Days Later:size=9} 
+   ${voffset -16}${color2}${font 28 Days Later:size=11}${mpd_title}${font 28 Days Later:size=9} 
+   ${color2}${font 28 Days Later:size=11}${mpd_album}${font 28 Days Later:size=9}
