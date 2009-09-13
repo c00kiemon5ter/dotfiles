@@ -98,6 +98,7 @@ alias netbeans-6.7="netbeans-6.7 --laf com.sun.java.swing.plaf.gtk.GTKLookAndFee
 # the matrix
 alias matrix='tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
 
+# TODO: Seperate and move to scripts with proper menu
 # translate a word
 translate(){
 	en2gr(){
