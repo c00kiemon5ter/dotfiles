@@ -1,0 +1,22 @@
+
+[cmdline]
+0=Downloads
+1=feh
+2=feh 
+3=OA
+4=q
+5=quit
+6=10
+7=2
+8=exit
+
+[Dir Hist New Left Panel]
+0=/home/koukos/Downloads
+1=/home/koukos.GNOME/.irssi
+2=/home/koukos.GNOME
+3=/
+4=/home
+5=/home/koukos
+
+[Dir Hist New Right Panel]
+0=/home/koukos
