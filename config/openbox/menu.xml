@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu>
+	<menu id="root-menu" label="OpenBox 3">
+		<menu id="1" label="Development">
+			<menu id="0" label="KDevelop">
+				<item label="KDevelop 4">
+					<action name="Execute">
+						<execute>
+							kdevelop
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<item label="Akonadi Console">
+				<action name="Execute">
+					<execute>
+						akonadiconsole
+					</execute>
+				</action>
+			</item>
+			<item label="Assistant">
+				<action name="Execute">
+					<execute>
+						assistant
+					</execute>
+				</action>
+			</item>
+			<item label="Designer">
+				<action name="Execute">
+					<execute>
+						designer
+					</execute>
+				</action>
+			</item>
+			<item label="GDB">
+				<action name="Execute">
+					<execute>
+						roxterm -e gdb
+					</execute>
+				</action>
+			</item>
+			<item label="IDLE">
+				<action name="Execute">
+					<execute>
+						idle
+					</execute>
+				</action>
+			</item>
+			<item label="KAppTemplate">
+				<action name="Execute">
+					<execute>
+						kapptemplate
+					</execute>
+				</action>
+			</item>
+			<item label="Linguist">
+				<action name="Execute">
+					<execute>
+						linguist
+					</execute>
+				</action>
+			</item>
+			<item label="Python">
+				<action name="Execute">
+					<execute>
+						roxterm -e python
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="2" label="Editors">
+			<item label="Kate">
+				<action name="Execute">
+					<execute>
+						kate
+					</execute>
+				</action>
+			</item>
+			<item label="KWrite">
+				<action name="Execute">
+					<execute>
+						kwrite
+					</execute>
+				</action>
+			</item>
+			<item label="Nano">
+				<action name="Execute">
+					<execute>
+						roxterm -e nano
+					</execute>
+				</action>
+			</item>
+			<item label="Openoffice.org Writer">
+				<action name="Execute">
+					<execute>
+						oowriter
+					</execute>
+				</action>
+			</item>
+			<item label="Vi">
+				<action name="Execute">
+					<execute>
+						roxterm -e vi
+					</execute>
+				</action>
+			</item>
+			<item label="Vim">
+				<action name="Execute">
+					<execute>
+						roxterm -e vim
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="18" label="Games">
+			<menu id="17" label="Amusement">
+				<item label="bb">
+					<action name="Execute">
+						<execute>
+							bb
+						</execute>
+					</action>
+				</item>
+			</menu>
+		</menu>
+		<menu id="6" label="Graphics">
+			<item label="Bitmap">
+				<action name="Execute">
+					<execute>
+						bitmap
+					</execute>
+				</action>
+			</item>
+			<item label="Gwenview">
+				<action name="Execute">
+					<execute>
+						gwenview
+					</execute>
+				</action>
+			</item>
+			<item label="KColorChooser">
+				<action name="Execute">
+					<execute>
+						kcolorchooser
+					</execute>
+				</action>
+			</item>
+			<item label="KolourPaint">
+				<action name="Execute">
+					<execute>
+						kolourpaint
+					</execute>
+				</action>
+			</item>
+			<item label="KRuler">
+				<action name="Execute">
+					<execute>
+						kruler
+					</execute>
+				</action>
+			</item>
+			<item label="KSnapshot">
+				<action name="Execute">
+					<execute>
+						ksnapshot
+					</execute>
+				</action>
+			</item>
+			<item label="Okular">
+				<action name="Execute">
+					<execute>
+						okular
+					</execute>
+				</action>
+			</item>
+			<item label="Openoffice.org Draw">
+				<action name="Execute">
+					<execute>
+						oodraw
+					</execute>
+				</action>
+			</item>
+			<item label="scanimage">
+				<action name="Execute">
+					<execute>
+						roxterm -e scanimage
+					</execute>
+				</action>
+			</item>
+			<item label="xCHM">
+				<action name="Execute">
+					<execute>
+						xchm
+					</execute>
+				</action>
+			</item>
+			<item label="XGlyph">
+				<action name="Execute">
+					<execute>
+						xglyph
+					</execute>
+				</action>
+			</item>
+			<item label="xv">
+				<action name="Execute">
+					<execute>
+						xv
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="7" label="Multimedia">
+			<item label="ALSA mixer">
+				<action name="Execute">
+					<execute>
+						roxterm -e alsamixer
+					</execute>
+				</action>
+			</item>
+			<item label="Amarok">
+				<action name="Execute">
+					<execute>
+						amarok
+					</execute>
+				</action>
+			</item>
+			<item label="cam">
+				<action name="Execute">
+					<execute>
+						roxterm -font vga -geometry 80x25 -bg black -fg gray -e /usr/bin/cam
+					</execute>
+				</action>
+			</item>
+			<item label="cam">
+				<action name="Execute">
+					<execute>
+						roxterm -e cam
+					</execute>
+				</action>
+			</item>
+			<item label="Dragon Player">
+				<action name="Execute">
+					<execute>
+						dragon
+					</execute>
+				</action>
+			</item>
+			<item label="JuK">
+				<action name="Execute">
+					<execute>
+						juk
+					</execute>
+				</action>
+			</item>
+			<item label="K3b">
+				<action name="Execute">
+					<execute>
+						k3b
+					</execute>
+				</action>
+			</item>
+			<item label="KMix">
+				<action name="Execute">
+					<execute>
+						kmix
+					</execute>
+				</action>
+			</item>
+			<item label="KsCD">
+				<action name="Execute">
+					<execute>
+						kscd
+					</execute>
+				</action>
+			</item>
+			<item label="SMPlayer">
+				<action name="Execute">
+					<execute>
+						smplayer
+					</execute>
+				</action>
+			</item>
+			<item label="XVidCap Screen Capture">
+				<action name="Execute">
+					<execute>
+						xvidcap
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="5" label="Network">
+			<item label="Akonaditray">
+				<action name="Execute">
+					<execute>
+						akonaditray
+					</execute>
+				</action>
+			</item>
+			<item label="Akregator">
+				<action name="Execute">
+					<execute>
+						akregator
+					</execute>
+				</action>
+			</item>
+			<item label="FireFox">
+				<action name="Execute">
+					<execute>
+						firefox
+					</execute>
+				</action>
+			</item>
+			<item label="Irssi">
+				<action name="Execute">
+					<execute>
+						roxterm -e irssi
+					</execute>
+				</action>
+			</item>
+			<item label="KGet">
+				<action name="Execute">
+					<execute>
+						kget
+					</execute>
+				</action>
+			</item>
+			<item label="KMail">
+				<action name="Execute">
+					<execute>
+						kmail
+					</execute>
+				</action>
+			</item>
+			<item label="KMess">
+				<action name="Execute">
+					<execute>
+						kmess
+					</execute>
+				</action>
+			</item>
+			<item label="KNode">
+				<action name="Execute">
+					<execute>
+						knode
+					</execute>
+				</action>
+			</item>
+			<item label="Konqueror">
+				<action name="Execute">
+					<execute>
+						kfmclient openProfile webbrowsing
+					</execute>
+				</action>
+			</item>
+			<item label="Kopete">
+				<action name="Execute">
+					<execute>
+						kopete
+					</execute>
+				</action>
+			</item>
+			<item label="KPPP">
+				<action name="Execute">
+					<execute>
+						kppp
+					</execute>
+				</action>
+			</item>
+			<item label="KRDC">
+				<action name="Execute">
+					<execute>
+						krdc
+					</execute>
+				</action>
+			</item>
+			<item label="Krfb">
+				<action name="Execute">
+					<execute>
+						krfb
+					</execute>
+				</action>
+			</item>
+			<item label="KTorrent">
+				<action name="Execute">
+					<execute>
+						ktorrent
+					</execute>
+				</action>
+			</item>
+			<item label="TkVNC">
+				<action name="Execute">
+					<execute>
+						roxterm -e tkvnc
+					</execute>
+				</action>
+			</item>
+			<item label="Wicd Network Manager">
+				<action name="Execute">
+					<execute>
+						wicd-client --no-tray
+					</execute>
+				</action>
+			</item>
+			<item label="WPA Supplicant Administration GUI">
+				<action name="Execute">
+					<execute>
+						wpa_gui
+					</execute>
+				</action>
+			</item>
+			<item label="Zenmap">
+				<action name="Execute">
+					<execute>
+						zenmap
+					</execute>
+				</action>
+			</item>
+			<item label="Zenmap (as root)">
+				<action name="Execute">
+					<execute>
+						/usr/share/zenmap/su-to-zenmap.sh
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="3" label="Office">
+			<item label="KAddressBook">
+				<action name="Execute">
+					<execute>
+						kaddressbook
+					</execute>
+				</action>
+			</item>
+			<item label="Kontact">
+				<action name="Execute">
+					<execute>
+						kontact
+					</execute>
+				</action>
+			</item>
+			<item label="KOrganizer">
+				<action name="Execute">
+					<execute>
+						korganizer
+					</execute>
+				</action>
+			</item>
+			<item label="OpenOffice.org 3.1 Impress">
+				<action name="Execute">
+					<execute>
+						ooffice
+					</execute>
+				</action>
+			</item>
+			<item label="OpenOffice.org 3.1 Printer Administration">
+				<action name="Execute">
+					<execute>
+						ooffice-printeradmin
+					</execute>
+				</action>
+			</item>
+			<item label="Openoffice.org Calc">
+				<action name="Execute">
+					<execute>
+						oocalc
+					</execute>
+				</action>
+			</item>
+			<item label="Openoffice.org Impress">
+				<action name="Execute">
+					<execute>
+						ooimpress
+					</execute>
+				</action>
+			</item>
+			<item label="Openoffice.org Math">
+				<action name="Execute">
+					<execute>
+						oomath
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="39" label="Other">
+			<item label="BeanShell Prompt">
+				<action name="Execute">
+					<execute>
+						bsh-console
+					</execute>
+				</action>
+			</item>
+			<item label="CMake">
+				<action name="Execute">
+					<execute>
+						cmake-gui
+					</execute>
+				</action>
+			</item>
+			<item label="Find Files/Folders">
+				<action name="Execute">
+					<execute>
+						kfind
+					</execute>
+				</action>
+			</item>
+			<item label="Help">
+				<action name="Execute">
+					<execute>
+						khelpcenter
+					</execute>
+				</action>
+			</item>
+			<item label="Netbeans 6.7">
+				<action name="Execute">
+					<execute>
+						netbeans-6.7
+					</execute>
+				</action>
+			</item>
+			<item label="sandbox">
+				<action name="Execute">
+					<execute>
+						roxterm -e sandbox
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="4" label="Science">
+			<item label="bc">
+				<action name="Execute">
+					<execute>
+						roxterm -e bc
+					</execute>
+				</action>
+			</item>
+			<item label="dc">
+				<action name="Execute">
+					<execute>
+						roxterm -e dc
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="19" label="Shells">
+			<item label="Dolphin">
+				<action name="Execute">
+					<execute>
+						dolphin
+					</execute>
+				</action>
+			</item>
+			<item label="GIT">
+				<action name="Execute">
+					<execute>
+						roxterm -e git
+					</execute>
+				</action>
+			</item>
+			<item label="Konsole">
+				<action name="Execute">
+					<execute>
+						konsole
+					</execute>
+				</action>
+			</item>
+			<item label="Terminal">
+				<action name="execute">
+					<command>terminal</command>
+				</action>
+			</item>
+				<item label="roxterm">
+				<action name="execute">
+					<command>roxterm</command>
+				</action>
+			</item>
+			<item label="urxvt">
+				<action name="execute">
+					<command>~/.scripts/urxvt_client.sh</command>
+				</action>
+			</item>
+			<item label="Xterm">
+				<action name="Execute">
+					<execute>
+						xterm
+					</execute>
+				</action>
+			</item>
+			<item label="XTerm (Unicode)">
+				<action name="Execute">
+					<execute>
+						uxterm
+					</execute>
+				</action>
+			</item>
+			<item label="Yakuake">
+				<action name="Execute">
+					<execute>
+						yakuake
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="37" label="System">
+			<menu execute="python ~/.scripts/time_for_label.py" id="time" label="Time"/>
+			<menu execute="sh .scripts/xcompmgr_mod.sh" id="CompositingPipeMenu" label="Compositing"/>
+			<menu id="36" label="Settings">
+				<menu id="21" label="GNOME">
+					<item label="Pop-Up Notifications">
+						<action name="Execute">
+							<execute>
+								notification-properties
+							</execute>
+						</action>
+					</item>
+				</menu>
+				<item label="Java Control Panel for Sun JDK 1.6">
+					<action name="Execute">
+						<execute>
+							/opt/sun-jdk-1.6.0.14/jre/bin/ControlPanel
+						</execute>
+					</action>
+				</item>
+				<item label="KWalletManager">
+					<action name="Execute">
+						<execute>
+							kwalletmanager
+						</execute>
+					</action>
+				</item>
+				<item label="Manage Printing">
+					<action name="Execute">
+						<execute>
+							xdg-open http://localhost:631/
+						</execute>
+					</action>
+				</item>
+				<item label="Menu Updating Tool">
+					<action name="Execute">
+						<execute>
+							kappfinder
+						</execute>
+					</action>
+				</item>
+				<item label="Openbox Configuration Manager">
+					<action name="Execute">
+						<execute>
+							obconf
+						</execute>
+					</action>
+				</item>
+				<item label="Screensaver">
+					<action name="Execute">
+						<execute>
+							xscreensaver-demo
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<item label="Htop">
+				<action name="Execute">
+					<execute>
+						roxterm -e htop
+					</execute>
+				</action>
+			</item>
+			<item label="KDiskFree">
+				<action name="Execute">
+					<execute>
+						kdf
+					</execute>
+				</action>
+			</item>
+			<item label="KInfoCenter">
+				<action name="Execute">
+					<execute>
+						kinfocenter
+					</execute>
+				</action>
+			</item>
+			<item label="KRandRTray">
+				<action name="Execute">
+					<execute>
+						krandrtray
+					</execute>
+				</action>
+			</item>
+			<item label="KSystemLog">
+				<action name="Execute">
+					<execute>
+						ksystemlog
+					</execute>
+				</action>
+			</item>
+			<item label="KUser">
+				<action name="Execute">
+					<execute>
+						kuser
+					</execute>
+				</action>
+			</item>
+			<item label="KwikDisk">
+				<action name="Execute">
+					<execute>
+						kwikdisk
+					</execute>
+				</action>
+			</item>
+			<item label="NVIDIA X Server Settings">
+				<action name="Execute">
+					<execute>
+						nvidia-settings
+					</execute>
+				</action>
+			</item>
+			<item label="pstree">
+				<action name="Execute">
+					<execute>
+						roxterm -e /usr/bin/pstree.x11
+					</execute>
+				</action>
+			</item>
+			<item label="pstree">
+				<action name="Execute">
+					<execute>
+						roxterm -e pstree
+					</execute>
+				</action>
+			</item>
+			<item label="pstree">
+				<action name="Execute">
+					<execute>
+						roxterm -e pstree.x11
+					</execute>
+				</action>
+			</item>
+			<item label="System Monitor">
+				<action name="Execute">
+					<execute>
+						ksysguard
+					</execute>
+				</action>
+			</item>
+			<item label="System Settings">
+				<action name="Execute">
+					<execute>
+						systemsettings
+					</execute>
+				</action>
+			</item>
+			<item label="Top">
+				<action name="Execute">
+					<execute>
+						roxterm -e top
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="38" label="Utilities">
+			<item label="Activate ScreenSaver (Next)">
+				<action name="Execute">
+					<execute>
+						xscreensaver-command -next
+					</execute>
+				</action>
+			</item>
+			<item label="Activate ScreenSaver (Previous)">
+				<action name="Execute">
+					<execute>
+						xscreensaver-command -prev
+					</execute>
+				</action>
+			</item>
+			<item label="Activate ScreenSaver (Random)">
+				<action name="Execute">
+					<execute>
+						xscreensaver-command -activate
+					</execute>
+				</action>
+			</item>
+			<item label="Ark">
+				<action name="Execute">
+					<execute>
+						ark
+					</execute>
+				</action>
+			</item>
+			<item label="Demo Screen Hacks">
+				<action name="Execute">
+					<execute>
+						xscreensaver-command -demo
+					</execute>
+				</action>
+			</item>
+			<item label="Disable XScreenSaver">
+				<action name="Execute">
+					<execute>
+						xscreensaver-command -exit
+					</execute>
+				</action>
+			</item>
+			<item label="Enable XScreenSaver">
+				<action name="Execute">
+					<execute>
+						xscreensaver
+					</execute>
+				</action>
+			</item>
+			<item label="Info">
+				<action name="Execute">
+					<execute>
+						roxterm -e info
+					</execute>
+				</action>
+			</item>
+			<item label="KAlarm">
+				<action name="Execute">
+					<execute>
+						kalarm
+					</execute>
+				</action>
+			</item>
+			<item label="KCalc">
+				<action name="Execute">
+					<execute>
+						kcalc
+					</execute>
+				</action>
+			</item>
+			<item label="KCharSelect">
+				<action name="Execute">
+					<execute>
+						kcharselect
+					</execute>
+				</action>
+			</item>
+			<item label="KDE Groupware Wizard">
+				<action name="Execute">
+					<execute>
+						groupwarewizard
+					</execute>
+				</action>
+			</item>
+			<item label="KGpg">
+				<action name="Execute">
+					<execute>
+						kgpg
+					</execute>
+				</action>
+			</item>
+			<item label="KJots">
+				<action name="Execute">
+					<execute>
+						kjots
+					</execute>
+				</action>
+			</item>
+			<item label="Klipper">
+				<action name="Execute">
+					<execute>
+						klipper
+					</execute>
+				</action>
+			</item>
+			<item label="KNotes">
+				<action name="Execute">
+					<execute>
+						knotes
+					</execute>
+				</action>
+			</item>
+			<item label="KPilot">
+				<action name="Execute">
+					<execute>
+						kpilot
+					</execute>
+				</action>
+			</item>
+			<item label="KTimer">
+				<action name="Execute">
+					<execute>
+						ktimer
+					</execute>
+				</action>
+			</item>
+			<item label="KTimeTracker">
+				<action name="Execute">
+					<execute>
+						ktimetracker
+					</execute>
+				</action>
+			</item>
+			<item label="Okteta">
+				<action name="Execute">
+					<execute>
+						okteta
+					</execute>
+				</action>
+			</item>
+			<item label="Reinitialize XScreenSaver">
+				<action name="Execute">
+					<execute>
+						xscreensaver-command -restart
+					</execute>
+				</action>
+			</item>
+			<item label="ScreenSaver Preferences">
+				<action name="Execute">
+					<execute>
+						xscreensaver-command -prefs
+					</execute>
+				</action>
+			</item>
+			<item label="SuperKaramba">
+				<action name="Execute">
+					<execute>
+						superkaramba
+					</execute>
+				</action>
+			</item>
+			<item label="Sweeper">
+				<action name="Execute">
+					<execute>
+						sweeper
+					</execute>
+				</action>
+			</item>
+			<item label="Xclock (analog)">
+				<action name="Execute">
+					<execute>
+						xclock -analog
+					</execute>
+				</action>
+			</item>
+			<item label="Xclock (digital)">
+				<action name="Execute">
+					<execute>
+						xclock -digital
+					</execute>
+				</action>
+			</item>
+			<item label="Xclock (digital)">
+				<action name="Execute">
+					<execute>
+						xclock -digital -update 1
+					</execute>
+				</action>
+			</item>
+			<item label="Xev">
+				<action name="Execute">
+					<execute>
+						roxterm -e xev
+					</execute>
+				</action>
+			</item>
+			<item label="Xkill">
+				<action name="Execute">
+					<execute>
+						xkill
+					</execute>
+				</action>
+			</item>
+			<item label="Xrefresh">
+				<action name="Execute">
+					<execute>
+						xrefresh
+					</execute>
+				</action>
+			</item>
+			<item label="Xsetroot">
+				<action name="Execute">
+					<execute>
+						xsetroot
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<menu id="40" label="OpenBox">
+			<menu id="client-list-menu"/>
+			<item label="Reconfigure">
+				<action name="Reconfigure"/>
+			</item>
+			<separator/>
+			<item label="Exit">
+				<action name="Execute">
+					<command>~/.scripts/shutdown_dialog.sh</command>
+				</action>
+			</item>
+			<item label="Lock">
+				<action name="Execute">
+					<execute>
+						xlock -mousemotion +description -mode blank -bg black -fg grey30 -font '-adobe-helvetica-lvetica-bold-r-normal--*-110-*-*-*-*-*-*' -planfont '-adobe-helvetica-bold-r-normal--*-110-*-*-*-*-*-*' -timeout 6 -info " " -username "  " -password " " -icongeometry 30x30
+						<!-- xscreensaver-command -lock -->
+					</execute>
+				</action>
+			</item>
+			<item label="Logout">
+				<action name="Exit"/>
+			</item>
+			<item label="Reboot">
+				<action name="Execute">
+					<execute>
+						kdesu 'shutdown -r now'
+					</execute>
+				</action>
+			</item>
+			<item label="Shutdown">
+				<action name="Execute">
+					<execute>
+						kdesu 'shutdown -h now'
+					</execute>
+				</action>
+			</item>
+		</menu>
+	</menu>
+</openbox_menu>
