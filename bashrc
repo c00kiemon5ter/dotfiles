@@ -29,7 +29,7 @@ fi
 CDPATH=:..:~/Projects/GITrepos:
 export HISTCONTROL=erasedups
 export HISTIGNORE="&:cd:ls:[bf]g:history:exit"
-export PS1='\n\[\033[0;32m\]\u@\h \[\033[1;33m\]\w\n\[\033[0m\]\[\033[0;32m\].:$\[\033[0m\] '
+export PS1='\n\[\e[0;32m\]┌─[ \[\e[1;32m\]\u\[\e[0m\e[0;32m\] ][ \[\e[33;1m\]\w\[\e[0;32m\] ]\n\[\e[0;32m\]└─╼\[\e[0m\] '
 
 JAVAHOME="$JDK_HOME"
 export OOO_FORCE_DESKTOP=gnome
