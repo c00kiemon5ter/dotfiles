@@ -5,7 +5,7 @@ app_wm_class="$(wmctrl -lx | grep -i $app_exec | cut -d" " -f4 | sed -e 's/\..*$
 
 if [ -z "$app_wm_class" ]; then # no app started, so start one
 	if [ "$app_exec" -eq "urxvt" ]; then
-		.scripts/urxvt_client.sh &
+		~/.scripts/urxvt_client.sh &
 	else
 		$1 &
 	fi;
