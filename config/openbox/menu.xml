@@ -39,6 +39,13 @@
 			</item>
 		</menu>
 		<menu id="6" label="Graphics">
+			<item label="Gimp">
+				<action name="Execute">
+					<execute>
+						gimp
+					</execute>
+				</action>
+			</item>
 			<item label="Mirage">
 				<action name="Execute">
 					<execute>
@@ -89,6 +96,13 @@
 				<action name="Execute">
 					<execute>
 						firefox
+					</execute>
+				</action>
+			</item>
+			<item label="Chromium">
+				<action name="Execute">
+					<execute>
+						chromium
 					</execute>
 				</action>
 			</item>

@@ -1,3 +1,4 @@
+
 [Midnight-Commander]
 show_backups=1
 show_dot_files=1
@@ -71,6 +72,16 @@ horizontal_split=0
 mcview_remember_file_position=0
 editor_backup_extension=~
 
+kilobyte_si=0
+mouse_close_dialog=0
+skip_check_codeset=1
+editor_persistent_selections=1
+editor_cursor_beyond_eol=1
+editor_line_state=0
+editor_simple_statusbar=0
+auto_fill_mkdir_name=1
+reverse_files_only=1
+
 [Layout]
 equal_split=1
 first_panel_size=17
@@ -83,6 +94,8 @@ menubar_visible=0
 show_mini_info=0
 permission_mode=0
 filetype_mode=0
+
+free_space=1
 
 [Dirs]
 other_dir=/home/ootput
@@ -124,8 +137,14 @@ ftp_proxy_host=gate
 display_codepage=Other_8_bit
 ftp_codepage=Other_8_bit
 
+find_ignore_dirs=
+source_codepage=
+
 [Colors]
 base_color=normal=lightgray,default:executable=green,default:selected=blue,default:marked=darkyellow,default:directory=default,default:link=default,default:device=default,default:special=default,default:stalledink=brightblue,default:editnormal=lightgray,default:editbold=default,yellow,default:menu=default,default:menuhot=green,default:menusel=blue,default:menuhotsel=green,default:markselect=,green:gauge=blue,green:dnormal=lightgray,default:dfocus=blue,default:dhotnormal=green,default:dhotfocus=green,default:errors=brightred,default:reverse=brightgreen,default:input=
+
+rxvt-unicode=
+color_terminals=
 
 [Panelize]
 Find *.orig after patching=find . -name \*.orig -print

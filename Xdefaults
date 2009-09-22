@@ -74,7 +74,7 @@ URxvt.xftAntialias:true
 !!URxvt*boldFont: xft:dejavu sans mono:pixelsize=14
 !!URxvt*font:     xft:Pragmata:pixelsize=13
 !!URxvt*boldFont: xft:Pragmata:pixelsize=13
-!
+
 !!for normal X11 fonts:
 !!URxvt*font:      -*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
 !!URxvt*boldFont:  -*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
@@ -132,7 +132,7 @@ URxvt*foreground: light grey
 ! Blue
 *color4: #006EDC
 *color12:#0071FF
-! Magneta
+ Magneta
 *color5: #990066
 *color13:#D4008D
 ! Cyan
@@ -165,6 +165,26 @@ URxvt*foreground: light grey
 !URxvt*color13: #ef0051
 !URxvt*color14: #4bb8fd
 !URxvt*color15: #ffffff
+
+! -- by Square -- !
+!*background: #1a1a1a
+!*foreground: #acacab
+!*color0: #171717
+!*color1: #ea6868
+!*color2: #b6e77d
+!*color3: #dbbb4b
+!*color4:  #66d9ef
+!*color5: #75507b
+!*color6:  #5e7175
+!*color7: #f2f2f2
+!*color8: #554444
+!*color9: #ff7272
+!*color10: #9ead72
+!*color11: #e7db52
+!*color12: #66d9ef
+!*color13: #ad7fa8
+!*color14: #a3babf
+!*color15: #e2e2e2
 
 ! -- by drkwolf -- !
 ! -- vim theme ~ molokai -- !

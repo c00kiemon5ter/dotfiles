@@ -326,12 +326,12 @@
     </keybind>
     <keybind key="A-Print">
       <action name="Execute">
-        <command>scrot --select -q100 '%Y-%m-%d_$wx$h_scrot'.jpg</command>
+        <command>scrot --select -q100 %Y-%m-%d_$wx$h_scrot.png</command>
       </action>
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>scrot -q100 '%Y-%m-%d_$wx$h_scrot'.jpg</command>
+        <command>scrot -q100 %Y-%m-%d_$wx$h_scrot.png</command>
       </action>
     </keybind>
   </keyboard>
