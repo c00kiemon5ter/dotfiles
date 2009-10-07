@@ -1,3 +1,4 @@
+" surround.vim - Surroundings
 " Author:       Tim Pope <vimNOSPAM@tpope.info>
 " GetLatestVimScripts: 1697 1 :AutoInstall: surround.vim
 " $Id: surround.vim,v 1.34 2008-02-15 21:43:42 tpope Exp $
@@ -625,4 +626,3 @@ endif
 let &cpo = s:cpo_save
 
 " vim:set ft=vim sw=4 sts=4 et:
-

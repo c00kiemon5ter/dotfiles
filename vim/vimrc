@@ -1,16 +1,18 @@
-" JesusSuperstar (R)(C)(LOL) 
+" JesusSuperstar (R)(C)(LOL) (pure.asxetos@gmail.com)
 " Ideas taken from :
 " briancarper --> http://briancarper.net/vim/vimrc
 " rsontech --> http://rsontech.net/dotfiles/.vimrc
 " ciaranm  --> http://github.com/ciaranm/dotfiles-ciaranm/blob/master/vimrc
 
-" Enable filetype settings
+" Enable filetype settings {{{
 if has("eval")
 	filetype on
 	filetype plugin on
 	filetype plugin indent on
 endif
+"}}}
 
+" Settings {{{
 " Set colors "
 set t_Co=256
 
@@ -97,23 +99,26 @@ set laststatus=2
 
 " Completion
 set dictionary=/usr/share/dict/words
+"}}}
 
-" Tab conf
+" Tab conf {{{
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 set smartindent
+"}}}
 
-" Enable mouse "
+" Enable mouse {{{
 "  [n]ormal
 "  [v]isual
 "  [i]nsert
 "  [c]ommand
 "  [a]ll
 "set mouse=a
+"}}} 
 
-" Color Scheme "
+" Color Scheme {{{
 "colorscheme desert256
 "colorscheme calmar256-dark
 "colorscheme calmar256-light
@@ -129,8 +134,9 @@ set smartindent
 "colorscheme inkpot
 "colorscheme wombat256
 colorscheme leo
+"}}}
 
-" auto commands
+" auto commands {{{
 if has("autocmd")
     " Set comment characters for common languages
     autocmd FileType python,sh,bash,zsh,ruby,perl let StartComment="#" | let EndComment=""
@@ -141,8 +147,9 @@ if has("autocmd")
     " turn off any existing search on exit
     au VimEnter * nohls
 endif
+"}}}
 
-" Tab-Completion
+" Tab-Completion {{{
 if has("eval")
     function! CleverTab()
         if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
@@ -154,8 +161,9 @@ if has("eval")
     inoremap <Tab> <C-R>=CleverTab()<CR>
     inoremap <S-Tab> <C-P>
 endif
+"}}}
 
-" Special less/man/vimpager modes
+" Special less/man/vimpager modes {{{
 if has("eval") && has("autocmd")
     fun! <SID>check_pager_mode()
         if exists("g:loaded_less") && g:loaded_less
@@ -176,8 +184,9 @@ if has("eval") && has("autocmd")
     endfun
     autocmd VimEnter * :call <SID>check_pager_mode()
 endif
+"}}}
 
-" [Un]Comment lines in a visual block
+" [Un]Comment lines in a visual block {{{
 fun CommentLines()
     try
         execute ":s@^".g:StartComment." @\@g"
@@ -189,8 +198,9 @@ fun CommentLines()
 endfun
 " Set keymaps for [un]commenting
 vmap <Leader>c :call CommentLines()<CR>
+"}}}
 
-" Copy/Paste from Word*doc files is a mess
+" Copy/Paste from Word*doc files is a mess {{{
 fun! FixInvisiblePunctuation()
     silent! %s/\%u2018/'/g
     silent! %s/\%u2019/'/g
@@ -205,4 +215,6 @@ fun! FixInvisiblePunctuation()
     silent! %s/\%ua0/ /g
     retab
 endfun
+"}}}
 
+" vim:foldmethod=marker:foldmarker={{{,}}}:foldlevel=0

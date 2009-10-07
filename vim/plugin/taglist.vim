@@ -1,3 +1,4 @@
+" File: taglist.vim
 " Author: Yegappan Lakshmanan (yegappan AT yahoo DOT com)
 " Version: 4.5
 " Last Modified: September 21, 2007
@@ -111,7 +112,7 @@ if !exists('loaded_taglist')
     " When the taglist window is toggle opened, move the cursor to the
     " taglist window
     if !exists('Tlist_GainFocus_On_ToggleOpen')
-        let Tlist_GainFocus_On_ToggleOpen = 1
+        let Tlist_GainFocus_On_ToggleOpen = 0
     endif
 
     " Process files even when the taglist window is not open
@@ -137,7 +138,7 @@ if !exists('loaded_taglist')
     " side.  This setting is relevant only if Tlist_Use_Horiz_Window is set to
     " zero (i.e.  only for vertically split windows)
     if !exists('Tlist_Use_Right_Window')
-        let Tlist_Use_Right_Window = 1
+        let Tlist_Use_Right_Window = 0
     endif
 
     " Increase Vim window width to display vertically split taglist window.
@@ -187,7 +188,7 @@ if !exists('loaded_taglist')
     " Exit Vim if only the taglist window is currently open. By default, this is
     " set to zero.
     if !exists('Tlist_Exit_OnlyWindow')
-        let Tlist_Exit_OnlyWindow = 1
+        let Tlist_Exit_OnlyWindow = 0
     endif
 
     " Automatically close the folds for the non-active files in the taglist
@@ -219,7 +220,7 @@ if !exists('loaded_taglist')
 
     " Enable fold column to display the folding for the tag tree
     if !exists('Tlist_Enable_Fold_Column')
-        let Tlist_Enable_Fold_Column = 0
+        let Tlist_Enable_Fold_Column = 1
     endif
 
     " Display the tags for only one file in the taglist window

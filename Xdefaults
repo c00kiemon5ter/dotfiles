@@ -1,16 +1,20 @@
-! --- xpdf --- !
+! JesusSuperstar (pure.asxetos@gmail.com)
+
+!xpdf settings {{{
 xpdf*enableFreetype:      yes
 xpdf*antialias:           yes
 xpdf*foreground:          black
 xpdf*background:          white
 xpdf*urlCommand:          firefox
 xpdf*viKeys:              on
+!}}}
 
-! -- Cursor -- ~
+!Cursor theme {{{
 !Xcursor*theme:          Vanilla-DMZ-AA
 !Xcursor.size:           22
+!}}}
 
-! --- Common Settings --- !
+!URxvt Settings {{{
 URxvt*internalBorder:0
 URxvt.title:URxvt
 URxvt.iconName:Terminal
@@ -26,8 +30,9 @@ URxvt.visualBell:false
 URxvt*cursorBlink:true
 URxvt.saveLines:1500
 cutchars::@-./_~?&=%+#
+!}}}
 
-! --- More Settings --- !
+!More URxvt Settings {{{
 URxvt*dynamicColors:        on
 URxvt*highlightSelection:   True
 URxvt*eightBitInput:        True
@@ -44,8 +49,9 @@ URxvt*multichar_encoding:noenc
 URxvt.inheritPixmap:false
 !URxvt.transient-for:windowid
 URxvt.preeditType:Root
+!}}}
 
-! --- Scroll and mousewheel --- !
+!Scroll and mousewheel {{{
 XTerm*jumpScroll:true
 XTerm*multiScroll:true
 URxvt*jumpScroll:true
@@ -58,8 +64,9 @@ URxvt.scrollTtyOutput:false
 URxvt.scrollWithBuffer:true
 URxvt.scrollTtyKeypress:true
 URXVT.mouseWheelScrollPage:false
+!}}}
 
-! --- URxvt Fonts --- !
+!URxvt Fonts {{{
 Xft.antialias: 	true
 Xft.hinting: 	true
 Xft.hintstyle: 	hintfull
@@ -85,8 +92,6 @@ URxvt.xftAntialias:true
 !!URxvt*font:      -*-proggysquaresz-*-*-*-*-*-*-*-*-*-*-*-*
 !!URxvt*boldFont:  -*-proggysquaresz-*-*-*-*-*-*-*-*-*-*-*-*
 
-
-
 !URxvt*font:            xft:DejaVu Sans Mono:pixelsize=12
 !URxvt*boldFont:        xft:DejaVu Sans Mono:bold:autohint=true
 !URxvt*italicFont:      xft:DejaVu Sans Mono:italic:autohint=true
@@ -96,8 +101,9 @@ URxvt*font:             xft:Droid Sans Mono:size=9
 URxvt*boldFont:         xft:Droid Sans Mono:bold:autohint=true
 URxvt*italicFont:       xft:Droid Sans Mono:italic:autohint=true
 URxvt*boldItalicFont:   xft:Droid Sans Mono:bold:italic:autohint=true
+!}}}
 
-! --- URxvt Colors --- !
+!URxvt Colors {{{
 URxvt*cursorColor:grey
 URxvt*pointerColor:grey
 URxvt*pointerColorBackground:black
@@ -109,8 +115,9 @@ URxvt*pointerBlankDelay:2
 !URxvt.tabbed.tabbar-bg:#eab93d
 !URxvt.tabbed.tab-fg:#eab93d
 !URxvt.tabbed.tab-bg:#eab93d
+!}}}
 
-! --- Color Schemes --- !
+!Color Schemes {{{
 
 ! ** JesuSuperStar ** !
 !URxvt*background: rgba:0000/0000/0000/bbbb
@@ -132,7 +139,7 @@ URxvt*foreground: light grey
 ! Blue
 *color4: #006EDC
 *color12:#0071FF
- Magneta
+! Magneta
 *color5: #990066
 *color13:#D4008D
 ! Cyan
@@ -847,4 +854,6 @@ URxvt*foreground: light grey
 !*color7:         rgb:ff/ff/ff
 !*color15:        rgb:dd/dd/dd
 
+!}}}
 
+! vim:foldmethod=marker:foldmarker={{{,}}}:foldlevel=0
