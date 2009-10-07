@@ -1,0 +1,67 @@
+# Navigation:
+alias ..='cd ..'
+alias ~='cd ~'
+
+# remote ssh to uni servers
+alias aueb='env LANG="el_GR.UTF-8@euro" ssh p3060190@dias.aueb.gr'
+alias alex="telnet p3060190@alexandros.ccslab.aueb.gr"
+alias foss="ssh root@foss.aueb.gr"
+
+# fortune equality
+alias fortune="fortune -e -a"
+# Gets a random Futurama quote from slashdot.org(/.)
+alias futurama="curl -Is slashdot.org | egrep '^X-(F|B|L)' | cut -d \- -f 2"
+alias cowfortune='cowthink -d $(fortune -sea)'
+
+# always use color with ls and grep
+alias ls="ls --color=always"
+alias grep="grep --color=always"
+alias egrep="egrep --color=always"
+
+# Editors:
+alias v='vim'
+alias sv='sudo vim'
+alias n='nano -w'
+alias nano="nano -w"
+alias sn='sudo nano'
+alias g='geany'
+alias sg='sudo geany'
+
+# common
+alias df='df -h -T'
+alias mkdir='mkdir -p -v'
+alias ll='ls -l'
+alias la='ls -A'
+alias lla='ls -al'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# files
+alias scolors='~/bin/colors.sh'
+alias obr='vim ~/.config/openbox/rc.xml'
+alias obm='vim ~/.config/openbox/menu.xml'
+alias oba='vim ~/.config/openbox/autostart.sh'
+alias vbash="vim ~/.bashrc && source ~/.bashrc"
+alias valias='vim ~/.alias && source ~/.bashrc'
+alias vfuncs='vim ~/.funcs && source ~/.bashrc'
+alias reload='source ~/.bashrc'
+alias :q='exit'
+
+# dump euse error messages
+alias euse="euse -i $@ 2>/dev/null"
+
+# the 'tree' command ..revisited
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+# Shows your WAN IP, when you`re sitting behind a router
+alias myIp="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
+
+# Quartus 9.0
+alias quartus="/opt/altera9.0/quartus/bin/quartus"
+
+# Look and Feel of Netbeans
+alias netbeans-6.7="netbeans-6.7 --laf com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
+
+# the matrix
+alias matrix='tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
+

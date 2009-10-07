@@ -34,8 +34,8 @@ whaw &
 # start parcellite clipboard
 parcellite &
 
-# start pidgin msn messenger
-pidgin &
+# start msn messenger
+emesene -m &
 
 # start sonata in systray
 sonata --hidden &
@@ -44,5 +44,5 @@ sonata --hidden &
 #xautolock -time 5 -locker "feh -FZxN --hide-pointer /home/koukos/Downloads/Themes_Stuff/Walls/the_screamy_wall/screamy1280x1024.jpg" &
 
 # start conky 
-conky -c ~/.scripts/conky/album.conkyrc &
+conky -c ~/.conky/album.conkyrc &
 

@@ -1,0 +1,208 @@
+" JesusSuperstar (R)(C)(LOL) 
+" Ideas taken from :
+" briancarper --> http://briancarper.net/vim/vimrc
+" rsontech --> http://rsontech.net/dotfiles/.vimrc
+" ciaranm  --> http://github.com/ciaranm/dotfiles-ciaranm/blob/master/vimrc
+
+" Enable filetype settings
+if has("eval")
+	filetype on
+	filetype plugin on
+	filetype plugin indent on
+endif
+
+" Set colors "
+set t_Co=256
+
+" No visual bell
+set novisualbell
+set noerrorbells
+
+" Show line numbers
+set number
+set numberwidth=2
+
+" Syntax Highliting
+if has("syntax")
+	syntax on
+endif
+
+" Syntax when printing
+set popt+=syntax:y
+
+" Default encoding
+set encoding=utf-8
+set fileencoding=utf-8
+
+" Keep backup of edited files
+set backup
+set writebackup
+set backupdir=~/.vim/backups/ ",/tmp/vimbackups/
+
+" Automatically save before commands like :next and :make
+set autowrite
+
+" Wrap text
+set wrap
+" Wrap in these
+set whichwrap+=<,>,[,]
+"set nowrapscan
+
+" Don't be compatible with vi
+set nocompatible
+
+" Make backspace delete lots of things
+set backspace=indent,eol,start
+
+" Show us the command we're typing
+set showcmd
+
+" Highlight matching parens
+set showmatch
+set matchpairs+=<:>
+set matchtime=3
+
+" Search conf : incremental, highlight
+set incsearch
+set hlsearch
+" Show full tags when doing search completion
+set showfulltag
+
+" Ignore case
+set ignorecase
+"set infercase
+
+" Speed up macros
+set lazyredraw
+
+" Place new window right of the current 
+set splitright
+
+" Use the cool tab complete menu
+set wildmenu
+set wildignore+=*.o,*~,.lo
+set suffixes+=.in,.a,.1
+
+" Allow edit buffers to be hidden
+set hidden
+
+" Minimul window height
+set winminheight=1
+
+" Always show statusbar
+set laststatus=2
+
+" Statusline Format :P
+"set statusline=%f\ %2*%m\ %1*%h%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}\ %{getfperm(@%)}]\ 0x%B\ %12.(%c:%l/%L%)
+
+" Completion
+set dictionary=/usr/share/dict/words
+
+" Tab conf
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smartindent
+
+" Enable mouse "
+"  [n]ormal
+"  [v]isual
+"  [i]nsert
+"  [c]ommand
+"  [a]ll
+"set mouse=a
+
+" Color Scheme "
+"colorscheme desert256
+"colorscheme calmar256-dark
+"colorscheme calmar256-light
+"colorscheme charged-256
+"colorscheme gardener
+"colorscheme peaksea
+"colorscheme asmanian2
+"colorscheme railscasts
+"colorscheme gentooish
+"colorscheme asmdev2
+"colorscheme lucius
+"colorscheme xoria256
+"colorscheme inkpot
+"colorscheme wombat256
+colorscheme leo
+
+" auto commands
+if has("autocmd")
+    " Set comment characters for common languages
+    autocmd FileType python,sh,bash,zsh,ruby,perl let StartComment="#" | let EndComment=""
+    autocmd FileType html let StartComment="<!--" | let EndComment="-->"
+    autocmd FileType php,c,javascript let StartComment="//" | let EndComment=""
+    autocmd FileType cpp,java let StartComment="/*" | let EndComment="*/"
+    autocmd FileType vim let StartComment="\"" | let EndComment=""
+    " turn off any existing search on exit
+    au VimEnter * nohls
+endif
+
+" Tab-Completion
+if has("eval")
+    function! CleverTab()
+        if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
+            return "\<Tab>"
+        else
+            return "\<C-N>"
+        endif
+    endfun
+    inoremap <Tab> <C-R>=CleverTab()<CR>
+    inoremap <S-Tab> <C-P>
+endif
+
+" Special less/man/vimpager modes
+if has("eval") && has("autocmd")
+    fun! <SID>check_pager_mode()
+        if exists("g:loaded_less") && g:loaded_less
+        " we're in vimpager / less.sh / man mode
+            set laststatus=0
+            set ruler
+            "set foldmethod=manual
+            "set foldlevel=99
+            set nowrap
+            " Remove weird keybindings from vimpagr
+            set nofoldenable
+            set nolist
+            unmap <Space>
+            unmap z
+            unmap q
+            unmap d
+        endif
+    endfun
+    autocmd VimEnter * :call <SID>check_pager_mode()
+endif
+
+" [Un]Comment lines in a visual block
+fun CommentLines()
+    try
+        execute ":s@^".g:StartComment." @\@g"
+        execute ":s@ ".g:EndComment."$@@g"
+    catch
+        execute ":s@^@".g:StartComment." @g"
+        execute ":s@$@ ".g:EndComment."@g"
+    endtry
+endfun
+" Set keymaps for [un]commenting
+vmap <Leader>c :call CommentLines()<CR>
+
+" Copy/Paste from Word*doc files is a mess
+fun! FixInvisiblePunctuation()
+    silent! %s/\%u2018/'/g
+    silent! %s/\%u2019/'/g
+    silent! %s/\%u2026/.../g
+    silent! %s/\%uf0e0/->/g
+    silent! %s/\%u0092/'/g
+    silent! %s/\%u2013/--/g
+    silent! %s/\%u2014/--/g
+    silent! %s/\%u201C/"/g
+    silent! %s/\%u201D/"/g
+    silent! %s/\%u0052\%u20ac\%u2122/'/g
+    silent! %s/\%ua0/ /g
+    retab
+endfun
+

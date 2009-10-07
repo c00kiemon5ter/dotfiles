@@ -120,6 +120,13 @@
 					</execute>
 				</action>
 			</item>
+			<item label="Emesene Instant Messenger">
+				<action name="Execute">
+					<execute>
+						emesene
+					</execute>
+				</action>
+			</item>
 			<item label="Pidgin Internet Messenger">
 				<action name="Execute">
 					<execute>
