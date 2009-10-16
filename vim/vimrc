@@ -1,8 +1,10 @@
-" JesusSuperstar (R)(C)(LOL) (pure.asxetos@gmail.com)
+" JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com)
+"
 " Ideas taken from :
 " briancarper --> http://briancarper.net/vim/vimrc
 " rsontech --> http://rsontech.net/dotfiles/.vimrc
 " ciaranm  --> http://github.com/ciaranm/dotfiles-ciaranm/blob/master/vimrc
+"
 
 " Enable filetype settings {{{
 if has("eval")

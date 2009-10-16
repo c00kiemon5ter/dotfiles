@@ -1,3 +1,7 @@
+# JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com)
+# Collection of PS's 
+#
+
 ## default like 
 # user@machine:path $ 
 PS1='\[\e[33m\]\u\[\e[37;0m\]@\[\e[37m\]\h:\[\e[37;1m\]\w \$\[\e[0m\] '

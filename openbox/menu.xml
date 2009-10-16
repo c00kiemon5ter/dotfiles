@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- # JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com) -->
 <openbox_menu>
 	<menu id="root-menu" label="OpenBox 3">
 		<menu id="1" label="Development">
@@ -102,7 +103,7 @@
 			<item label="Chromium">
 				<action name="Execute">
 					<execute>
-						chromium
+                        sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; chromium'
 					</execute>
 				</action>
 			</item>

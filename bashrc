@@ -1,3 +1,6 @@
+# JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com)
+#
+
 # /etc/skel/.bashrc
 #
 # This file is sourced by all *interactive* bash shells on startup,
@@ -27,7 +30,8 @@ fi
 
 ## Put your fun stuff here ##
 CDPATH=:..:~/Projects/GITrepos:
-PS1='\n\[\e[0;32m\]┌─[ \[\e[1;32m\]\u\[\e[0m\e[0;32m\] ][ \[\e[33;1m\]\w\[\e[0;32m\] ]\n\[\e[0;32m\]└─╼\[\e[0m\] '
+#PS1='\n\[\e[0;32m\]┌─[ \[\e[1;32m\]\u\[\e[0m\e[0;32m\] ][ \[\e[33;1m\]\w\[\e[0;32m\] ]\n\[\e[0;32m\]└─╼\[\e[0m\] '
+PS1='\n\[\e[0;32m\]┌─[ \[\e[1;31m\]\u\[\e[0;32m@\[\e[1;34m\]\h\[\e[0;32m\] ][ \[\e[1;33m\]\w\[\e[0;32m\] ]\n\[\e[0;32m\]└─╼\[\e[0m\] '
 HISTCONTROL=erasedups
 HISTIGNORE="&:cd:ls:[bf]g:history:exit"
 JAVAHOME="$JDK_HOME"

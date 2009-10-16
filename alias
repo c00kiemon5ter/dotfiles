@@ -1,3 +1,6 @@
+# JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com)
+#
+
 # Navigation:
 alias ..='cd ..'
 alias ~='cd ~'
@@ -37,14 +40,16 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 # files
-alias scolors='~/bin/colors.sh'
-alias obr='vim ~/.config/openbox/rc.xml'
-alias obm='vim ~/.config/openbox/menu.xml'
-alias oba='vim ~/.config/openbox/autostart.sh'
+alias scolors='~/.scripts/colors.sh'
+alias vtint='vim ~/.config/tint2/tint2rc'
+alias rtint='killall tint2; tint2 && disown &'
+alias obr='vim ~/.config/openbox/rc.xml && openbox --reconfigure'
+alias obm='vim ~/.config/openbox/menu.xml && openbox --reconfigure'
+alias oba='vim ~/.config/openbox/autostart.sh && openbox --reconfigure'
 alias vbash="vim ~/.bashrc && source ~/.bashrc"
 alias valias='vim ~/.alias && source ~/.bashrc'
 alias vfuncs='vim ~/.funcs && source ~/.bashrc'
-alias reload='source ~/.bashrc'
+alias reload='source ~/.bashrc && openbox --reconfigure'
 alias :q='exit'
 
 # dump euse error messages

@@ -1,6 +1,6 @@
 name=HackThis
 description=This is an Pidgin style conversation layout with modifications embeding the default Emesene theme
-author=Ivan "JesusSuperstar" Kanakarakis
+author=Ivan "JesusSuperstar" Kanakarakis (mrJesusSuperstar@gmail.com)
 website=http://foss.aueb.gr/forum/
 
 incoming=<span style="color: #A82F2F">(%h%:%m%) <span style="font-weight: bold;">%nick% %says%:<br/>  </span></span> %formattedmessage%<br/>
