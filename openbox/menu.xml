@@ -103,7 +103,7 @@
 			<item label="Chromium">
 				<action name="Execute">
 					<execute>
-                        sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; chromium'
+                        sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; chromium-bin'
 					</execute>
 				</action>
 			</item>

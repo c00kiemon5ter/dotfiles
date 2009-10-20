@@ -38,6 +38,7 @@ alias la='ls -A'
 alias lla='ls -al'
 alias cp='cp -i'
 alias mv='mv -i'
+alias du='du -h --max-depth=1'
 
 # files
 alias scolors='~/.scripts/colors.sh'
@@ -50,7 +51,11 @@ alias vbash="vim ~/.bashrc && source ~/.bashrc"
 alias valias='vim ~/.alias && source ~/.bashrc'
 alias vfuncs='vim ~/.funcs && source ~/.bashrc'
 alias reload='source ~/.bashrc && openbox --reconfigure'
+alias vx='vim ~/.Xdefaults'
 alias :q='exit'
+
+# Jsymphonic
+alias jsym="cd ~/Downloads/JSymph/ && java -jar JSymphonic_v0.3.0b.jar"
 
 # dump euse error messages
 alias euse="euse -i $@ 2>/dev/null"

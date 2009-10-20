@@ -26,7 +26,11 @@ URxvt.perl-ext-common:default,tabbed,matcher,-selection-popup,-option-popupi,sea
 URxvt.geometry:80x26
 URxvt*depth:32
 URxvt*buffered:true
-URxvt*urlLauncher:firefox
+URxvt*urlLauncher:chromium-bin
+
+URxvt.matcher.pattern.1:([\\w-]+.jpg)
+URxvt.matcher.launcher.1:feh $@
+
 URxvt.visualBell:false
 URxvt*cursorBlink:true
 URxvt.saveLines:1500
@@ -102,6 +106,22 @@ URxvt*font:             xft:Droid Sans Mono:size=9
 URxvt*boldFont:         xft:Droid Sans Mono:bold:autohint=true
 URxvt*italicFont:       xft:Droid Sans Mono:italic:autohint=true
 URxvt*boldItalicFont:   xft:Droid Sans Mono:bold:italic:autohint=true
+
+!URxvt*font:             xft:inconsolata:size=11
+!URxvt*boldFont:         xft:inconsolata:bold:autohint=true
+!URxvt*italicFont:       xft:inconsolata:italic:autohint=true
+!URxvt*boldItalicFont:   xft:inconsolata:bold:italic:autohint=true
+
+!URxvt*font:             xft:terminus:size=11
+!URxvt*boldFont:         xft:terminus:bold:autohint=true
+!URxvt*italicFont:       xft:terminus:italic:autohint=true
+!URxvt*boldItalicFont:   xft:terminus:bold:italic:autohint=true
+
+!URxvt*font:             xft:dina:size=12
+!URxvt*boldFont:         xft:dina:bold:autohint=true
+!URxvt*italicFont:       xft:dina:italic:autohint=true
+!URxvt*boldItalicFont:   xft:dina:bold:italic:autohint=true
+
 !}}}
 
 !URxvt Colors {{{

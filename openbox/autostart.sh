@@ -28,7 +28,7 @@ parcellite &
 emesene -m &
 
 # start sonata in systray
-sonata --hidden &
+sonata &
 
 # start conky 
 conky -c ~/.conky/album.conkyrc &

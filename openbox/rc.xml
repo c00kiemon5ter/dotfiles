@@ -300,7 +300,7 @@
     </keybind>
     <keybind key="XF86HomePage">
       <action name="Execute">
-        <command>~/.scripts/app_focus.sh firefox</command>
+          <command>sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; ~/.scripts/app_focus.sh chromium-bin' <!--firefox--> </command>
       </action>
     </keybind>
     <keybind key="XF86Mail">
