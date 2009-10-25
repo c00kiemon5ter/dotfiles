@@ -2,9 +2,12 @@
 #
 #.gitignore
 #
-
-history
-backups
+*hist*
+*history*
 *~
-*errors*
+*error*
 *log*
+*old*
+*bak*
+*BAK*
+*backup*

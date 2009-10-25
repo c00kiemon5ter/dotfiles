@@ -11,12 +11,12 @@ sh $HOME/.fehbg &
 # tint panel
 tint2 &
 
-# start urxvt daemon
-urxvtd -q -f -o &
-
 # toogle keyboard layout with S-A
 setxkbmap -model evdev -layout us,gr -variant ,extended -option grp_led:scroll,eurosign:e,grp:alt_shift_toggle &
 #,lv3:rwin_switch,altwin:left_meta_win & 
+
+# start urxvt daemon
+urxvtd -q -f -o &
 
 # enable numlock
 numlockx on &
@@ -25,10 +25,10 @@ numlockx on &
 parcellite &
 
 # start msn messenger
-emesene -m &
+emesene -i &
 
 # start sonata in systray
-sonata &
+sonata -t &
 
 # start conky 
 conky -c ~/.conky/album.conkyrc &
@@ -40,10 +40,10 @@ halevt &
 unclutter &
 
 # tiling features
-whaw &
+#whaw &
 
 # tint2 is above
-wmctrl -ir $(wmctrl -l | grep tint2 | awk '{print $1}') -b add,above
+#wmctrl -ir $(wmctrl -li | grep tint2 | awk '{print $1}') -b add,above
 
 # start compositing manager
 #xcompmgr -CfF -o.55 -D4 -m.86 &

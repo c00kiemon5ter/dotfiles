@@ -38,6 +38,7 @@ alias la='ls -A'
 alias lla='ls -al'
 alias cp='cp -i'
 alias mv='mv -i'
+alias rm='rm -I -v'
 alias du='du -h --max-depth=1'
 
 # files
@@ -74,4 +75,7 @@ alias netbeans-6.7="netbeans-6.7 --laf com.sun.java.swing.plaf.gtk.GTKLookAndFee
 
 # the matrix
 alias matrix='tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
+
+#echo $(shuf -i 1-49 | head -n6 | sort -n)'
+alias lotto='shuf -i 1-49 | head -n6 | sort -n | xargs'
 

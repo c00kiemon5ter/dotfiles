@@ -80,23 +80,6 @@ Xft.dpi:		96
 
 URxvt.xftAntialias:true
 
-!for antialiased fonts (using Xft)
-!!URxvt*font:     xft:Envy Code R:pixelsize=13
-!!URxvt*font:     xft:dejavu sans mono:pixelsize=14
-!!URxvt*boldFont: xft:dejavu sans mono:pixelsize=14
-!!URxvt*font:     xft:Pragmata:pixelsize=13
-!!URxvt*boldFont: xft:Pragmata:pixelsize=13
-
-!!for normal X11 fonts:
-!!URxvt*font:      -*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
-!!URxvt*boldFont:  -*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
-!URxvt*font:      -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
-!URxvt*boldFont:  -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
-!!URxvt*font:      -*-proggyclean-*-*-*-*-*-*-*-*-*-*-*-*
-!!URxvt*boldFont:  -*-proggyclean-*-*-*-*-*-*-*-*-*-*-*-*
-!!URxvt*font:      -*-proggysquaresz-*-*-*-*-*-*-*-*-*-*-*-*
-!!URxvt*boldFont:  -*-proggysquaresz-*-*-*-*-*-*-*-*-*-*-*-*
-
 !URxvt*font:            xft:DejaVu Sans Mono:pixelsize=12
 !URxvt*boldFont:        xft:DejaVu Sans Mono:bold:autohint=true
 !URxvt*italicFont:      xft:DejaVu Sans Mono:italic:autohint=true
@@ -107,20 +90,20 @@ URxvt*boldFont:         xft:Droid Sans Mono:bold:autohint=true
 URxvt*italicFont:       xft:Droid Sans Mono:italic:autohint=true
 URxvt*boldItalicFont:   xft:Droid Sans Mono:bold:italic:autohint=true
 
+!URxvt*font:             xft:Monaco:size=10
+!URxvt*boldFont:         xft:Monaco:bold:autohint=true
+!URxvt*italicFont:       xft:Monaco:italic:autohint=true
+!URxvt*boldItalicFont:   xft:Monaco:bold:italic:autohint=true
+
 !URxvt*font:             xft:inconsolata:size=11
 !URxvt*boldFont:         xft:inconsolata:bold:autohint=true
 !URxvt*italicFont:       xft:inconsolata:italic:autohint=true
 !URxvt*boldItalicFont:   xft:inconsolata:bold:italic:autohint=true
 
-!URxvt*font:             xft:terminus:size=11
-!URxvt*boldFont:         xft:terminus:bold:autohint=true
-!URxvt*italicFont:       xft:terminus:italic:autohint=true
-!URxvt*boldItalicFont:   xft:terminus:bold:italic:autohint=true
-
-!URxvt*font:             xft:dina:size=12
-!URxvt*boldFont:         xft:dina:bold:autohint=true
-!URxvt*italicFont:       xft:dina:italic:autohint=true
-!URxvt*boldItalicFont:   xft:dina:bold:italic:autohint=true
+!URxvt*font:             xft:Liberation Mono:pixelsize=13
+!URxvt*boldFont:         xft:Liberation Mono:bold:autohint=true
+!URxvt*italicFont:       xft:Liberation Mono:italic:autohint=true
+!URxvt*boldItalicFont:   xft:Liberation Mono:bold:italic:autohint=true
 
 !}}}
 

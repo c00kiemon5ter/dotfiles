@@ -135,7 +135,8 @@ set smartindent
 "colorscheme xoria256
 "colorscheme inkpot
 "colorscheme wombat256
-colorscheme leo
+"colorscheme leo
+colorscheme miromiro
 "}}}
 
 " auto commands {{{
