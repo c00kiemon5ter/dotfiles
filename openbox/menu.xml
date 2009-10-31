@@ -2,6 +2,43 @@
 <!-- # JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com) -->
 <openbox_menu>
 	<menu id="root-menu" label="OpenBox 3">
+			<item label="Chromium">
+				<action name="Execute">
+					<execute>
+                        sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; chromium-bin'
+					</execute>
+				</action>
+			</item>
+			<item label="FireFox">
+				<action name="Execute">
+					<execute>
+						firefox
+					</execute>
+				</action>
+			</item>
+			<item label="Rxvt-Unicode">
+				<action name="Execute">
+					<execute>
+						~/.scripts/urxvt_client.sh
+					</execute>
+				</action>
+            </item>
+        	<item label="MPlayer">
+				<action name="Execute">
+					<execute>
+						gnome-mplayer
+					</execute>
+				</action>
+			</item>
+			<item label="Gimp">
+				<action name="Execute">
+					<execute>
+						gimp
+					</execute>
+				</action>
+			</item>
+            <separator/>
+        <menu id="0" label="Applications">
 		<menu id="1" label="Development">
 			<item label="Sandbox">
 				<action name="Execute">
@@ -74,13 +111,6 @@
 				<action name="Execute">
 					<execute>
 						~/.scripts/urxvt_client.sh alsamixer
-					</execute>
-				</action>
-			</item>
-			<item label="cam">
-				<action name="Execute">
-					<execute>
-						~/.scripts/urxvt_client.sh -e cam
 					</execute>
 				</action>
 			</item>
@@ -222,37 +252,7 @@
 				</action>
 			</item>
 		</menu>
-		<menu id="4" label="Science">
-			<item label="Calc">
-				<action name="Execute">
-					<execute>
-						~/.scripts/urxvt_client.sh -e calc
-					</execute>
-				</action>
-			</item>
-			<item label="bc">
-				<action name="Execute">
-					<execute>
-						~/.scripts/urxvt_client.sh -e bc
-					</execute>
-				</action>
-			</item>
-			<item label="dc">
-				<action name="Execute">
-					<execute>
-						~/.scripts/urxvt_client.sh -e dc
-					</execute>
-				</action>
-			</item>
-		</menu>
 		<menu id="19" label="Shells">
-			<item label="GIT">
-				<action name="Execute">
-					<execute>
-						~/.scripts/urxvt_client.sh -e git
-					</execute>
-				</action>
-			</item>
 			<item label="MC">
 				<action name="Execute">
 					<execute>
@@ -334,20 +334,6 @@
 					</action>
 				</item>
 			</menu>
-			<item label="Htop">
-				<action name="Execute">
-					<execute>
-						~/.scripts/urxvt_client.sh -e htop
-					</execute>
-				</action>
-			</item>
-			<item label="Top">
-				<action name="Execute">
-					<execute>
-						~/.scripts/urxvt_client.sh -e top
-					</execute>
-				</action>
-			</item>
 			<item label="pstree">
 				<action name="Execute">
 					<execute>
@@ -399,41 +385,6 @@
 					</execute>
 				</action>
 			</item>
-			<item label="unclutter - start">
-				<action name="Execute">
-					<execute>
-						unclutter
-					</execute>
-				</action>
-			</item>
-			<item label="Xclock (analog)">
-				<action name="Execute">
-					<execute>
-						xclock -analog
-					</execute>
-				</action>
-			</item>
-			<item label="Xclock (digital)">
-				<action name="Execute">
-					<execute>
-						xclock -digital
-					</execute>
-				</action>
-			</item>
-			<item label="Xclock (digital)">
-				<action name="Execute">
-					<execute>
-						xclock -digital -update 1
-					</execute>
-				</action>
-			</item>
-			<item label="Xev">
-				<action name="Execute">
-					<execute>
-						~/.scripts/urxvt_client.sh -e xev
-					</execute>
-				</action>
-			</item>
 			<item label="Xkill">
 				<action name="Execute">
 					<execute>
@@ -455,7 +406,8 @@
 					</execute>
 				</action>
 			</item>
-		</menu>
+        </menu>
+    </menu>
 		<separator/>
 		<menu id="40" label="OpenBox">
 			<menu id="client-list-menu"/>

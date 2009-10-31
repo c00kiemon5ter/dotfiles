@@ -5,7 +5,7 @@
 " rsontech --> http://rsontech.net/dotfiles/.vimrc
 " ciaranm  --> http://github.com/ciaranm/dotfiles-ciaranm/blob/master/vimrc
 "
-
+ 
 " Enable filetype settings {{{
 if has("eval")
 	filetype on
@@ -46,6 +46,9 @@ set backupdir=~/.vim/backups/ ",/tmp/vimbackups/
 " Automatically save before commands like :next and :make
 set autowrite
 
+" do auto identation
+set autoindent
+
 " Wrap text
 set wrap
 " Wrap in these
@@ -79,7 +82,7 @@ set ignorecase
 " Speed up macros
 set lazyredraw
 
-" Place new window right of the current 
+" Place new window right of the current
 set splitright
 
 " Use the cool tab complete menu
@@ -118,9 +121,9 @@ set smartindent
 "  [c]ommand
 "  [a]ll
 "set mouse=a
-"}}} 
+"}}}
 
-" Color Scheme {{{
+"z Color Scheme {{{
 "colorscheme desert256
 "colorscheme calmar256-dark
 "colorscheme calmar256-light
@@ -137,9 +140,16 @@ set smartindent
 "colorscheme wombat256
 "colorscheme leo
 colorscheme miromiro
+
 "}}}
 
 " auto commands {{{
+
+:ab #d #define
+:ab #i #include
+:ab #b /*******************************
+:ab #e *******************************/
+
 if has("autocmd")
     " Set comment characters for common languages
     autocmd FileType python,sh,bash,zsh,ruby,perl let StartComment="#" | let EndComment=""
@@ -221,3 +231,4 @@ endfun
 "}}}
 
 " vim:foldmethod=marker:foldmarker={{{,}}}:foldlevel=0
+
