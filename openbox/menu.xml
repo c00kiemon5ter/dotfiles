@@ -47,6 +47,13 @@
 					</execute>
 				</action>
 			</item>
+            <item label="CodeBlocks">
+                <action name="Execute">
+                    <execute>
+                        codeblocks
+                    </execute>
+                </action>
+            </item>
 			<item label="Netbeans">
 				<action name="Execute">
 					<execute>

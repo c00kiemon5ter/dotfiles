@@ -2,8 +2,10 @@ playlist_display_mode = "columns"
 browser_display_mode = "columns"
 search_engine_display_mode = "columns"
 progressbar_color = "$1"
-song_columns_list_format = "(7)[black]{l} (28)[red]{a} (28)[yellow]{t} (28)[green]{b}"
-#progressbar_color = "green"
+
+song_columns_list_format = "(7)[black]{l} (28)[green]{t} (28)[red]{a} (28)[blue]{b}"
+
+progressbar_color = "black"
 header_visibility = "no"
 statusbar_visibility = "no"
 fancy_scrolling = "yes"

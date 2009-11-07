@@ -56,7 +56,7 @@ alias vx='vim ~/.Xdefaults'
 alias :q='exit'
 
 # Jsymphonic
-alias jsym="cd ~/Downloads/JSymph/ && java -jar JSymphonic_v0.3.0b.jar"
+#alias jsym="cd ~/Downloads/JSymph/ && java -jar JSymphonic_v0.3.0b.jar"
 
 # dump euse error messages
 alias euse="euse -i $@ 2>/dev/null"

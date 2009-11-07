@@ -24,7 +24,6 @@ URxvt.borderLess:true
 URxvt.perl-ext-common:default,tabbed,matcher,-selection-popup,-option-popupi,searchable-scrollback<M-s>
 !,-kuake<F12>
 URxvt.geometry:80x26
-URxvt*depth:32
 URxvt*buffered:true
 URxvt*urlLauncher:chromium-bin
 
@@ -108,6 +107,8 @@ URxvt*boldItalicFont:   xft:Droid Sans Mono:bold:italic:autohint=true
 !}}}
 
 !URxvt Colors {{{
+URxvt*depth:24
+!32
 URxvt*cursorColor:grey
 URxvt*pointerColor:grey
 URxvt*pointerColorBackground:black
@@ -125,7 +126,9 @@ URxvt*pointerBlankDelay:2
 
 ! ** JesuSuperStar ** !
 !URxvt*background: rgba:0000/0000/0000/bbbb
-URxvt*background: rgba:0000/0000/0000/c000
+!URxvt*background: rgba:0000/0000/0000/c000
+URxvt*background: #080808
+! 242424 1F1F1F 1A1A1A 141414 0F0F0F 0A0A0A 080808
 URxvt*foreground: light grey
 ! Black
 *color0: #101010

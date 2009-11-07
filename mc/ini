@@ -85,6 +85,9 @@ reverse_files_only=1
 skin=default
 keymap=mc.keymap
 
+editor_check_new_line=0
+copymove_persistent_attr=1
+
 [Layout]
 equal_split=1
 first_panel_size=40
