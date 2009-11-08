@@ -19,7 +19,7 @@
 			<item label="Rxvt-Unicode">
 				<action name="Execute">
 					<execute>
-						~/.scripts/urxvt_client.sh
+						~/.scripts/urxvt_client.sh -pe default,-tabbed
 					</execute>
 				</action>
             </item>

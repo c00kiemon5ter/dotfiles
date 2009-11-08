@@ -89,15 +89,15 @@ editor_check_new_line=0
 copymove_persistent_attr=1
 
 [Layout]
-equal_split=1
+equal_split=0
 first_panel_size=40
-message_visible=1
-keybar_visible=1
+message_visible=0
+keybar_visible=0
 xterm_title=1
 output_lines=0
 command_prompt=1
-menubar_visible=1
-show_mini_info=1
+menubar_visible=0
+show_mini_info=0
 permission_mode=0
 filetype_mode=1
 
@@ -138,11 +138,11 @@ panel_display_codepage=Other_8_bit
 [Misc]
 ftpfs_password=anonymous@
 ftp_proxy_host=gate
-display_codepage=Other_8_bit
+display_codepage=UTF-8
 ftp_codepage=Other_8_bit
 
 find_ignore_dirs=
-source_codepage=Other_8_bit
+source_codepage=UTF-8
 
 [Colors]
 base_color=

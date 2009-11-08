@@ -123,7 +123,7 @@ set smartindent
 "set mouse=a
 "}}}
 
-"z Color Scheme {{{
+" Color Scheme {{{
 "colorscheme desert256
 "colorscheme calmar256-dark
 "colorscheme calmar256-light
@@ -138,8 +138,10 @@ set smartindent
 "colorscheme xoria256
 "colorscheme inkpot
 "colorscheme wombat256
-"colorscheme leo
-colorscheme miromiro
+
+"colorscheme molokai
+colorscheme leo
+"colorscheme miromiro
 
 "}}}
 

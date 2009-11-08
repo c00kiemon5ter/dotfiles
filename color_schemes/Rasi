@@ -1,0 +1,25 @@
+! -- by Rasi -- !
+URxvt*background: rgba:0000/0000/0000/c000
+!URxvt*background: #000000
+!URxvt*background: #101010
+URxvt*foreground: #B0B0B0
+URxvt*color0: #101010
+URxvt*color1: #f13a21
+URxvt*color2: #93f91d
+URxvt*color3: #ffd00a
+URxvt*color4: #004f9e
+URxvt*color5: #ec0048
+URxvt*color6: #2aa7e7
+URxvt*color7: #f2f2f2
+!URxvt*color7: #ffffff
+URxvt*color8: #1d202f
+!URxvt*color9: #ff361e
+URxvt*color9: #ffffff
+URxvt*color10: #ffc005
+URxvt*color11: #93ff00
+URxvt*color12: #0071ff
+URxvt*color13: #ef0051
+URxvt*color14: #4bb8fd
+URxvt*color15: #ffffff
+
+

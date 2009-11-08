@@ -1,0 +1,29 @@
+! -- by drkwolf -- !
+! -- vim theme ~ molokai -- !
+URxvt*shading:40
+*background: #262626
+*foreground: light grey
+!black
+*color0: #222222
+*color8: #554444
+!red
+*color1: #EA6868
+*color9: #FF7272
+!green
+*color2: #ABCB8D
+*color10: #AFD78A
+!yellow
+*color3: #E8AE5B
+*color11: #FFA75D
+!blue
+*color4: #71C5F4
+*color12: #67CDE9
+!magenta
+*color5: #E2BAF1
+*color13: #ECAEE9
+!cyan
+*color6: #21F1EA
+*color14: #36FFFC
+!white
+*color7: #F1F1F1
+*color15: #FFFFFF
