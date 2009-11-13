@@ -9,17 +9,10 @@
 					</execute>
 				</action>
 			</item>
-			<item label="FireFox">
+    		<item label="Rxvt-Unicode">
 				<action name="Execute">
 					<execute>
-						firefox
-					</execute>
-				</action>
-			</item>
-			<item label="Rxvt-Unicode">
-				<action name="Execute">
-					<execute>
-						~/.scripts/urxvt_client.sh -pe default,-tabbed
+						~/.scripts/urxvt_client.sh
 					</execute>
 				</action>
             </item>
@@ -130,14 +123,7 @@
 			</item>
 		</menu>
 		<menu id="5" label="Network">
-			<item label="FireFox">
-				<action name="Execute">
-					<execute>
-						firefox
-					</execute>
-				</action>
-			</item>
-			<item label="Chromium">
+    		<item label="Chromium">
 				<action name="Execute">
 					<execute>
                         sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; chromium-bin'

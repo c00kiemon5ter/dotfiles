@@ -28,7 +28,7 @@ parcellite &
 emesene -i &
 
 # start sonata in systray
-sonata -t &
+#sonata -t &
 
 # start conky 
 conky -c ~/.conky/album.conkyrc &
@@ -46,7 +46,7 @@ unclutter &
 #wmctrl -ir $(wmctrl -li | grep tint2 | awk '{print $1}') -b add,above
 
 # start compositing manager
-#xcompmgr -CfF -o.55 -D4 -m.86 &
+xcompmgr -CfF -o.55 -D4 -m.86 &
 
 # lock screen with image
 #xautolock -time 5 -locker "feh -FZxN --hide-pointer /home/koukos/Downloads/Themes_Stuff/Walls/the_screamy_wall/screamy1280x1024.jpg" &

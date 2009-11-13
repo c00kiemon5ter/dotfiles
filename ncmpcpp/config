@@ -34,7 +34,7 @@ use_console_editor = "yes"
 
 song_list_format = "{%a}{ %t}$R{ (%l)}"
 #song_columns_list_format = "(7)[black]{l} (28)[red]{a} (28)[green]{t} (28)[black]{b}"
-song_columns_list_format = "(20)[red]{a} (28)[green]{t} (25)[black]{b}"
+song_columns_list_format = "(20)[red]{a} (32)[green]{t} (25)[black]{b}"
 song_status_format = "%t{ by %a}{ from %b}{ (%y)}"
 
 colors_enabled = "yes"

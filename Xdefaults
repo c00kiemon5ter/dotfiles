@@ -27,12 +27,12 @@ URxvt*title:URxvt
 URxvt*iconName:console
 URxvt*termName:rxvt-unicode
 
-URxvt*geometry:80x25
-URxvt*borderLess:true
-URxvt*externalBorder:0
+URxvt*geometry:80x24
+URxvt*borderLess:false
+URxvt*externalBorder:1
 URxvt*internalBorder:0
 
-URxvt*perl-ext-common:default,tabbed,matcher,-selection-popup,-option-popupi,searchable-scrollback<M-s>
+URxvt*perl-ext-common:default,-tabbed,matcher,-selection-popup,-option-popupi,searchable-scrollback<M-s>
 
 URxvt*visualBell:false
 URxvt*cursorBlink:true

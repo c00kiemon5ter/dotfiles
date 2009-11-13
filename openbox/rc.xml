@@ -292,10 +292,16 @@
       <action name="Execute">
         <command>gmrun</command>
       </action>
+   </keybind>
+   <keybind key="A-grave">
+      <action name="Execute">
+        <command>~/.scripts/app_focus.sh urxvt</command> 
+      </action>
     </keybind>
     <keybind key="W-grave">
       <action name="Execute">
-        <command>~/.scripts/app_focus.sh urxvt</command>
+        <!-- <command>~/.scripts/app_focus.sh urxvt</command> -->
+        <command>~/.scripts/urxvt_client.sh</command>
       </action>
     </keybind>
     <keybind key="XF86HomePage">
@@ -702,6 +708,9 @@
     <!-- <application name="Pcmanfm" class="pcmanfm">
 		<decor>yes</decor>
 	</application> -->
+    <application name="urxvt" class="URxvt">
+        <decor>no</decor>
+    </application>
     <application class="Firefox" role="browser">
       <decor>no</decor>
       <maximized>yes</maximized>
