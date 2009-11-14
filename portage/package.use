@@ -1,0 +1,9 @@
+x11-drivers/nvidia-drivers -multilib custom-cflags
+dev-util/subversion -dso
+dev-util/git -gtk
+app-admin/syslog-ng -sql
+www-plugins/adobe-flash -32bit
+media-sound/sonata -trayicon
+dev-libs/DirectFB -X
+dev-util/codeblocks contrib
+
