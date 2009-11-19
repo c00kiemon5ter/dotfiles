@@ -1,0 +1,1036 @@
+
+
+## Wireless WiFI Support ----
+net-wireless/wpa_supplicant ~amd64
+dev-libs/libnl ~amd64
+net-wireless/wireless-tools ~amd64
+
+# NetworManager
+net-misc/networkmanager ~amd64
+sys-auth/policykit ~amd64
+
+# WICD
+net-misc/wicd ~amd64
+sys-power/pm-utils ~amd64
+app-text/xmlto ~amd64
+app-text/docbook-xml-dtd ~amd64
+sys-apps/vbetool ~amd64
+dev-libs/libx86 ~amd64
+dev-python/urwid ~amd64
+
+# NOT TO BE USED, PREFER ATH5K BUILT INTO THE KERNEL
+net-wireless/madwifi-ng ~amd64
+net-wireless/madwifi-ng-tools ~amd64
+
+## X-SERVER ---------------
+
+# xorg-x11
+x11-base/xorg-x11 ~amd64
+x11-base/xorg-server ~amd64
+x11-apps/x11perf ~amd64
+x11-apps/smproxy ~amd64
+x11-apps/xev ~amd64
+x11-apps/mkfontscale ~amd64
+x11-apps/mkfontdir ~amd64
+x11-libs/libXrender ~amd64
+x11-proto/renderproto ~amd64
+x11-apps/xprop ~amd64
+x11-libs/libXau ~amd64
+x11-apps/xcmsdb ~amd64
+x11-libs/libXrandr ~amd64
+x11-libs/libXxf86vm ~amd64
+x11-apps/xkbevd ~amd64
+x11-libs/libpciaccess ~amd64
+x11-apps/xkbcomp ~amd64
+x11-apps/sessreg ~amd64
+x11-libs/xtrans ~amd64
+x11-apps/xdpyinfo ~amd64
+x11-libs/libXinerama ~amd64
+x11-libs/libXmu ~amd64
+x11-apps/xrdb ~amd64
+x11-libs/libFS ~amd64
+x11-apps/xwininfo ~amd64
+x11-apps/luit ~amd64
+x11-apps/xpr ~amd64
+x11-misc/util-macros ~amd64
+x11-apps/xinput ~amd64
+x11-libs/libSM ~amd64
+x11-libs/libXfont ~amd64
+x11-libs/libXv ~amd64
+x11-apps/xrandr ~amd64
+x11-libs/libXScrnSaver ~amd64
+x11-libs/libxkbfile ~amd64
+x11-libs/libXft ~amd64
+x11-libs/libXext ~amd64
+x11-libs/libX11 ~amd64
+x11-apps/xwd ~amd64
+x11-proto/xextproto ~amd64
+x11-libs/libdrm ~amd64
+x11-proto/inputproto ~amd64
+x11-proto/xf86driproto ~amd64
+x11-apps/rgb ~amd64
+x11-apps/xinit ~amd64
+x11-proto/randrproto ~amd64
+x11-libs/libXi ~amd64
+x11-libs/libnotify ~amd64
+media-libs/mesa ~amd64
+media-fonts/font-xfree86-type1 ~amd64
+x11-proto/dri2proto ~amd64
+x11-misc/xdg-utils ~amd64
+# Devices and Drivers
+x11-drivers/xf86-input-evdev ~amd64
+
+## Portage --------------
+sys-apps/portage ~amd64
+sys-apps/sandbox ~amd64
+sys-apps/slocate ~amd64
+app-portage/eix ~amd64
+app-portage/gentoolkit ~amd64
+app-portage/layman ~amd64
+app-admin/eselect ~amd64
+app-admin/eselect-news ~amd64
+app-admin/eselect-python ~amd64
+app-admin/eselect-boost ~amd64
+app-admin/eselect-opengl ~amd64
+app-admin/gam-server ~amd64
+app-admin/gamin ~amd64
+dev-libs/libgamin ~amd64
+dev-util/ccache ~amd64
+x11-apps/xauth ~amd64
+app-portage/elogviewer ~amd64
+app-portage/autounmask ~amd64
+app-portage/genlop ~amd64
+dev-util/git ~amd64
+
+# System ---------------
+dev-util/oprofile ~amd64
+sys-fs/ntfsprogs ~amd64
+sys-fs/ntfs3g ~amd64
+sys-fs/fuse ~amd64
+sys-fs/jfsutils ~amd64
+sys-fs/reiser4progs ~amd64
+sys-fs/reiserfsprogs ~amd64
+sys-fs/xfsprogs ~amd64
+sys-fs/xfsdump ~amd64
+sys-fs/e2fsprogs ~amd64
+sys-libs/e2fsprogs-libs ~amd64
+sys-libs/gpm ~amd64
+sys-boot/grub ~amd64
+sys-block/gparted ~amd64
+sys-process/vixie-cron ~amd64
+app-admin/conky ~amd64
+app-shells/gentoo-bashcomp ~amd64
+app-shells/tcsh ~amd64
+x11-apps/xset ~amd64
+sys-devel/libtool ~amd64
+sys-apps/hwinfo ~amd64
+sys-apps/v86d ~amd64 #framebuffer deamon, uvesafb support
+sys-apps/hal ~amd64
+app-misc/hal-info ~amd64
+dev-libs/libusb ~amd64
+virtual/libusb ~amd64
+sys-apps/usbutils ~amd64
+sys-apps/baselayout ~amd64
+sys-apps/openrc ~amd64
+sys-apps/sysvinit ~amd64
+sys-fs/udev ~amd64
+sys-fs/cryptsetup ~amd64
+net-misc/dhcpcd ~amd64
+sys-fs/device-mapper ~amd64
+sys-apps/man-pages ~amd64
+sys-apps/which  ~amd64
+sys-apps/util-linux ~amd64
+sys-apps/pciutils ~amd64
+sys-apps/module-init-tools ~amd64
+sys-apps/groff ~amd64
+sys-apps/grep ~amd64
+sys-apps/findutils ~amd64
+sys-apps/file ~amd64
+sys-apps/ed ~amd64
+sys-apps/dmidecode ~amd64
+sys-apps/dmapi ~amd64
+sys-apps/debianutils ~amd64
+x11-terms/xterm ~amd64
+sys-libs/timezone-data ~amd64
+sys-libs/readline ~amd64
+sys-libs/pam ~amd64
+sys-libs/ncurses ~amd64
+sys-libs/libcap ~amd64
+sys-libs/gdbm ~amd64
+sys-libs/db ~amd64
+sys-auth/pambase ~amd64
+sys-auth/consolekit ~amd64
+sys-devel/binutils ~amd64
+sys-devel/bison ~amd64
+sys-devel/gnuconfig ~amd64
+sys-devel/patch ~amd64
+sys-power/acpid ~amd64
+sys-apps/coreutils ~amd64
+dev-libs/libpcre ~amd64
+app-admin/lsat ~amd64
+sys-apps/dbus ~amd64
+dev-libs/dbus-glib ~amd64
+dev-libs/openssl ~amd64
+net-fs/samba ~amd64
+net-fs/samba-server ~amd64
+net-fs/samba-client ~amd64
+net-fs/samba-libs ~amd64
+app-arch/p7zip ~amd64
+sys-process/at ~amd64
+sys-libs/slang ~amd64
+sys-apps/halevt ~amd64
+dev-libs/boolstuff ~amd64
+net-libs/gnutls ~amd64
+dev-libs/libtasn1 ~amd64
+
+## Cd_Dvd Tools ------
+media-libs/libmodplug ~amd64
+app-cdr/dvd+rw-tools ~amd64
+app-arch/libarchive ~amd64
+media-libs/libdvdread ~amd64
+media-libs/libdvdnav ~amd64
+media-libs/libdvdcss ~amd64
+app-cdr/cdrtools ~amd64
+media-libs/xvid ~amd64
+app-cdr/brasero ~amd64
+dev-libs/libisofs ~amd64
+
+## Alsa Sound ---------
+media-libs/alsa-lib ~amd64
+media-sound/alsa-utils ~amd64
+media-plugins/alsa-plugins ~amd64
+media-sound/alsa-tools ~amd64
+media-sound/alsa-headers ~amd64
+app-text/docbook-xml-dtd ~amd64
+app-text/gnome-doc-utils ~amd64
+app-text/xmlto ~amd64
+dev-util/dialog ~amd64
+dev-libs/libburn ~amd64
+app-cdr/cdrdao ~amd64
+
+## GCC -----------------
+sys-devel/gcc ~amd64
+sys-libs/glibc ~amd64
+sys-devel/gcc-config ~amd64
+dev-util/colorgcc ~amd64
+sys-devel/gdb ~amd64
+sys-devel/m4 ~amd64
+sys-devel/automake-wrapper ~amd64
+sys-devel/automake ~amd64
+sys-devel/autoconf ~amd64
+
+## Kernel Sources ------
+sys-kernel/gentoo-sources ~amd64
+
+## Nvidia Drivers ------
+x11-drivers/nvidia-drivers ~amd64
+media-video/nvidia-settings ~amd64
+x11-apps/mesa-progs ~amd64
+
+## AppEmulation x86 ---
+app-emulation/emul-linux-x86-baselibs ~amd64
+app-emulation/emul-linux-x86-compat ~amd64
+app-emulation/emul-linux-x86-gtklibs ~amd64
+app-emulation/emul-linux-x86-java ~amd64
+app-emulation/emul-linux-x86-medialibs ~amd64
+app-emulation/emul-linux-x86-sdl ~amd64
+app-emulation/emul-linux-x86-soundlibs ~amd64
+app-emulation/emul-linux-x86-xlibs ~amd64
+app-emulation/wine ~amd64
+
+## Surfing Internet --------
+# Firefox
+www-client/mozilla-firefox ~amd64
+net-libs/xulrunner ~amd64
+dev-libs/nss ~amd64
+dev-util/intltool ~amd64
+www-plugins/gecko-mediaplayer ~amd64
+www-plugins/mplayerplug-in ~amd64
+net-ftp/filezilla ~amd64
+# Flash Web
+www-plugins/adobe-flash ~amd64
+
+## Network Analyzers / Penetration Testing / Security
+# Nmap
+net-analyzer/nmap ~amd64
+dev-perl/Nmap-Parser ~amd64
+net-libs/libpcap ~amd64
+net-libs/libpcapnav ~amd64
+# Nessus
+net-analyzer/nessus ~amd64
+net-analyzer/nessus-core ~amd64
+net-analyzer/libnasl ~amd64
+net-analyzer/nessus-plugins ~amd64
+net-analyzer/nessus-libraries ~amd64
+net-analyzer/nessus-client **
+net-analyzer/nessus-bin **
+# Hydra
+net-analyzer/hydra ~amd64
+net-libs/libssh ~amd64
+# Nikto
+net-analyzer/nikto ~amd64
+#Paros
+net-proxy/paros ~amd64
+
+## TextEditors -------------
+app-editors/vim ~amd64
+app-editors/vim-core ~amd64
+app-editors/nano ~amd64
+app-vim/phpdocs ~amd64
+app-vim/gtk-syntax ~amd64
+
+## Dicts
+app-text/gtkspell ~amd64
+app-text/aspell ~amd64
+
+## Mobile Support -----------
+app-mobilephone/obexftp ~amd64
+dev-libs/openobex ~amd64
+sys-fs/obexfs ~amd64
+gnome-extra/gnome-vfs-obexftp ~amd64
+net-wireless/bluez-utils ~amd64
+net-wireless/bluez-gnome ~amd64
+app-mobilephone/obex-data-server ~amd64
+
+## MEDIA ---------------------
+
+# WebCam Support
+media-video/guvcview ~amd64
+media-video/linux-uvc ~amd64
+media-video/luvcview ~amd64
+
+# Recording
+media-video/recordmydesktop ~amd64
+x11-misc/xvidcap ~amd64
+
+# vlc
+media-video/vlc ~amd64
+media-libs/libdvbpsi ~amd64
+x11-libs/libxcb ~amd64
+x11-proto/xcb-proto ~amd64
+
+# MPlayer
+media-video/smplayer ~amd64
+media-video/mplayer ~amd64
+media-libs/giflib ~amd64
+media-libs/libtheora ~amd64
+www-plugins/mplayerplug-in ~amd64
+media-video/gnome-mplayer ~amd64
+x11-themes/mplayer-skins ~amd64
+media-libs/x264 ~amd64
+
+# media-plugins/gst-plugins
+media-plugins/gst-plugins-a52dec ~amd64
+media-plugins/gst-plugins-alsa ~amd64
+media-plugins/gst-plugins-amrnb ~amd64
+media-plugins/gst-plugins-amrwb ~amd64
+media-plugins/gst-plugins-annodex ~amd64
+media-plugins/gst-plugins-cdio ~amd64
+media-plugins/gst-plugins-cdparanoia ~amd64
+media-plugins/gst-plugins-dv ~amd64
+media-plugins/gst-plugins-dvb ~amd64
+media-plugins/gst-plugins-dvdread ~amd64
+media-plugins/gst-plugins-esd ~amd64
+media-plugins/gst-plugins-faac ~amd64
+media-plugins/gst-plugins-faad ~amd64
+media-plugins/gst-plugins-farsight ~amd64
+media-plugins/gst-plugins-ffmpeg ~amd64
+media-plugins/gst-plugins-flac ~amd64
+media-plugins/gst-plugins-fluendo-mpegdemux ~amd64
+media-plugins/gst-plugins-gconf ~amd64
+media-plugins/gst-plugins-gio ~amd64
+media-plugins/gst-plugins-gnomevfs ~amd64
+media-plugins/gst-plugins-jpeg ~amd64
+media-plugins/gst-plugins-ladspa ~amd64
+media-plugins/gst-plugins-lame ~amd64
+media-plugins/gst-plugins-libmms ~amd64
+media-plugins/gst-plugins-libpng ~amd64
+media-plugins/gst-plugins-libvisual ~amd64
+media-plugins/gst-plugins-mad ~amd64
+media-plugins/gst-plugins-meta ~amd64
+media-plugins/gst-plugins-modplug ~amd64
+media-plugins/gst-plugins-mpeg2dec ~amd64
+media-plugins/gst-plugins-musepack ~amd64
+media-plugins/gst-plugins-mythtv ~amd64
+media-plugins/gst-plugins-neon ~amd64
+media-plugins/gst-plugins-ogg ~amd64
+media-plugins/gst-plugins-oss ~amd64
+media-plugins/gst-plugins-pango ~amd64
+media-plugins/gst-plugins-pulse ~amd64
+media-plugins/gst-plugins-raw1394 ~amd64
+media-plugins/gst-plugins-resindvd ~amd64
+media-plugins/gst-plugins-shout2 ~amd64
+media-plugins/gst-plugins-sidplay ~amd64
+media-plugins/gst-plugins-soup ~amd64
+media-plugins/gst-plugins-speex ~amd64
+media-plugins/gst-plugins-taglib ~amd64
+media-plugins/gst-plugins-theora ~amd64
+media-plugins/gst-plugins-twolame ~amd64
+media-plugins/gst-plugins-v4l ~amd64
+media-plugins/gst-plugins-v4l2 ~amd64
+media-plugins/gst-plugins-vorbis ~amd64
+media-plugins/gst-plugins-wavpack ~amd64
+media-plugins/gst-plugins-x ~amd64
+media-plugins/gst-plugins-x264 ~amd64
+media-plugins/gst-plugins-ximagesrc ~amd64
+media-plugins/gst-plugins-xvideo ~amd64
+
+# Banshee
+media-sound/banshee ~amd64
+media-libs/gst-plugins-bad ~amd64
+media-libs/gst-plugins-ugly ~amd64
+dev-lang/boo ~amd64
+dev-lang/mono ~amd64
+dev-dotnet/taglib-sharp ~amd64
+dev-dotnet/mono-addins ~amd64
+dev-dotnet/libgdiplus ~amd64
+dev-dotnet/gconf-sharp ~amd64
+dev-dotnet/gtk-sharp ~amd64
+dev-dotnet/art-sharp ~amd64
+dev-dotnet/glade-sharp ~amd64
+dev-dotnet/gnome-sharp ~amd64
+dev-dotnet/gnomevfs-sharp ~amd64
+dev-dotnet/gtk-sharp-gapi ~amd64
+dev-dotnet/atk-sharp ~amd64
+dev-dotnet/gdk-sharp ~amd64
+dev-dotnet/pango-sharp ~amd64
+dev-dotnet/glib-sharp ~amd64
+dev-dotnet/notify-sharp ~amd64
+dev-dotnet/gluezilla ~amd64
+dev-dotnet/libgdiplus ~amd64
+dev-libs/liboil ~amd64
+
+# Audacious
+media-sound/audacious ~amd64
+x11-misc/notification-daemon ~amd64 # :P :P 
+
+## Development ------------
+
+# VHDL
+sci-electronics/freehdl ~amd64
+sci-electronics/ghdl ~amd64
+virtual/gnat ~amd64
+app-admin/eselect-gnat ~amd64
+dev-lang/gnat-gcc ~amd64
+dev-scheme/guile ~amd64
+
+# GEDA
+sci-electronics/geda ~amd64
+sci-electronics/geda-docs ~amd64
+sci-electronics/geda-examples ~amd64
+sci-electronics/geda-gattrib ~amd64
+sci-electronics/geda-gnetlist ~amd64
+sci-electronics/geda-gschem ~amd64
+sci-electronics/geda-gsymcheck ~amd64
+sci-electronics/geda-suite ~amd64
+sci-electronics/geda-symbols ~amd64
+sci-electronics/geda-utils ~amd64
+sci-libs/libgeda ~amd64
+media-libs/gd ~amd64
+sci-electronics/ng-spice-rework ~amd64
+sci-electronics/iverilog ~amd64
+sci-visualization/xgraph ~amd64
+sci-electronics/gnetman ~amd64
+sci-electronics/gtkwave ~amd64
+sci-electronics/gnucap ~amd64
+sci-electronics/gwave ~amd64
+sci-electronics/gerbv ~amd64
+sci-electronics/pcb ~amd64
+x11-libs/guile-gtk ~amd64
+dev-scheme/guile ~amd64
+
+# Java 
+dev-java/sun-jdk ~amd64
+virtual/jdk ~amd64
+virtual/jre ~amd64
+dev-java/javacup ~amd64
+dev-java/httpunit ~amd64
+dev-java/lucene ~amd64
+dev-java/bytelist ~amd64
+dev-java/freemarker ~amd64
+dev-java/jvyamlb ~amd64
+dev-java/flyingsaucer ~amd64
+dev-java/jdbc-mysql ~amd64
+dev-java/junit ~amd64
+dev-java/glassfish-transaction-api ~amd64
+dev-java/asm ~amd64
+dev-java/svgsalamander ~amd64
+dev-java/juel ~amd64
+dev-java/jython ~amd64
+dev-java/sablecc ~amd64
+dev-java/sun-javamail ~amd64
+dev-java/javacc ~amd64
+dev-java/java-config-wrapper ~amd64
+dev-java/stringtemplate ~amd64
+dev-java/antlr ~amd64
+dev-java/constantine ~amd64
+dev-java/jna-posix ~amd64
+x11-libs/libICE ~amd64
+
+# NetBeans
+dev-util/netbeans ~amd64
+dev-util/subversion ~amd64
+dev-java/cglib ~amd64
+dev-java/ehcache ~amd64
+dev-java/hibernate ~amd64
+dev-java/oscache ~amd64
+dev-java/sun-jacc-api ~amd64
+dev-java/jsch ~amd64
+java-virtuals/jms ~amd64
+dev-java/jna ~amd64
+dev-java/jcodings ~amd64
+dev-java/jakarta-slide-webdavclient ~amd64
+dev-util/jay ~amd64
+dev-java/glassfish-deployment-api ~amd64
+dev-java/proguard ~amd64
+dev-java/joni ~amd64
+dev-java/jettison ~amd64
+dev-java/jsr311-api ~amd64
+java-virtuals/jaxp-virtual ~amd64
+dev-java/java-config ~amd64
+virtual/libffi ~amd64
+dev-libs/libffi ~amd64
+perl-core/MIME-Base64 ~amd64
+
+# Spim MIPS-32
+app-emulation/spim ~amd64
+
+# Apache Server
+www-servers/apache ~amd64
+app-admin/apache-tools ~amd64
+
+# PHP 
+devl-lang/php ~amd64
+dev-db/phpmyadmin ~amd64
+
+# MySQL
+dev-db/mysql-administrator ~amd64
+dev-db/mysql-query-browser ~amd64
+dev-cpp/gtkmm ~amd64
+dev-perl/DBD-mysql ~amd64
+dev-db/mysql ~amd64
+dev-db/mysql-gui-tools ~amd64
+
+# Python
+dev-lang/python ~amd64
+app-admin/python-updater ~amd64
+dev-python/dbus-python ~amd64
+dev-python/gst-python ~amd64
+dev-python/notify-python ~amd64
+dev-python/python-ldap ~amd64
+dev-python/pyopengl ~amd64
+dev-python/sip ~amd64
+
+# Perl 
+virtual/perl-libnet ~amd64
+virtual/perl-Test-Simple ~amd64
+virtual/perl-Sys-Syslog ~amd64
+virtual/perl-Storable ~amd64
+virtual/perl-Scalar-List-Utils ~amd64
+virtual/perl-Module-Build ~amd64
+virtual/perl-MIME-Base64 ~amd64
+virtual/perl-File-Spec ~amd64
+virtual/perl-IO-Zlib ~amd64
+virtual/perl-IO-Compress-Zlib ~amd64
+virtual/perl-IO-Compress-Base ~amd64
+virtual/perl-ExtUtils-ParseXS ~amd64
+virtual/perl-ExtUtils-CBuilder ~amd64
+virtual/perl-Digest-MD5 ~amd64
+virtual/perl-Compress-Zlib ~amd64
+virtual/perl-Compress-Raw-Zlib ~amd64
+virtual/perl-CGI ~amd64
+virtual/perl-Archive-Tar ~amd64
+sys-devel/libperl ~amd64
+dev-perl/libwww-perl ~amd64
+dev-lang/perl ~amd64
+app-admin/perl-cleaner ~amd64
+perl-core/CGI ~amd64
+perl-core/libnet ~amd64
+perl-core/Digest-MD5 ~amd64
+perl-core/Storable ~amd64
+perl-core/Test-Simple ~amd64
+perl-core/File-Spec ~amd64
+perl-core/Module-Build ~amd64
+perl-core/ExtUtils-CBuilder ~amd64
+perl-core/Archive-Tar ~amd64
+virtual/perl-Test-Harness ~amd64
+perl-core/Test-Harness ~amd64
+perl-core/ExtUtils-ParseXS ~amd64
+perl-core/IO-Zlib ~amd64
+perl-core/Scalar-List-Utils ~amd64
+virtual/perl-IO-Compress ~amd64 
+perl-core/IO-Compress ~amd64
+perl-core/Compress-Raw-Zlib ~amd64
+virtual/perl-Compress-Raw-Bzip2 ~amd64
+perl-core/Compress-Raw-Bzip2 ~amd64
+
+## OpenOffice ------------
+app-office/openoffice-bin ~amd64
+app-office/openoffice ~amd64
+dev-libs/boost ~amd64
+dev-util/boost-build ~amd64
+media-libs/glew ~amd64
+
+## Tcl / Tk -------------
+dev-lang/tk ~amd64
+dev-lang/tcl ~amd64
+dev-tcltk/tls ~amd64
+dev-tcltk/tcllib ~amd64
+
+## Instant Messager -------
+
+# kmess
+net-im/kmess ~amd64
+
+# irssi
+net-irc/irssi ~amd64
+
+# quassel
+net-irc/quassel ~amd64
+
+# amsn
+net-im/amsn ~amd64
+x11-themes/amsn-skins ~amd64
+app-text/pytextile ~amd64
+x11-proto/xproto ~amd64
+dev-tcltk/snack ~amd64
+
+# Skype
+net-im/skype ~amd64
+# Pidgin
+net-im/pidgin ~amd64
+x11-themes/pidgin-smileys ~amd64
+x11-plugins/pidgin-otr ~amd64
+x11-plugins/pidgin-musictracker ~amd64
+x11-plugins/msn-pecan ~amd64
+x11-plugins/pidgin-libnotify ~amd64
+x11-plugins/pidgin-facebookchat ~amd64
+x11-plugins/pidgin-extprefs ~amd64
+x11-plugins/pidgin-encryption ~amd64
+net-libs/libotr ~amd64
+net-libs/libmsn ~amd64
+dev-libs/json-glib ~amd64
+net-libs/farsight2 ~amd64
+net-libs/libnice ~amd64
+
+## Peer-2-Peer -----------
+net-p2p/ktorrent ~amd64
+dev-libs/geoip ~amd64
+
+# Torrent
+net-p2p/bittorrent ~amd64
+dev-python/wxpython ~amd64
+x11-libs/wxGTK ~amd64
+dev-python/twisted-web ~amd64
+dev-python/twisted ~amd64
+dev-python/pyopenssl ~amd64
+dev-python/dnspython ~amd64
+dev-python/pycrypto ~amd64
+net-zope/zopeinterface ~amd64
+net-p2p/lince ~amd64
+net-p2p/deluge ~amd64
+net-p2p/vuze ~amd64
+net-p2p/vuze-coreplugins ~amd64
+
+# eMule
+net-p2p/amule ~amd64
+
+# PDF-viewers
+app-text/epdfview ~amd64
+app-text/xpdf ~amd64
+dev-java/pdf-renderer ~amd64
+gnustep-apps/gspdf ~amd64
+
+# libjpeg
+media-libs/jpeg ~amd64
+
+## Gimp -----------
+media-gfx/gimp ~amd64
+media-libs/gegl ~amd64
+media-libs/babl ~amd64
+
+## Incscape
+media-gfx/inkscape ~amd64
+virtual/poppler-glib ~amd64
+dev-libs/poppler-glib ~amd64
+dev-libs/poppler ~amd64
+dev-cpp/pangomm ~amd64
+dev-cpp/glibmm ~amd64
+virtual/poppler-qt4 ~amd64
+virtual/poppler-utils ~amd64
+app-text/poppler-utils ~amd64
+dev-libs/poppler-qt4 ~amd64
+dev-libs/libsigc++ ~amd64
+dev-perl/libxml-perl ~amd64
+dev-cpp/cairomm ~amd64
+dev-libs/boehm-gc ~amd64
+dev-python/lxml ~amd64
+media-gfx/imagemagick ~amd64
+dev-python/numpy ~amd64
+dev-perl/Parse-Yapp ~amd64
+dev-perl/XML-RegExp ~amd64
+dev-perl/XML-DOM ~amd64
+dev-cpp/gtkmm ~amd64
+dev-perl/XML-XQL ~amd64
+dev-python/cython ~amd64
+media-gfx/graphviz ~amd64
+
+## Docks -----------
+
+# Dock - Awn
+gnome-extra/avant-window-navigator ~amd64
+gnome-extra/avant-window-navigator-extras ~amd64
+
+# Dock - Cairo Dock
+gnome-extra/cairo-dock ~amd64
+gnome-extra/cairo-dock-plugins ~amd64
+gnome-extra/cairo-dock-themes ~amd64
+
+## Fortune! ----------
+games-misc/fortune-mod-all ~amd64
+games-misc/fortune-mod ~amd64
+games-misc/fortune-mod-all ~amd64
+games-misc/fortune-mod-at-linux  ~amd64
+games-misc/fortune-mod-bofh-excuses ~amd64
+games-misc/fortune-mod-calvin ~amd64
+games-misc/fortune-mod-chucknorris ~amd64
+games-misc/fortune-mod-cs ~amd64
+games-misc/fortune-mod-debilneho ~amd64
+games-misc/fortune-mod-discworld ~amd64
+games-misc/fortune-mod-dubya ~amd64
+games-misc/fortune-mod-dune ~amd64
+games-misc/fortune-mod-familyguy ~amd65
+games-misc/fortune-mod-firefly ~amd64
+games-misc/fortune-mod-futurama ~amd64
+games-misc/fortune-mod-fvl ~amd64
+games-misc/fortune-mod-gentoo-dev ~amd64
+games-misc/fortune-mod-gentoo-forums ~amd64
+games-misc/fortune-mod-hitchhiker ~amd64
+games-misc/fortune-mod-homer ~amd64
+games-misc/fortune-mod-humorixfortunes ~amd64
+games-misc/fortune-mod-it ~amd64
+games-misc/fortune-mod-kernelcookies ~amd64
+games-misc/fortune-mod-martin-piskernig ~amd64
+games-misc/fortune-mod-mormon ~amd64
+games-misc/fortune-mod-norbert-tretkowski ~amd64
+games-misc/fortune-mod-osfortune ~amd64
+games-misc/fortune-mod-powerpuff ~amd64
+games-misc/fortune-mod-pqf ~amd64
+games-misc/fortune-mod-rss ~amd64
+games-misc/fortune-mod-scriptures ~amd64
+games-misc/fortune-mod-simpsons-chalkboard ~amd64
+games-misc/fortune-mod-slackware ~amd64
+games-misc/fortune-mod-smac ~amd64
+games-misc/fortune-mod-sp-fortunes ~amd64
+games-misc/fortune-mod-starwars ~amd64
+games-misc/fortune-mod-strangelove ~amd64
+games-misc/fortune-mod-tao ~amd64
+games-misc/fortune-mod-thomas-ogrisegg ~amd64
+games-misc/fortune-mod-woody-allen-it ~amd64
+games-misc/fortune-mod-zx-error ~amd64
+
+########################
+# DESKTOP ENVIRONMENTS #
+########################
+
+## Gtk To Qt
+x11-themes/gtk-engines-qtcurve ~amd64
+x11-themes/qtcurve ~amd64
+x11-themes/qtcurve-qt4 ~amd64
+x11-themes/gtk-engines-qtcurve ~amd64
+x11-themes/gtk-engines-qt ~amd64
+x11-themes/gtk-engines-kde4 ~amd64
+
+## Dynamic Window Manager
+x11-wm/wmii ~amd64
+sys-libs/libixp ~amd64
+
+## FluxBox -------------
+x11-wm/fluxbox ~amd64
+
+## Login Manager 
+sys-apps/qingy ~amd64
+media-gfx/qingy-themes ~amd64
+
+## OpenBox -------------
+x11-wm/openbox ~amd64
+x11-misc/obmenu ~amd64
+x11-misc/obconf ~amd64
+
+## Xmonad
+x11-wm/xmonad ~amd64
+dev-haskell/x11 ~amd64
+dev-haskell/mtl ~amd64
+dev-haskell/cabal ~amd64
+dev-lang/ghc ~amd64
+
+## MidnightCommander
+app-misc/mc ~amd64
+
+## PCMANFM
+x11-misc/pcmanfm ~amd64
+dev-perl/XML-NamespaceSupport ~amd64
+perl-core/Test-Simple ~amd64
+dev-perl/XML-LibXML-Common ~amd64
+dev-perl/XML-SAX ~amd64
+virtual/perl-Test-Simple ~amd64
+dev-perl/XML-LibXML ~amd64
+dev-perl/XML-Simple ~amd64
+x11-misc/icon-naming-utils ~amd64
+x11-themes/gnome-icon-theme ~amd64
+
+## X11-misc ------------
+lxde-base/lxappearance ~amd64
+x11-misc/xclip ~amd64
+x11-misc/tint2 ~amd64
+x11-misc/menumaker ~amd64
+x11-misc/whaw ~amd64
+x11-misc/xbindkeys ~amd64
+x11-misc/netwmpager ~amd64
+x11-misc/xlockmore ~amd64
+x11-misc/xautomation ~amd64
+x11-misc/xautolock ~amd4
+x11-misc/gmrun ~amd64
+x11-misc/wmctrl ~amd64
+x11-terms/rxvt-unicode ~amd64
+x11-terms/terminal ~amd64
+x11-terms/roxterm ~amd64
+x11-misc/glipper ~amd64
+x11-misc/shutterbug ~amd64
+dev-util/geany ~amd64
+x11-misc/parcellite ~amd64
+x11-libs/libxklavier ~amd64
+x11-plugins/screenlets ~amd64
+
+## XFCE-4
+dev-util/xfce4-dev-tools ~amd64
+x11-misc/xfce4-notifyd ~amd64
+x11-themes/xfce4-icon-theme ~amd64
+xfce-base/libxfce4menu ~amd64
+xfce-base/libxfce4util ~amd64
+xfce-base/xfce4-meta ~amd64
+xfce-base/xfce4-panel ~amd64
+xfce-base/xfce4-session ~amd64
+xfce-base/xfce4-settings ~amd64
+xfce-extra/xfce4-appfinder ~amd64
+xfce-extra/xfce4-battery-plugin ~amd64
+xfce-extra/xfce4-cellmodem-plugin ~amd64
+xfce-extra/xfce4-clipman-plugin ~amd64
+xfce-extra/xfce4-cpufreq-plugin ~amd64
+xfce-extra/xfce4-cpugraph-plugin ~amd64
+xfce-extra/xfce4-datetime-plugin ~amd64
+xfce-extra/xfce4-dict ~amd64
+xfce-extra/xfce4-diskperf-plugin ~amd64
+xfce-extra/xfce4-eyes-plugin ~amd64
+xfce-extra/xfce4-fsguard-plugin ~amd64
+xfce-extra/xfce4-genmon-plugin ~amd64
+xfce-extra/xfce4-gvfs-mount ~amd64
+xfce-extra/xfce4-linelight-plugin ~amd64
+xfce-extra/xfce4-mailwatch-plugin ~amd64
+xfce-extra/xfce4-mixer ~amd64
+xfce-extra/xfce4-modemlights-plugin ~amd64
+xfce-extra/xfce4-mount-plugin ~amd64
+xfce-extra/xfce4-mpc-plugin ~amd64
+xfce-extra/xfce4-netload-plugin ~amd64
+xfce-extra/xfce4-notes-plugin ~amd64
+xfce-extra/xfce4-places-plugin ~amd64
+xfce-extra/xfce4-power-manager ~amd64
+xfce-extra/xfce4-quicklauncher-plugin ~amd64
+xfce-extra/xfce4-radio-plugin ~amd64
+xfce-extra/xfce4-screenshooter ~amd64
+xfce-extra/xfce4-sensors-plugin ~amd64
+xfce-extra/xfce4-smartbookmark-plugin ~amd64
+xfce-extra/xfce4-stopwatch-plugin ~amd64
+xfce-extra/xfce4-systemload-plugin ~amd64
+xfce-extra/xfce4-taskmanager ~amd64
+xfce-extra/xfce4-time-out-plugin ~amd64
+xfce-extra/xfce4-timer-plugin ~amd64
+xfce-extra/xfce4-vala ~amd64
+xfce-extra/xfce4-verve-plugin ~amd64
+xfce-extra/xfce4-volstatus-icon ~amd64
+xfce-extra/xfce4-wavelan-plugin ~amd64
+xfce-extra/xfce4-weather-plugin ~amd64
+xfce-extra/xfce4-wmdock-plugin ~amd64
+xfce-extra/xfce4-xfapplet-plugin ~amd64
+xfce-extra/xfce4-xkb-plugin ~amd64
+
+## QT --------------
+x11-libs/qt-assistant ~amd64
+x11-libs/qt-core ~amd64
+x11-libs/qt-dbus ~amd64
+x11-libs/qt-demo ~amd64
+x11-libs/qt-gui ~amd64
+x11-libs/qt-opengl ~amd64
+x11-libs/qt-phonon ~amd64
+x11-libs/qt-qt3support ~amd64
+x11-libs/qt-script ~amd64
+x11-libs/qt-sql ~amd64
+x11-libs/qt-svg ~amd64
+x11-libs/qt-test ~amd64
+x11-libs/qt-webkit ~amd64
+x11-libs/qt-xmlpatterns ~amd64
+# extra 
+x11-libs/qt-gui ~amd64
+
+## GNOME --------------
+gnome-base/gnome ~amd64
+gnome-base/gnome-control-center ~amd64
+gnome-base/gconf ~amd64 
+gnome-base/gnome-applets ~amd64
+gnome-base/gnome-vfs ~amd64
+gnome-base/libgnome ~amd64
+gnome-base/gnome-settings-daemon ~amd64
+gnome-base/orbit ~amd64
+gnome-base/gnome-keyring ~amd64
+gnome-base/libgnomeui ~amd64
+gnome-base/gail ~amd64
+gnome-base/gvfs ~amd64
+gnome-base/gnome-volume-manager ~amd64
+gnome-base/libgnomeprint ~amd64
+gnome-base/gnome-session ~amd64
+gnome-base/libgnomeprintui ~amd64
+gnome-base/libbonoboui ~amd64
+gnome-base/libgnomekbd ~amd64
+gnome-base/nautilus ~amd64
+gnome-base/gdm ~amd64
+gnome-base/libgtop ~amd64
+gnome-base/eel ~amd64
+gnome-base/gnome-desktop ~amd64
+gnome-base/gnome-menus ~amd64
+gnome-base/gnome-panel ~amd64
+gnome-base/librsvg ~amd64
+gnome-base/libglade ~amd64
+# Gnome Extra
+gnome-extra/music-applet ~amd64
+gnome-extra/gnome-keyring-manager ~amd64
+dev-libs/nspr ~amd64
+gnome-extra/libgsf ~amd64
+# -- 
+gnome-extra/gnome-media ~amd64
+gnome-extra/gnome-system-monitor ~amd64
+gnome-extra/deskbar-applet ~amd64
+gnome-extra/gconf-editor ~amd64
+gnome-extra/swfdec-gnome ~amd64
+gnome-extra/zenity ~amd64
+gnome-extra/nautilus-cd-burner ~amd64
+gnome-extra/gcalctool ~amd64
+gnome-extra/gnome-user-docs ~amd64
+gnome-extra/gnome-screensaver ~amd64
+gnome-extra/gnome-games ~amd64
+gnome-extra/yelp ~amd64
+gnome-extra/gtkhtml ~amd64
+gnome-extra/bug-buddy ~amd64
+gnome-extra/gnome-utils ~amd64
+gnome-extra/fast-user-switch-applet ~amd64
+# app- 
+app-admin/pessulus ~amd64
+app-arch/file-roller ~amd64
+app-text/evince ~amd64
+app-editors/gedit ~amd64
+# dev-libs
+dev-libs/libunique ~amd64
+dev-libs/glib ~amd64
+dev-libs/atk ~amd64
+dev-libs/libgweather ~amd64
+dev-libs/totem-pl-parser ~amd64
+dev-util/intltool ~amd64
+# dev-python
+dev-python/libwnck-python ~amd64
+dev-python/libgtop-python ~amd64
+dev-python/totem-python ~amd64
+dev-python/libgnomeprint-python ~amd64
+dev-python/evolution-python ~amd64
+dev-python/nautilus-cd-burner-python ~amd64
+dev-python/librsvg-python ~amd64
+dev-python/gnome-desktop-python ~amd64
+dev-python/gnome-python ~amd64
+dev-python/gnome-applets-python ~amd64
+dev-python/gnome-media-python ~amd64
+dev-python/gnome-python-desktop-base ~amd64
+dev-python/gconf-python ~amd64
+dev-python/gnome-python-base ~amd64
+dev-python/gtksourceview-python ~amd64
+dev-python/bug-buddy-python ~amd64
+dev-python/pygobject ~amd64
+dev-python/libgnomecanvas-python ~amd64
+dev-python/gnome-python-desktop ~amd64
+dev-python/gnome-keyring-python ~amd64
+dev-python/pygtk ~amd64
+dev-python/libbonobo-python ~amd64
+dev-python/gnome-vfs-python ~amd64
+dev-python/metacity-python ~amd64
+dev-python/libgnome-python ~amd64
+# X11
+x11-libs/vte ~amd64
+x11-libs/gtk+ ~amd64
+x11-libs/gtk+extra ~amd64
+x11-libs/pango ~amd64
+x11-libs/cairo ~amd64
+x11-libs/pixman ~amd64
+x11-libs/libwnck ~amd64
+x11-libs/gtksourceview ~amd64
+x11-wm/metacity ~amd64
+x11-themes/gnome-backgrounds ~amd64
+x11-themes/gtk-engines ~amd64
+x11-themes/gnome-icon-theme ~amd64
+x11-themes/sound-theme-freedesktop ~amd64
+x11-themes/gnome-themes ~amd64
+x11-themes/metacity-themes ~amd64
+x11-misc/alacarte ~amd64
+x11-misc/icon-naming-utils ~amd64
+x11-terms/gnome-terminal ~amd64
+# media
+media-libs/gstreamer ~amd64
+media-libs/gst-plugins-base ~amd64 
+media-libs/gst-plugins-good ~amd64
+media-libs/swfdec ~amd64
+media-libs/libcanberra ~amd64
+media-sound/esound ~amd64
+media-sound/sound-juicer ~amd64
+media-gfx/eog ~amd64
+media-video/totem ~amd64
+# net
+net-libs/libsoup ~amd64
+net-analyzer/gnome-nettool ~amd64
+net-analyzer/gnome-netstatus ~amd64
+net-misc/vino ~amd64
+net-misc/vinagre ~amd64
+net-wireless/bluez-libs ~amd64
+www-client/epiphany ~amd64
+
+## Compiz --------------
+x11-wm/compiz-fusion ~amd64
+x11-wm/compiz ~amd64
+x11-apps/ccsm ~amd64
+x11-libs/compizconfig-backend-gconf ~amd64
+x11-libs/compizconfig-backend-kconfig 
+x11-libs/libcompizconfig ~amd64
+x11-plugins/compiz-plugins-main ~amd64
+x11-libs/compiz-bcop ~amd64
+x11-plugins/compiz-plugins-unsupported ~amd64
+x11-plugins/compiz-fusion-plugins-extra ~amd64
+x11-plugins/compiz-fusion-plugins-main ~amd64
+x11-plugins/compiz-plugins-extra ~amd64
+x11-plugins/compiz-fusion-plugins-unsupported ~amd64
+dev-python/compizconfig-python ~amd64
+x11-apps/simple-ccsm ~amd64
+
+## Emerald ------------
+x11-wm/emerald ~amd64
+x11-themes/emerald-themes ~amd64
+
+## Other Packages 
+gnome-extra/nautilus-dropbox ~amd64
+media-fonts/artwiz-latin1 ~amd64
+media-fonts/unifont ~amd64
+media-fonts/liberation-fonts ~amd64
+net-print/cups ~amd64
+media-gfx/sane-backends ~amd64
+media-libs/libgphoto2 ~amd64
+media-libs/libdiscid ~amd64
+media-sound/cplay ~amd64
+media-sound/cmus ~amd64
+media-gfx/mirage ~amd64
+media-sound/ncmpcpp ~amd64
+media-sound/moc ~amd64
+

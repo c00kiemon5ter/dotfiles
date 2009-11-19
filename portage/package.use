@@ -6,4 +6,4 @@ www-plugins/adobe-flash -32bit
 media-sound/sonata -trayicon
 dev-libs/DirectFB -X
 dev-util/codeblocks contrib
-
+media-video/vlc -nsplugin
