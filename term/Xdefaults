@@ -56,7 +56,7 @@ URxvt*imLocale:en_US.UTF-8
 
 modifier:meta
 !alt, meta, hyper, super, mod1..5
-!}}}
+!}}} 
 
 !Scroll and mousewheel {{{
 XTerm*jumpScroll:true
@@ -74,24 +74,22 @@ URXvt*mouseWheelScrollPage:false
 !}}}
 
 !URxvt Fonts {{{
-URxvt*xftAntialias:true
 
 !URxvt*font:            xft:DejaVu Sans Mono:pixelsize=12
 !URxvt*boldFont:        xft:DejaVu Sans Mono:bold:autohint=true
 !URxvt*italicFont:      xft:DejaVu Sans Mono:italic:autohint=true
 !URxvt*boldItalicFont:  xft:DejaVu Sans Mono:bold:italic:autohint=true
 
-URxvt*font:             xft:Droid Sans Mono:size=9
-URxvt*boldFont:         xft:Droid Sans Mono:bold:autohint=true
-URxvt*italicFont:       xft:Droid Sans Mono:italic:autohint=true
-URxvt*boldItalicFont:   xft:Droid Sans Mono:bold:italic:autohint=true
+!URxvt*font:             xft:Droid Sans Mono:size=9
+!URxvt*boldFont:         xft:Droid Sans Mono:bold:autohint=true
+!URxvt*italicFont:       xft:Droid Sans Mono:italic:autohint=true
+!URxvt*boldItalicFont:   xft:Droid Sans Mono:bold:italic:autohint=true
 
-!URxvt*font:             xft:Monaco:size=10
-!URxvt*boldFont:         xft:Monaco:bold:autohint=true
-!URxvt*italicFont:       xft:Monaco:italic:autohint=true
-!URxvt*boldItalicFont:   xft:Monaco:bold:italic:autohint=true
+!xft:terminus:antialias=true:autohinting=true:pixelsize=14
+!urxvt*font:xft:ProggySquare:style=regular:pixelsize=10
+!urxvt*font:xft:Envy Code R:pixelsize=14
 
-!URxvt*font:             xft:inconsolata:size=11
+URxvt*font:             xft:inconsolata:pixelsize=14
 !URxvt*boldFont:         xft:inconsolata:bold:autohint=true
 !URxvt*italicFont:       xft:inconsolata:italic:autohint=true
 !URxvt*boldItalicFont:   xft:inconsolata:bold:italic:autohint=true

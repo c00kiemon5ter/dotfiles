@@ -2,405 +2,405 @@
 <!-- # JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com) -->
 <openbox_menu>
 	<menu id="root-menu" label="OpenBox 3">
-			<item label="Chromium">
-				<action name="Execute">
-					<execute>
+		<item label="Chromium">
+			<action name="Execute">
+				<execute>
                         sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; chromium-bin'
-					</execute>
-				</action>
-			</item>
-    		<item label="Rxvt-Unicode">
-				<action name="Execute">
-					<execute>
+				</execute>
+			</action>
+		</item>
+		<item label="Rxvt-Unicode">
+			<action name="Execute">
+				<execute>
 						~/.scripts/urxvt_client.sh
-					</execute>
-				</action>
-            </item>
-        	<item label="MPlayer">
-				<action name="Execute">
-					<execute>
+				</execute>
+			</action>
+		</item>
+		<item label="MPlayer">
+			<action name="Execute">
+				<execute>
 						gnome-mplayer
-					</execute>
-				</action>
-			</item>
-			<item label="Gimp">
-				<action name="Execute">
-					<execute>
+				</execute>
+			</action>
+		</item>
+		<item label="Gimp">
+			<action name="Execute">
+				<execute>
 						gimp
-					</execute>
-				</action>
-			</item>
-            <separator/>
-        <menu id="0" label="Applications">
-		<menu id="1" label="Development">
-			<item label="Sandbox">
-				<action name="Execute">
-					<execute>
+				</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="0" label="Applications">
+			<menu id="1" label="Development">
+				<item label="Sandbox">
+					<action name="Execute">
+						<execute>
 						~/.scripts/urxvt_client.sh -e sandbox
-					</execute>
-				</action>
-			</item>
-            <item label="CodeBlocks">
-                <action name="Execute">
-                    <execute>
+						</execute>
+					</action>
+				</item>
+				<item label="CodeBlocks">
+					<action name="Execute">
+						<execute>
                         codeblocks
-                    </execute>
-                </action>
-            </item>
-			<item label="Netbeans">
-				<action name="Execute">
-					<execute>
+						</execute>
+					</action>
+				</item>
+				<item label="Netbeans">
+					<action name="Execute">
+						<execute>
 						netbeans-6.7
-					</execute>
-				</action>
-			</item>
-			<item label="BeanShell Prompt">
-				<action name="Execute">
-					<execute>
+						</execute>
+					</action>
+				</item>
+				<item label="BeanShell Prompt">
+					<action name="Execute">
+						<execute>
 						bsh-console
-					</execute>
-				</action>
-			</item>
-			<item label="Geany">
-				<action name="Execute">
-					<execute>
+						</execute>
+					</action>
+				</item>
+				<item label="Geany">
+					<action name="Execute">
+						<execute>
 						geany
-					</execute>
-				</action>
-			</item>
-			<item label="Python">
-				<action name="Execute">
-					<execute>
+						</execute>
+					</action>
+				</item>
+				<item label="Python">
+					<action name="Execute">
+						<execute>
 						~/.scripts/urxvt_client.sh -e python
-					</execute>
-				</action>
-			</item>
-		</menu>
-		<menu id="6" label="Graphics">
-			<item label="Gimp">
-				<action name="Execute">
-					<execute>
-						gimp
-					</execute>
-				</action>
-			</item>
-			<item label="Mirage">
-				<action name="Execute">
-					<execute>
-						mirage
-					</execute>
-				</action>
-			</item>
-			<item label="Openoffice.org Draw">
-				<action name="Execute">
-					<execute>
-						oodraw
-					</execute>
-				</action>
-			</item>
-		</menu>
-		<menu id="7" label="Multimedia">
-			<item label="GNOME MPlayer">
-				<action name="Execute">
-					<execute>
-						gnome-mplayer
-					</execute>
-				</action>
-			</item>
-			<item label="ALSA mixer">
-				<action name="Execute">
-					<execute>
-						~/.scripts/urxvt_client.sh alsamixer
-					</execute>
-				</action>
-			</item>
-			<item label="Sonata">
-				<action name="Execute">
-					<execute>
-						sonata
-					</execute>
-				</action>
-			</item>
-		</menu>
-		<menu id="5" label="Network">
-    		<item label="Chromium">
-				<action name="Execute">
-					<execute>
-                        sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; chromium-bin'
-					</execute>
-				</action>
-			</item>
-			<item label="Deluge BitTorrent Client">
-				<action name="Execute">
-					<execute>
-						deluge
-					</execute>
-				</action>
-			</item>
-			<item label="Irssi">
-				<action name="Execute">
-					<execute>
-						~/.scripts/urxvt_client.sh -e irssi
-					</execute>
-				</action>
-			</item>
-			<item label="Emesene Instant Messenger">
-				<action name="Execute">
-					<execute>
-						emesene
-					</execute>
-				</action>
-			</item>
-			<item label="Pidgin Internet Messenger">
-				<action name="Execute">
-					<execute>
-						pidgin
-					</execute>
-				</action>
-			</item>
-			<item label="TkVNC">
-				<action name="Execute">
-					<execute>
-						~/.scripts/urxvt_client.sh -e tkvnc
-					</execute>
-				</action>
-			</item>
-			<item label="Wicd Network Manager">
-				<action name="Execute">
-					<execute>
-						wicd-client --no-tray
-					</execute>
-				</action>
-			</item>
-			<item label="Zenmap">
-				<action name="Execute">
-					<execute>
-						zenmap
-					</execute>
-				</action>
-			</item>
-			<item label="Zenmap (as root)">
-				<action name="Execute">
-					<execute>
-						/usr/share/zenmap/su-to-zenmap.sh
-					</execute>
-				</action>
-			</item>
-		</menu>
-		<menu id="3" label="Office">
-			<item label="xCHM">
-				<action name="Execute">
-					<execute>
-						xchm
-					</execute>
-				</action>
-			</item>
-			<item label="ePDFViewer">
-				<action name="Execute">
-					<execute>
-						epdfview
-					</execute>
-				</action>
-			</item>
-			<item label="OpenOffice.org Writer">
-				<action name="Execute">
-					<execute>
-						oowriter
-					</execute>
-				</action>
-			</item>
-			<item label="OpenOffice.org 3.1 Impress">
-				<action name="Execute">
-					<execute>
-						ooffice
-					</execute>
-				</action>
-			</item>
-			<item label="OpenOffice.org 3.1 Printer Administration">
-				<action name="Execute">
-					<execute>
-						ooffice-printeradmin
-					</execute>
-				</action>
-			</item>
-			<item label="Openoffice.org Calc">
-				<action name="Execute">
-					<execute>
-						oocalc
-					</execute>
-				</action>
-			</item>
-			<item label="Openoffice.org Impress">
-				<action name="Execute">
-					<execute>
-						ooimpress
-					</execute>
-				</action>
-			</item>
-			<item label="Openoffice.org Math">
-				<action name="Execute">
-					<execute>
-						oomath
-					</execute>
-				</action>
-			</item>
-		</menu>
-		<menu id="19" label="Shells">
-			<item label="MC">
-				<action name="Execute">
-					<execute>
-						~/.scripts/urxvt_client.sh -e mc
-					</execute>
-				</action>
-			</item>
-			<item label="Xterm">
-				<action name="Execute">
-					<execute>
-						xterm
-					</execute>
-				</action>
-			</item>
-			<item label="XTerm (Unicode)">
-				<action name="Execute">
-					<execute>
-						uxterm
-					</execute>
-				</action>
-			</item>
-			<item label="Rxvt-Unicode">
-				<action name="Execute">
-					<execute>
-						urxvt
-					</execute>
-				</action>
-			</item>
-			<item label="Rxvt-Unicode Client">
-				<action name="Execute">
-					<execute>
-						~/.scripts/urxvt_client.sh
-					</execute>
-				</action>
-			</item>
-		</menu>
-		<menu id="37" label="System">
-			<menu id="36" label="Settings">
-				<item label="Pop-Up Notifications">
-					<action name="Execute">
-						<execute>
-							notification-properties
-						</execute>
-					</action>
-				</item>
-				<item label="Appearance">
-					<action name="Execute">
-						<execute>
-							lxappearance
-						</execute>
-					</action>
-				</item>
-				<item label="Java Control Panel for Sun JDK 1.6">
-					<action name="Execute">
-						<execute>
-							/opt/sun-jdk-1.6.0.16/jre/bin/ControlPanel
-						</execute>
-					</action>
-				</item>
-				<item label="Manage Printing">
-					<action name="Execute">
-						<execute>
-							xdg-open http://localhost:631/
-						</execute>
-					</action>
-				</item>
-				<item label="Openbox Menu Configuration">
-					<action name="Execute">
-						<execute>
-							obmenu
-						</execute>
-					</action>
-				</item>
-				<item label="Openbox Configuration Manager">
-					<action name="Execute">
-						<execute>
-							obconf
 						</execute>
 					</action>
 				</item>
 			</menu>
-			<item label="pstree">
-				<action name="Execute">
-					<execute>
+			<menu id="6" label="Graphics">
+				<item label="Gimp">
+					<action name="Execute">
+						<execute>
+						gimp
+						</execute>
+					</action>
+				</item>
+				<item label="Mirage">
+					<action name="Execute">
+						<execute>
+						mirage
+						</execute>
+					</action>
+				</item>
+				<item label="Openoffice.org Draw">
+					<action name="Execute">
+						<execute>
+						oodraw
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="7" label="Multimedia">
+				<item label="GNOME MPlayer">
+					<action name="Execute">
+						<execute>
+						gnome-mplayer
+						</execute>
+					</action>
+				</item>
+				<item label="ALSA mixer">
+					<action name="Execute">
+						<execute>
+						~/.scripts/urxvt_client.sh alsamixer
+						</execute>
+					</action>
+				</item>
+				<item label="Sonata">
+					<action name="Execute">
+						<execute>
+						sonata
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="5" label="Network">
+				<item label="Chromium">
+					<action name="Execute">
+						<execute>
+                        sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; chromium-bin'
+						</execute>
+					</action>
+				</item>
+				<item label="Deluge BitTorrent Client">
+					<action name="Execute">
+						<execute>
+						deluge
+						</execute>
+					</action>
+				</item>
+				<item label="Irssi">
+					<action name="Execute">
+						<execute>
+						~/.scripts/urxvt_client.sh -e irssi
+						</execute>
+					</action>
+				</item>
+				<item label="Emesene Instant Messenger">
+					<action name="Execute">
+						<execute>
+						emesene
+						</execute>
+					</action>
+				</item>
+				<item label="Pidgin Internet Messenger">
+					<action name="Execute">
+						<execute>
+						pidgin
+						</execute>
+					</action>
+				</item>
+				<item label="TkVNC">
+					<action name="Execute">
+						<execute>
+						~/.scripts/urxvt_client.sh -e tkvnc
+						</execute>
+					</action>
+				</item>
+				<item label="Wicd Network Manager">
+					<action name="Execute">
+						<execute>
+						wicd-client --no-tray
+						</execute>
+					</action>
+				</item>
+				<item label="Zenmap">
+					<action name="Execute">
+						<execute>
+						zenmap
+						</execute>
+					</action>
+				</item>
+				<item label="Zenmap (as root)">
+					<action name="Execute">
+						<execute>
+						/usr/share/zenmap/su-to-zenmap.sh
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="3" label="Office">
+				<item label="xCHM">
+					<action name="Execute">
+						<execute>
+						xchm
+						</execute>
+					</action>
+				</item>
+				<item label="ePDFViewer">
+					<action name="Execute">
+						<execute>
+						epdfview
+						</execute>
+					</action>
+				</item>
+				<item label="OpenOffice.org Writer">
+					<action name="Execute">
+						<execute>
+						oowriter
+						</execute>
+					</action>
+				</item>
+				<item label="OpenOffice.org 3.1 Impress">
+					<action name="Execute">
+						<execute>
+						ooffice
+						</execute>
+					</action>
+				</item>
+				<item label="OpenOffice.org 3.1 Printer Administration">
+					<action name="Execute">
+						<execute>
+						ooffice-printeradmin
+						</execute>
+					</action>
+				</item>
+				<item label="Openoffice.org Calc">
+					<action name="Execute">
+						<execute>
+						oocalc
+						</execute>
+					</action>
+				</item>
+				<item label="Openoffice.org Impress">
+					<action name="Execute">
+						<execute>
+						ooimpress
+						</execute>
+					</action>
+				</item>
+				<item label="Openoffice.org Math">
+					<action name="Execute">
+						<execute>
+						oomath
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="19" label="Shells">
+				<item label="MC">
+					<action name="Execute">
+						<execute>
+						~/.scripts/urxvt_client.sh -e mc
+						</execute>
+					</action>
+				</item>
+				<item label="Xterm">
+					<action name="Execute">
+						<execute>
+						xterm
+						</execute>
+					</action>
+				</item>
+				<item label="XTerm (Unicode)">
+					<action name="Execute">
+						<execute>
+						uxterm
+						</execute>
+					</action>
+				</item>
+				<item label="Rxvt-Unicode">
+					<action name="Execute">
+						<execute>
+						urxvt
+						</execute>
+					</action>
+				</item>
+				<item label="Rxvt-Unicode Client">
+					<action name="Execute">
+						<execute>
+						~/.scripts/urxvt_client.sh
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="37" label="System">
+				<menu id="36" label="Settings">
+					<item label="Pop-Up Notifications">
+						<action name="Execute">
+							<execute>
+							notification-properties
+							</execute>
+						</action>
+					</item>
+					<item label="Appearance">
+						<action name="Execute">
+							<execute>
+							lxappearance
+							</execute>
+						</action>
+					</item>
+					<item label="Openbox Configuration Manager">
+						<action name="Execute">
+							<execute>
+							obconf
+							</execute>
+						</action>
+					</item>
+					<item label="Openbox Menu Configuration">
+						<action name="Execute">
+							<execute>
+							obmenu
+							</execute>
+						</action>
+					</item>
+					<item label="Manage Printing">
+						<action name="Execute">
+							<execute>
+							xdg-open http://localhost:631/
+							</execute>
+						</action>
+					</item>
+					<item label="Java Control Panel for Sun JDK 1.6">
+						<action name="Execute">
+							<execute>
+							/opt/sun-jdk-1.6.0.16/jre/bin/ControlPanel
+							</execute>
+						</action>
+					</item>
+				</menu>
+				<item label="pstree">
+					<action name="Execute">
+						<execute>
 						~/.scripts/urxvt_client.sh -e /usr/bin/pstree.x11
-					</execute>
-				</action>
-			</item>
-			<item label="pstree">
-				<action name="Execute">
-					<execute>
+						</execute>
+					</action>
+				</item>
+				<item label="pstree">
+					<action name="Execute">
+						<execute>
 						~/.scripts/urxvt_client.sh -e pstree
-					</execute>
-				</action>
-			</item>
-			<item label="pstree">
-				<action name="Execute">
-					<execute>
+						</execute>
+					</action>
+				</item>
+				<item label="pstree">
+					<action name="Execute">
+						<execute>
 						~/.scripts/urxvt_client.sh -e pstree.x11
-					</execute>
-				</action>
-			</item>
-			<item label="NVIDIA X Server Settings">
-				<action name="Execute">
-					<execute>
+						</execute>
+					</action>
+				</item>
+				<item label="NVIDIA X Server Settings">
+					<action name="Execute">
+						<execute>
 						nvidia-settings
-					</execute>
-				</action>
-			</item>
-		</menu>
-		<menu id="38" label="Utilities">
-			<item label="Pcmanfm">
-				<action name="Execute">
-					<execute>
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="38" label="Utilities">
+				<item label="Pcmanfm">
+					<action name="Execute">
+						<execute>
 						pcmanfm
-					</execute>
-				</action>
-			</item>
-			<item label="Xarchiver">
-				<action name="Execute">
-					<execute>
+						</execute>
+					</action>
+				</item>
+				<item label="Xarchiver">
+					<action name="Execute">
+						<execute>
 						xarchiver
-					</execute>
-				</action>
-			</item>
-			<item label="Parcellite">
-				<action name="Execute">
-					<execute>
+						</execute>
+					</action>
+				</item>
+				<item label="Parcellite">
+					<action name="Execute">
+						<execute>
 						parcellite
-					</execute>
-				</action>
-			</item>
-			<item label="Xkill">
-				<action name="Execute">
-					<execute>
+						</execute>
+					</action>
+				</item>
+				<item label="Xkill">
+					<action name="Execute">
+						<execute>
 						xkill
-					</execute>
-				</action>
-			</item>
-			<item label="Xrefresh">
-				<action name="Execute">
-					<execute>
+						</execute>
+					</action>
+				</item>
+				<item label="Xrefresh">
+					<action name="Execute">
+						<execute>
 						xrefresh
-					</execute>
-				</action>
-			</item>
-			<item label="Xsetroot">
-				<action name="Execute">
-					<execute>
+						</execute>
+					</action>
+				</item>
+				<item label="Xsetroot">
+					<action name="Execute">
+						<execute>
 						xsetroot
-					</execute>
-				</action>
-			</item>
-        </menu>
-    </menu>
+						</execute>
+					</action>
+				</item>
+			</menu>
+		</menu>
 		<separator/>
 		<menu id="40" label="OpenBox">
 			<menu id="client-list-menu"/>

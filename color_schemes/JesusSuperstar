@@ -27,8 +27,10 @@
 *color5: #990066
 *color13:#D4008D
 ! Cyan
-*color6: #2AA7E7
-*color14:#4BB8FD
+*color6: #5E7175
+*color14: #A3BABF
+!!*color6: #2AA7E7
+!!*color14:#4BB8FD
 ! White
 *color7: #FFFFFF
 *color15:#FFFFFF

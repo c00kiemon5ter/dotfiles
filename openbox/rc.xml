@@ -24,18 +24,18 @@
        mouse into it, also raise the window -->
   </focus>
   <placement>
-    <policy>Smart</policy>
+    <policy>UnderMouse</policy>
     <!-- 'Smart' or 'UnderMouse' -->
     <center>yes</center>
     <!-- whether to place windows in the center of the free area found or
        the top left corner -->
-    <monitor>Any</monitor>
+    <monitor>Mouse</monitor>
     <!-- with Smart placement on a multi-monitor system, try to place new windows
        on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
        the active window is -->
   </placement>
   <theme>
-    <name>Moka</name>
+    <name>xfzen blue</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -116,7 +116,7 @@
   </desktops>
   <resize>
     <drawContents>yes</drawContents>
-    <popupShow>Nonpixel</popupShow>
+    <popupShow>NonPixel</popupShow>
     <!-- 'Always', 'Never', or 'Nonpixel' (xterms and such) -->
     <popupPosition>Center</popupPosition>
     <!-- 'Center', 'Top', or 'Fixed' -->
@@ -292,10 +292,10 @@
       <action name="Execute">
         <command>gmrun</command>
       </action>
-   </keybind>
-   <keybind key="A-grave">
+    </keybind>
+    <keybind key="A-grave">
       <action name="Execute">
-        <command>~/.scripts/app_focus.sh urxvt</command> 
+        <command>~/.scripts/app_focus.sh urxvt</command>
       </action>
     </keybind>
     <keybind key="W-grave">
@@ -306,7 +306,7 @@
     </keybind>
     <keybind key="XF86HomePage">
       <action name="Execute">
-          <command>sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; ~/.scripts/app_focus.sh chromium-bin' <!--firefox--> </command>
+        <command>sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; ~/.scripts/app_focus.sh chromium-bin' <!--firefox--> </command>
       </action>
     </keybind>
     <keybind key="XF86Mail">
@@ -708,8 +708,11 @@
     <!-- <application name="Pcmanfm" class="pcmanfm">
 		<decor>yes</decor>
 	</application> -->
+    <application class="MPlayer">
+      <decor>no</decor>
+    </application>
     <application name="urxvt" class="URxvt">
-        <decor>no</decor>
+      <decor>no</decor>
     </application>
     <application class="Firefox" role="browser">
       <decor>no</decor>
