@@ -1,7 +1,7 @@
 
 [Midnight-Commander]
 show_backups=1
-show_dot_files=1
+show_dot_files=0
 verbose=1
 mark_moves_down=1
 pause_after_run=1
@@ -87,6 +87,8 @@ keymap=mc.keymap
 
 editor_check_new_line=0
 copymove_persistent_attr=1
+
+filepos_max_saved_entries=1024
 
 [Layout]
 equal_split=0

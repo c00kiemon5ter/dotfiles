@@ -5,28 +5,35 @@
 		<item label="Chromium">
 			<action name="Execute">
 				<execute>
-                        sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; chromium-bin'
+                    sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; chromium'
 				</execute>
 			</action>
 		</item>
 		<item label="Rxvt-Unicode">
 			<action name="Execute">
 				<execute>
-						~/.scripts/urxvt_client.sh
+                    ~/.scripts/urxvt_client.sh
 				</execute>
 			</action>
 		</item>
-		<item label="MPlayer">
+		<item label="QtCreator">
 			<action name="Execute">
 				<execute>
-						gnome-mplayer
+                    qtcreator
 				</execute>
 			</action>
 		</item>
-		<item label="Gimp">
+	    <item label="CodeBlocks">
 			<action name="Execute">
 				<execute>
-						gimp
+                    codeblocks
+				</execute>
+			</action>
+		</item>
+        <item label="Gimp">
+			<action name="Execute">
+				<execute>
+					gimp
 				</execute>
 			</action>
 		</item>
@@ -36,10 +43,17 @@
 				<item label="Sandbox">
 					<action name="Execute">
 						<execute>
-						~/.scripts/urxvt_client.sh -e sandbox
+						    ~/.scripts/urxvt_client.sh -e sandbox
 						</execute>
 					</action>
 				</item>
+		        <item label="QtCreator">
+	    		    <action name="Execute">
+    				    <execute>
+                            qtcreator
+    				    </execute>
+	    		    </action>
+		        </item>
 				<item label="CodeBlocks">
 					<action name="Execute">
 						<execute>
@@ -126,7 +140,7 @@
 				<item label="Chromium">
 					<action name="Execute">
 						<execute>
-                        sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; chromium-bin'
+                        sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; chromium'
 						</execute>
 					</action>
 				</item>

@@ -12,10 +12,10 @@ $VERSION = "3.2";
 
 # Settings:
 # title_string: The string used in the title, see below for explaination
-# title_topic_length: The length to truncate the topic to 
-#   (some terminals have problems with long titles).
-# title_screen_window: (EXPERIMENTAL), 
-#   sets the screen window title rather than the Xterm title.
+# title_topic_length: The length to truncate the topic to (some terminals have
+# problems with long titles).
+# title_screen_window: (EXPERIMENTAL), sets the screen window title rather than
+# the Xterm title.
 
 # The $vars are normal Irssi vars (docs/special_vars.txt).
 # $.var does some magic, adds a space at the begining and brackets around 

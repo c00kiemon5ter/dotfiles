@@ -24,7 +24,7 @@
        mouse into it, also raise the window -->
   </focus>
   <placement>
-    <policy>UnderMouse</policy>
+    <policy>Smart</policy>
     <!-- 'Smart' or 'UnderMouse' -->
     <center>yes</center>
     <!-- whether to place windows in the center of the free area found or
@@ -35,7 +35,7 @@
        the active window is -->
   </placement>
   <theme>
-    <name>xfzen blue</name>
+    <name>Moka</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -306,7 +306,7 @@
     </keybind>
     <keybind key="XF86HomePage">
       <action name="Execute">
-        <command>sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; ~/.scripts/app_focus.sh chromium-bin' <!--firefox--> </command>
+        <command>sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; ~/.scripts/app_focus.sh chromium' <!--firefox--> </command>
       </action>
     </keybind>
     <keybind key="XF86Mail">

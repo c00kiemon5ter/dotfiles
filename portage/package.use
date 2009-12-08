@@ -1,9 +1,10 @@
 x11-drivers/nvidia-drivers -multilib custom-cflags
-dev-util/subversion -dso
-dev-util/git -gtk
-app-admin/syslog-ng -sql
-www-plugins/adobe-flash -32bit
-media-sound/sonata -trayicon
 dev-libs/DirectFB -X
+app-admin/syslog-ng -sql
+dev-util/git -gtk
+dev-util/subversion -dso
 dev-util/codeblocks contrib
+media-sound/sonata -trayicon
 media-video/vlc -nsplugin
+www-plugins/adobe-flash -32bit
+dev-db/mysql embedded -minimal

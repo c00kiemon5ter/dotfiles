@@ -6,9 +6,8 @@
 *background: #1C1C1C
 
 ! Black
-*color0: #1C1C1C
-*color8: #4D4D4D
-!6A6A6A
+*color0: #222222
+*color8: #454545
 ! Red 
 *color1: #D81860
 ! #EA3A23  <-- orange
@@ -29,8 +28,6 @@
 ! Cyan
 *color6: #5E7175
 *color14: #A3BABF
-!!*color6: #2AA7E7
-!!*color14:#4BB8FD
 ! White
 *color7: #FFFFFF
 *color15:#FFFFFF

@@ -28,9 +28,6 @@ URxvt*iconName:console
 URxvt*termName:rxvt-unicode
 
 URxvt*geometry:80x24+317+307
-!URxvt*geometry:80x24+42+26
-!URxvt*geometry:80x24+43+40
-!URxvt*geometry:68x24-25+26
 URxvt*borderLess:false
 URxvt*externalBorder:1
 URxvt*internalBorder:0
@@ -44,7 +41,7 @@ URxvt*buffered:true
 URxvt*saveLines:1500
 cutchars::@-./_~?&=%+#'"'()*,;<=>[]^{|}
 
-URxvt*urlLauncher:chromium-bin
+URxvt*urlLauncher:chromium
 URxvt*matcher.pattern.2:([\\w-]+.jpg)
 URxvt*matcher.launcher.2:feh $@
 
