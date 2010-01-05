@@ -3,7 +3,7 @@
 # A script to gracefully shutdown openbox, closing all apps
 # without the need to have extra permissions, or sudo entries
 # plus an optional timeout in secs, min, hours or days
-# The script depends on HAL and D-bus
+# The script depends on HAL, D-bus and wmctrl
 
 # the usage message
 usage() {
@@ -49,7 +49,7 @@ shut(){
 # reboot
 rebt(){
     dbus-send --system --print-reply \
-     --dest="org.freedesktop.Hal" \
+    --dest="org.freedesktop.Hal" \
     /org/freedesktop/Hal/devices/computer \
     org.freedesktop.Hal.Device.SystemPowerManagement.Reboot
 }
