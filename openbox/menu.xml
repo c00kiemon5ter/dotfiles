@@ -4,36 +4,39 @@
 	<menu id="root-menu" label="OpenBox 3">
 		<item label="Chromium">
 			<action name="Execute">
-				<execute>
-                    sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; chromium'
-				</execute>
+                <execute>chromium</execute>
 			</action>
 		</item>
 		<item label="Rxvt-Unicode">
 			<action name="Execute">
-				<execute>
-                    ~/.scripts/urxvt_client.sh
-				</execute>
+				<execute>~/.scripts/urxvt_client.sh</execute>
 			</action>
 		</item>
 		<item label="QtCreator">
 			<action name="Execute">
 				<execute>
-                    qtcreator
+                qtcreator
 				</execute>
 			</action>
 		</item>
 	    <item label="CodeBlocks">
 			<action name="Execute">
 				<execute>
-                    codeblocks
+                codeblocks
 				</execute>
 			</action>
 		</item>
+ 		<item label="Netbeans">
+			<action name="Execute">
+				<execute>
+	    		netbeans-6.8
+				</execute>
+			</action>
+	    </item>
         <item label="Gimp">
 			<action name="Execute">
 				<execute>
-					gimp
+				gimp
 				</execute>
 			</action>
 		</item>
@@ -43,14 +46,14 @@
 				<item label="Sandbox">
 					<action name="Execute">
 						<execute>
-						    ~/.scripts/urxvt_client.sh -e sandbox
+						~/.scripts/urxvt_client.sh -e sandbox
 						</execute>
 					</action>
 				</item>
 		        <item label="QtCreator">
 	    		    <action name="Execute">
     				    <execute>
-                            qtcreator
+                        qtcreator
     				    </execute>
 	    		    </action>
 		        </item>
@@ -64,7 +67,7 @@
 				<item label="Netbeans">
 					<action name="Execute">
 						<execute>
-						netbeans-6.7
+						netbeans-6.8
 						</execute>
 					</action>
 				</item>
@@ -139,9 +142,7 @@
 			<menu id="5" label="Network">
 				<item label="Chromium">
 					<action name="Execute">
-						<execute>
-                        sh -c 'export LC_CTYPE=en_US.UTF-8 &amp;&amp; chromium'
-						</execute>
+                        <execute>chromium</execute>
 					</action>
 				</item>
 				<item label="Deluge BitTorrent Client">

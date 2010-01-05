@@ -1,0 +1,63 @@
+#!/bin/bash
+#
+# A script to gracefully shutdown openbox, closing all apps
+# without the need to have extra permissions, or sudo entries
+# plus an optional timeout in secs, min, hours or days
+# The script depends on HAL and D-bus
+
+# the usage message
+usage() {
+    echo "Usage is: $0 OPTION [TIME]"
+    echo
+    echo "  Option:"
+    echo "    -h    halt, poweroff"
+    echo "    -r    reboot"
+    echo
+    echo "  Time:"
+    echo "    NUMBER[SUFFIX]"
+    echo "    Suffix is \"s\" for seconds"
+    echo "              \"m\" for minutes"
+    echo "              \"h\" for hours"
+    echo "              \"d\" for days"
+    exit 1
+}
+
+# our local vars
+action="$1"
+time="${2:-0}"  #default timeout is now
+
+# check for correct form of arguments
+if [[ -z "$action" || ! $time =~ ^[[:digit:]]+[s|m|h|d]?$ ]]; then 
+    usage
+fi
+
+# gracefully close all apps
+close_apps(){
+    wmctrl -l | awk '{print $1}' | while read APP; do
+        wmctrl -i -c $APP || echo "$APP not killed"
+    done
+}
+
+# shutdown
+shut(){
+    dbus-send --system --print-reply \
+    --dest="org.freedesktop.Hal" \
+    /org/freedesktop/Hal/devices/computer \
+    org.freedesktop.Hal.Device.SystemPowerManagement.Shutdown
+}
+
+# reboot
+rebt(){
+    dbus-send --system --print-reply \
+     --dest="org.freedesktop.Hal" \
+    /org/freedesktop/Hal/devices/computer \
+    org.freedesktop.Hal.Device.SystemPowerManagement.Reboot
+}
+
+# do it
+case $action in
+    -r) sleep +"$time" && close_apps && rebt && openbox --exit ;;
+    -h) sleep +"$time" && close_apps && shut && openbox --exit ;;
+     *) usage ;;
+esac
+

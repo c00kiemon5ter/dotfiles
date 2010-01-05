@@ -1,33 +1,40 @@
 ! ** JesusSuperStar ** !
 
-!!URxvt*background: rgba:0000/0000/0000/c000
-!! 242424 1F1F1F 1A1A1A 141414 0F0F0F 0A0A0A 080808
+!URxvt*background: rgba:0000/0000/0000/c000
 *foreground: #DDEEDD
 *background: #1C1C1C
 
 ! Black
 *color0: #222222
 *color8: #454545
+
 ! Red 
-*color1: #D81860
-! #EA3A23  <-- orange
+*color1: #F60606
+!!*color1: #B22222
 *color9: #F60606
+
 ! Green
 *color2: #72F91D
 *color10:#93FF00
+
 ! Yellow
-*color3: #FFD00A
+*color3: #FF971F
+!!*color3: #FFD00A
 *color11:#FFBF00
-!FFFF2F FFC005
+
 ! Blue
-*color4: #006EDC
+!!*color4: #006EDC
 *color12:#0071FF
+*color4: #44A7EE
+
 ! Magneta
-*color5: #990066
-*color13:#D4008D
+*color5: #9E6FFE
+*color13: #B18CFE
+
 ! Cyan
 *color6: #5E7175
 *color14: #A3BABF
+
 ! White
 *color7: #FFFFFF
 *color15:#FFFFFF

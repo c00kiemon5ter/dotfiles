@@ -1,0 +1,27 @@
+alignment top_left
+default_bar_size 0 2
+color0 fafafa
+default_color 302e30
+double_buffer yes
+draw_shades no
+gap_x 20
+gap_y 2
+imlib_cache_size 0
+mpd_host 127.0.0.1
+mpd_port 6600
+no_buffers yes
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+update_interval 5
+uppercase no
+use_xft yes
+xftfont Liberation Sans:size=14
+
+TEXT
+${if_match "$mpd_status" == "Playing"}\
+${font Liberation Sans:size=22}$alignr$mpd_artist$font
+${voffset -4}${font Liberation Sans:size=9}$alignr$mpd_album$font
+${voffset -36}$color0$mpd_title$color
+$mpd_bar
+${endif}

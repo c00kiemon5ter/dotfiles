@@ -7,7 +7,7 @@ background yes
 own_window yes
 own_window_type normal
 own_window_transparent yes
-own_window_hints skip_taskbar,skip_pager,above,undecorated
+own_window_hints skip_taskbar,skip_pager,above,sticky,undecorated
 own_window_title clock.conky
 
 use_xft yes
@@ -16,12 +16,12 @@ xftfont droid sans mono:size=8
 xftalpha .1
 uppercase yes
 
-total_run_times 5
+total_run_times 10
 update_interval 3
 double_buffer no
 alignment bottom_right
 gap_x 3
-gap_y 32
+gap_y 29
 #border_inner_margin 0
 #border_outer_margin 0
 

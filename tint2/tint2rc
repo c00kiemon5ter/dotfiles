@@ -32,7 +32,7 @@ background_color = #000000 0
 #---------------------------------------------
 panel_monitor = all
 panel_position = bottom right #left #center
-panel_size = 86% 28
+panel_size = 86% 25
 panel_margin = -1 -1
 panel_padding = 7 0
 font_shadow = 0
@@ -55,6 +55,7 @@ taskbar_background_id = 0
 task_icon = 0
 task_text = 1
 task_width = 120
+task_maximum_size = 120 35
 task_centered = 1
 task_padding = 5 3
 task_font = droid sans 9
@@ -67,8 +68,10 @@ task_active_background_id = 3
 #---------------------------------------------
 # SYSTRAYBAR {{{
 #---------------------------------------------
+systray = 1
 systray_padding = 0 4 5
 systray_background_id = 0
+#systray_sort = left2right
 #}}}
 
 #---------------------------------------------
@@ -83,7 +86,8 @@ clock_font_color = #ffffff 76
 clock_padding = 1 0
 clock_background_id = 0
 clock_lclick_command = conky -c ~/.conky/small_clock.conkyrc
-#clock_rclick_command = 
+clock_rclick_command = conky -c ~/.conky/calendar.conkyrc
+clock_tooltip = %A %d %B
 #}}}
 
 #---------------------------------------------
@@ -97,6 +101,18 @@ clock_lclick_command = conky -c ~/.conky/small_clock.conkyrc
 #battery_font_color = #ffffff 76
 #battery_padding = 1 0
 #battery_background_id = 0
+#}}}
+
+#---------------------------------------------
+# TOOLTIP {{{
+#---------------------------------------------
+tooltip = 0
+tooltip_padding = 2 2
+tooltip_show_timeout = 0.9
+tooltip_hide_timeout = 0.3
+tooltip_background_id = 1
+tooltip_font_color = #ffffff 80
+tooltip_font = sans 8
 #}}}
 
 #---------------------------------------------

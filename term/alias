@@ -30,7 +30,7 @@ alias lla="ls -al"
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -I -v"
-alias du="du -h --max-depth=1"
+alias du="du -h -a --max-depth=1"
 alias lw="wmctrl -l | cut -d\" \" -f5- | sed \"s/^[[:space:]|\(].*$//\" | uniq"
 alias :q="exit"
 
@@ -55,6 +55,11 @@ alias vxorg="sudo $EDITOR /etc/X11/xorg.conf"
 alias vgrub="sudo $EDITOR /boot/grub/grub.conf"
 alias vmpd="sudo $EDITOR /etc/mpd.conf"
 
+# kernel files
+alias ukernfls="cp -u /boot/config ~/Projects/GITrepos/dotfiles/kernel/ && \
+cp /boot/vmlinuz ~/Projects/GITrepos/dotfiles/kernel/ && \
+cp /boot/System.map ~/Projects/GITrepos/dotfiles/kernel/"
+
 # mount
 alias mount="sudo mount"
 alias umount="sudo umount"
@@ -63,15 +68,17 @@ alias umount="sudo umount"
 alias shutdown="sudo shutdown"
 alias shutnow="sudo shutdown -h now"
 alias reboot="sudo reboot"
+alias off="~/.scripts/pancakes"
 
 # remote ssh to uni servers
-alias aueb="export LANG=\"el_GR.UTF-8@euro\" ssh p3060190@dias.aueb.gr"
+alias aueb="ssh p3060190@dias.aueb.gr"
 alias alex="telnet p3060190@alexandros.ccslab.aueb.gr"
 alias foss="ssh root@foss.aueb.gr"
 
 # Other
 alias s="sudo"
 alias c="clear"
+alias chrome="chromium"
 alias mzk="ncmpcpp"
 # fortune equality
 alias fortune="fortune -e -a"
