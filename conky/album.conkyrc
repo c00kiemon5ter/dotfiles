@@ -26,7 +26,7 @@ xftalpha 1
 
 color1 5E5E5E # Artist
 color2 D3CDCD # track/album
-color3 8A8383 #9F9595 #B0AAAA
+color3 8A8383 # #9F9595 #B0AAAA
 
 #mpd_host localhost
 #mpd_port 6600
@@ -40,7 +40,10 @@ color3 8A8383 #9F9595 #B0AAAA
 #   ${voffset -16}${color2}${font TrashCo:size=16}${mpd_title}${font TrashCo:size=8}
 #  ${color2}${font TrashCo:size=16}${mpd_album}${font TrashCo:size=8}
 
+#${if_match "$mpd_status" == "Playing"}
+#${mpd_bar [height]
+
 TEXT
-${color1}${font 28 Days Later:size=35}${mpd_artist}${font 28 Days Later:size=9} 
+${if_mpd_playing}${color1}${font 28 Days Later:size=35}${mpd_artist}${font 28 Days Later:size=9} 
    ${voffset -16}${color2}${font 28 Days Later:size=11}${mpd_title}${font 28 Days Later:size=9} 
-   ${color2}${font 28 Days Later:size=11}${mpd_album}${font 28 Days Later:size=9}
+   ${color2}${font 28 Days Later:size=11}${mpd_album}${font 28 Days Later:size=9}${endif}

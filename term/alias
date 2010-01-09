@@ -50,7 +50,8 @@ alias valias="$EDITOR ~/.alias && reload"
 alias vfuncs="$EDITOR ~/.funcs && reload"
 alias reload="source ~/.bashrc && obr"
 alias vxdefs="$EDITOR ~/.Xdefaults"
-##sufiles
+##su-files
+alias vmkconf="sudo $EDITOR /etc/make.conf"
 alias vxorg="sudo $EDITOR /etc/X11/xorg.conf"
 alias vgrub="sudo $EDITOR /boot/grub/grub.conf"
 alias vmpd="sudo $EDITOR /etc/mpd.conf"

@@ -2,56 +2,57 @@
 # JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com)
 #
 
-# load the default autostart.sh
+## load the default autostart.sh
 . $GLOBALAUTOSTART &
 
-# set wallpaper 
+## set wallpaper 
 sh $HOME/.fehbg &
 
-# tint panel
+## tint panel
 tint2 &
 
-# toogle keyboard layout with S-A
+## toogle keyboard layout with S-A
 setxkbmap -model evdev -layout us,gr -variant ,extended -option grp_led:scroll,eurosign:e,grp:alt_shift_toggle &
 #,lv3:rwin_switch,altwin:left_meta_win & 
 
-# start urxvt daemon
+## start urxvt daemon
 urxvtd -q -f -o &
 
-# enable numlock
+## enable numlock
 numlockx on &
 
-# start parcellite clipboard
+## start parcellite clipboard
 parcellite &
 
-# start msn messenger
+## start msn messenger
 emesene -i &
 
-# start sonata in systray
+## start sonata in systray
 #sonata -t &
 
-# start conky 
+## start conky 
 conky -c ~/.conky/album.conkyrc &
 
-# mount or umount devices
+## mount or umount devices
 halevt &
 
-# hide mouse after some idle time
+## hide mouse after some idle time
 unclutter &
 
-# tiling features
+## tiling features
 #whaw &
 
-# tint2 is above
+## tint2 is above
 #wmctrl -ir $(wmctrl -li | grep tint2 | awk '{print $1}') -b add,above
 
-# start compositing manager
+## start compositing manager
 #xcompmgr -CfF -o.55 -D4 -m.86 &
 
-# lock screen with image
+## lock screen with image
 #xautolock -time 5 -locker "feh -FZxN --hide-pointer /home/koukos/Downloads/Themes_Stuff/Walls/the_screamy_wall/screamy1280x1024.jpg" &
 
-# pop the terminals
-~/.scripts/urxvt_client.sh -geometry 78x24+7+16 & #80x24+33+16 &
-~/.scripts/urxvt_client.sh -geometry 78x24-7+16 & #69x24-32+16 &
+## top parallel 
+#~/.scripts/urxvt_client.sh -geometry 78x24+7+16 & #80x24+33+16 &
+#~/.scripts/urxvt_client.sh -geometry 78x24-7+16 & #69x24-32+16 &
+~/.scripts/urxvt_client.sh -geometry 80x24+54+52 &
 

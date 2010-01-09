@@ -140,8 +140,9 @@ set smartindent
 "colorscheme wombat256
 
 "colorscheme molokai
-colorscheme leo
 "colorscheme miromiro
+colorscheme leo
+"colorscheme vibrantink
 
 "}}}
 
@@ -188,12 +189,13 @@ if has("eval") && has("autocmd")
             "set foldmethod=manual
             "set foldlevel=99
             set nowrap
+            set nonumber
             " Remove weird keybindings from vimpagr
             set nofoldenable
             set nolist
             unmap <Space>
             unmap z
-            unmap q
+            "unmap q
             unmap d
         endif
     endfun

@@ -5,9 +5,15 @@
 # plus an optional timeout in secs, min, hours or days
 # The script depends on HAL, D-bus and wmctrl
 
+# our local vars
+needed_commands="grep awk read sleep wmctrl dbus-send openbox"
+missing_commands=0
+action="$1"
+timeout="${2:-0}"
+
 # the usage message
 usage() {
-    echo "Usage is: $0 OPTION [TIME]"
+    echo "Usage is: $(basename $0) OPTION [TIME]"
     echo
     echo "  Option:"
     echo "    -h    halt, poweroff"
@@ -22,19 +28,10 @@ usage() {
     exit 1
 }
 
-# our local vars
-action="$1"
-time="${2:-0}"  #default timeout is now
-
-# check for correct form of arguments
-if [[ -z "$action" || ! $time =~ ^[[:digit:]]+[s|m|h|d]?$ ]]; then 
-    usage
-fi
-
 # gracefully close all apps
 close_apps(){
-    wmctrl -l | awk '{print $1}' | while read APP; do
-        wmctrl -i -c $APP || echo "$APP not killed"
+    wmctrl -il | grep -vi "$(basename $0)" | awk '{print $1}' | while read APP; do
+        wmctrl -ic $APP || echo "$APP not killed"
     done
 }
 
@@ -54,10 +51,33 @@ rebt(){
     org.freedesktop.Hal.Device.SystemPowerManagement.Reboot
 }
 
+# set the term title to the script name
+echo -e "\033]0;$(basename $0)\007"
+
+# check if need tools are here
+for needed_command in $needed_commands; do
+    if ! hash $needed_command >/dev/null 2>&1; then
+        printf "Command not found in PATH: %s\n" "$needed_command" >&2
+        ((missing_commands++))
+    fi
+done
+if ((missing_commands > 0)); then
+    printf "%d commands are missing in PATH, abording" "$missing_commands"
+    exit 1
+fi
+
+# check for correct form of arguments
+if [[ -z "$action" || ! $timeout =~ ^[[:digit:]]+[s|m|h|d]?$ ]]; then 
+    usage
+fi
+
 # do it
 case $action in
-    -r) sleep +"$time" && close_apps && rebt && openbox --exit ;;
-    -h) sleep +"$time" && close_apps && shut && openbox --exit ;;
-     *) usage ;;
+    -r) sleep +"$timeout" && close_apps && rebt && openbox --exit 
+    ;;
+    -s) sleep +"$timeout" && close_apps && shut && openbox --exit 
+    ;;
+    *) usage 
+    ;;
 esac
 

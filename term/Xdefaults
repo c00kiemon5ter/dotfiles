@@ -27,7 +27,8 @@ URxvt*title:URxvt
 URxvt*iconName:console
 URxvt*termName:rxvt-unicode
 
-URxvt*geometry:80x24+375+394
+URxvt*geometry:80x24+369+436
+!80x24+375+394 (top parallel terms)
 !80x24+317+307 (center)
 URxvt*borderLess:false
 URxvt*externalBorder:1

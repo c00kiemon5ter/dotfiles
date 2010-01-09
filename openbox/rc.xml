@@ -353,9 +353,9 @@
             </action>
         </keybind>
     </keybind>
-    <keybind key="M-F11">
-      <action name="Execute">
-        <command>~/.scripts/toogle_fullscreen.sh urxvt</command>
+    <keybind key="F11">
+        <action name="ToggleFullscreen" > <!-- "Execute">
+            <command>~/.scripts/toogle_fullscreen.sh urxvt</command> -->
       </action>
     </keybind>
     <!-- <keybind key="Scroll_Lock">
@@ -819,6 +819,15 @@
     </application>
     <application name="amarok" class="Amarok" role="MainWindow">
       <maximized>yes</maximized>
+    </application>
+    <application name="gmrun" class="Gmrun">
+        <decor>no</decor>
+        <skip_pager>yes</skip_pager>
+        <skip_taskbar>yes</skip_taskbar>
+        <layer>above</layer>
+        <maximized>no</maximized>
+        <fullscreen>no</fullscreen>
+        <focus>yes</focus>
     </application>
     <application name="gxmessage">
       <decor>no</decor>

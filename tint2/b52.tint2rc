@@ -1,0 +1,48 @@
+rounded = 3
+background_color = #ffffff 0
+border_width = 1
+border_color = #cccccc 20
+
+rounded = 3
+background_color = #ffffff 20
+border_width = 1
+border_color = #ffffff 50
+
+panel_monitor = all
+panel_position = top left vertical
+panel_size = 40% 250
+panel_margin = 15 20
+
+wm_menu = 1
+
+taskbar_mode = single_desktop
+taskbar_padding = 0 0 6
+
+urgent_nb_of_blink = 5
+
+task_icon = 1
+task_text = 1
+task_centered = 0
+task_maximum_size = 0 24
+task_padding = 6 4
+task_font = sans 8
+task_font_color = #cccccc 100
+task_active_font_color = #ffffff 100
+task_icon_asb = 30 -100 0
+task_active_icon_asb = 50 0 0
+task_background_id = 1
+task_active_background_id = 2
+
+#systray = 1
+#tooltip = 0
+#battery = 0
+#autohide = 1
+
+#mouse_left = toggle
+#mouse_right = none
+#mouse_middle = none
+mouse_middle = shade
+mouse_right = close
+mouse_scroll_up = toggle
+mouse_scroll_down = iconify
+
