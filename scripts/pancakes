@@ -25,6 +25,7 @@ usage() {
     echo "              \"m\" for minutes"
     echo "              \"h\" for hours"
     echo "              \"d\" for days"
+    echo -e "\033]0;$TERM\007"
     exit 1
 }
 
@@ -63,6 +64,7 @@ for needed_command in $needed_commands; do
 done
 if ((missing_commands > 0)); then
     printf "%d commands are missing in PATH, abording" "$missing_commands"
+    echo -e "\033]0;$TERM\007"
     exit 1
 fi
 
@@ -81,3 +83,5 @@ case $action in
     ;;
 esac
 
+echo -e "\033]0;$TERM\007"
+exit 0
