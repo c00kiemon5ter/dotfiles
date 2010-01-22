@@ -1,45 +1,5 @@
 # JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com)
 
-## this is now a script, GOTO: ~/.scripts/pancakes :D
-#function die() {
-#   usage() {
-#        echo "Usage is: die OPTION [TIME]"
-#        echo
-#        echo "  Option:"
-#        echo "    -h    halt, poweroff"
-#        echo "    -r    reboot"
-#        echo
-#        echo "  Time:"
-#        echo "    NUMBER[SUFFIX]"
-#        echo "    Suffix is \"s\" for seconds"
-#        echo "              \"m\" for minutes"
-#        echo "              \"h\" for hours"
-#        echo "              \"d\" for days"
-#    }
-#   
-#    local action="$1"
-#    local time="${2:-0}"
-#    
-#    if [[ -z "$action" || ! $time =~ ^[[:digit:]]+[s|m|h|d]?$ ]]; then 
-#       usage && return 1
-#    fi
-#  
-#    case $action in
-#        -r) sleep +"$time" && dbus-send --system --print-reply \
-#            --dest="org.freedesktop.Hal" \
-#            /org/freedesktop/Hal/devices/computer \
-#            org.freedesktop.Hal.Device.SystemPowerManagement.Reboot \
-#            && openbox --exit ;;
-#        -h) sleep +"$time" && dbus-send --system --print-reply \
-#            --dest="org.freedesktop.Hal" \
-#            /org/freedesktop/Hal/devices/computer \
-#            org.freedesktop.Hal.Device.SystemPowerManagement.Shutdown \
-#            && openbox --exit ;;
-#         *) usage && return 1 ;;
-#    esac
-#    return 0
-#} 
-   
 function prompt_command() {
     # different colors for different status
     [ $? -eq 0 ] && local scol="\[\e[0;32m\]" || local scol="\[\e[1;31m\]"

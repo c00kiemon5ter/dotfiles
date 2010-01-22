@@ -35,7 +35,6 @@ alias lw="wmctrl -l | cut -d\" \" -f5- | sed \"s/^[[:space:]|\(].*$//\" | uniq"
 alias :q="exit"
 
 ## files
-alias scolors="~/.scripts/colors.sh"
 #tint
 alias vtint="$EDITOR ~/.config/tint2/tint2rc"
 alias rtint="killall tint2; tint2 &"
@@ -55,8 +54,7 @@ alias vmkconf="sudo $EDITOR /etc/make.conf"
 alias vxorg="sudo $EDITOR /etc/X11/xorg.conf"
 alias vgrub="sudo $EDITOR /boot/grub/grub.conf"
 alias vmpd="sudo $EDITOR /etc/mpd.conf"
-
-## kernel files
+# kernel files
 alias ukernfls="cp -u /boot/config ~/Projects/GITrepos/dotfiles/kernel/ && \
 cp /boot/vmlinuz ~/Projects/GITrepos/dotfiles/kernel/ && \
 cp /boot/System.map ~/Projects/GITrepos/dotfiles/kernel/"
@@ -69,7 +67,6 @@ alias umount="sudo umount"
 alias shutdown="sudo shutdown"
 alias shutnow="sudo shutdown -h now"
 alias reboot="sudo reboot"
-alias off="~/.scripts/pancakes"
 
 ## remote ssh to uni servers
 alias aueb="ssh p3060190@dias.aueb.gr"

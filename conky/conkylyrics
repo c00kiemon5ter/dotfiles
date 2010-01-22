@@ -152,4 +152,4 @@ mpd_port 6600
 text_buffer_size 6076
 
 TEXT
-${font}${execi 10 ~/.scripts/lyricsdownloader.py | fold -sw60 }${font}
+${font}${execi 10 ~/.bin/lyricsdownloader.py | fold -sw60 }${font}

@@ -9,7 +9,7 @@
 		</item>
 		<item label="Rxvt-Unicode">
 			<action name="Execute">
-				<execute>~/.scripts/urxvt_client.sh</execute>
+				<execute>~/.bin/urxvt_client.sh</execute>
 			</action>
 		</item>
 		<item label="QtCreator">
@@ -46,7 +46,7 @@
 				<item label="Sandbox">
 					<action name="Execute">
 						<execute>
-						~/.scripts/urxvt_client.sh -e sandbox
+						~/.bin/urxvt_client.sh -e sandbox
 						</execute>
 					</action>
 				</item>
@@ -88,7 +88,7 @@
 				<item label="Python">
 					<action name="Execute">
 						<execute>
-						~/.scripts/urxvt_client.sh -e python
+						~/.bin/urxvt_client.sh -e python
 						</execute>
 					</action>
 				</item>
@@ -127,7 +127,7 @@
 				<item label="ALSA mixer">
 					<action name="Execute">
 						<execute>
-						~/.scripts/urxvt_client.sh alsamixer
+						~/.bin/urxvt_client.sh alsamixer
 						</execute>
 					</action>
 				</item>
@@ -155,7 +155,7 @@
 				<item label="Irssi">
 					<action name="Execute">
 						<execute>
-						~/.scripts/urxvt_client.sh -e irssi
+						~/.bin/urxvt_client.sh -e irssi
 						</execute>
 					</action>
 				</item>
@@ -176,7 +176,7 @@
 				<item label="TkVNC">
 					<action name="Execute">
 						<execute>
-						~/.scripts/urxvt_client.sh -e tkvnc
+						~/.bin/urxvt_client.sh -e tkvnc
 						</execute>
 					</action>
 				</item>
@@ -264,7 +264,7 @@
 				<item label="MC">
 					<action name="Execute">
 						<execute>
-						~/.scripts/urxvt_client.sh -e mc
+						~/.bin/urxvt_client.sh -e mc
 						</execute>
 					</action>
 				</item>
@@ -292,7 +292,7 @@
 				<item label="Rxvt-Unicode Client">
 					<action name="Execute">
 						<execute>
-						~/.scripts/urxvt_client.sh
+						~/.bin/urxvt_client.sh
 						</execute>
 					</action>
 				</item>
@@ -345,21 +345,21 @@
 				<item label="pstree">
 					<action name="Execute">
 						<execute>
-						~/.scripts/urxvt_client.sh -e /usr/bin/pstree.x11
+						~/.bin/urxvt_client.sh -e /usr/bin/pstree.x11
 						</execute>
 					</action>
 				</item>
 				<item label="pstree">
 					<action name="Execute">
 						<execute>
-						~/.scripts/urxvt_client.sh -e pstree
+						~/.bin/urxvt_client.sh -e pstree
 						</execute>
 					</action>
 				</item>
 				<item label="pstree">
 					<action name="Execute">
 						<execute>
-						~/.scripts/urxvt_client.sh -e pstree.x11
+						~/.bin/urxvt_client.sh -e pstree.x11
 						</execute>
 					</action>
 				</item>

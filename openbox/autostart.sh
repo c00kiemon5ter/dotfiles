@@ -53,7 +53,7 @@ xcompmgr -cCfF -o.55 -D4 &
 #xautolock -time 5 -locker "feh -FZxN --hide-pointer /home/koukos/Downloads/Themes_Stuff/Walls/the_screamy_wall/screamy1280x1024.jpg" &
 
 ## top parallel 
-#~/.scripts/urxvt_client.sh -geometry 78x24+7+16 & #80x24+33+16 &
-#~/.scripts/urxvt_client.sh -geometry 78x24-7+16 & #69x24-32+16 &
-~/.scripts/urxvt_client.sh -geometry 80x24+54+52 &
+#~/.bin/urxvt_client.sh -geometry 78x24+7+16 & #80x24+33+16 &
+#~/.bin/urxvt_client.sh -geometry 78x24-7+16 & #69x24-32+16 &
+~/.bin/urxvt_client.sh -geometry 80x24+54+52 &
 
