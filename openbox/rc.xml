@@ -799,6 +799,10 @@
       <decor>no</decor>
       <maximized>yes</maximized>
     </application>
+    <!-- <application name="hwengine" class="hwengine">
+        <decor>no</decor>
+        <fullscreen>yes</fullscreen>
+    </application> -->
     <application name="mirage" class="Mirage">
       <maximized>yes</maximized>
     </application>

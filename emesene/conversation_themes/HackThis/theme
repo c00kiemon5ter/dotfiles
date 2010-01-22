@@ -5,7 +5,7 @@ website=http://foss.aueb.gr/forum/
 
 incoming=<span style="color: #A82F2F">(%h%:%m%) <span style="font-weight: bold;">%nick% %says%:<br/>  </span></span> %formattedmessage%<br/>
 consecutive_incoming=   %formattedmessage%<br/>
-offline_incoming=incoming
+offline_incoming=consecutive_incoming
 outgoing=<span style="color: #16569E">(%h%:%m%) <span style="font-weight: bold;">%nick% %says%:<br/>  </span></span> %formattedmessage%<br/>
 consecutive_outgoing=consecutive_incoming
 information=(%h%:%m%) <span style="font-weight: bold;">%message%</span><br/>

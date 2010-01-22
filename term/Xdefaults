@@ -23,7 +23,7 @@ xpdf*viKeys:              on
 !}}}
 
 !URxvt Settings {{{
-URxvt*title:URxvt
+URxvt*title:rxvt-unicode
 URxvt*iconName:console
 URxvt*termName:rxvt-unicode
 

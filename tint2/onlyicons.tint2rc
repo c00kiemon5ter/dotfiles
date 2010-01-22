@@ -1,6 +1,3 @@
-# JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com)
-#
-
 #---------------------------------------------
 # TINT2 CONFIG FILE
 #---------------------------------------------
@@ -8,35 +5,32 @@
 #---------------------------------------------
 # BACKGROUND AND BORDER
 #---------------------------------------------
-#taskbar
-rounded = 2 #7
+rounded = 0
 border_width = 1
-background_color = #000000 70 #40
-border_color = #ffffff 50 #18
+background_color = #000000 40
+border_color = #ffffff 10
 
-#active window mark
-rounded = 2 #5
+rounded = 2
 border_width = 0
-background_color = #ffffff 40
-border_color = #ffffff 50
+background_color = #ffffff 20
+border_color = #ffffff 20
 
-#inactive window mark
-rounded = 2 #5
+rounded = 2
 border_width = 0
-background_color = #ffffff 18
-border_color = #ffffff 70
+background_color = #ffffff 10
+border_color = #ffffff 10
 
 #---------------------------------------------
 # PANEL
 #---------------------------------------------
 panel_monitor = all
-panel_position = bottom right #left #center
-panel_size = 86% 28 #90% 30
-panel_margin = -1 -1 #0 -1
-panel_padding = 7 0
+panel_position = bottom center
+panel_size = 100% 30
+panel_margin = 0 0
+panel_padding = 2 0
 font_shadow = 0
-panel_background_id = 1 
-wm_menu = 1
+panel_background_id = 1
+wm_menu = 0
 
 #---------------------------------------------
 # TASKBAR
@@ -45,16 +39,17 @@ wm_menu = 1
 taskbar_mode = single_desktop
 taskbar_padding = 2 3 2
 taskbar_background_id = 0
+#taskbar_active_background_id = 1
 
 #---------------------------------------------
 # TASKS
 #---------------------------------------------
 task_icon = 1
-task_text = 1
-task_width = 130 #140
+task_text = 0
+task_maximum_size = 35 35
 task_centered = 1
-task_padding = 5 3 #6 3
-task_font = droid sans 7
+task_padding = 3 3
+task_font = sans 7
 task_font_color = #ffffff 70
 task_active_font_color = #ffffff 85
 task_background_id = 3
@@ -63,42 +58,52 @@ task_active_background_id = 2
 #---------------------------------------------
 # SYSTRAYBAR
 #---------------------------------------------
+systray = 1
 systray_padding = 0 4 5
 systray_background_id = 0
+systray_sort = left2right
 
 #---------------------------------------------
 # CLOCK
 #---------------------------------------------
 time1_format = %H:%M
-time1_font = droid sans 8
-time2_format = %a %d %b
-#%A %d %B
-time2_font = droid sans 7
+time1_font = sans 8
+#time2_format = %A %d %B
+#time2_font = sans 6
 clock_font_color = #ffffff 76
 clock_padding = 1 0
 clock_background_id = 0
-clock_lclick_command = conky -c ~/.conky/small_clock.conkyrc
-#clock_rclick_command = 
+#clock_lclick_command = xclock
+clock_rclick_command = orage
+#clock_tooltip = %A %d %B
 
 #---------------------------------------------
 # BATTERY
 #---------------------------------------------
-battery = 0
+battery = 1
 battery_low_status = 10
 battery_low_cmd = notify-send "battery low"
-bat1_font = droid sans 8
-bat2_font = droid sans 6
+bat1_font = sans 8
+bat2_font = sans 6
 battery_font_color = #ffffff 76
 battery_padding = 1 0
 battery_background_id = 0
 
+#---------------------------------------------
+# TOOLTIP
+#---------------------------------------------
+tooltip = 0
+tooltip_padding = 2 2
+tooltip_show_timeout = 0.7
+tooltip_hide_timeout = 0.3
+tooltip_background_id = 1
+tooltip_font_color = #OOOOOO 80
+tooltip_font = sans 10
 
 #---------------------------------------------
 # MOUSE ACTION ON TASK
 #---------------------------------------------
-# none, close, toggle, iconify, shade, toggle_iconify
-mouse_middle = shade
+mouse_middle = none
 mouse_right = close
 mouse_scroll_up = toggle
 mouse_scroll_down = iconify
-

@@ -1,0 +1,39 @@
+# Conky Config File
+# Other scripts in ~/.conky
+
+# Main options (alphabetically)
+alignment top_left 
+#alignment top_middle
+#background yes
+border_inner_margin 0
+color1 909090
+default_color 606060
+draw_outline no
+draw_shades no
+double_buffer yes
+gap_x 0
+gap_y 1
+#maximum_width 1024
+minimum_size 1280 14
+#mpd_host 192.168.0.5
+#mpd_port 6600
+no_buffers yes
+own_window yes
+own_window_colour 303030
+own_window_type desktop
+own_window_transparent no
+override_utf8_locale yes
+short_units yes
+text_buffer_size 2048
+#total_run_times 0
+update_interval 2
+use_xft yes
+xftalpha 0.7
+#xftfont Inconsolata:size=9
+xftfont Droid Sans Mono:size=8
+
+# ${execi 10 ~/.bin/battery.sh}$color  ::  ${color1}${execi 10 ~/.bin/wireless.sh}$col
+
+# After TEXT is formatted on screen
+TEXT
+  CPU: ${color1}${cpu cpu1}% ${cpu cpu2}%$color  ${goto 80} MEM: ${color1}${memperc}%$color  ${if_mpd_playing}${goto 220}.:   Now Playing: ${color1}${mpd_title}$color by ${color1}${mpd_artist}$color   :.$endif ${alignr}${color1}${execi 10 ~/.bin/battery.sh}$color  ::  ${color1}${execi 10 ~/.bin/wireless.sh}$color  

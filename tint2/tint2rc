@@ -6,13 +6,13 @@
 #---------------------------------------------
 
 #--------------------------------------------- 
-# BACKGROUND AND BORDER {{{
+# BACKGROUND AND BORDER PROFILES {{{
 #---------------------------------------------
 # 1 ~ taskbar
-rounded = 2
+rounded = 1
 border_width = 1
 border_color = #ffffff 50
-background_color = #000000 85
+background_color = #000000 75
 
 # 2 ~ active window mark
 rounded = 2
@@ -38,6 +38,8 @@ panel_padding = 7 0
 font_shadow = 0
 panel_background_id = 1 
 wm_menu = 1
+real_transparency = 1
+panel_layer = normal #bottom normal top
 #}}}
 
 #---------------------------------------------
@@ -58,11 +60,16 @@ task_width = 120
 task_maximum_size = 120 35
 task_centered = 1
 task_padding = 5 3
-task_font = droid sans 9
+task_font = Droid Sans 9
 task_font_color = #ffffff 60
 task_active_font_color = #ffffff 100
 task_background_id = 3
 task_active_background_id = 3
+## on iconify show only icons
+#task_iconfied_icon = 1
+#task_iconfied_text = 0
+#task_iconfied_maximum_size = 35 35
+#task_iconfied_width = 35
 #}}}
 
 #---------------------------------------------
@@ -72,6 +79,8 @@ systray = 1
 systray_padding = 0 4 5
 systray_background_id = 0
 #systray_sort = left2right
+systray_icon_size = 0
+#systray_icon_asb = 100 0 0
 #}}}
 
 #---------------------------------------------
@@ -88,6 +97,8 @@ clock_background_id = 0
 clock_lclick_command = conky -c ~/.conky/small_clock.conkyrc
 clock_rclick_command = conky -c ~/.conky/calendar.conkyrc
 clock_tooltip = %A %d %B
+time1_timezone = Europe/Athens
+clock_tooltip_timezone = :/usr/share/zoneinfo/Europe/Athens
 #}}}
 
 #---------------------------------------------
@@ -106,13 +117,13 @@ clock_tooltip = %A %d %B
 #---------------------------------------------
 # TOOLTIP {{{
 #---------------------------------------------
-tooltip = 0
+tooltip = 1
 tooltip_padding = 2 2
 tooltip_show_timeout = 0.9
 tooltip_hide_timeout = 0.3
-tooltip_background_id = 1
+tooltip_background_id = 0
 tooltip_font_color = #ffffff 80
-tooltip_font = sans 8
+tooltip_font = Droid Sans 8
 #}}}
 
 #---------------------------------------------
@@ -123,6 +134,16 @@ mouse_middle = shade
 mouse_right = close
 mouse_scroll_up = toggle
 mouse_scroll_down = iconify
+# }}}
+
+#---------------------------------------------
+# AUTOHIDE OPTIONS {{{
+#---------------------------------------------
+autohide = 0
+autohide_show_timeout = 0.3
+autohide_hide_timeout = 2
+autohide_height = 4
+strut_policy = minimum
 # }}}
 
 # vim:foldmethod=marker:foldmarker={{{,}}}:foldlevel=0

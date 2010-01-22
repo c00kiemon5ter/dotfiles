@@ -1,17 +1,17 @@
 # JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com)
 
-# Navigation:
+## Navigation:
 alias ~="cd ~"
 alias ..="cd .."
 alias ...="cd ../../"
 alias ....="cd ../../../"
 
-# always use color with ls and grep
-alias ls="ls --color=always"
+## always use color with ls and grep
+alias ls="ls --color=always -h"
 alias grep="grep --color=always"
 alias egrep="egrep --color=always"
 
-# Editors:
+## Editors:
 alias v="vim"
 alias sv="sudo vim"
 alias svim="sudo vim"
@@ -21,7 +21,7 @@ alias sn="sudo nano"
 alias snano="sudo nano"
 alias g="geany"
 
-# common
+## Common
 alias df="df -h -T"
 alias mkdir="mkdir -p -v"
 alias ll="ls -l"
@@ -34,12 +34,12 @@ alias du="du -h -a --max-depth=1"
 alias lw="wmctrl -l | cut -d\" \" -f5- | sed \"s/^[[:space:]|\(].*$//\" | uniq"
 alias :q="exit"
 
-# files
+## files
 alias scolors="~/.scripts/colors.sh"
-##tint
+#tint
 alias vtint="$EDITOR ~/.config/tint2/tint2rc"
-alias rtint="killall tint2; tint2 && disown &"
-##openbox
+alias rtint="killall tint2; tint2 &"
+#openbox
 alias obr="openbox --reconfigure"
 alias obrc="$EDITOR ~/.config/openbox/rc.xml && obr"
 alias obm="$EDITOR ~/.config/openbox/menu.xml && obr"
@@ -50,33 +50,34 @@ alias valias="$EDITOR ~/.alias && reload"
 alias vfuncs="$EDITOR ~/.funcs && reload"
 alias reload="source ~/.bashrc && obr"
 alias vxdefs="$EDITOR ~/.Xdefaults"
-##su-files
+#su-files
 alias vmkconf="sudo $EDITOR /etc/make.conf"
 alias vxorg="sudo $EDITOR /etc/X11/xorg.conf"
 alias vgrub="sudo $EDITOR /boot/grub/grub.conf"
 alias vmpd="sudo $EDITOR /etc/mpd.conf"
 
-# kernel files
+## kernel files
 alias ukernfls="cp -u /boot/config ~/Projects/GITrepos/dotfiles/kernel/ && \
 cp /boot/vmlinuz ~/Projects/GITrepos/dotfiles/kernel/ && \
 cp /boot/System.map ~/Projects/GITrepos/dotfiles/kernel/"
 
-# mount
+## mount
 alias mount="sudo mount"
 alias umount="sudo umount"
 
-# poweroff etc
+## poweroff etc
 alias shutdown="sudo shutdown"
 alias shutnow="sudo shutdown -h now"
 alias reboot="sudo reboot"
 alias off="~/.scripts/pancakes"
 
-# remote ssh to uni servers
+## remote ssh to uni servers
 alias aueb="ssh p3060190@dias.aueb.gr"
 alias alex="telnet p3060190@alexandros.ccslab.aueb.gr"
 alias foss="ssh root@foss.aueb.gr"
 
-# Other
+## Other
+alias tname="echo -ne \"\033]0;$TERM\007\""
 alias s="sudo"
 alias c="clear"
 alias chrome="chromium"
@@ -94,8 +95,6 @@ alias myIp="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 
 # Quartus 9.0
 alias quartus="/opt/altera9.0/quartus/bin/quartus"
-# Look and Feel of Netbeans
-#alias netbeans-6.7="netbeans-6.7 --laf com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 
 # the 'tree' command ..revisited
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
