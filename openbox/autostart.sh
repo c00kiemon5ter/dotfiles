@@ -4,6 +4,7 @@
 
 ## load the default autostart.sh
 . $GLOBALAUTOSTART &
+xrdb -merge $HOME/.Xdefaults &
 
 ## set wallpaper 
 sh $HOME/.fehbg &
