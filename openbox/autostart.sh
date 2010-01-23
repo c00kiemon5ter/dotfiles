@@ -13,7 +13,7 @@ sh $HOME/.fehbg &
 tint2 &
 
 ## toogle keyboard layout with S-A
-setxkbmap -model evdev -layout us,gr -variant ,extended -option grp_led:scroll,eurosign:e,grp:alt_shift_toggle &
+setxkbmap -model evdev -layout us,gr -variant extended -option grp_led:scroll,eurosign:e,grp:alt_shift_toggle &
 #,lv3:rwin_switch,altwin:left_meta_win & 
 
 ## start urxvt daemon
