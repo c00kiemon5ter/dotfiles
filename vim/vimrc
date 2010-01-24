@@ -124,26 +124,13 @@ set smartindent
 "}}}
 
 " Color Scheme {{{
-"colorscheme desert256
-"colorscheme calmar256-dark
-"colorscheme calmar256-light
-"colorscheme charged-256
-"colorscheme gardener
-"colorscheme peaksea
-"colorscheme asmanian2
-"colorscheme railscasts
-"colorscheme gentooish
-"colorscheme asmdev2
-"colorscheme lucius
-"colorscheme xoria256
-"colorscheme inkpot
-"colorscheme wombat256
-
-"colorscheme molokai
-"colorscheme miromiro
-colorscheme leo
+colorscheme mrJesus
 "colorscheme vibrantink
-
+"colorscheme Mustang
+"colorscheme Digerati_mod
+"colorscheme asmdev2
+"colorscheme leo
+"colorscheme molokai
 "}}}
 
 " auto commands {{{
