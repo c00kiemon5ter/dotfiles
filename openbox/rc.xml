@@ -141,14 +141,14 @@
     <right>0</right>
   </margins>
   <dock>
-    <position>TopLeft</position>
+    <position>BottomLeft</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>0</floatingX>
     <floatingY>0</floatingY>
-    <noStrut>no</noStrut>
+    <noStrut>yes</noStrut>
     <stacking>Above</stacking>
     <!-- 'Above', 'Normal', or 'Below' -->
-    <direction>Vertical</direction>
+    <direction>Horizontal</direction>
     <!-- 'Vertical' or 'Horizontal' -->
     <autoHide>no</autoHide>
     <hideDelay>300</hideDelay>
@@ -283,78 +283,81 @@
         <command>amixer set PCM 1%-</command>
       </action>
     </keybind>
-    <keybind key="W-m">
-        <keybind key="p">
-            <action name="Execute">
-                <command> ncmpcpp toggle
+    <keybind key="W-m" chroot="true">
+      <keybind key="Escape">
+        <action name="BreakChroot"/>
+      </keybind>
+      <keybind key="p">
+        <action name="Execute">
+          <command> ncmpcpp toggle
                 </command>
-            </action>
-        </keybind>
-        <keybind key="Right">
-            <action name="Execute">
-                <command> ncmpcpp next
+        </action>
+      </keybind>
+      <keybind key="Right">
+        <action name="Execute">
+          <command> ncmpcpp next
                 </command>
-            </action>
-        </keybind>
-        <keybind key="Left">
-            <action name="Execute">
-                <command> ncmpcpp prev
+        </action>
+      </keybind>
+      <keybind key="Left">
+        <action name="Execute">
+          <command> ncmpcpp prev
                 </command>
+        </action>
+      </keybind>
+      <keybind key="0">
+        <action name="Execute">
+          <command>amixer set PCM 0%</command>
+        </action>
+      </keybind>
+      <keybind key="1">
+        <action name="Execute">
+          <command>amixer set PCM 10%</command>
+        </action>
+      </keybind>
+      <keybind key="2">
+        <action name="Execute">
+          <command>amixer set PCM 20%</command>
+        </action>
+      </keybind>
+      <keybind key="3">
+        <action name="Execute">
+          <command>amixer set PCM 30%</command>
+        </action>
+      </keybind>
+      <keybind key="4">
+        <action name="Execute">
+          <command>amixer set PCM 40%</command>
+        </action>
+      </keybind>
+      <keybind key="5">
+        <action name="Execute">
+          <command>amixer set PCM 50%</command>
+        </action>
+      </keybind>
+      <keybind key="6">
+        <action name="Execute">
+          <command>amixer set PCM 60%</command>
+        </action>
+      </keybind>
+      <keybind key="7">
+        <action name="Execute">
+          <command>amixer set PCM 70%</command>
+        </action>
+      </keybind>
+      <keybind key="8">
+        <action name="Execute">
+          <command>amixer set PCM 80%</command>
+        </action>
+      </keybind>
+      <keybind key="9">
+        <action name="Execute"><command>amixer set PCM 90%</command>a
             </action>
-        </keybind>
-        <keybind key="0">
-            <action name="Execute">
-                <command>amixer set PCM 0%</command>
-            </action>
-        </keybind>
-        <keybind key="1">
-            <action name="Execute">
-                <command>amixer set PCM 10%</command>
-            </action>
-        </keybind>
-        <keybind key="2">
-            <action name="Execute">
-                <command>amixer set PCM 20%</command>
-            </action>
-        </keybind>
-        <keybind key="3">
-            <action name="Execute">
-                <command>amixer set PCM 30%</command>
-            </action>
-        </keybind>
-        <keybind key="4">
-            <action name="Execute">
-                <command>amixer set PCM 40%</command>
-            </action>
-        </keybind>
-        <keybind key="5">
-            <action name="Execute">
-                <command>amixer set PCM 50%</command>
-            </action>
-        </keybind>
-        <keybind key="6">
-            <action name="Execute">
-                <command>amixer set PCM 60%</command>
-            </action>
-        </keybind>
-        <keybind key="7">
-            <action name="Execute">
-                <command>amixer set PCM 70%</command>
-            </action>
-        </keybind>
-        <keybind key="8">
-            <action name="Execute">
-                <command>amixer set PCM 80%</command>
-            </action>
-        </keybind>
-        <keybind key="9">
-            <action name="Execute">
-                <command>amixer set PCM 90%</command>a
-            </action>
-        </keybind>
+      </keybind>
     </keybind>
     <keybind key="F11">
-        <action name="ToggleFullscreen" > <!-- "Execute">
+      <action name="ToggleFullscreen">
+        <!-- "Execute">
             <command>~/.bin/toogle_fullscreen.sh urxvt</command> -->
       </action>
     </keybind>
@@ -825,13 +828,13 @@
       <maximized>yes</maximized>
     </application>
     <application name="gmrun" class="Gmrun">
-        <decor>no</decor>
-        <skip_pager>yes</skip_pager>
-        <skip_taskbar>yes</skip_taskbar>
-        <layer>above</layer>
-        <maximized>no</maximized>
-        <fullscreen>no</fullscreen>
-        <focus>yes</focus>
+      <decor>no</decor>
+      <skip_pager>yes</skip_pager>
+      <skip_taskbar>yes</skip_taskbar>
+      <layer>above</layer>
+      <maximized>no</maximized>
+      <fullscreen>no</fullscreen>
+      <focus>yes</focus>
     </application>
     <application name="gxmessage">
       <decor>no</decor>

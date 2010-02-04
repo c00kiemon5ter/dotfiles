@@ -77,7 +77,7 @@ alias foss="ssh root@foss.aueb.gr"
 alias tname="echo -ne \"\033]0;$TERM\007\""
 alias s="sudo"
 alias c="clear"
-alias chrome="chromium"
+#alias chrome="chromium"
 alias mzk="ncmpcpp"
 # fortune equality
 alias fortune="fortune -e -a"

@@ -12,3 +12,13 @@ net-print/hplip new-hpcups
 dev-db/sqlite fts3
 app-office/openoffice -java -nsplugin
 sys-apps/qingy -directfb
+dev-libs/nss utils
+net-analyzer/nmap -gtk
+games-fps/freedoom doomsday
+games-fps/doom-data doomsday
+
+# empathy - least deps
+net-im/empathy gnome gstreamer
+net-libs/libnice gstreamer
+net-libs/libsoup gnome
+

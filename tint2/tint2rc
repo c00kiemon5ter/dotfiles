@@ -32,7 +32,7 @@ background_color = #000000 0
 #---------------------------------------------
 panel_monitor = all
 panel_position = bottom right #left #center
-panel_size = 86% 25
+panel_size = 86% 26
 panel_margin = -1 -1
 panel_padding = 7 0
 font_shadow = 0

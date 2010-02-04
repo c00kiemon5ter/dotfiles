@@ -131,6 +131,7 @@ colorscheme mrJesus
 "colorscheme asmdev2
 "colorscheme leo
 "colorscheme molokai
+"colorscheme miromiro
 "}}}
 
 " auto commands {{{

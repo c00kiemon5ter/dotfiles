@@ -4,7 +4,9 @@
 
 ## load the default autostart.sh
 . $GLOBALAUTOSTART &
-xrdb -merge $HOME/.Xdefaults &
+
+## merge xdefault settings to X db
+#xrdb -merge $HOME/.Xdefaults &
 
 ## set wallpaper 
 sh $HOME/.fehbg &
@@ -26,7 +28,8 @@ numlockx on &
 parcellite &
 
 ## start msn messenger
-emesene -i &
+#emesene -i &
+pidgin &
 
 ## start sonata in systray
 #sonata -t &
@@ -48,7 +51,7 @@ unclutter &
 
 ## start compositing manager
 #xcompmgr-dana -cCfF -o.55 -D4 -m.88 &
-xcompmgr -cCfF -o.55 -D4 &
+xcompmgr -cCfF -o.55 -D4 -r4.2 -t-5 -l-5 &
 
 ## lock screen with image
 #xautolock -time 5 -locker "feh -FZxN --hide-pointer /home/koukos/Downloads/Themes_Stuff/Walls/the_screamy_wall/screamy1280x1024.jpg" &

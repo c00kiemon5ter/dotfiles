@@ -359,10 +359,10 @@ formats = {
     window_scroll_unknown = "Unknown scroll mode $0, must be ON, OFF or DEFAULT";
   };
   "fe-common/irc" = {
-    netsplit = "{netsplit  Netsplit} %W<%n {server $0} %W<%n-%W>%n {server $1} quits: $2";
-    netsplit_more = "{netsplit  Netsplit} %W<%n {server $0} %W<%n-%W>%n {server $1} quits: $2 (%K+$3 more%n)";
-    netsplit_join = "{netjoin  Netsplit} %W>%n $0";
-    netsplit_join_more = "{netjoin  Netsplit} %W>%n $0 (%K+$1 more%n)";
+    netsplit = "{netsplit     Netsplit} %W<%n {server $0} %W<%n-%W>%n {server $1} quits: $2";
+    netsplit_more = "{netsplit     Netsplit} %W<%n {server $0} %W<%n-%W>%n {server $1} quits: $2 (%K+$3 more%n)";
+    netsplit_join = "{netjoin     Netsplit} %W>%n $0";
+    netsplit_join_more = "{netjoin     Netsplit} %W>%n $0 (%K+$1 more%n)";
     no_netsplits = "There are no net splits";
     netsplits_header = "Nick      Channel    Server               Splitted server";
     netsplits_line = "$[9]0 $[10]1 $[20]2 $3";

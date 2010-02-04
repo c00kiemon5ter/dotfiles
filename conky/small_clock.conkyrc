@@ -21,7 +21,7 @@ update_interval 3
 double_buffer no
 alignment bottom_right
 gap_x 3
-gap_y 29
+gap_y 30
 #border_inner_margin 0
 #border_outer_margin 0
 
