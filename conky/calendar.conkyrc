@@ -19,7 +19,7 @@ double_buffer no
 alignment bottom_right
 maximum_width 156
 gap_x 2
-gap_y 30
+gap_y 27
 #border_inner_margin 0
 #border_outer_margin 0
 
