@@ -71,7 +71,7 @@ alias reboot="sudo reboot"
 ## remote ssh to uni servers
 alias aueb="ssh p3060190@dias.aueb.gr"
 alias alex="telnet p3060190@alexandros.ccslab.aueb.gr"
-alias foss="ssh root@foss.aueb.gr"
+alias foss="ssh jesus@foss.aueb.gr"
 
 ## Other
 alias tname="echo -ne \"\033]0;$TERM\007\""
@@ -79,6 +79,7 @@ alias s="sudo"
 alias c="clear"
 #alias chrome="chromium"
 alias mzk="ncmpcpp"
+alias kaoradio="mplayer http://www.kaotonik.net:8000/playlist &>/dev/null </dev/null &"
 # fortune equality
 alias fortune="fortune -e -a"
 # Gets a random Futurama quote from slashdot.org(/.)

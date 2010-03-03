@@ -1,4 +1,4 @@
-x11-drivers/nvidia-drivers -multilib custom-cflags
+x11-drivers/nvidia-drivers -multilib -custom-cflags
 dev-libs/DirectFB -X
 app-admin/syslog-ng -sql
 dev-util/git -gtk
@@ -16,6 +16,7 @@ dev-libs/nss utils
 net-analyzer/nmap -gtk
 games-fps/freedoom doomsday
 games-fps/doom-data doomsday
+media-sound/ncmpcpp clock outputs fftw visualizer
 
 # empathy - least deps
 net-im/empathy gnome gstreamer

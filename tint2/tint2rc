@@ -1,4 +1,4 @@
-# JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com)
+# mrJesus (L)(O)(L) (mrJesusSuperstar@gmail.com)
 #
 
 #---------------------------------------------
@@ -31,9 +31,9 @@ background_color = #000000 0
 # PANEL {{{
 #---------------------------------------------
 panel_monitor = all
-panel_position = bottom right #left #center
-panel_size = 86% 26
-panel_margin = -1 -1
+panel_position = bottom center #right #left #center
+panel_size = 101% 23 #86% 22 #26 to get nice emesene icon
+panel_margin = 0 -1 #-1 -1
 panel_padding = 7 0
 font_shadow = 0
 panel_background_id = 1 
@@ -87,7 +87,7 @@ systray_icon_size = 0
 # CLOCK {{{
 #---------------------------------------------
 time1_format = %a %d %b %H:%M
-time1_font = droid sans 9
+time1_font = droid sans 8
 #time2_format = %a %d %b 
 #time2_font = droid sans 7
 #%A %d %B
@@ -123,7 +123,7 @@ tooltip_show_timeout = 0.9
 tooltip_hide_timeout = 0.3
 tooltip_background_id = 0
 tooltip_font_color = #ffffff 80
-tooltip_font = Droid Sans 8
+tooltip_font = Droid Sans 9
 #}}}
 
 #---------------------------------------------

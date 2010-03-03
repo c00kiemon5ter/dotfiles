@@ -1,5 +1,5 @@
 #!/bin/bash
-# JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com)
+# mrJesus (L)(O)(L) (mrJesusSuperstar@gmail.com)
 #
 
 ## load the default autostart.sh
@@ -29,7 +29,7 @@ parcellite &
 
 ## start msn messenger
 #emesene -i &
-pidgin &
+#pidgin &
 
 ## start sonata in systray
 #sonata -t &
@@ -50,8 +50,9 @@ unclutter &
 #wmctrl -ir $(wmctrl -li | grep tint2 | awk '{print $1}') -b add,above
 
 ## start compositing manager
-#xcompmgr-dana -cCfF -o.55 -D4 -m.88 &
-xcompmgr -cCfF -o.55 -D4 -r4.2 -t-5 -l-5 &
+#xcompmgr-dana -cCfF -o.55 -D4 -m.88 &   # c-shadows affect conky
+#xcompmgr-dana -fF -o.55 -D4 -m.88 &
+#xcompmgr -cCfF -o.55 -D4 -r4.2 -t-5 -l-5 &
 
 ## lock screen with image
 #xautolock -time 5 -locker "feh -FZxN --hide-pointer /home/koukos/Downloads/Themes_Stuff/Walls/the_screamy_wall/screamy1280x1024.jpg" &
@@ -60,4 +61,5 @@ xcompmgr -cCfF -o.55 -D4 -r4.2 -t-5 -l-5 &
 #~/.bin/urxvt_client.sh -geometry 78x24+7+16 & #80x24+33+16 &
 #~/.bin/urxvt_client.sh -geometry 78x24-7+16 & #69x24-32+16 &
 ~/.bin/urxvt_client.sh -geometry 80x24+54+52 &
+#~/.bin/urxvt_client.sh -geometry 80x24+0+0 -pe kuake &
 

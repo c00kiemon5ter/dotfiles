@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- # JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com) -->
+<!-- # mrJesus (L)(O)(L) (mrJesusSuperstar@gmail.com) -->
 <openbox_config xmlns="http://openbox.org/3.4/rc">
   <resistance>
     <strength>10</strength>
@@ -110,7 +110,7 @@
       <name>Flip</name>
       <name>Flop</name>
     </names>
-    <popupTime>675</popupTime>
+    <popupTime>0</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
        desktops.  Set this to 0 to disable the popup. -->
   </desktops>

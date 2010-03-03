@@ -1,0 +1,20 @@
+URxvt*background: #1f1f1f
+URxvt*foreground: #beed5f
+
+URxvt*color0: #000000
+URxvt*color1: #A80000
+URxvt*color2: #ED254F
+URxvt*color3: #A85400
+URxvt*color4: #020202
+URxvt*color5: #A800A8
+URxvt*color6: #00A8A8
+URxvt*color7: #A8A8A8
+URxvt*color8: #545054
+URxvt*color9: #F85450
+URxvt*color10: #ED254F
+URxvt*color11: #ED254F
+URxvt*color12: #5054F8
+URxvt*color13: #ED254F
+URxvt*color14: #50FCF8
+URxvt*color15: #F8FCF8
+

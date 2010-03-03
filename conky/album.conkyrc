@@ -3,7 +3,7 @@
 
 double_buffer yes
 draw_shades no
-update_interval 2.0
+update_interval 1.0
 
 maximum_width 780
 minimum_size 640
@@ -48,3 +48,4 @@ TEXT
 ${color1}${font 28 Days Later:size=35}${mpd_artist}${font 28 Days Later:size=9} 
    ${voffset -16}${color2}${font 28 Days Later:size=11}${mpd_title}${font 28 Days Later:size=9} 
    ${color2}${font 28 Days Later:size=11}${mpd_album}${font 28 Days Later:size=9}
+

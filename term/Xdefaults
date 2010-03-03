@@ -1,4 +1,4 @@
-! JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com)
+! mrJesus (L)(O)(L) (mrJesusSuperstar@gmail.com)
 
 !xft settings {{{
 Xft.antialias: 	true
@@ -34,7 +34,7 @@ URxvt*borderLess:false
 URxvt*externalBorder:1
 URxvt*internalBorder:0
 
-URxvt*perl-ext-common:default,-tabbed,matcher,-selection-popup,-option-popupi,searchable-scrollback<M-s>
+URxvt*perl-ext-common:default,-tabbed,matcher,-selection-popup,-option-popupi
 
 URxvt*visualBell:false
 URxvt*cursorBlink:true
@@ -74,33 +74,27 @@ URXvt*mouseWheelScrollPage:false
 
 !URxvt Fonts {{{
 
-!URxvt*font:            xft:DejaVu Sans Mono:pixelsize=12
-!URxvt*boldFont:        xft:DejaVu Sans Mono:bold:autohint=true
-!URxvt*italicFont:      xft:DejaVu Sans Mono:italic:autohint=true
-!URxvt*boldItalicFont:  xft:DejaVu Sans Mono:bold:italic:autohint=true
+!! passed
+!URxvt*font:             xft:inconsolata:pixelsize=14
+URxvt*font:             xft:DroidSansMonoDotted:size=9
+!URxvt*font:             xft:DejaVuSansMono:size=9
 
+!! small
+!URxvt*font:             xft:Liberation Mono:size=9
+!URxvt*font:             xft:Terminus:pixelsize=14
+
+!! other
 !URxvt*font:             xft:Droid Sans Mono:size=9
-!URxvt*boldFont:         xft:Droid Sans Mono:bold:autohint=true
-!URxvt*italicFont:       xft:Droid Sans Mono:italic:autohint=true
-!URxvt*boldItalicFont:   xft:Droid Sans Mono:bold:italic:autohint=true
-
-!xft:terminus:antialias=true:autohinting=true:pixelsize=14
-!urxvt*font:xft:ProggySquare:style=regular:pixelsize=10
-!urxvt*font:xft:Envy Code R:pixelsize=14
-
-URxvt*font:             xft:inconsolata:pixelsize=14
-!URxvt*boldFont:         xft:inconsolata:bold:autohint=true
-!URxvt*italicFont:       xft:inconsolata:italic:autohint=true
-!URxvt*boldItalicFont:   xft:inconsolata:bold:italic:autohint=true
-
-!URxvt*font:             xft:Liberation Mono:pixelsize=13
-!URxvt*boldFont:         xft:Liberation Mono:bold:autohint=true
-!URxvt*italicFont:       xft:Liberation Mono:italic:autohint=true
-!URxvt*boldItalicFont:   xft:Liberation Mono:bold:italic:autohint=true
+!URxvt*font:             xft:DejaVu Sans Mono:pixelsize=12
+!URxvt*font:             xft:Envy Code R:size=10
 
 !}}}
 
 !URxvt Color Settings {{{
+
+! Color Scheme
+#include "/home/mrjesus/.config/color_schemes/mrJesus"
+
 URxvt*depth:32
 URxvt*dynamicColors:on
 URxvt*transparent:false
@@ -124,9 +118,6 @@ URxvt*pointerBlankDelay:2
 !URxvt*tabbed.tabbar-bg:#F60606
 !URxvt*tabbed.tab-fg:#F60606
 !URxvt*tabbed.tab-bg:#F60606
-
-! Color Scheme
-#include "/home/jesus/.config/color_schemes/JesusSuperstar"
 
 !}}}
 

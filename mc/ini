@@ -90,6 +90,10 @@ copymove_persistent_attr=1
 
 filepos_max_saved_entries=1024
 
+ftpfs_use_passive_connections_over_proxy=0
+select_flags=6
+auto_save_setup_panels=1
+
 [Layout]
 equal_split=0
 first_panel_size=40

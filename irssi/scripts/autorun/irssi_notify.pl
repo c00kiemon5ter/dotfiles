@@ -1,0 +1,1 @@
+../irssi_notify.pl
