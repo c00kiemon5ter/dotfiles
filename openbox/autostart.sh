@@ -34,9 +34,6 @@ parcellite &
 ## start sonata in systray
 #sonata -t &
 
-## start conky 
-conky -c ~/.conky/album.conkyrc &
-
 ## mount or umount devices
 halevt &
 
@@ -62,4 +59,7 @@ unclutter &
 #~/.bin/urxvt_client.sh -geometry 78x24-7+16 & #69x24-32+16 &
 ~/.bin/urxvt_client.sh -geometry 80x24+54+52 &
 #~/.bin/urxvt_client.sh -geometry 80x24+0+0 -pe kuake &
+
+## start conky 
+conky -c ~/.conky/nowplaying.conkyrc &
 

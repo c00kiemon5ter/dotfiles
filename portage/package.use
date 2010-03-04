@@ -17,6 +17,8 @@ net-analyzer/nmap -gtk
 games-fps/freedoom doomsday
 games-fps/doom-data doomsday
 media-sound/ncmpcpp clock outputs fftw visualizer
+www-client/uzbl -helpers -gnome
+net-libs/libsoup -gnome
 
 # empathy - least deps
 net-im/empathy gnome gstreamer

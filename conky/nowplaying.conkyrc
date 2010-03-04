@@ -5,12 +5,11 @@ double_buffer yes
 draw_shades no
 update_interval 1.0
 
-maximum_width 780
-minimum_size 640
-
 alignment bottom_left
 gap_x 2
 gap_y 2
+#maximum_width 780
+#minimum_size 640
 
 background yes
 own_window yes
@@ -19,7 +18,7 @@ own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 
 uppercase yes
-override_utf8_locale yes
+override_utf8_locale no
 use_xft yes
 xftfont 28 Days Later:size=9
 xftalpha 1

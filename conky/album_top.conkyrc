@@ -1,7 +1,12 @@
 alignment top_left
 default_bar_size 0 2
-color0 fafafa
-default_color 302e30
+
+#color0 fafafa
+#default_color 302e30
+color1 5E5E5E # Artist
+color2 D3CDCD # track/album
+color3 8A8383 # #9F9595 #B0AAAA
+
 double_buffer yes
 draw_shades no
 gap_x 20
@@ -13,15 +18,15 @@ no_buffers yes
 own_window yes
 own_window_transparent yes
 own_window_type desktop
-update_interval 5
+update_interval 1
 uppercase no
 use_xft yes
-xftfont Liberation Sans:size=14
+xftfont rough_typewriter:size=14
 
 TEXT
 ${if_match "$mpd_status" == "Playing"}\
-${font Liberation Sans:size=22}$alignr$mpd_artist$font
-${voffset -4}${font Liberation Sans:size=9}$alignr$mpd_album$font
-${voffset -36}$color0$mpd_title$color
+${font rough_typewriter:size=22}$color1$mpd_artist$color$font
+${voffset -4}${font rough_typewriter:size=9}$color2$alignr$mpd_album$color$font
+${voffset -36}$color2$mpd_title$color
 $mpd_bar
 ${endif}

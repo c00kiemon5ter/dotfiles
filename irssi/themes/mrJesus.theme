@@ -115,8 +115,8 @@ formats = {
     query_start = "Starting query in {server $1} with {nick $0}";
     #used to hava a 4xtab(4spaces) blank start
     join = "{channick_hilight $[-12]0} %W>%n";
-    part = "{channick $[-12]0} %W<%n {reason $3}";
-    quit = "{channick $[-12]0} %W<<%n {reason $2}";
+    part = "{channick $[-12]0} %W<%n Part: {reason $3}";
+    quit = "{channick $[-12]0} %W<%n Quit: {reason $2}";
     quit_once = "{channel $3} {channick $0} {chanhost $1} quit {reason $2}";
     nick_changed = "{channick $[-12]0} %W|%n changes nick to {channick_hilight $1}";
     own_msg = "{ownmsgnick {ownnick $[-12]0$2}}$1";

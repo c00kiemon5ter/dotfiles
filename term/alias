@@ -71,7 +71,7 @@ alias reboot="sudo reboot"
 ## remote ssh to uni servers
 alias aueb="ssh p3060190@dias.aueb.gr"
 alias alex="telnet p3060190@alexandros.ccslab.aueb.gr"
-alias foss="ssh jesus@foss.aueb.gr"
+alias foss="ssh mrjesus@foss.aueb.gr"
 
 ## Other
 alias tname="echo -ne \"\033]0;$TERM\007\""
