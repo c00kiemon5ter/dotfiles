@@ -14,12 +14,14 @@ sh $HOME/.fehbg &
 ## tint panel
 tint2 &
 
+## start urxvt daemon
+#urxvtd -q -f -o &
+## have a termnal ready
+~/.bin/urxvt_client.sh -geometry 80x24+54+52 &
+
 ## toogle keyboard layout with S-A
 setxkbmap -model evdev -layout us,gr -variant extended -option grp_led:scroll,eurosign:e,grp:alt_shift_toggle &
 #,lv3:rwin_switch,altwin:left_meta_win & 
-
-## start urxvt daemon
-urxvtd -q -f -o &
 
 ## enable numlock
 numlockx on &
@@ -27,23 +29,10 @@ numlockx on &
 ## start parcellite clipboard
 parcellite &
 
-## start msn messenger
-#emesene -i &
-#pidgin &
-
-## start sonata in systray
-#sonata -t &
-
-## mount or umount devices
-halevt &
-
 ## hide mouse after some idle time
 unclutter &
 
-## tiling features
-#whaw &
-
-## tint2 is above
+## tint2 is above other windows
 #wmctrl -ir $(wmctrl -li | grep tint2 | awk '{print $1}') -b add,above
 
 ## start compositing manager
@@ -54,12 +43,6 @@ unclutter &
 ## lock screen with image
 #xautolock -time 5 -locker "feh -FZxN --hide-pointer /home/koukos/Downloads/Themes_Stuff/Walls/the_screamy_wall/screamy1280x1024.jpg" &
 
-## top parallel 
-#~/.bin/urxvt_client.sh -geometry 78x24+7+16 & #80x24+33+16 &
-#~/.bin/urxvt_client.sh -geometry 78x24-7+16 & #69x24-32+16 &
-~/.bin/urxvt_client.sh -geometry 80x24+54+52 &
-#~/.bin/urxvt_client.sh -geometry 80x24+0+0 -pe kuake &
-
 ## start conky 
-conky -c ~/.conky/nowplaying.conkyrc &
+sleep 5 && conky -c ~/.conky/nowplaying.conkyrc &
 
