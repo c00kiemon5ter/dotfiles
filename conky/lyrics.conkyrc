@@ -1,0 +1,48 @@
+#avoid flicker                                                
+double_buffer yes                                             
+
+#own window to run simultanious 2 or more conkys
+own_window  yes                                 
+own_window_transparent yes
+own_window_type normal                          
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+
+#borders
+draw_borders no
+
+#shades
+draw_shades yes
+
+#position
+gap_x 20 #230
+gap_y 30 #20
+alignment top_left
+
+#behaviour
+update_interval 1
+
+#colour
+default_color  ffffff
+default_shade_color 000000
+own_window_colour 555555
+default_outline_color 000000
+draw_outline no
+
+#font
+use_xft yes
+xftfont Droid Sans Mono:size=10 
+#DejaVu Sans:pixelsize=10
+
+#to prevent window from moving
+#use_spacer no               
+#minimum_size  300 500
+
+#mpd
+mpd_host localhost
+mpd_port 6600     
+
+text_buffer_size 6076
+
+#${font}${execi 10 ~/.bin/lyricsdownloader.py | fold -sw60 }${font}
+TEXT
+${font}${execi 10 cat ~/.lyrics/$mpd_artist\ -\ $mpd_title.txt | fold -sw60 }${font}

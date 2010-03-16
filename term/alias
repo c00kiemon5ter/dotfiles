@@ -24,6 +24,7 @@ alias g="geany"
 ## Common
 alias df="df -h -T"
 alias mkdir="mkdir -p -v"
+alias l="ls"
 alias ll="ls -l"
 alias la="ls -A"
 alias lla="ls -al"
@@ -76,6 +77,7 @@ alias foss="ssh mrjesus@foss.aueb.gr"
 ## Other
 alias tname="echo -ne \"\033]0;$TERM\007\""
 alias kaoradio="mplayer http://www.kaotonik.net:8000/playlist &>/dev/null </dev/null &"
+alias JSymphonic="cd ${HOME}/.JSymphonic && java -jar JSymphonic_v0.3.0.jar"
 # desktop record
 alias ffrecord="ffmpeg -f alsa -i plughw -acodec flac -f x11grab -r 30 -s 1280x1024 -i $DISPLAY -vcodec libx264 -vpre lossless_ultrafast -threads 0 \"$@\""
 # fortune equality
@@ -89,8 +91,8 @@ alias euse="euse -i $@ 2>/dev/null"
 # Shows your WAN IP, when you`re sitting behind a router
 alias myIp="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 
-# Quartus 9.0
-alias quartus="/opt/altera9.0/quartus/bin/quartus"
+# Quartus 9.1beta
+alias quartus="/opt/altera9.1sp1/quartus/bin/quartus"
 
 # the 'tree' command ..revisited
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
@@ -98,4 +100,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias matrix="tr -c \"[:digit:]\" \" \" < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR=\"1;32\" grep --color \"[^ ]\""
 #echo $(shuf -i 1-49 | head -n6 | sort -n)'
 alias lotto="shuf -i 1-49 | head -n6 | sort -n | xargs"
+
+## The Fountain (movie.2006)
+alias fountain="mplayer -stop-xscreensaver -subdelay -20,5 -utf8 ${HOME}/Video/the.fountain-done/The.Fountain.DVDRip.XviD-DoNE.avi"
 

@@ -4,7 +4,7 @@ function prompt_command() {
     # different colors for different status
     [ $? -eq 0 ] && local scol="\[\e[0;32m\]" || local scol="\[\e[1;31m\]"
     # workpath, pwd max length, prefix for long paths
-    local w="${PWD/#$HOME/~}" len=55 pre=".."
+    local w="${PWD/#$HOME/~}" len=48 pre=".."
     if [ ${#w} -gt $len ]; then
         local w="${pre}${w:$((${#w} - $len + ${#pre}))}"
     fi
@@ -26,7 +26,7 @@ extract() {
 			*.tar.bz2)   tar xvjf $1    ;;
 			*.tar.gz)    tar xvzf $1    ;;
 			*.bz2)       bunzip2 $1     ;;
-			*.rar)       rar x $1       ;;
+			*.rar)       unrar x $1       ;;
 			*.gz)        gunzip $1      ;;
 			*.tar)       tar xvf $1     ;;
 			*.tbz2)      tar xvjf $1    ;;
@@ -56,6 +56,6 @@ dict() {
 
 # screenshot with style
 scrotshot() {
-	clear && cowthink -d $(fortune -eas) && echo && echo && uname -a && echo && emerge --info | head -n1 && echo && scrot -cd5 -q100 '%F_%T_$wx$h_scrot.jpg'
+	cowthink -d $(fortune -eas) && echo && echo && uname -a && echo && emerge --info | head -n1 && echo && tname && scrot -cd5 -q100 '%F_%T_$wx$h_scrot.png'
 }
 

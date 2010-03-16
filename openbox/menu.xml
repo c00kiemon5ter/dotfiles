@@ -4,12 +4,16 @@
 	<menu id="root-menu" label="OpenBox 3">
 		<item label="Chromium">
 			<action name="Execute">
-                <execute>chromium</execute>
+				<execute>
+					chromium
+				</execute>
 			</action>
 		</item>
 		<item label="Rxvt-Unicode">
 			<action name="Execute">
-				<execute>~/.bin/urxvt_client.sh</execute>
+				<execute>
+					~/.bin/urxvt_client.sh
+				</execute>
 			</action>
 		</item>
 		<item label="QtCreator">
@@ -19,21 +23,21 @@
 				</execute>
 			</action>
 		</item>
-	    <item label="CodeBlocks">
+		<item label="CodeBlocks">
 			<action name="Execute">
 				<execute>
                 codeblocks
 				</execute>
 			</action>
 		</item>
- 		<item label="Netbeans">
+		<item label="Netbeans">
 			<action name="Execute">
 				<execute>
 	    		netbeans-6.8
 				</execute>
 			</action>
-	    </item>
-        <item label="Gimp">
+		</item>
+		<item label="Gimp">
 			<action name="Execute">
 				<execute>
 				gimp
@@ -50,13 +54,13 @@
 						</execute>
 					</action>
 				</item>
-		        <item label="QtCreator">
-	    		    <action name="Execute">
-    				    <execute>
+				<item label="QtCreator">
+					<action name="Execute">
+						<execute>
                         qtcreator
-    				    </execute>
-	    		    </action>
-		        </item>
+						</execute>
+					</action>
+				</item>
 				<item label="CodeBlocks">
 					<action name="Execute">
 						<execute>
@@ -117,13 +121,6 @@
 				</item>
 			</menu>
 			<menu id="7" label="Multimedia">
-				<item label="GNOME MPlayer">
-					<action name="Execute">
-						<execute>
-						gnome-mplayer
-						</execute>
-					</action>
-				</item>
 				<item label="ALSA mixer">
 					<action name="Execute">
 						<execute>
@@ -131,18 +128,13 @@
 						</execute>
 					</action>
 				</item>
-				<item label="Sonata">
-					<action name="Execute">
-						<execute>
-						sonata
-						</execute>
-					</action>
-				</item>
 			</menu>
 			<menu id="5" label="Network">
 				<item label="Chromium">
 					<action name="Execute">
-                        <execute>chromium</execute>
+						<execute>
+							chromium
+						</execute>
 					</action>
 				</item>
 				<item label="Deluge BitTorrent Client">
@@ -156,27 +148,6 @@
 					<action name="Execute">
 						<execute>
 						~/.bin/urxvt_client.sh -e irssi
-						</execute>
-					</action>
-				</item>
-				<item label="Emesene Instant Messenger">
-					<action name="Execute">
-						<execute>
-						emesene
-						</execute>
-					</action>
-				</item>
-				<item label="Pidgin Internet Messenger">
-					<action name="Execute">
-						<execute>
-						pidgin
-						</execute>
-					</action>
-				</item>
-				<item label="TkVNC">
-					<action name="Execute">
-						<execute>
-						~/.bin/urxvt_client.sh -e tkvnc
 						</execute>
 					</action>
 				</item>
@@ -261,13 +232,6 @@
 				</item>
 			</menu>
 			<menu id="19" label="Shells">
-				<item label="MC">
-					<action name="Execute">
-						<execute>
-						~/.bin/urxvt_client.sh -e mc
-						</execute>
-					</action>
-				</item>
 				<item label="Xterm">
 					<action name="Execute">
 						<execute>

@@ -9,7 +9,7 @@
 #xrdb -merge $HOME/.Xdefaults &
 
 ## set wallpaper 
-sh $HOME/.fehbg &
+sh ${HOME}/.fehbg &
 
 ## tint panel
 tint2 &
@@ -17,7 +17,7 @@ tint2 &
 ## start urxvt daemon
 #urxvtd -q -f -o &
 ## have a termnal ready
-~/.bin/urxvt_client.sh -geometry 80x24+54+52 &
+${HOME}/.bin/urxvt_client.sh -geometry 80x24+54+52 &
 
 ## toogle keyboard layout with S-A
 setxkbmap -model evdev -layout us,gr -variant extended -option grp_led:scroll,eurosign:e,grp:alt_shift_toggle &
@@ -44,5 +44,5 @@ unclutter &
 #xautolock -time 5 -locker "feh -FZxN --hide-pointer /home/koukos/Downloads/Themes_Stuff/Walls/the_screamy_wall/screamy1280x1024.jpg" &
 
 ## start conky 
-sleep 5 && conky -c ~/.conky/nowplaying.conkyrc &
+sleep 5 && conky -c ${HOME}/.conky/nowplaying.conkyrc &
 

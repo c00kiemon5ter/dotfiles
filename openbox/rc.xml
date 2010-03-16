@@ -107,8 +107,7 @@
     <number>1</number>
     <firstdesk>1</firstdesk>
     <names>
-      <name>Flip</name>
-      <name>Flop</name>
+      <name>Main</name>
     </names>
     <popupTime>0</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -366,15 +365,10 @@
         <command>~/.bin/toogle_layout.sh</command>
       </action>
     </keybind> -->
-    <keybind key="A-F3">
+    <keybind key="A-F2">
       <action name="Execute">
         <command>dmenu_run -i -nb 'black' -nf 'white' -sb 'orange' -sf 'black'</command>
         <!-- <command>~/.bin/dmenu_lanch.sh</command> -->
-      </action>
-    </keybind>
-    <keybind key="A-F2">
-      <action name="Execute">
-        <command>gmrun</command>
       </action>
     </keybind>
     <keybind key="A-grave">
