@@ -20,7 +20,7 @@ my $notifications = $bus->get_service('org.freedesktop.Notifications');
 my $object = $notifications->get_object('/org/freedesktop/Notifications',
 					'org.freedesktop.Notifications');
 
-my $notify_nick = 'mrJesus';
+my $notify_nick = 'c00kiemon5ter';
 
 # $object->Notify('appname', 0, 'info', 'Title', 'Message', [], { }, 3000);
 

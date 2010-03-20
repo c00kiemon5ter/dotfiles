@@ -93,7 +93,7 @@ URxvt*font:             xft:DroidSansMonoDotted:size=9
 !URxvt Color Settings {{{
 
 ! Color Scheme
-#include "/home/c00kiemon5ter/.config/color_schemes/mrJesus"
+#include "/home/c00kiemon5ter/.color_schemes/mrJesus"
 
 URxvt*depth:32
 URxvt*dynamicColors:on
