@@ -77,6 +77,8 @@ alias foss="ssh mrjesus@foss.aueb.gr"
 ## Other
 alias tname="echo -ne \"\033]0;$TERM\007\""
 alias kaoradio="mplayer http://www.kaotonik.net:8000/playlist &>/dev/null </dev/null &"
+alias oggfossradio="mplayer http://foss.aueb.gr:8000/radio.ogg &>/dev/null </dev/null &"
+alias mp3fossradio="mplayer http://foss.aueb.gr:8000/radio.mp3 &>/dev/null </dev/null &"
 alias JSymphonic="cd ${HOME}/.JSymphonic && java -jar JSymphonic_v0.3.0.jar"
 # desktop record
 alias ffrecord="ffmpeg -f alsa -i plughw -acodec flac -f x11grab -r 30 -s 1280x1024 -i $DISPLAY -vcodec libx264 -vpre lossless_ultrafast -threads 0 \"$@\""
@@ -98,6 +100,8 @@ alias quartus="/opt/altera9.1sp1/quartus/bin/quartus"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 # the matrix
 alias matrix="tr -c \"[:digit:]\" \" \" < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR=\"1;32\" grep --color \"[^ ]\""
+# binary clock
+alias binclock="watch -n 1 'echo \"obase=2;\`date +%s\`\" | bc'"
 #echo $(shuf -i 1-49 | head -n6 | sort -n)'
 alias lotto="shuf -i 1-49 | head -n6 | sort -n | xargs"
 
