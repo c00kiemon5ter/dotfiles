@@ -1,4 +1,4 @@
-# JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com)
+# c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
 
 ## Navigation:
 alias ~="cd ~"
@@ -48,7 +48,7 @@ alias oba="$EDITOR ~/.config/openbox/autostart.sh && obr"
 alias vbash="$EDITOR ~/.bashrc && reload"
 alias valias="$EDITOR ~/.alias && reload"
 alias vfuncs="$EDITOR ~/.funcs && reload"
-alias reload="source ~/.bashrc && obr"
+alias reload="source ~/.bashrc"
 alias vxdefs="$EDITOR ~/.Xdefaults"
 #su-files
 alias vmkconf="sudo $EDITOR /etc/make.conf"

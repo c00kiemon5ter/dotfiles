@@ -1,5 +1,5 @@
-" mrJesus Vim Color Theme
-" JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com)
+" c00kies Vim Color Theme
+" c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
 " $date -> Sunday 24 Jan 2010 
 " 
 " This is inspired by Vibrantink and Mustang color themes

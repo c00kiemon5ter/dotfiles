@@ -1,4 +1,4 @@
-# mrJesus (L)(O)(L) (mrJesusSuperstar@gmail.com)
+# c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
 #
 
 # /etc/skel/.bashrc
@@ -37,6 +37,9 @@ CDPATH=:${HOME}/../git/:
 PROMPT_COMMAND=prompt_command
 HISTCONTROL=erasedups
 HISTIGNORE="&:pwd:cd:~:[bf]g:history:l:l[wsla]:lla:exit:\:q"
+
+export MPD_HOST=127.0.0.1
+export MPD_PORT=6600
 
 source ${HOME}/.alias
 source ${HOME}/.funcs

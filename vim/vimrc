@@ -1,4 +1,4 @@
-" JesusSuperstar (L)(O)(L) (mrJesusSuperstar@gmail.com)
+" c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
 "
 " Ideas taken from :
 " briancarper --> http://briancarper.net/vim/vimrc
@@ -124,7 +124,7 @@ set smartindent
 "}}}
 
 " Color Scheme {{{
-colorscheme mrJesus
+"colorscheme c00kiez
 "colorscheme vibrantink
 "colorscheme Mustang
 "colorscheme Digerati_mod

@@ -1,5 +1,5 @@
 #!/bin/bash
-# mrJesus (L)(O)(L) (mrJesusSuperstar@gmail.com)
+# c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
 #
 
 ## load the default autostart.sh
