@@ -11,7 +11,7 @@ if exists("syntax_on")
    syntax reset
 endif
 
-let g:colors_name = "mrJesus"
+let g:colors_name = "c00kiez"
 
 " Vim >= 7.0 specific colors
 if version >= 700
