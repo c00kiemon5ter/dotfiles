@@ -1,4 +1,4 @@
-# c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
+# c00kiemon5ter (ivan.kanak@gmail.com) $HOME under c00kie License
 
 ## Navigation:
 alias ~="cd ~"
@@ -7,18 +7,12 @@ alias ...="cd ../../"
 alias ....="cd ../../../"
 
 ## always use color with ls and grep
-alias ls="ls --color=always -h"
-alias grep="grep --color=always"
-alias egrep="egrep --color=always"
+alias ls="ls --color=auto -h"
+alias grep="grep --color=auto -I" # skip binary files
+alias egrep="egrep --color=auto"
 
 ## Editors:
-alias v="vim"
-alias sv="sudo vim"
-alias svim="sudo vim"
-alias n="nano -w"
-alias nano="nano -w"
-alias sn="sudo nano"
-alias snano="sudo nano"
+alias v="$EDITOR"
 alias g="geany"
 
 ## Common
@@ -33,63 +27,61 @@ alias mv="mv -i"
 alias rm="rm -I -v"
 alias du="du -h -a --max-depth=1"
 alias lw="wmctrl -l | cut -d\" \" -f5- | sed \"s/^[[:space:]|\(].*$//\" | uniq"
-alias :q="exit"
 
 ## files
 #tint
-alias vtint="$EDITOR ~/.config/tint2/tint2rc"
+alias vtint="$EDITOR $HOME/.config/tint2/tint2rc"
 alias rtint="killall tint2; tint2 &"
 #openbox
 alias obr="openbox --reconfigure"
-alias obrc="$EDITOR ~/.config/openbox/rc.xml && obr"
-alias obm="$EDITOR ~/.config/openbox/menu.xml && obr"
-alias oba="$EDITOR ~/.config/openbox/autostart.sh && obr"
+alias obrc="$EDITOR $HOME/.config/openbox/rc.xml && obr"
+alias obm="$EDITOR $HOME/.config/openbox/menu.xml && obr"
+alias oba="$EDITOR $HOME/.config/openbox/autostart.sh && obr"
 #bash
-alias vbash="$EDITOR ~/.bashrc && reload"
-alias valias="$EDITOR ~/.alias && reload"
-alias vfuncs="$EDITOR ~/.funcs && reload"
-alias reload="source ~/.bashrc"
-alias vxdefs="$EDITOR ~/.Xdefaults"
+alias reload="source $HOME/.bashrc"
+alias vbash="$EDITOR $HOME/.bashrc && reload"
+alias valias="$EDITOR $HOME/.alias && reload"
+alias vfuncs="$EDITOR $HOME/.funcs && reload"
+alias vxdefs="$EDITOR $HOME/.Xdefaults"
+#other
+alias vmutt="$EDITOR $HOME/.mutt/muttrc"
+alias vvim="$EDITOR $HOME/.vimrc"
 #su-files
 alias vmkconf="sudo $EDITOR /etc/make.conf"
 alias vxorg="sudo $EDITOR /etc/X11/xorg.conf"
 alias vgrub="sudo $EDITOR /boot/grub/grub.conf"
 alias vmpd="sudo $EDITOR /etc/mpd.conf"
-# kernel files
-alias ukernfls="cp -u /boot/config ~/Projects/GITrepos/dotfiles/kernel/ && \
-cp /boot/vmlinuz ~/Projects/GITrepos/dotfiles/kernel/ && \
-cp /boot/System.map ~/Projects/GITrepos/dotfiles/kernel/"
-
-## mount
-alias mount="sudo mount"
-alias umount="sudo umount"
-
-## poweroff etc
-alias shutdown="sudo shutdown"
-alias shutnow="sudo shutdown -h now"
-alias reboot="sudo reboot"
 
 ## remote ssh to uni servers
-alias aueb="ssh p3060190@dias.aueb.gr"
+alias dias="ssh -1 p3060190@dias.aueb.gr"
 alias alex="telnet p3060190@alexandros.ccslab.aueb.gr"
 alias foss="ssh mrjesus@foss.aueb.gr"
+alias honeyc00kiez="shh honeypot@c00kiemon5ter.ath.cx"
 
 ## Other
-alias tname="echo -ne \"\033]0;$TERM\007\""
+alias irssi="dtach -A $HOME/.irssi/irssi.session irssi"
+
+# music
 alias kaoradio="mplayer http://www.kaotonik.net:8000/playlist &>/dev/null </dev/null &"
 alias oggfossradio="mplayer http://foss.aueb.gr:8000/radio.ogg &>/dev/null </dev/null &"
 alias mp3fossradio="mplayer http://foss.aueb.gr:8000/radio.mp3 &>/dev/null </dev/null &"
-alias JSymphonic="cd ${HOME}/.JSymphonic && java -jar JSymphonic_v0.3.0.jar"
+alias jsymphonic="cd ${HOME}/.JSymphonic && java -jar JSymphonic_v0.3.0.jar"
+
 # desktop record
 alias ffrecord="ffmpeg -f alsa -i plughw -acodec flac -f x11grab -r 30 -s 1280x1024 -i $DISPLAY -vcodec libx264 -vpre lossless_ultrafast -threads 0 \"$@\""
+
 # fortune equality
 alias fortune="fortune -e -a"
 # Gets a random Futurama quote from slashdot.org(/.)
 alias futurama="curl -Is slashdot.org | egrep '^X-(F|B|L)' | cut -d \- -f 2"
 alias cowfortune="cowthink -d $(fortune -sea)"
 
+## Nexuiz
+alias nexuiz-foss="nexuiz +connect foss.aueb.gr:2600"
+
 # dump euse error messages
 alias euse="euse -i $@ 2>/dev/null"
+
 # Shows your WAN IP, when you`re sitting behind a router
 alias myIp="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 
@@ -98,13 +90,18 @@ alias quartus="/opt/altera9.1sp1/quartus/bin/quartus"
 
 # the 'tree' command ..revisited
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
 # the matrix
 alias matrix="tr -c \"[:digit:]\" \" \" < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR=\"1;32\" grep --color \"[^ ]\""
+
 # binary clock
 alias binclock="watch -n 1 'echo \"obase=2;\`date +%s\`\" | bc'"
+
+# randomers
 #echo $(shuf -i 1-49 | head -n6 | sort -n)'
 alias lotto="shuf -i 1-49 | head -n6 | sort -n | xargs"
 
 ## The Fountain (movie.2006)
-alias fountain="mplayer -stop-xscreensaver -subdelay -20,5 -utf8 ${HOME}/Video/the.fountain-done/The.Fountain.DVDRip.XviD-DoNE.avi"
+#alias fountain="mplayer -stop-xscreensaver -subdelay -20,5 -utf8 ${HOME}/Video/the.fountain-done/The.Fountain.DVDRip.XviD-DoNE.avi"
 
+# vim: nospell

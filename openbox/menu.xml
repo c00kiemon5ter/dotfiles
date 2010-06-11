@@ -23,17 +23,10 @@
 				</execute>
 			</action>
 		</item>
-		<item label="CodeBlocks">
-			<action name="Execute">
-				<execute>
-                codeblocks
-				</execute>
-			</action>
-		</item>
 		<item label="Netbeans">
 			<action name="Execute">
 				<execute>
-	    		netbeans-6.8
+	    		netbeans-6.9
 				</execute>
 			</action>
 		</item>
@@ -71,7 +64,7 @@
 				<item label="Netbeans">
 					<action name="Execute">
 						<execute>
-						netbeans-6.8
+						netbeans-6.9
 						</execute>
 					</action>
 				</item>
@@ -339,7 +332,7 @@
 				<item label="Pcmanfm">
 					<action name="Execute">
 						<execute>
-						pcmanfm
+						pcmanfm2
 						</execute>
 					</action>
 				</item>

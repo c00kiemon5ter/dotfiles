@@ -1,0 +1,28 @@
+!URxvt*background: rgba:0000/0000/0000/c000
+*foreground: #DDEEDD
+*background: #1C1C1C
+
+!black 
+*color0 : #222222
+*color8 : #454545
+!red
+*color1 : #F92672
+*color9 : #F92672
+!green
+*color2 : #A6E22E
+*color10: #A6E22E
+!yellow
+*color3 : #FD971F
+*color11: #FD971F
+!blue
+*color4 : #4682B4
+*color12: #4682B4
+!magenta
+*color5 : #AE81FF
+*color13: #AE81FF
+!cyan
+*color6: #89b6e2
+*color14: #46a4ff
+!white
+*color7 : #FFFFFF
+*color15: #FFFFFF

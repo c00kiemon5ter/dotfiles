@@ -1,53 +1,44 @@
-song_window_title_format = "MPD: {%a - }{%t}|{%f}"
-enable_window_title = "yes"
-mpd_crossfade_time = "5"
-mpd_music_dir = "/mnt/data/music"
-allow_physical_files_deletion = "no"
-allow_physical_directories_deletion = "no"
-default_place_to_search_in = "database"
-show_hidden_files_in_local_browser = "no"
-mouse_support = "yes"
-regular_expressions = "extended"
-fancy_scrolling = "yes"
-cyclic_scrolling = "no"
-jump_to_now_playing_song_at_start = "yes"
-ask_before_clearing_main_playlist = "yes"
-autocenter_mode = "no"
+##DISPLAY
+playlist_display_mode = "classic"
+browser_display_mode = "classic"
+search_engine_display_mode = "classic"
+
+song_list_format = "{$3%a$9} {$8%t$9} $R {$1%b$9}"
+song_columns_list_format = "(30)[green]{a} (37)[white]{t} (33)[black]{b}"
 
 header_visibility = "no"
 statusbar_visibility = "yes"
-header_text_scrolling = "yes"
 
-playlist_display_mode = "columns" #"classic"
-playlist_disable_highlight_delay = "2"
-browser_display_mode = "columns"
-search_engine_display_mode = "columns"
-
+mouse_list_scroll_whole_page = "no"
+lines_scrolled = 5
+fancy_scrolling = "yes"
 ignore_leading_the = "no"
-## - 1 - lyricwiki.org
-## - 2 - lyricsplugin.com
 lyrics_database = "2"
 follow_now_playing_lyrics = "yes"
-
-external_editor = "vim"
-use_console_editor = "yes"
-
-song_list_format = "{%a}{ %t}$R{ (%l)}"
-#song_columns_list_format = "(7)[black]{l} (28)[red]{a} (28)[green]{t} (28)[black]{b}"
-song_columns_list_format = "(5)[black]{ll} (22)[blue]{ar} (34)[yellow]{t} (30)[black]{b}"
-song_status_format = "%t{ by %a}{ from %b}{ (%y)}"
-
 colors_enabled = "yes"
-#header_window_color = "white"
-progressbar_color = "black"
-#statusbar_color = "black"
-#main_window_color = "black"
-#main_window_highlight_color = "green"
-#volume_color = "blue"
-#active_column_color = "green"
-#window_border_color = "red"
-#active_window_border = "yellow"
-#state_line_color = "cyan"
-#state_flags_color = "green"
-
+statusbar_color = "green"
+progressbar_color = "green"
+playlist_disable_highlight_delay = "5"
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_type = "spectrum" #spectrum|wave
+visualizer_color = "green"
+progressbar_color = "green"
+progressbar_look = "=>"
+clock_display_seconds = "no"
 user_interface = "alternative"
+
+alternative_header_first_line_format = "$8--$3 %t $8--$9"
+alternative_header_second_line_format = "$8(%b)$9"
+alternative_ui_separator_color = "white"
+volume_color = "white"
+state_line_color = "default"
+state_flags_color = "default"
+main_window_color = "white"
+color1 = "green"
+color2 = "white"
+main_window_highlight_color = "green"
+
+mpd_crossfade_time = "5"
+mpd_music_dir = "/mnt/data/music"
+
+# vim: nospell

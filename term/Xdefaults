@@ -9,12 +9,17 @@ Xft.dpi:		96
 !}}}
 
 !xpdf settings {{{
-xpdf*enableFreetype:      yes
-xpdf*antialias:           yes
-xpdf*foreground:          black
-xpdf*background:          white
-xpdf*urlCommand:          firefox
-xpdf*viKeys:              on
+xpdf*enableFreetype:	  true
+xpdf*antialias:           true
+xpdf*foreground:          white
+!black
+xpdf*background:          #1f1f1f
+!white
+xpdf*paperColor:          #1f1f1f
+xpdf*urlCommand:          chromium %s
+xpdf*viKeys:              true
+xpdf*continuousView:      true
+xpdf*initialZoom:		  width
 !}}}
 
 !Cursor theme {{{
@@ -95,7 +100,7 @@ URxvt*font:             xft:DroidSansMonoDotted:size=9
 ! Color Scheme
 #include "/home/c00kiemon5ter/.color_schemes/c00kiez"
 
-URxvt*depth:32
+URxvt*depth:16
 URxvt*dynamicColors:on
 URxvt*transparent:false
 
@@ -121,4 +126,31 @@ URxvt*pointerBlankDelay:2
 
 !}}}
 
-! vim:foldmethod=marker:foldmarker={{{,}}}:foldlevel=0
+!xscreensaver {{{
+! xscreensaver theme from thayer
+! ! http://www.flickr.com/photos/cinderwick/2685038363/
+xscreensaver.Dialog.headingFont:        -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:           -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:          -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:          -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:         -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:           -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:         -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.foreground:         #ffffff
+xscreensaver.Dialog.background:         #111111
+xscreensaver.Dialog.topShadowColor:     #111111
+xscreensaver.Dialog.bottomShadowColor:  #111111
+xscreensaver.Dialog.Button.foreground:  #666666
+xscreensaver.Dialog.Button.background:  #ffffff
+xscreensaver.Dialog.text.foreground:    #666666
+xscreensaver.Dialog.text.background:    #ffffff
+xscreensaver.Dialog.internalBorderWidth:24
+xscreensaver.Dialog.borderWidth:        20
+xscreensaver.Dialog.shadowThickness:    2
+xscreensaver.passwd.thermometer.foreground:  #ff0000
+xscreensaver.passwd.thermometer.background:  #000000
+xscreensaver.passwd.thermometer.width:       8
+xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
+!}}}
+
+! vim:nospell foldmethod=marker:foldmarker={{{,}}}:foldlevel=0

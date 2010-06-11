@@ -26,7 +26,10 @@ set noerrorbells
 set number
 set numberwidth=2
 
-" Syntax Highliting
+" Spell Checking
+setlocal spell spelllang=en,el
+
+" Syntax Highlighting
 if has("syntax")
 	syntax on
 endif
@@ -46,7 +49,7 @@ set backupdir=~/.vim/backups/ ",/tmp/vimbackups/
 " Automatically save before commands like :next and :make
 set autowrite
 
-" do auto identation
+" do auto indentation
 set autoindent
 
 " Wrap text
@@ -64,7 +67,7 @@ set backspace=indent,eol,start
 " Show us the command we're typing
 set showcmd
 
-" Highlight matching parens
+" Highlight matching patterns
 set showmatch
 set matchpairs+=<:>
 set matchtime=3
@@ -93,7 +96,7 @@ set suffixes+=.in,.a,.1
 " Allow edit buffers to be hidden
 set hidden
 
-" Minimul window height
+" Minimum window height
 set winminheight=1
 
 " Always show statusbar
@@ -110,7 +113,7 @@ set dictionary=/usr/share/dict/words
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab
+"set expandtab
 set smartindent
 "}}}
 
@@ -124,7 +127,10 @@ set smartindent
 "}}}
 
 " Color Scheme {{{
+"colorscheme inkpot
 "colorscheme c00kiez
+colorscheme ristoink
+"colorscheme neverland
 "colorscheme vibrantink
 "colorscheme Mustang
 "colorscheme Digerati_mod
@@ -154,17 +160,17 @@ endif
 "}}}
 
 " Tab-Completion {{{
-if has("eval")
-    function! CleverTab()
-        if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
-            return "\<Tab>"
-        else
-            return "\<C-N>"
-        endif
-    endfun
-    inoremap <Tab> <C-R>=CleverTab()<CR>
-    inoremap <S-Tab> <C-P>
-endif
+"if has("eval")
+"    function! CleverTab()
+"        if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
+"            return "\<Tab>"
+"        else
+"            return "\<C-N>"
+"        endif
+"    endfun
+"    inoremap <Tab> <C-R>=CleverTab()<CR>
+"    inoremap <S-Tab> <C-P>
+"endif
 "}}}
 
 " Special less/man/vimpager modes {{{
@@ -220,7 +226,23 @@ fun! FixInvisiblePunctuation()
     silent! %s/\%ua0/ /g
     retab
 endfun
-"}}}
+"}}} 
 
-" vim:foldmethod=marker:foldmarker={{{,}}}:foldlevel=0
+" Auto-change timestamp on closing irssi .pl scripts {{{
+autocmd BufWrite *.pl %s/changed     => '.*/\="changed     => '" . strftime("%c") . "',"/e
+" }}}
 
+" Mutt settings {{{
+" F1 through F3 rewraps paragraphs
+augroup MUTT
+	au BufRead ~/.mutt/temp/mutt* set spell 
+	au BufRead ~/.mutt/temp/mutt* nmap  <F1>  gqap
+	au BufRead ~/.mutt/temp/mutt* nmap  <F2>  gqqj
+	au BufRead ~/.mutt/temp/mutt* nmap  <F3>  kgqj
+	au BufRead ~/.mutt/temp/mutt* map!  <F1>  <ESC>gqapi
+	au BufRead ~/.mutt/temp/mutt* map!  <F2>  <ESC>gqqji
+	au BufRead ~/.mutt/temp/mutt* map!  <F3>  <ESC>kgqji
+augroup END
+" }}}
+
+" vim: nospell foldmethod=marker:foldmarker={{{,}}}:foldlevel=0
