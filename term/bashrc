@@ -59,8 +59,3 @@ export MPD_PORT=6600
 source ${HOME}/.alias
 source ${HOME}/.funcs
 
-# StartUp quottes
-#cowthink -d $(fortune -sea) && echo;
-#cowthink -d $(futurama) && echo;
-#cowthink -d $(bashfortune) && echo;
-

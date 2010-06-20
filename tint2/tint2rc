@@ -31,14 +31,18 @@ background_color = #000000 0
 # PANEL {{{
 #---------------------------------------------
 panel_monitor = all
-panel_position = bottom center #right #left #center
-panel_size = 101% 23 #86% 22 #26 to get nice emesene icon
-panel_margin = 0 -1 #-1 -1
+
+#panel_position = bottom center #right #left #center
+#panel_size = 101% 23 #86% 22 #26 to get nice emesene icon
+#panel_margin = 0 -1 
+panel_position = bottom center
+panel_size = 1924 23
+panel_margin = 0 -1
+
 panel_padding = 7 0
 font_shadow = 0
 panel_background_id = 1 
 wm_menu = 1
-real_transparency = 1
 panel_layer = normal #bottom normal top
 #}}}
 
@@ -146,5 +150,5 @@ autohide_height = 4
 strut_policy = minimum
 # }}}
 
-# vim:foldmethod=marker:foldmarker={{{,}}}:foldlevel=0
+# vim: nospell foldmethod=marker:foldmarker={{{,}}}:foldlevel=0
 

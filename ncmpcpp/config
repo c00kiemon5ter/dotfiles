@@ -40,5 +40,6 @@ main_window_highlight_color = "green"
 
 mpd_crossfade_time = "5"
 mpd_music_dir = "/mnt/data/music"
+external_editor = "vim"
 
 # vim: nospell

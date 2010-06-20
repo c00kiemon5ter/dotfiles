@@ -49,6 +49,6 @@ unclutter &
 #xautolock -time 5 -locker "feh -FZxN --hide-pointer $HOME/Downloads/Themes_Stuff/Walls/the_screamy_wall/screamy1280x1024.jpg" &
 
 ## start conky 
-sleep 5 && conky -c ${HOME}/.conky/nowplaying.conkyrc &
+#sleep 5 && conky -c ${HOME}/.conky/nowplaying.conkyrc &
 
 # vim: nospell
