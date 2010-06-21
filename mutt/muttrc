@@ -1,0 +1,151 @@
+## main settings
+set mbox_type=Maildir
+# use another service to grab mail at intervals
+#set folder=${HOME}/Mail
+#set spoolfile="+/INBOX"
+# do not store mail locally
+set folder=imaps://imap.gmail.com:993/
+set spoolfile=imaps://imap.gmail.com:993/[Gmail]/All\ Mail
+# specify where to save and/or look for postponed messages
+set postponed=+[Gmail]/Drafts
+set alias_file=${HOME}/.mutt/alias
+
+## IMAP settings
+# allow mutt to open new imap connection automatically
+set imap_passive=no
+# keep imap connection alive by polling intermittently (time in seconds)
+set imap_keepalive=300
+# how often to check for new mail (time in seconds)
+set mail_check=120
+
+source ${HOME}/.mutt/gmail_account
+
+## SMTP settings
+set smtp_url=smtps://${imap_user}:${imap_pass}@smtp.gmail.com
+set ssl_force_tls=yes
+
+## boxes
+mailboxes +---GMail-- +[Gmail]/All\ Mail +[Gmail]/Sent\ Mail +[Gmail]/Drafts
+mailboxes +[Gmail]/Bin +INBOX +AUEB +FOSS +Linux +Git +ArchLinux 
+mailboxes +Admin +ACM +Family +mrJesusSuperstar +PureAsxetos
+
+## cached files
+set header_cache=${HOME}/.mutt/cache/headers
+set message_cachedir=${HOME}/.mutt/cache/bodies
+
+set certificate_file=${HOME}/.mutt/certificates
+set mailcap_path=${HOME}/.mutt/mailcap
+set signature=${HOME}/.mutt/sig
+#set tmpdir=${HOME}/.mutt/tmp
+set tmpdir=/tmp
+
+## editor settings
+set editor="vim +:silent+?^$"
+set ispell="aspell -e -c"
+
+## commands
+set delete
+set quit
+set beep_new
+# strip headers and eval mimes when piping
+set pipe_decode
+# strip headers and eval mimes before searching
+set thorough_search
+# gmail like sort
+set sort=threads
+set sort_aux=reverse-last-date-received
+# don't collapse on an unread message
+set uncollapse_jump
+# thread based on regex
+set sort_re
+set reply_regexp        = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+
+## pager stuff
+# number of index lines to show
+set pager_index_lines=5
+# number of context lines to show
+set pager_context=5
+# don't go to next message automatically
+set pager_stop
+# scroll in menus
+set menu_scroll
+# don't split words
+set smart_wrap
+# show tildes like in vim
+set tilde
+# no ugly plus signs
+unset markers
+# view html automatically
+auto_view text/html
+# save html for last
+alternative_order text/plain text/enriched text/html
+set quote_regexp        = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+
+## formats
+set date_format         = "%d/%m/%y at %I:%M%P"
+set index_format        = "%3C [%Z] %D %-15.15F %s"
+set status_format       = "-%r- %v ---[ Folder: %f, Msgs: %m%?n? New: %n?%?d? Del: %d?%?t? Tag: %t?%?l? %l? ]%?p?---- .: %p waiting to send :. ?--%>- (%P) ---"
+set alias_format        = "%4n %t %-20a  %r"
+
+## composing mail
+set realname="Ivan Kanakarakis"
+set sig_dashes
+# show headers when composing
+set edit_headers
+# skip to compose when replying
+set fast_reply
+# don't wait for sending... to complete
+set sendmail_wait=-1
+# ask for cc recipents
+set askcc
+# save attachments with the body
+set fcc_attach
+# forward attachments as part of body
+unset mime_forward
+set forward_format="Fwd: %s"
+# decode when forwarding
+set forward_decode
+# set the attribution, quoting
+set attribution="On %d, %n wrote:"
+# reply to Reply to: field
+set reply_to
+# reply as w    homever it was to
+set reverse_name
+# include message in replies
+set include
+# include message in forwards
+set forward_quote
+
+## headers to show
+ignore *
+unignore from: to: cc: date: subject:
+# header order
+hdr_order from: to: cc: date: subject:
+
+## sources
+source $alias_file
+source ${HOME}/.mutt/macros
+source ${HOME}/.mutt/colors.muttrc
+source ${HOME}/.mutt/sidebar.muttrc
+
+## bindings ~ vim like
+# these just give me headaches
+#bind index,pager \#     noop
+#bind index i            noop
+bind pager i            exit
+bind pager /            search
+bind pager <up>         previous-line
+bind pager <down>       next-line
+bind pager k            previous-line
+bind pager j            next-line
+bind pager gg           top
+bind pager G            bottom
+bind index gg           first-entry
+bind index G            last-entry
+bind pager K            previous-undeleted
+bind pager J            next-undeleted
+bind index K            previous-unread
+bind index J            next-unread
+bind index,pager R      group-reply
+
+# vim: nospell

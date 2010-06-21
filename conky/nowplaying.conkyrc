@@ -1,31 +1,34 @@
 # c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
 # 
 
-double_buffer yes
-draw_shades no
-update_interval 1.0
+background yes
+update_interval 2.0
 
 alignment bottom_left
 gap_x 2
 gap_y 2
-#maximum_width 780
-#minimum_size 640
+minimum_size 1680
 
-background yes
 own_window yes
-own_window_type desktop
 own_window_transparent yes
+own_window_type override
+#own_window_type desktop
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 
-uppercase yes
-override_utf8_locale no
-use_xft yes
-xftfont 28 Days Later:size=9
-xftalpha 1
+double_buffer yes
+draw_shades no
+draw_graph_borders no
 
-color1 5E5E5E # Artist
-color2 D3CDCD # track/album
-color3 8A8383 # #9F9595 #B0AAAA
+uppercase yes
+use_xft yes
+xftalpha 0.8
+xftfont 28 Days Later:size=9
+override_utf8_locale yes
+
+# Artist
+color1 4C4C4C #5E5E5E
+# track/album
+color2 D3CDCD
 
 #mpd_host localhost
 #mpd_port 6600

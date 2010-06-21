@@ -2,7 +2,7 @@ background yes
 use_xft yes
 xftalpha 0.8
 xftfont Note This:size=14
-update_interval 0.0
+update_interval 300
 total_run_times 0
 own_window no
 own_window_transparent yes
@@ -13,6 +13,7 @@ draw_shades no
 draw_graph_borders no
 #max_text_width 23
 maximum_width 225
+minimum_size 255
 default_color 333333
 default_shade_color 333333
 default_outline_color 333333
@@ -29,6 +30,6 @@ imlib_cache_size 0
 
 TEXT
 ${image /home/c00kiemon5ter/.tasklist/postit2tr.png -s 220x200}
-${execp ${HOME}/.bin/tasklist.sh -list|sed 's/.\{24\}/&\n/g'|sed '/^\s*$/d'|sed 's/^\(.*\)/${offset 25}\1/'}
+${execp ${HOME}/.bin/tasklist -list|sed 's/.\{24\}/&\n/g'|sed '/^\s*$/d'|sed 's/^\(.*\)/${offset 25}\1/'}
 
 # vim: nospell
