@@ -2,10 +2,10 @@
 <!-- # c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License -->
 <openbox_menu>
 	<menu id="root-menu" label="OpenBox 3">
-		<item label="Chromium">
+		<item label="Firefox">
 			<action name="Execute">
 				<execute>
-					chromium
+					~/.bin/app_focus.sh firefox
 				</execute>
 			</action>
 		</item>
@@ -26,7 +26,7 @@
 		<item label="Netbeans">
 			<action name="Execute">
 				<execute>
-	    		netbeans-6.9
+	    		netbeans
 				</execute>
 			</action>
 		</item>
@@ -64,7 +64,7 @@
 				<item label="Netbeans">
 					<action name="Execute">
 						<execute>
-						netbeans-6.9
+						netbeans
 						</execute>
 					</action>
 				</item>

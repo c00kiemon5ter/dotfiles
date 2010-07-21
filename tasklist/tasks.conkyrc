@@ -2,7 +2,7 @@ background yes
 use_xft yes
 xftalpha 0.8
 xftfont Note This:size=14
-update_interval 300
+update_interval 60
 total_run_times 0
 own_window no
 own_window_transparent yes

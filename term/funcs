@@ -2,8 +2,9 @@
 # c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
 
 function prompt_command(){
-	# define color codes
 	local STATUS="$?"
+	
+	# define color codes
 	local GREEN="\[\e[0;32m\]"
 	local GOLD="\[\e[1;33m\]"
 	local PURPLE="\[\e[0;36m\]"
@@ -101,6 +102,9 @@ function scrotshot() {
 
 function sprunge() {
 	curl -F 'sprunge=<-' http://sprunge.us
+}
+function fsprunge() {
+	curl -F 'sprunge=<-' http://sprunge.us < $1
 }
 
 #alias tname="echo -ne \"\033]0;${1:-$TERM}\007\""

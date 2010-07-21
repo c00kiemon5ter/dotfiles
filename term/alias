@@ -74,7 +74,7 @@ alias ffrecord="ffmpeg -f alsa -i plughw -acodec flac -f x11grab -r 30 -s 1280x1
 alias fortune="fortune -e -a"
 # Gets a random Futurama quote from slashdot.org(/.)
 alias futurama="curl -Is slashdot.org | egrep '^X-(F|B|L)' | cut -d \- -f 2"
-alias cowfortune="cowthink -d $(fortune -sea)"
+#alias cowfortune="cowthink -d $(fortune -sea)"
 
 ## Nexuiz
 alias nexuiz-foss="nexuiz +connect foss.aueb.gr:2600"
@@ -83,7 +83,8 @@ alias nexuiz-foss="nexuiz +connect foss.aueb.gr:2600"
 alias euse="euse -i $@ 2>/dev/null"
 
 # Shows your WAN IP, when you`re sitting behind a router
-alias myIp="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
+#alias myIp="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
+alias getmyip="curl ifconfig.me"
 
 # Quartus 9.1beta
 alias quartus="/opt/altera9.1sp1/quartus/bin/quartus"

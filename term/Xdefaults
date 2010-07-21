@@ -16,7 +16,8 @@ xpdf*foreground:          white
 xpdf*background:          #1f1f1f
 !white
 xpdf*paperColor:          #1f1f1f
-xpdf*urlCommand:          chromium %s
+#xpdf*urlCommand:          chromium %s
+xpdf*urlCommand:          firefox %s
 xpdf*viKeys:              true
 xpdf*continuousView:      true
 xpdf*initialZoom:		  width
@@ -32,7 +33,7 @@ URxvt*title:rxvt-unicode
 URxvt*iconName:console
 URxvt*termName:rxvt-unicode
 
-URxvt*geometry:80x24+369+436
+URxvt*geometry:90x24+369+436
 !80x24+375+394 (top parallel terms)
 !80x24+317+307 (center)
 URxvt*borderLess:false
@@ -48,7 +49,8 @@ URxvt*buffered:true
 URxvt*saveLines:1500
 cutchars::@-./_~?&=%+#'"'()*,;<=>[]^{|}
 
-URxvt*urlLauncher:chromium
+#URxvt*urlLauncher:chromium
+URxvt*urlLauncher:firefox
 URxvt*matcher.pattern.2:([\\w-]+.jpg)
 URxvt*matcher.launcher.2:feh $@
 
@@ -81,8 +83,15 @@ URXvt*mouseWheelScrollPage:false
 
 !! passed
 !URxvt*font:             xft:inconsolata:pixelsize=14
-URxvt*font:             xft:DroidSansMonoDotted:size=9
+URxvt*font:             xft:DroidSansMonoSlashed:size=9:antialias=true:hinting=true
 !URxvt*font:             xft:DejaVuSansMono:size=9
+
+#URxvt*font:           xft:DroidSans Mono Slashed-11:antialias=true:hinting=true
+#URxvt*boldFont:       xft:DroidSans Mono Slashed-11:antialias=true:bold:hinting=true
+#URxvt*italicFont:     xft:DroidSans Mono Slashed-11:antialias=true:italic:hinting=true
+#URxvt*bolditalicFont: xft:DroidSans Mono Slashed-11:antialias=true:bold:italic:hinting=true
+
+
 
 !! small
 !URxvt*font:             xft:Liberation Mono:size=9
@@ -91,7 +100,7 @@ URxvt*font:             xft:DroidSansMonoDotted:size=9
 !! other
 !URxvt*font:             xft:Droid Sans Mono:size=9
 !URxvt*font:             xft:DejaVu Sans Mono:pixelsize=12
-!URxvt*font:             xft:Envy Code R:size=10
+!URxvt*font:             xft:EnvyCodeR:size=9
 
 !}}}
 

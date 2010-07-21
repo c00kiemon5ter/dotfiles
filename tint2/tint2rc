@@ -43,7 +43,7 @@ panel_padding = 7 0
 font_shadow = 0
 panel_background_id = 1 
 wm_menu = 1
-panel_layer = normal #bottom normal top
+panel_layer = top #bottom normal top
 #}}}
 
 #---------------------------------------------
@@ -147,7 +147,7 @@ autohide = 0
 autohide_show_timeout = 0.3
 autohide_hide_timeout = 2
 autohide_height = 4
-strut_policy = minimum
+strut_policy = follow_size #minimum|follow_size|none
 # }}}
 
 # vim: nospell foldmethod=marker:foldmarker={{{,}}}:foldlevel=0

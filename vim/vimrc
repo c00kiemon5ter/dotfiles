@@ -23,11 +23,11 @@ set novisualbell
 set noerrorbells
 
 " Show line numbers
-set number
+"set number
 set numberwidth=2
 
 " Spell Checking
-setlocal spell spelllang=en,el
+"setlocal spell spelllang=en,el
 
 " Syntax Highlighting
 if has("syntax")

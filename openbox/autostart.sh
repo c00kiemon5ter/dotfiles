@@ -1,15 +1,16 @@
 #!/bin/bash
 # c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
 #
+# some settigns moved to .xinitrc
 
 ## load the default autostart.sh
-. $GLOBALAUTOSTART &
+#. $GLOBALAUTOSTART &
 
 ## merge xdefault settings to X db
 #xrdb -merge $HOME/.Xdefaults &
 
 ## set wallpaper 
-sh ${HOME}/.fehbg &
+#sh ${HOME}/.fehbg &
 
 ## tint panel
 tint2 &
@@ -17,26 +18,26 @@ tint2 &
 ## start urxvt daemon
 #urxvtd -q -f -o &
 ## have a termnal ready
-${HOME}/.bin/urxvt_client.sh -geometry 80x24+54+52 &
+${HOME}/.bin/urxvt_client.sh -geometry 90x24+54+52 &
 
 ## toogle keyboard layout with S-A
-setxkbmap -model evdev -layout us,gr -variant extended -option grp_led:scroll,eurosign:e,grp:alt_shift_toggle &
+#setxkbmap -model evdev -layout us,gr -variant extended -option grp_led:scroll,eurosign:e,grp:alt_shift_toggle &
 #,lv3:rwin_switch,altwin:left_meta_win & 
 
 ## tiling openbox windows
-pytyle &
+#pytyle &
 
 ## enable numlock
-numlockx on &
+#numlockx on &
 
 ## start parcellite clipboard
 parcellite &
 
 ## hide mouse after some idle time
-unclutter &
+#unclutter &
 
-## tint2 is above other windows
-#wmctrl -ir $(wmctrl -li | grep tint2 | awk '{print $1}') -b add,above
+## volume tray icon
+volwheel &
 
 ## start x compositing manager
 #xcompmgr-dana -cCfF -o.55 -D4 -m.88 &   # c-shadows affect conky
@@ -49,7 +50,7 @@ unclutter &
 #xautolock -time 5 -locker "feh -FZxN --hide-pointer $HOME/Downloads/Themes_Stuff/Walls/the_screamy_wall/screamy1280x1024.jpg" &
 
 ## start conky 
-sleep 3 && conky -c ${HOME}/.conky/nowplaying.conkyrc &
-sleep 3 && conky -c ${HOME}/.tasklist/tasks.conkyrc &
+sleep 1 && conky -c ${HOME}/.conky/nowplaying.conkyrc &
+sleep 2 && conky -c ${HOME}/.tasklist/tasks.conkyrc &
 
 # vim: nospell
