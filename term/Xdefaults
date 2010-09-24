@@ -17,7 +17,7 @@ xpdf*background:          #1f1f1f
 !white
 xpdf*paperColor:          #1f1f1f
 xpdf*urlCommand:          chromium %s
-#xpdf*urlCommand:          firefox %s
+!xpdf*urlCommand:          firefox %s
 xpdf*viKeys:              true
 xpdf*continuousView:      true
 xpdf*initialZoom:		  width
@@ -25,7 +25,8 @@ xpdf*initialZoom:		  width
 
 !Cursor theme {{{
 !Xcursor*theme:          Vanilla-DMZ-AA
-!Xcursor.size:           22
+Xcursor*theme:          Obsidian
+Xcursor.size:           22
 !}}}
 
 !URxvt Settings {{{
@@ -50,7 +51,7 @@ URxvt*saveLines:1500
 cutchars::@-./_~?&=%+#'"'()*,;<=>[]^{|}
 
 URxvt*urlLauncher:chromium
-#URxvt*urlLauncher:firefox
+!URxvt*urlLauncher:firefox
 URxvt*matcher.pattern.2:([\\w-]+.jpg)
 URxvt*matcher.launcher.2:feh $@
 
@@ -86,10 +87,10 @@ URXvt*mouseWheelScrollPage:false
 URxvt*font:             xft:DroidSansMonoSlashed:size=9:antialias=true:hinting=true
 !URxvt*font:             xft:DejaVuSansMono:size=9
 
-#URxvt*font:           xft:DroidSans Mono Slashed-11:antialias=true:hinting=true
-#URxvt*boldFont:       xft:DroidSans Mono Slashed-11:antialias=true:bold:hinting=true
-#URxvt*italicFont:     xft:DroidSans Mono Slashed-11:antialias=true:italic:hinting=true
-#URxvt*bolditalicFont: xft:DroidSans Mono Slashed-11:antialias=true:bold:italic:hinting=true
+!URxvt*font:           xft:DroidSans Mono Slashed-11:antialias=true:hinting=true
+!URxvt*boldFont:       xft:DroidSans Mono Slashed-11:antialias=true:bold:hinting=true
+!URxvt*italicFont:     xft:DroidSans Mono Slashed-11:antialias=true:italic:hinting=true
+!URxvt*bolditalicFont: xft:DroidSans Mono Slashed-11:antialias=true:bold:italic:hinting=true
 
 
 
@@ -133,7 +134,7 @@ URxvt*pointerBlankDelay:2
 !URxvt*tabbed.tab-fg:#F60606
 !URxvt*tabbed.tab-bg:#F60606
 
-!}}}
+! }}}
 
 !xscreensaver {{{
 ! xscreensaver theme from thayer
