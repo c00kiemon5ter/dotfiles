@@ -16,8 +16,8 @@ xpdf*foreground:          white
 xpdf*background:          #1f1f1f
 !white
 xpdf*paperColor:          #1f1f1f
-#xpdf*urlCommand:          chromium %s
-xpdf*urlCommand:          firefox %s
+xpdf*urlCommand:          chromium %s
+#xpdf*urlCommand:          firefox %s
 xpdf*viKeys:              true
 xpdf*continuousView:      true
 xpdf*initialZoom:		  width
@@ -49,8 +49,8 @@ URxvt*buffered:true
 URxvt*saveLines:1500
 cutchars::@-./_~?&=%+#'"'()*,;<=>[]^{|}
 
-#URxvt*urlLauncher:chromium
-URxvt*urlLauncher:firefox
+URxvt*urlLauncher:chromium
+#URxvt*urlLauncher:firefox
 URxvt*matcher.pattern.2:([\\w-]+.jpg)
 URxvt*matcher.launcher.2:feh $@
 

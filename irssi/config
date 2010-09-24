@@ -66,7 +66,13 @@ chatnets = {
 channels = (
   { name = "foss-aueb"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "dietunichtguten"; chatnet = "QuakeNet"; autojoin = "yes"; },
-  { name = "thebadasschoobs"; chatnet = "QuakeNet"; autojoin = "yes"; }
+  { name = "thebadasschoobs"; chatnet = "QuakeNet"; autojoin = "yes"; },
+  { name = "capbots"; chatnet = "QuakeNet"; autojoin = "yes"; },
+  { 
+    name = "capbots-internal";
+    chatnet = "QuakeNet";
+    autojoin = "yes";
+  }
 );
 
 aliases = {
@@ -128,6 +134,7 @@ aliases = {
   awayr = "/away Away - c00kiehuntin'";
   busy = "/away Busy - work time is serious work time serious";
   offline = "/away Offline - hidding from mortals, no more wishes for now..";
+  slap = "/me slaps $0 around with a large c00kiezbox";
 };
 
 statusbar = {
@@ -214,7 +221,7 @@ settings = {
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
-    theme = "c00kiez";
+    theme = "minimalist";
     use_status_window = "no";
     use_msgs_window = "no";
     autocreate_query_level = "MSGS";
@@ -225,7 +232,7 @@ settings = {
     autocreate_windows = "yes";
     hide_text_style = "no";
     timestamps = "yes";
-    show_nickmode_empty = "yes";
+    show_nickmode_empty = "no";
     show_quit_once = "yes";
     completion_auto = "yes";
     autoclose_query = "300";
@@ -250,11 +257,10 @@ settings = {
   "fe-common/irc" = { show_away_once = "yes"; };
 };
 hilights = (
-  { text = "ivan"; nick = "yes"; word = "yes"; },
-  { text = "jesus"; nick = "yes"; word = "yes"; },
-  { text = "koukos"; nick = "yes"; word = "yes"; },
+  { text = "c00kie"; nick = "no"; word = "no"; },
+  { text = "c00kiemon5ter"; nick = "no"; word = "no"; },
   { text = "cookie"; nick = "yes"; word = "yes"; },
-  { text = "c00kie"; nick = "yes"; word = "yes"; }
+  { text = "ivan"; nick = "no"; word = "no"; }
 );
 ignores = (
   {

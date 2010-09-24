@@ -2,6 +2,13 @@
 <!-- # c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License -->
 <openbox_menu>
 	<menu id="root-menu" label="OpenBox 3">
+		<item label="Chromium">
+			<action name="Execute">
+				<execute>
+					~/.bin/app_focus.sh chromium
+				</execute>
+			</action>
+		</item>
 		<item label="Firefox">
 			<action name="Execute">
 				<execute>

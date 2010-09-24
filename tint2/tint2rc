@@ -147,7 +147,8 @@ autohide = 0
 autohide_show_timeout = 0.3
 autohide_hide_timeout = 2
 autohide_height = 4
-strut_policy = follow_size #minimum|follow_size|none
+strut_policy = follow_size 
+#minimum|follow_size|none
 # }}}
 
 # vim: nospell foldmethod=marker:foldmarker={{{,}}}:foldlevel=0
