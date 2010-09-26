@@ -24,9 +24,10 @@ xpdf*initialZoom:		  width
 !}}}
 
 !Cursor theme {{{
-!Xcursor*theme:          Vanilla-DMZ-AA
-Xcursor*theme:          Obsidian
+Xcursor*theme:          Vanilla-DMZ-AA
 Xcursor.size:           22
+!Xcursor*theme:          Obsidian
+!Xcursor.size:           16 
 !}}}
 
 !URxvt Settings {{{

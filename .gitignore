@@ -14,3 +14,6 @@
 gmail_account
 mutt/cache
 tasklist/tasks
+irssi/saved_colors
+*.swap
+*.swp
