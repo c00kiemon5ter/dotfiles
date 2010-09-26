@@ -136,6 +136,29 @@ function mktbz() {
 	tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; 
 }
 
+# Convert any flash.flv to matroska.mkv
+function flv2mkv()
+{
+	mkdir mkv
+	for f in *.flv
+	do
+		ffmpeg -i $f -vcodec copy -sameq -acodec copy -f matroska mkv/${f%.*}.mkv
+	done
+}
+
+# Setup empty github repo
+function mkgit()
+{
+	mkdir $1
+	cd $1
+	git init
+	touch README
+	git add README
+	git commit -m 'inital setup - automated'
+	git remote add origin git@github.com:crshd/$1.git
+	git push origin master
+}
+
 # Look up the definition of a word
 function dict() {
 	curl -s dict://dict.org/d:$1 | perl -ne 's/\r//; last if /^\.$/; print if /^151/../^250/';

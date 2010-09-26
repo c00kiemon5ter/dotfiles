@@ -4,7 +4,7 @@
 alias ~="cd ~"
 alias ..="cd .."
 alias ...="cd ../../"
-alias ....="cd ../../../"
+alias cd..="cd .."
 
 ## always use color with ls and grep
 alias ls="ls --color=auto -h"
@@ -22,11 +22,32 @@ alias l="ls"
 alias ll="ls -l"
 alias la="ls -A"
 alias lla="ls -al"
-alias cp="cp -i"
+alias cp="cp -ir"
 alias mv="mv -i"
 alias rm="rm -I -v"
-alias du="du -h -a --max-depth=1"
+alias du="du -h"
 alias lw="wmctrl -l | cut -d\" \" -f5- | sed \"s/^[[:space:]|\(].*$//\" | uniq"
+alias h="history"
+
+## pacman|clyde
+alias i="sudo clyde -S"
+alias syu="sudo clyde -Syu"
+alias ?s="clyde -Ss"
+alias ?i="clyde -Si"
+alias x="sudo clyde -Rsn"
+alias xo="sudo clyde -Rns $(clyde -Qqdt)"
+
+## git
+alias g="git"
+alias gst="git status"
+alias gpl="git pull"
+alias gps="git push"
+alias gca="git commit -a"
+alias gcv="git commit -v"
+alias gva="git commit -va"
+alias gbr="git branch"
+alias gba="git branch -a"
+alias gch="git checkout"
 
 ## files
 #tint
