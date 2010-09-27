@@ -46,8 +46,8 @@ function git_prompt() {
 	local suf="${WHITE}]${NORMAL}"
 	local ref=$(git symbolic-ref HEAD 2> /dev/null)
 	[ "$ref" = "" ] && return
-	git status | grep "committed" &>/dev/null && ref="${ref}${GREEN}!"
-	git status | grep "Untracked\|updated" &>/dev/null && ref="${ref}${GREEN}?"
+	git status | grep "not updated" &>/dev/null && ref="${ref}${GREEN}!"
+	git status | grep "Untracked" &>/dev/null && ref="${ref}${GREEN}?"
 	echo ${pre}${ref#refs/heads/}${suf}
 }
 
@@ -65,23 +65,10 @@ function wazaaa(){
 	echo -e "${who} $(yes ' ' | head -${spc} | tr -d '\n') ${say}${NORMAL}"
 }
 
-function prompt_command(){
-	local STATUS="$?"
-	# different colors for different status
-	((! $STATUS)) && STATUS="${BLUEISH}:)" || STATUS="${PURPLE}:S"
-	# workpath, pwd max length, prefix for long paths
-	local workdir="$(reduce_path)"
-	# assembly'it!
-	PS1="\n$GREEN┌─[ $BRED\u$GREEN@$BBLUE\h $GREEN][ $GOLD$workdir $GREEN]\n$GREEN└─[$STATUS$GREEN]$BLUEISH>$GREEN> $NORMAL"
-	#PS1="\n\[\e[0;32m\]╭─[ \[\e[1;31m\]\u\[\e[0;32m@\[\e[1;34m\]\h\[\e[0;32m\] ][ \[\e[1;33m\]${w}\[\e[0;32m\] ]\n\[\e[0;32m\]╰─\[\e[0;36m\]>\[\e[0;32m\]>\[\e[0m\] "
-	#PS1="\n\[\e[0;32m\]┌─[ \[\e[1;31m\]\u\[\e[0;32m@\[\e[1;34m\]\h\[\e[0;32m\] ][ \[\e[1;33m\]${w}\[\e[0;32m\] ]\n\[\e[0;32m\]└─${scol}╼\[\e[0m\] "
-}
-
 # cd helper
 function goto() { 
 	[ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; 
 }
-
 # copy and follow
 function cpf() { 
 	cp "$@" && goto "$_"; 
@@ -91,49 +78,75 @@ function mvf() {
 	mv "$@" && goto "$_"; 
 }
 
+## services
+function start() {
+	for arg in $@
+	do
+		sudo /etc/rc.d/$arg start
+	done
+}
+function stop() {
+	for arg in $@
+	do
+		sudo /etc/rc.d/$arg stop
+	done
+}
+function restart() {
+	for arg in $@
+	do
+		sudo /etc/rc.d/$arg restart
+	done
+}
+function status() {
+	for	arg in $@
+	do
+		sudo /etc/rc.d/$arg status
+	done
+}
+
 # funny quotes from bash.org @irc
 function bashfortune() {
-	curl -s http://bash.org/?random1|grep -oE "<p class=\"quote\">.*</p>.*</p>"|grep -oE "<p class=\"qt.*?</p>"|sed -e 's/<\/p>/\n/g' -e 's/<p class=\"qt\">//g' -e 's/<p class=\"qt\">//g'|perl -ne 'use HTML::Entities;print decode_entities($_),"\n"'|head -1
+curl -s http://bash.org/?random1|grep -oE "<p class=\"quote\">.*</p>.*</p>"|grep -oE "<p class=\"qt.*?</p>"|sed -e 's/<\/p>/\n/g' -e 's/<p class=\"qt\">//g' -e 's/<p class=\"qt\">//g'|perl -ne 'use HTML::Entities;print decode_entities($_),"\n"'|head -1
 }
 
 # Easy extract
 # TODO: extended capbilities 
 # to accept more arguments
 function extract() {
-	if [ -f $1 ] ; then
-		case $1 in
-			*.tar.bz2)   tar xvjf $1    ;;
-			*.tar.gz)    tar xvzf $1    ;;
-			*.bz2)       bunzip2 $1     ;;
+if [ -f $1 ] ; then
+	case $1 in
+		*.tar.bz2)   tar xvjf $1    ;;
+	*.tar.gz)    tar xvzf $1    ;;
+*.bz2)       bunzip2 $1     ;;
 			*.rar)       unrar x $1       ;;
-			*.gz)        gunzip $1      ;;
-			*.tar)       tar xvf $1     ;;
-			*.tbz2)      tar xvjf $1    ;;
+		*.gz)        gunzip $1      ;;
+	*.tar)       tar xvf $1     ;;
+*.tbz2)      tar xvjf $1    ;;
 			*.tgz)       tar xvzf $1    ;;
-			*.zip)       unzip $1       ;;
-			*.Z)         uncompress $1  ;;
-			*.7z)        7z x $1        ;;
+		*.zip)       unzip $1       ;;
+	*.Z)         uncompress $1  ;;
+*.7z)        7z x $1        ;;
 			*)           echo "don't know how to extract '$1'..." ;;
 		esac
 	else
 		echo "'$1' is not a valid file"
-    fi
+	fi
 }
 
 # Makes directory then moves into it
 function mkcdr() { 
-	mkdir -vp "$@" && cd "$_"; 
+mkdir -vp "$@" && cd "$_"; 
 }
 
 # creates an archive from given directory
 function mktar() { 
-	tar cvf  "${1%%/}.tar"     "${1%%/}/"; 
+tar cvf  "${1%%/}.tar"     "${1%%/}/"; 
 }
 function mktgz() { 
-	tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; 
+tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; 
 }
 function mktbz() { 
-	tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; 
+tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; 
 }
 
 # Convert any flash.flv to matroska.mkv
@@ -161,32 +174,32 @@ function mkgit()
 
 # Look up the definition of a word
 function dict() {
-	curl -s dict://dict.org/d:$1 | perl -ne 's/\r//; last if /^\.$/; print if /^151/../^250/';
+curl -s dict://dict.org/d:$1 | perl -ne 's/\r//; last if /^\.$/; print if /^151/../^250/';
 }
 
 # screenshot with style
 function scrotshot() {
-	cowthink -d $(fortune -eas) && echo && echo && uname -a && echo && emerge --info | head -n1 && echo && tname && scrot -cd5 -q100 '%F_%T_$wx$h_scrot.png'
+cowthink -d $(fortune -eas) && echo && echo && uname -a && echo && emerge --info | head -n1 && echo && tname && scrot -cd5 -q100 '%F_%T_$wx$h_scrot.png'
 }
 
 function sprunge() {
-	curl -F 'sprunge=<-' http://sprunge.us
+curl -F 'sprunge=<-' http://sprunge.us
 }
 function fsprunge() {
-	curl -F 'sprunge=<-' http://sprunge.us < $1
+curl -F 'sprunge=<-' http://sprunge.us < $1
 }
 
 #alias tname="echo -ne \"\033]0;${1:-$TERM}\007\""
 function tname(){
-	echo -ne "\033]0;${1:-$TERM}\007";
+echo -ne "\033]0;${1:-$TERM}\007";
 }
 
 function cpcd(){ 
-	cp $@ /home/c00kiemon5ter/mp3cd/
+cp $@ /home/c00kiemon5ter/mp3cd/
 }
 
 function bgmplayer(){
-	mplayer $1 -novideo &>/dev/null </dev/null &
+mplayer $1 -novideo &>/dev/null </dev/null &
 }
 
 # vim: nospell
