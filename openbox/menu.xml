@@ -9,24 +9,10 @@
 				</execute>
 			</action>
 		</item>
-		<item label="Firefox">
-			<action name="Execute">
-				<execute>
-					~/.bin/app_focus.sh firefox
-				</execute>
-			</action>
-		</item>
 		<item label="Rxvt-Unicode">
 			<action name="Execute">
 				<execute>
 					~/.bin/urxvt_client.sh
-				</execute>
-			</action>
-		</item>
-		<item label="QtCreator">
-			<action name="Execute">
-				<execute>
-                qtcreator
 				</execute>
 			</action>
 		</item>
@@ -45,7 +31,7 @@
 			</action>
 		</item>
 		<separator/>
-		<menu id="0" label="Applications">
+		<!-- <menu id="0" label="Applications"> -->
 			<menu id="1" label="Development">
 				<item label="Sandbox">
 					<action name="Execute">
@@ -379,7 +365,7 @@
 					</action>
 				</item>
 			</menu>
-		</menu>
+		<!-- </menu> -->
 		<separator/>
 		<menu id="40" label="OpenBox">
 			<menu id="client-list-menu"/>

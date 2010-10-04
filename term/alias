@@ -81,6 +81,9 @@ alias honeyc00kiez="shh honeypot@c00kiemon5ter.ath.cx"
 
 ## Other
 alias irssi="dtach -A $HOME/.irssi/irssi.session irssi"
+alias notes="clear; tail ${HOME}/notes"
+alias vnotes="$EDITOR ${HOME}/notes && notes"
+alias vquote="$EDITOR ${HOME}/.archquotes"
 
 # music
 alias kaoradio="mplayer http://www.kaotonik.net:8000/playlist &>/dev/null </dev/null &"
@@ -88,27 +91,14 @@ alias oggfossradio="mplayer http://foss.aueb.gr:8000/radio.ogg &>/dev/null </dev
 alias mp3fossradio="mplayer http://foss.aueb.gr:8000/radio.mp3 &>/dev/null </dev/null &"
 alias jsymphonic="cd ${HOME}/.JSymphonic && java -jar JSymphonic_v0.3.0.jar"
 
-# desktop record
-alias ffrecord="ffmpeg -f alsa -i plughw -acodec flac -f x11grab -r 30 -s 1280x1024 -i $DISPLAY -vcodec libx264 -vpre lossless_ultrafast -threads 0 \"$@\""
-
 # fortune equality
 alias fortune="fortune -e -a"
 # Gets a random Futurama quote from slashdot.org(/.)
 alias futurama="curl -Is slashdot.org | egrep '^X-(F|B|L)' | cut -d \- -f 2"
-#alias cowfortune="cowthink -d $(fortune -sea)"
-
-## Nexuiz
-alias nexuiz-foss="nexuiz +connect foss.aueb.gr:2600"
-
-# dump euse error messages
-alias euse="euse -i $@ 2>/dev/null"
 
 # Shows your WAN IP, when you`re sitting behind a router
 #alias myIp="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 alias getmyip="curl ifconfig.me"
-
-# Quartus 9.1beta
-alias quartus="/opt/altera9.1sp1/quartus/bin/quartus"
 
 # the 'tree' command ..revisited
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
@@ -122,8 +112,5 @@ alias binclock="watch -n 1 'echo \"obase=2;\`date +%s\`\" | bc'"
 # randomers
 #echo $(shuf -i 1-49 | head -n6 | sort -n)'
 alias lotto="shuf -i 1-49 | head -n6 | sort -n | xargs"
-
-## The Fountain (movie.2006)
-#alias fountain="mplayer -stop-xscreensaver -subdelay -20,5 -utf8 ${HOME}/Video/the.fountain-done/The.Fountain.DVDRip.XviD-DoNE.avi"
 
 # vim: nospell
