@@ -36,9 +36,6 @@ parcellite &
 ## hide mouse after some idle time
 #unclutter &
 
-## volume tray icon
-#volwheel &
-
 ## start x compositing manager
 #xcompmgr-dana -cCfF -o.55 -D4 -m.88 &   # c-shadows affect conky
 #xcompmgr-dana -fF -o.55 -D4 -m.88 &

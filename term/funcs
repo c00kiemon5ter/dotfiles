@@ -1,37 +1,6 @@
 #!/bin/bash
 # c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kiez License
 
-# color vars, terminal independent
-function setcolors() {
-	DARK=$(tput setaf 0)
-	RED=$(tput setaf 1)
-	GREEN=$(tput setf 2)
-	ORANGE=$(tput setaf 3)
-	LIGHTBLUE=$(tput setaf 4)
-	MAUV=$(tput setaf 5)
-	DARKGREY=$(tput setaf 6)
-	WHITE=$(tput setaf 7)	
-	
-	BOLDDARK=$(tput setaf 8)
-	BOLDRED=$(tput setaf 9)
-	BOLDGREEN=$(tput setaf 10)
-	GOLD=$(tput setaf 11)
-	BLUE=$(tput setaf 12)
-	PURPLE=$(tput setaf 13)
-	GREY=$(tput setaf 14)
-	BOLDWHITE=$(tput setaf 15)
-
-	BLACK=$(tput setaf 16)
-	NORMAL=$(tput sgr0) # reset
-	DIM=$(tput dim)
-	BOLD=$(tput bold)
-	UNDRLN=$(tput smul)
-	RMUNDRLN=$(tput rmul)
-	BLINK=$(tput blink)
-	REVERSE=$(tput rev)
-	INVISIBLE=$(tput invis)
-}
-
 # keep path in one line, trim long paths to ..reduced/path/
 function reduce_path() {
 	local path="${PWD/#$HOME/~}"

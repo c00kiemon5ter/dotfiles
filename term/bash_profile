@@ -1,0 +1,22 @@
+export HISTCONTROL=erasedups
+export HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
+
+export BROWSER=chromium
+export EDITOR=vim
+
+shopt -s cdspell
+shopt -s checkwinsize
+shopt -s cmdhist
+shopt -s dirspell
+shopt -s histappend
+shopt -s hostcomplete
+shopt -s no_empty_cmd_completion
+shopt -s nocaseglob
+
+source $HOME/.bashrc
+
+if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
+	. startx
+	logout
+fi
+
