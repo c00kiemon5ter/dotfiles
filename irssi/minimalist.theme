@@ -38,13 +38,14 @@ abstracts = {
   ownprivmsgnick = "{msgnick   $0-}";
   ownprivnick = "%W$0-%n";
   privmsgnick = "{msgnick   %Y$0-%n}";
-  action_core = "%W$[-11]0- * %n";
-  action = "{action_core $0-} ";
-  ownaction = "{action $0-}";
+  #action_core = "%W$[-11]0- * %n";
+  action_core = "%W$0- %R|%n";
+  action = "{action_core $0-}";
+  ownaction = "{action %W$0-}";
   ownaction_target = "{action_core $0}%K:%c$1%n ";
   pvtaction = "%W (*) $0-%n ";
   pvtaction_query = "{action $0-}";
-  pubaction = "{action $0-}";
+  pubaction = "{action $0-} ";
   ownnotice = "[%r$0%K(%R$1-%K)]%n ";
   notice = "%K-%M$0-%K-%n ";
   pubnotice_channel = "%K:%m$0-";
@@ -152,12 +153,64 @@ formats = {
     whois_extra = "%K|%n {whois extra %|$1}";
     end_of_whois = "%K`---------------- --  --- -   -   -";
     whois_not_found = "%K>%w>%W>%N There is no such nick $0";
-    own_action = "{ownaction $[-8]0} $1";
-    action_public = "{pubaction $[-8]0}$1";
+    own_action = "{ownaction $[-12]0} $1";
+    action_public = "{pubaction $[-12]0}$1";
     action_public_channel = "{pubaction $0{msgchannel $1}}$2";
     default_event_server = "%K|%n {whois ircdmsg $1 [$0]}";
-    action_private = "{pvtaction $[-8]0}$1";
-    action_private_query = "{pvtaction_query $[-8]0} $2";
+    action_private = "{pvtaction $[-12]0}$1";
+    action_private_query = "{pvtaction_query $[-12]0} $2";
   };
 };
+
+statusbar = {
+  # <snip>
+  default = {
+    window = {
+      # disable the default bar containing window list
+      disabled = "yes";
+      # window, root
+      type = "window";
+      # top, bottom
+      placement = "bottom";
+      # number
+      position = "0";
+      # active, inactive, always
+      visible = "active";
+      # list of items in statusbar in the display order
+      items = {
+        barstart = { priority = "100"; };
+        time = { };
+        user = { };
+        window = { };
+        window_empty = { };
+        lag = { priority = "-1"; };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+        active = { };
+        act = { };
+      };
+    };
+    # <snip>
+    prompt = {
+      type = "root";
+      placement = "bottom";
+      # we want to be at the bottom always
+      position = "100";
+      visible = "always";
+      items = {
+        barstart = { priority = "100"; };
+        time = { };
+        user = { };
+        # added my current nick here b/c it was the only useful
+        # item in the disabled bar
+        prompt = { priority = "-1"; };
+        prompt_empty = { priority = "-1"; };
+        # treated specially, this is the real input line.
+        input = { priority = "10"; };
+      };
+    };
+    # <snip>
+  };
+};
+
 # vim: nospell
