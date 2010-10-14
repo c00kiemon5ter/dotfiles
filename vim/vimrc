@@ -12,11 +12,34 @@ if has("eval")
 	filetype plugin on
 	filetype plugin indent on
 endif
+
+" Default encoding
+set encoding=utf-8
+set fileencoding=utf-8
+scriptencoding utf-8
+
+" Keep backup of edited files
+set backup
+set writebackup
+set backupdir=~/.vim/backups/ ",/tmp/vimbackups/
+
 "}}}
 
-" Settings {{{
-" Set colors "
-set t_Co=256
+" Syntax {{{ 
+" Syntax Highlighting
+if has("syntax")
+	syntax on
+endif
+
+" Syntax when printing
+set popt+=syntax:y
+" }}}
+
+" When scrolling off-screen do so 3 lines at a time, not 1
+set scrolloff=2
+
+" assume the /g flag on :s substitutions to replace all matches in a line:
+"set gdefault
 
 " No visual bell
 set novisualbell
@@ -28,23 +51,6 @@ set numberwidth=2
 
 " Spell Checking
 "setlocal spell spelllang=en,el
-
-" Syntax Highlighting
-if has("syntax")
-	syntax on
-endif
-
-" Syntax when printing
-set popt+=syntax:y
-
-" Default encoding
-set encoding=utf-8
-set fileencoding=utf-8
-
-" Keep backup of edited files
-set backup
-set writebackup
-set backupdir=~/.vim/backups/ ",/tmp/vimbackups/
 
 " Automatically save before commands like :next and :make
 set autowrite
@@ -58,8 +64,8 @@ set wrap
 set whichwrap+=<,>,[,]
 "set nowrapscan
 
-" Don't be compatible with vi
-set nocompatible
+" Don't be compatible with vi, this is Vim!
+set nocompatible 
 
 " Make backspace delete lots of things
 set backspace=indent,eol,start
@@ -67,6 +73,28 @@ set backspace=indent,eol,start
 " Show us the command we're typing
 set showcmd
 
+" Speed up macros
+set lazyredraw
+
+" Place new window right of the current
+set splitright
+
+" Allow edit buffers to be hidden
+set hidden
+
+" Use the cool tab complete menu {{{
+set wildmenu
+set wildignore+=*.o,*~,.lo
+set suffixes+=.in,.a,.1
+
+set dictionary=/usr/share/dict/words
+
+" Ignore case
+set ignorecase
+"set infercase
+"}}}
+
+" searching {{{
 " Highlight matching patterns
 set showmatch
 set matchpairs+=<:>
@@ -77,25 +105,9 @@ set incsearch
 set hlsearch
 " Show full tags when doing search completion
 set showfulltag
+" }}}
 
-" Ignore case
-set ignorecase
-"set infercase
-
-" Speed up macros
-set lazyredraw
-
-" Place new window right of the current
-set splitright
-
-" Use the cool tab complete menu
-set wildmenu
-set wildignore+=*.o,*~,.lo
-set suffixes+=.in,.a,.1
-
-" Allow edit buffers to be hidden
-set hidden
-
+" stausbar and window {{{
 " Minimum window height
 set winminheight=1
 
@@ -104,10 +116,7 @@ set laststatus=2
 
 " Statusline Format :P
 "set statusline=%f\ %2*%m\ %1*%h%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}\ %{getfperm(@%)}]\ 0x%B\ %12.(%c:%l/%L%)
-
-" Completion
-set dictionary=/usr/share/dict/words
-"}}}
+" }}}
 
 " Tab conf {{{
 set tabstop=4
@@ -115,7 +124,7 @@ set shiftwidth=4
 set softtabstop=4
 "set expandtab
 set smartindent
-"}}}
+" }}}
 
 " Enable mouse {{{
 "  [n]ormal
@@ -138,6 +147,9 @@ colorscheme ristoink
 "colorscheme leo
 "colorscheme molokai
 "colorscheme miromiro
+
+" Set colors "
+set t_Co=256
 "}}}
 
 " auto commands {{{
@@ -244,5 +256,12 @@ augroup MUTT
 	au BufRead ~/.mutt/temp/mutt* map!  <F3>  <ESC>kgqji
 augroup END
 " }}}
+
+" folding {{{
+set foldenable
+set foldmethod=marker
+set foldmarker={{{,}}}
+set foldlevel=0
+"}}}
 
 " vim: nospell foldmethod=marker:foldmarker={{{,}}}:foldlevel=0
