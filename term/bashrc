@@ -45,46 +45,37 @@ if [ "$TERM" = "linux" ]; then
 	clear #for background artifacting
 fi
 
-export PATH=/usr/share/perl5/vendor_perl/auto/share/dist/Cope:/bin:/usr/bin:/sbin:/usr/sbin:/usr/bin/perlbin/site:/usr/bin/perlbin/vendor:/usr/lib/perl5/core_perl/bin:/home/c00kiemon5ter/.bin:/usr/local/bin
-
-export CDPATH="${HOME}/data/:${HOME}/data/projects/git/"
-export PMS=clyde #pacman
-
-export MPD_HOST=127.0.0.1
-export MPD_PORT=6600
+CDPATH="${HOME}/data/:${HOME}/data/projects/git/"
+PMS=clyde #pacman
 
 source ${HOME}/.alias
 source ${HOME}/.funcs
 
 # set color variables {{{
-export DARK=$(tput setaf 0)
-export RED=$(tput setaf 1)
-export GREEN=$(tput setf 2)
-export ORANGE=$(tput setaf 3)
-export LIGHTBLUE=$(tput setaf 4)
-export MAUV=$(tput setaf 5)
-export DARKGREY=$(tput setaf 6)
-export WHITE=$(tput setaf 7)	
-
-export BOLDDARK=$(tput setaf 8)
-export BOLDRED=$(tput setaf 9)
-export BOLDGREEN=$(tput setaf 10)
-export GOLD=$(tput setaf 11)
-export BLUE=$(tput setaf 12)
-export PURPLE=$(tput setaf 13)
-export GREY=$(tput setaf 14)
-export BOLDWHITE=$(tput setaf 15)
-
-export BLACK=$(tput setaf 16)
-export NORMAL=$(tput sgr0) # reset
-export DIM=$(tput dim)
-export BOLD=$(tput bold)
-export UNDRLN=$(tput smul)
-export RMUNDRLN=$(tput rmul)
-export BLINK=$(tput blink)
-export REVERSE=$(tput rev)
-export INVISIBLE=$(tput invis)
+BLACK=$(tput setaf 0)
+RED=$(tput setaf 1)
+GREEN=$(tput setf 2)
+ORANGE=$(tput setaf 3)
+BLUE=$(tput setaf 4)
+PURPLE=$(tput setaf 5)
+GREY=$(tput setaf 6)
+WHITE=$(tput setaf 7)	
+# intense
+BOLD_BLACK=$(tput setaf 8)
+BOLD_RED=$(tput setaf 9)
+BOLD_GREEN=$(tput setaf 10)
+BOLD_YELLOW=$(tput setaf 11)
+BOLD_BLUE=$(tput setaf 12)
+BOLD_PURPLE=$(tput setaf 13)
+BOLD_GREY=$(tput setaf 14)
+BOLD_WHITE=$(tput setaf 15)
+# properties
+NORMAL=$(tput sgr0) # reset
+BOLD=$(tput bold)
+UNDRLN=$(tput smul)
+RMUNDRLN=$(tput rmul)
+BLINK=$(tput blink)
+REVERSE=$(tput rev)
 # }}}
-
-export PROMPT_COMMAND=prompt
+PROMPT_COMMAND=prompt
 wazaaa

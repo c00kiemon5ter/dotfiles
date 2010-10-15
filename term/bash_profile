@@ -1,8 +1,13 @@
+export PATH=/usr/share/perl5/vendor_perl/auto/share/dist/Cope:${PATH}:/home/c00kiemon5ter/.bin:/usr/local/bin
+
 export HISTCONTROL=erasedups
 export HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
 
 export BROWSER=chromium
 export EDITOR=vim
+
+export MPD_HOST=127.0.0.1
+export MPD_PORT=6600
 
 shopt -s cdspell
 shopt -s checkwinsize

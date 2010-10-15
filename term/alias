@@ -99,7 +99,7 @@ alias nowplaying="mpc current"
 alias dias="ssh -1 p3060190@dias.aueb.gr"
 alias alex="telnet p3060190@alexandros.ccslab.aueb.gr"
 alias foss="ssh c00kiemon5ter@foss.aueb.gr"
-alias honeyc00kiez="shh honeypot@c00kiemon5ter.ath.cx"
+alias sshloop="shh c00kiemon5ter@c00kiemon5ter.ath.cx"
 
 ## Other
 alias irssi="dtach -A $HOME/.irssi/irssi.session irssi"

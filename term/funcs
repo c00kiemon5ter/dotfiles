@@ -30,7 +30,7 @@ function prompt() {
 	local git="$(git_prompt)"
 	[ -n "$git" ] && git=" ${git}"
 	local path="$(reduce_path $(echo $git | sed -r "s:\x1B\[[0-9;]*[mK]::g" | wc -c))"
-	PS1="\n\[${ORANGE}\]\u\[${WHITE}\] on \[${BLUE}\]\h\[${WHITE}\] in \[${GOLD}\]${path}\[${NORMAL}\]${git}\n\[${DARKGREY}\]>>\[${GREEN}\]>\[${NORMAL}\] "
+	PS1="\n\[${ORANGE}\]\u\[${WHITE}\] on \[${BOLD_BLUE}\]\h\[${WHITE}\] in \[${BOLD_YELLOW}\]${path}\[${NORMAL}\]${git}\n\[${GREY}\]>>\[${GREEN}\]>\[${NORMAL}\] "
 }
 
 # display a random quote on top of every new shell
