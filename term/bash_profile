@@ -1,4 +1,4 @@
-export PATH=/usr/share/perl5/vendor_perl/auto/share/dist/Cope:${PATH}:/home/c00kiemon5ter/.bin:/usr/local/bin
+export PATH=/usr/share/perl5/vendor_perl/auto/share/dist/Cope:${PATH}:/home/c00kiemon5ter/.bin
 
 export HISTCONTROL=erasedups
 export HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
@@ -19,6 +19,8 @@ shopt -s no_empty_cmd_completion
 shopt -s nocaseglob
 
 source $HOME/.bashrc
+
+lsyncd --logfile /tmp/lsyncd.log $HOME/music/ $HOME/data/music/reserved/ &
 
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
 	. startx
