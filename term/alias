@@ -63,15 +63,17 @@ alias obrc="$EDITOR $HOME/.config/openbox/rc.xml && obr"
 alias obm="$EDITOR $HOME/.config/openbox/menu.xml && obr"
 alias oba="$EDITOR $HOME/.config/openbox/autostart.sh && obr"
 #bash
-alias reload="source $HOME/.bash_profile"
-alias vprof="$EDITOR $HOME/.bash_profile && reload"
-alias vbash="$EDITOR $HOME/.bashrc +50 && reload"
+alias reload="source $HOME/.bashrc"
+alias vprof="$EDITOR $HOME/.bash_profile && source $HOME/.bash_profile"
+alias vbash="$EDITOR $HOME/.bashrc + && reload"
 alias valias="$EDITOR $HOME/.alias && reload"
 alias vfuncs="$EDITOR $HOME/.funcs && reload"
 alias vxdefs="$EDITOR $HOME/.Xdefaults"
 #other
 alias vmutt="$EDITOR $HOME/.mutt/muttrc"
+alias vxinit="$EDITOR $HOME/.xinitrc"
 alias vvim="$EDITOR $HOME/.vimrc"
+alias vgit="$EDITOR $HOME/.gitconfig"
 #su-files
 alias vmkconf="sudo $EDITOR /etc/make.conf"
 alias vxorg="sudo $EDITOR /etc/X11/xorg.conf"
@@ -103,7 +105,7 @@ alias sshloop="shh c00kiemon5ter@c00kiemon5ter.ath.cx"
 
 ## Other
 alias irssi="dtach -A $HOME/.irssi/irssi.session irssi"
-alias notes="clear; tail ${HOME}/notes"
+alias notes="clear; tail ${HOME}/notes | grep -v \"^$\" | cat -n"
 alias vnotes="$EDITOR ${HOME}/notes + && notes"
 alias vquote="$EDITOR ${HOME}/.archquotes"
 
