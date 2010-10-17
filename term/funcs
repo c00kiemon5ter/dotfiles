@@ -6,7 +6,7 @@ function reduce_path() {
 	local path="${PWD/#$HOME/~}"
 	# " on " + " in " = 8  #taken from the prompt
 	local maxlen="$(($(tput cols) -${#USER} -${#HOSTNAME} -8 -${1:-0}))"
-	if [ ${#path} -gt ${maxlen} ]
+	if (( ${#path} > ${maxlen} ))
 	then
 		local prefix=".."
 		local path="${prefix}${path:$((${#path} -${maxlen} +${#prefix}))}"
@@ -27,10 +27,11 @@ function git_prompt() {
 
 # the promp
 function prompt() {
+	(( $? )) && local status="$RED" || local status="$GREEN"
 	local git="$(git_prompt)"
 	[ -n "$git" ] && git=" ${git}"
 	local path="$(reduce_path $(echo $git | sed -r "s:\x1B\[[0-9;]*[mK]::g" | wc -c))"
-	PS1="\n\[${ORANGE}\]\u\[${WHITE}\] on \[${BOLD_BLUE}\]\h\[${WHITE}\] in \[${BOLD_YELLOW}\]${path}\[${NORMAL}\]${git}\n\[${GREY}\]>>\[${GREEN}\]>\[${NORMAL}\] "
+	PS1="\n\[${ORANGE}\]\u\[${WHITE}\] on \[${BOLD_BLUE}\]\h\[${WHITE}\] in \[${BOLD_YELLOW}\]${path}\[${NORMAL}\]${git}\n\[${GREY}\]>>\[${status}\]>\[${NORMAL}\] "
 }
 
 # display a random quote on top of every new shell
@@ -151,7 +152,7 @@ function mkgit() {
 	touch README
 	git add README
 	git commit -m 'inital setup - automated'
-	git remote add origin git@github.com:crshd/$1.git
+	git remote add origin git@github.com:c00kiemon5ter/$1.git
 	git push origin master
 }
 
@@ -169,14 +170,28 @@ function screencap() {
 
 # screenshot with style
 function scrotshot() {
-	cowthink -d $(fortune -eas) && echo && echo && uname -a && echo && emerge --info | head -n1 && echo && tname && scrot -cd5 -q100 '%F_%T_$wx$h_scrot.png'
+	cowthink -d $(fortune -eas) 
+	echo && echo 
+	uname -a 
+	echo && echo 
+	tname
+	scrot -cd5 -q100 '%F_%T_$wx$h_scrot.png' -e mv $f /tmp/
 }
 
+# file loader
+function metabox() {
+	curl -F file=@"$1" metabox.it
+}
+
+# paste text
 function sprunge() {
-	curl -F 'sprunge=<-' http://sprunge.us
+	cat "$@" | curl -F 'sprunge=<-' http://sprunge.us
 }
 function fsprunge() {
-	curl -F 'sprunge=<-' http://sprunge.us < $1
+	for file in "$@"
+	do
+		curl -F 'sprunge=<-' http://sprunge.us < "$file"
+	done
 }
 
 #alias tname="echo -ne \"\033]0;${1:-$TERM}\007\""
