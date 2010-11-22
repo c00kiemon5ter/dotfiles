@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/c00kiemon5ter/.config/pytyle'
+let g:netrw_dirhist_2='/home/c00kiemon5ter/projects/DummyCalculator/build'
+let g:netrw_dirhist_3='/usr/share/vim/vim73/keymap'

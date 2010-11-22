@@ -1,0 +1,177 @@
+#!/bin/bash
+# c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kiez License
+
+# the prompt
+function prompt() {
+	local st="$?" stclr="$fggrn" gpr=""
+	local ref="$(git symbolic-ref HEAD 2>/dev/null)"
+	(($st)) && stclr="$fgred" st="\[$fgwht\][\[$stclr\]$st\[$fgwht\]]" || st=""
+	if [ -n "$ref" ]
+	then
+		gst|grep "not updated" &>/dev/null && ref="$ref\[$fggrn\]!"
+		gst|grep "Untracked" &>/dev/null && ref="$ref\[$fggrn\]?"
+		gpr="\[$fgwht\]:\[$fgpur\]${ref#refs/heads/}"
+	fi
+	PS1="\n$st\[$bfgblu\]\h \[$bfgylw\]\W$gpr \[$fgcyn\]>>\[$stclr\]> \[$normal\]"
+	PS2=" \[$fgcyn\]> \[$normal\]"
+	PS3=" \[$bfgcyn\]> \[$normal\]"
+	PS4="[$LINENO]+"
+}
+
+# display a random quote on top of every new shell
+function wazaaa() {
+	local qdb="$HOME/.archquotes" # quotes database
+	local arch="Arch"
+	local nix="Linux"
+	local say="$(shuf -n1 $qdb)" # pick a random quote
+	local spc="$(($(tput cols) -${#arch} -${#nix} -${#say}))"
+	clear && echo "$mkbold$fgwht$arch$bfgblu$nix$normal$(yes ' ' | head -${spc} | tr -d '\n')$fgwht$say$normal"
+}
+
+# cd helper
+function goto() { 
+	[ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; 
+}
+# copy and follow
+function cpf() { 
+	cp "$@" && goto "$_"; 
+}
+# move and follow
+function mvf() { 
+	mv "$@" && goto "$_"; 
+}
+
+## services handling
+function start() {
+	for arg in $@
+	do
+		sudo /etc/rc.d/$arg start
+	done
+}
+function stop() {
+	for arg in $@
+	do
+		sudo /etc/rc.d/$arg stop
+	done
+}
+function restart() {
+	for arg in $@
+	do
+		sudo /etc/rc.d/$arg restart
+	done
+}
+function status() {
+	for	arg in $@
+	do
+		sudo /etc/rc.d/$arg status
+	done
+}
+
+# funny quotes from bash.org @irc
+function bashfortune() {
+	curl -s http://bash.org/?random1|grep -oE "<p class=\"quote\">.*</p>.*</p>"|grep -oE "<p class=\"qt.*?</p>"|sed -e 's/<\/p>/\n/g' -e 's/<p class=\"qt\">//g' -e 's/<p class=\"qt\">//g'|perl -ne 'use HTML::Entities;print decode_entities($_),"\n"'|head -1
+}
+
+# extract all in one
+function extract() {
+	if [ -f $1 ] ; then
+		case $1 in
+			*.tar.bz2)   tar xvjf $1    ;;
+			*.tar.gz)    tar xvzf $1    ;;
+			*.bz2)       bunzip2 $1     ;;
+			*.rar)       unrar x $1     ;;
+			*.gz)        gunzip $1      ;;
+			*.tar)       tar xvf $1     ;;
+			*.tbz2)      tar xvjf $1    ;;
+			*.tgz)       tar xvzf $1    ;;
+			*.zip)       unzip $1       ;;
+			*.Z)         uncompress $1  ;;
+			*.7z)        7z x $1        ;;
+			*)           echo "don't know how to extract '$1'..." ;;
+		esac
+	else
+		echo "'$1' is not a valid file"
+	fi
+}
+
+# Makes directory then moves into it
+function mkcdr() { 
+	mkdir -vp "$@" && cd "$_"; 
+}
+
+# creates an archive from given directory
+function mktar() { 
+	tar cvf  "${1%%/}.tar"     "${1%%/}/"; 
+}
+function mktgz() { 
+	tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; 
+}
+function mktbz() { 
+	tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; 
+}
+
+# Convert any flash.flv to matroska.mkv
+function flv2mkv() {
+	mkdir mkvconv
+	for f in *.flv
+	do
+		ffmpeg -i $f -vcodec copy -sameq -acodec copy -f matroska mkvconv/${f%.*}.mkv
+	done
+}
+
+# Convert any flash.flv to mp3
+function flv2mp3() {
+	mkdir mp3conv
+	for f in *.flv
+	do
+		ffmpeg -i $f -ab 320 -ar 44100 mp3conv/${f%.*}.mp3
+	done
+}
+
+# Look up the definition of a word
+function dict() {
+	curl -s dict://dict.org/d:$1 | perl -ne 's/\r//; last if /^\.$/; print if /^151/../^250/';
+}
+
+# screencap - the right way
+function screencap() {
+	local filename="${1-capture.mkv}"
+	local resolution="${2-1920x1080}"
+	ffmpeg -f alsa -i plughw -acodec flac -f x11grab -r 30 -s $resolution -i $DISPLAY -vcodec libx264 -vpre lossless_ultrafast -threads 0 $filename
+}
+
+# screenshot with style
+function scrotshot() {
+	cowthink -d $(fortune -eas) 
+	echo && echo 
+	uname -a 
+	echo && echo 
+	tname
+	scrot -cd5 -q100 '%F_%T_$wx$h_scrot.png' -e mv $f /tmp/
+}
+
+# image loader
+function metabox() {
+	curl -F file=@"$1" metabox.it
+}
+
+# paste text
+function sprunge() {
+	cat "$@" | curl -F 'sprunge=<-' http://sprunge.us
+}
+function fsprunge() {
+	for file in "$@"
+	do
+		curl -F 'sprunge=<-' http://sprunge.us < "$file"
+	done
+}
+
+function tname() {
+	echo -ne "\033]0;${1:-$TERM}\007";
+}
+
+function songplayer() {
+	mplayer "$@" -novideo &>/dev/null </dev/null &
+}
+
+# vim: nospell

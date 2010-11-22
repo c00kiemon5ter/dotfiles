@@ -1,0 +1,144 @@
+# c00kiemon5ter (ivan.kanak@gmail.com) $HOME under c00kie License
+
+## Navigation:
+alias ~="cd ~"
+alias ..="cd .."
+alias ...="cd ../../"
+alias cd..="cd .."
+
+## always use color with ls and grep
+alias ls="ls --color=auto -h"
+alias grep="grep --color=auto -I" # skip binary files
+alias egrep="egrep --color=auto"
+
+## Editors:
+alias v="$EDITOR"
+alias g="geany"
+
+## Common
+alias df="df -h -T"
+alias mkdir="mkdir -p -v"
+alias l="ls"
+alias ll="ls -l"
+alias la="ls -A"
+alias lla="ls -al"
+alias cp="cp -ir"
+alias mv="mv -i"
+alias rm="rm -I -v"
+alias du="du -h"
+alias lw="wmctrl -l | cut -d\" \" -f5- | sed \"s/^[[:space:]|\(].*$//\" | grep -v ^$"
+alias h="history"
+
+## package management
+alias syu="sudo $PMS -Syu"
+alias i="sudo $PMS -S"
+alias ?qs="$PMS -Qs"
+alias ?qi="$PMS -Qi"
+alias ?ss="$PMS -Ss"
+alias ?si="$PMS -Si"
+alias ?as="[ "$PMS" == clyde ] && "$PMS" --aur -Ss"
+alias ?ai="[ \"$PMS\" == \"clyde\" ] && $PMS --aur -Si"
+alias rx="sudo $PMS -Rsn"
+alias rxo="sudo $PMS -Rns $($PMS -Qqdt)"
+
+## git
+alias g="git"
+alias gst="git status"
+alias gpl="git pull"
+alias gps="git push"
+alias gcm="git commit"
+alias gca="git commit -a"
+alias gcv="git commit -v"
+alias gbr="git branch"
+alias gco="git checkout"
+alias gdf="git diff"
+alias glp="git log -p"
+
+## files
+#tint
+alias vtint="$EDITOR $HOME/.config/tint2/tint2rc"
+alias rtint="killall tint2; tint2 &"
+#openbox
+alias obr="openbox --reconfigure"
+alias obrc="$EDITOR $HOME/.config/openbox/rc.xml && obr"
+alias obm="$EDITOR $HOME/.config/openbox/menu.xml && obr"
+alias oba="$EDITOR $HOME/.config/openbox/autostart.sh && obr"
+#bash
+alias reload="source $HOME/.bashrc"
+alias vprof="$EDITOR $HOME/.bash_profile && source $HOME/.bash_profile"
+alias vbash="$EDITOR $HOME/.bashrc + && reload"
+alias valias="$EDITOR $HOME/.alias && reload"
+alias vfuncs="$EDITOR $HOME/.funcs && reload"
+alias vxdefs="$EDITOR $HOME/.Xdefaults && xrdb .Xdefaults"
+#other
+alias vmutt="$EDITOR $HOME/.mutt/muttrc"
+alias vxinit="$EDITOR $HOME/.xinitrc"
+alias vvim="$EDITOR $HOME/.vimrc"
+alias vgit="$EDITOR $HOME/.gitconfig"
+#su-files
+alias vmkconf="sudo $EDITOR /etc/make.conf"
+alias vxorg="sudo $EDITOR /etc/X11/xorg.conf"
+alias vgrub="sudo $EDITOR /boot/grub/menu.lst"
+alias vrc="sudo $EDITOR /etc/rc.conf"
+alias vssh="sudo $EDITOR /etc/ssh/sshd_config"
+#mpd
+alias ncmpcpp="ncmpcpp && tname"
+alias vmpd="sudo $EDITOR /etc/mpd.conf"
+alias vmpc="$EDITOR ${HOME}/.ncmpcpp/config"
+alias mpcv="mpc volume"
+alias mpcm="mpc volume 0"
+alias mpcp="mpc play &>/dev/null && mpc volume 55"
+alias mpct="mpc toggle"
+alias mpco="mpc outputs"
+alias mpce="mpc enable"
+alias mpcd="mpc disable"
+alias mpcr="mpc random"
+alias mpcn="mpc next"
+alias mpcpr="mpc prev"
+alias mpct="mpc toggle"
+alias mpcs="mpc seek"
+alias nowplaying="mpc current"
+
+## remote ssh to uni servers
+alias dias="ssh -1 p3060190@dias.aueb.gr"
+alias alex="telnet p3060190@alexandros.ccslab.aueb.gr"
+alias foss="ssh c00kiemon5ter@foss.aueb.gr"
+alias sshloop="ssh c00kiemon5ter@c00kiemon5ter.ath.cx"
+
+## Other
+alias irssi="dtach -A $HOME/.irssi/irssi.session irssi"
+alias notes="$HOME/.bin/tasklist/tasklist ls"
+alias vnotes="$EDITOR ${HOME}/.bin/tasklist/tasks + && notes"
+alias vquote="$EDITOR ${HOME}/.archquotes"
+alias netbeans="netbeans --laf com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
+
+# music
+alias c00kieradio="mplayer http://c00kiemon5ter.ath.cx:8000/mpdstream &>/dev/null </dev/null &"
+alias kaoradio="mplayer http://www.kaotonik.net:8000/playlist &>/dev/null </dev/null &"
+alias oggfossradio="mplayer http://foss.aueb.gr:8000/radio.ogg &>/dev/null </dev/null &"
+alias mp3fossradio="mplayer http://foss.aueb.gr:8000/radio.mp3 &>/dev/null </dev/null &"
+alias jsymphonic="cd ${HOME}/.JSymphonic && java -jar JSymphonic_v0.3.0.jar"
+
+# fortune equality
+alias fortune="fortune -e -a"
+# Gets a random Futurama quote from slashdot.org(/.)
+alias futurama="curl -Is slashdot.org | egrep '^X-(F|B|L)' | cut -d \- -f 2"
+
+# Shows your WAN IP, when you`re sitting behind a router
+#alias myIp="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
+alias getmyip="curl ifconfig.me"
+
+# the 'tree' command ..revisited
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+# the matrix
+alias matrix="tr -c \"[:digit:]\" \" \" < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR=\"1;32\" grep --color \"[^ ]\""
+
+# binary clock
+alias binclock="watch -n 1 'echo \"obase=2;\`date +%s\`\" | bc'"
+
+# randomers
+#echo $(shuf -i 1-49 | head -n6 | sort -n)'
+alias lotto="shuf -i 1-49 | head -n6 | sort -n | xargs"
+
+# vim: nospell

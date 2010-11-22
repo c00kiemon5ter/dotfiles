@@ -1,0 +1,46 @@
+##DISPLAY
+playlist_display_mode = "classic"
+browser_display_mode = "classic"
+search_engine_display_mode = "classic"
+
+song_list_format = "{$3%a$9} {$8%t$9} $R {$1%b$9}"
+song_columns_list_format = "(30)[green]{a} (37)[white]{t} (33)[black]{b}"
+
+header_visibility = "no"
+statusbar_visibility = "yes"
+
+mouse_list_scroll_whole_page = "no"
+lines_scrolled = 5
+fancy_scrolling = "yes"
+ignore_leading_the = "no"
+lyrics_database = "2"
+follow_now_playing_lyrics = "yes"
+colors_enabled = "yes"
+statusbar_color = "green"
+progressbar_color = "green"
+playlist_disable_highlight_delay = "5"
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_type = "spectrum" #spectrum|wave
+visualizer_color = "green"
+progressbar_color = "green"
+progressbar_look = "=>"
+clock_display_seconds = "no"
+user_interface = "alternative"
+
+alternative_header_first_line_format = "$8--$3 %t $8--$9"
+alternative_header_second_line_format = "$8(%b)$9"
+alternative_ui_separator_color = "white"
+volume_color = "white"
+state_line_color = "default"
+state_flags_color = "default"
+main_window_color = "white"
+color1 = "green"
+color2 = "white"
+main_window_highlight_color = "green"
+
+mpd_crossfade_time = "5"
+mpd_music_dir = "music"
+external_editor = "vim"
+use_console_editor = "yes"
+
+# vim: nospell
