@@ -1,6 +1,4 @@
 # c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
-# Theme modified from minimalist theme made by ~bl1nk @ deviantart
-# mixed with my c00kiez.theme to produce this :)
 # 
 
 replaces = { };
@@ -24,7 +22,7 @@ abstracts = {
   chanhost = "{nickhost $0-}";
   channelhilight = "%g$0-%n";
   ban = "%r$0-%n";
-  msgnick = "$0$1- %w:%n %|";
+  msgnick = "$0$1- %w%K»%n %|";
   ownmsgnick = "{msgnick $0 $1-}";
   ownnick = "%W$0-%n";
   pubmsgnick = "{msgnick $0 $1-}";
@@ -32,7 +30,7 @@ abstracts = {
   pubmsgmenick = "{msgnick $0 $1-}";
   menick = "%Y$0-%n";
   pubmsghinick = "{msgnick $1 $0$2-}";
-  msgchannel = "%K:%c$0-%n";
+  msgchannel = "%K»%c$0-%n";
   privmsg = "[%R$0%K(%r$1-%K)%n] ";
   ownprivmsg = "[%r$0%K(%R$1-%K)%n] ";
   ownprivmsgnick = "{msgnick   $0-}";

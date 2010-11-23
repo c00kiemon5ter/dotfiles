@@ -4,6 +4,7 @@
 !.funcs
 !.alias
 !.color_schemes/
+!.inputrc
 
 !.xinitrc
 !.Xdefaults

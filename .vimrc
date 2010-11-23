@@ -139,17 +139,13 @@ set smartindent
 "}}}
 
 " Color Scheme {{{
-"colorscheme inkpot
-"colorscheme c00kiez
 colorscheme ristoink
-"colorscheme neverland
-"colorscheme vibrantink
-"colorscheme Mustang
-"colorscheme Digerati_mod
-"colorscheme asmdev2
-"colorscheme leo
-"colorscheme molokai
 "colorscheme miromiro
+"colorscheme Mustang
+"colorscheme vibrantink
+"colorscheme gmarik
+"colorscheme asmdev2
+"colorscheme molokai
 
 " Set colors "
 set t_Co=256
