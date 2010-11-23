@@ -35,9 +35,8 @@ URxvt*title:rxvt-unicode
 URxvt*iconName:urxvt
 URxvt*termName:rxvt-unicode
 
-URxvt*geometry:90x24+369+436
-!80x24+375+394 (top parallel terms)
-!80x24+317+307 (center)
+URxvt*geometry:98x28 
+!90x24+369+436
 URxvt*borderLess:false
 URxvt*externalBorder:1
 URxvt*internalBorder:0
