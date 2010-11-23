@@ -42,18 +42,15 @@ URxvt*borderLess:false
 URxvt*externalBorder:1
 URxvt*internalBorder:0
 
-URxvt*perl-ext-common:default,-tabbed,matcher,-selection-popup,-option-popupi
-
 URxvt*visualBell:false
 URxvt*highlightSelection:True
 URxvt*buffered:true
 URxvt*saveLines:1500
 cutchars::@-./_~?&=%+#'"'()*,;<=>[]^{|}
 
+URxvt*perl-ext-common:default,matcher
 URxvt*urlLauncher:chromium
-!URxvt*urlLauncher:firefox
-URxvt*matcher.pattern.2:([\\w-]+.jpg)
-URxvt*matcher.launcher.2:feh $@
+URxvt.matcher.button:1
 
 URxvt*eightBitInput:true
 URxvt*inputMethod:SCIM
@@ -83,27 +80,14 @@ URXvt*mouseWheelScrollPage:false
 !URxvt Fonts {{{
 
 !! passed
+URxvt*font: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt*boldFont: -*-terminus-bold-*-*-*-*-*-*-*-*-*-*-*
+URxvt*italicFont: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt*boldItalicFont: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+
 !URxvt*font:             xft:inconsolata:pixelsize=14
-!URxvt*font:             xft:terminus:size=9
-URxvt*font:             xft:DroidSansMonoSlashed:size=9
+!URxvt*font:             xft:DroidSansMonoSlashed:size=9
 !URxvt*font:             xft:DejaVuSansMono:size=9
-
-!URxvt*font:           xft:DroidSans Mono Slashed-11:antialias=true:hinting=true
-!URxvt*boldFont:       xft:DroidSans Mono Slashed-11:antialias=true:bold:hinting=true
-!URxvt*italicFont:     xft:DroidSans Mono Slashed-11:antialias=true:italic:hinting=true
-!URxvt*bolditalicFont: xft:DroidSans Mono Slashed-11:antialias=true:bold:italic:hinting=true
-
-
-
-!! small
-!URxvt*font:             xft:Liberation Mono:size=9
-!URxvt*font:             xft:Terminus:pixelsize=14
-
-!! other
-!URxvt*font:             xft:Droid Sans Mono:size=9
-!URxvt*font:             xft:DejaVu Sans Mono:pixelsize=12
-!URxvt*font:             xft:EnvyCodeR:size=9
-
 !}}}
 
 !URxvt Color Settings {{{
