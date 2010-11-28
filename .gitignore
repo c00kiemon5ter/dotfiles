@@ -4,7 +4,8 @@
 !.funcs
 !.alias
 !.color_schemes/
-!.inputrc
+!.inputrc*
+!.dircolors
 
 !.xinitrc
 !.Xdefaults
@@ -16,7 +17,6 @@
 
 !.vimrc
 !.vim/
-.vim/backups/
 
 !.irssi/
 .irssi/config
