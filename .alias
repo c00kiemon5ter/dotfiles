@@ -30,16 +30,26 @@ alias lw="wmctrl -l | cut -d\" \" -f5- | sed \"s/^[[:space:]|\(].*$//\" | grep -
 alias h="history"
 
 ## package management
-alias syu="sudo $PMS -Syu"
-alias i="sudo $PMS -S"
-alias ?qs="$PMS -Qs"
-alias ?qi="$PMS -Qi"
-alias ?ss="$PMS -Ss"
-alias ?si="$PMS -Si"
-alias ?as="[ "$PMS" == clyde ] && "$PMS" --aur -Ss"
-alias ?ai="[ \"$PMS\" == \"clyde\" ] && $PMS --aur -Si"
-alias rx="sudo $PMS -Rsn"
-alias rxo="sudo $PMS -Rns $($PMS -Qqdt)"
+alias pacman="pacman-color"	 # colors :D
+# pacman update
+alias syu="sudo pacman -Syu" # pacman upgrade
+alias i="sudo pacman -S"     # pacman install
+alias u="sudo pacman -U"     # makepkg install
+# pacman search
+alias ?qs="pacman -Qs"	# query search
+alias ?qi="pacman -Qi"	# query info
+alias ?ss="pacman -Ss"	# sync search
+alias ?si="pacman -Si"	# sync info
+# aur update
+alias sya="mkcdr /tmp/cower && cower -cudd"	# aur upgrade
+alias a="mkcdr /tmp/cower && cower -cdd"	# aur install
+alias ?au="cower -cu | pr -n -t"			# aur update
+# aur search
+alias ?as="cower -cs"	# aur search
+alias ?ai="cower -ci"	# aur info
+# remove pkgs
+alias rsn="sudo pacman -Rsn"				 # clean, purge
+alias rtd="sudo pacman -Rsn $(pacman -Qqdt)" # unreq deps [!]
 
 ## git
 alias g="git"
