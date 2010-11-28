@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+xrdb $HOME/.Xdefaults
+
 # urxvt daemon
 urxvtd -q -o -f
 
@@ -13,10 +15,10 @@ display -window root data/pics/Wallpapers/arch/blue-1920x1080.png &
 unclutter &
 
 # have a termnal ready
-${HOME}/.bin/urxvt_client.sh -geometry 98x28+54+52 & #90x24+54+52
+$HOME/.bin/urxvt_client.sh -geometry 98x28+54+52 & #90x24+54+52
 
 # nowplaying conky
-sleep 2 && conky -c ${HOME}/.conky/nowplaying.conkyrc &
+sleep 2 && conky -c $HOME/.conky/nowplaying.conkyrc &
 
 # start the X session
 exec openbox-session

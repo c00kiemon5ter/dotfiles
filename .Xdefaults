@@ -1,16 +1,17 @@
 ! c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
 
-!xft settings {{{
+!xft settings {
 Xft.antialias: 	true
 Xft.hinting: 	true
 Xft.hintstyle: 	hintfull
 !Xft.hintstyle: 	hintmedium
 !Xft.hintstyle: 	hintslight
-Xft.rgba: 		rgb
-Xft.dpi:		96 
-!}}}
+Xft.rgba:		rgb
+!Xft.dpi:		96 
+Xft.lcdfilter:	lcddefault
+!}
 
-!xpdf settings {{{
+!xpdf settings {
 xpdf*enableFreetype:	  true
 xpdf*antialias:           true
 xpdf*foreground:          white
@@ -23,14 +24,14 @@ xpdf*urlCommand:          chromium %s
 xpdf*viKeys:              true
 xpdf*continuousView:      true
 xpdf*initialZoom:		  width
-!}}}
+!}
 
-!Cursor theme {{{
+!Cursor theme {
 Xcursor*theme:          Vanilla-DMZ
 Xcursor.size:           16
-!}}}
+!}
 
-!URxvt Settings {{{
+!URxvt Settings {
 URxvt*title:rxvt-unicode
 URxvt*iconName:urxvt
 URxvt*termName:rxvt-unicode
@@ -44,12 +45,13 @@ URxvt*internalBorder:0
 URxvt*visualBell:false
 URxvt*highlightSelection:True
 URxvt*buffered:true
-URxvt*saveLines:1500
+URxvt*saveLines:3000
 cutchars::@-./_~?&=%+#'"'()*,;<=>[]^{|}
 
-URxvt*perl-ext-common:default,matcher
+URxvt*perl-ext-common:default,matcher,mark-yank-urls
 URxvt*urlLauncher:chromium
 URxvt.matcher.button:1
+URxvt.underlineURLs:true
 
 URxvt*eightBitInput:true
 URxvt*inputMethod:SCIM
@@ -59,9 +61,9 @@ URxvt*imLocale:en_US.UTF-8
 
 modifier:meta
 !alt, meta, hyper, super, mod1..5
-!}}} 
+!}
 
-!Scroll and mousewheel {{{
+!Scroll and mousewheel {
 XTerm*jumpScroll:true
 XTerm*multiScroll:true
 URxvt*jumpScroll:true
@@ -74,23 +76,19 @@ URxvt*scrollTtyOutput:false
 URxvt*scrollWithBuffer:true
 URxvt*scrollTtyKeypress:true
 URXvt*mouseWheelScrollPage:false
-!}}}
+!}
 
-!URxvt Fonts {{{
+!URxvt Fonts {
+URxvt*font:			-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
 
-!! passed
-URxvt*font: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-URxvt*boldFont: -*-terminus-bold-*-*-*-*-*-*-*-*-*-*-*
-URxvt*italicFont: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-URxvt*boldItalicFont: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*font:			xft:DroidSansMonoSlashed:pixelsize=12:normal
+!URxvt.boldFont:		xft:DroidSansMono:pixelsize=12:bold
 
-!URxvt*font:             xft:inconsolata:pixelsize=14
-!URxvt*font:             xft:DroidSansMonoSlashed:size=9
-!URxvt*font:             xft:DejaVuSansMono:size=9
-!}}}
+!URxvt*font:			xft:inconsolata:pixelsize=14
+!URxvt*font:			xft:DejaVuSansMono:size=9
+!}
 
-!URxvt Color Settings {{{
-
+!URxvt Color Settings {
 ! Color Scheme
 #include "/home/c00kiemon5ter/.color_schemes/c00kiez"
 
@@ -120,19 +118,16 @@ URxvt*pointerBlankDelay:2
 !URxvt*tabbed.tabbar-bg:#F60606
 !URxvt*tabbed.tab-fg:#F60606
 !URxvt*tabbed.tab-bg:#F60606
+!}
 
-! }}}
-
-!xscreensaver {{{
-! xscreensaver theme from thayer
-! ! http://www.flickr.com/photos/cinderwick/2685038363/
-xscreensaver.Dialog.headingFont:        -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.bodyFont:           -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.labelFont:          -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.unameFont:          -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.buttonFont:         -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.dateFont:           -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.passwd.passwdFont:         -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
+!xscreensaver {
+xscreensaver.Dialog.headingFont:        -*-droid sans-bold-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:           -*-droid sans-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:          -*-droid sans-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:          -*-droid sans-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:         -*-droid sans-bold-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:           -*-droid sans-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:         -*-droid sans-bold-r-*-*-14-*-*-*-*-*-*-* 
 xscreensaver.Dialog.foreground:         #ffffff
 xscreensaver.Dialog.background:         #111111
 xscreensaver.Dialog.topShadowColor:     #111111
@@ -148,6 +143,6 @@ xscreensaver.passwd.thermometer.foreground:  #ff0000
 xscreensaver.passwd.thermometer.background:  #000000
 xscreensaver.passwd.thermometer.width:       8
 xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
-!}}}
+!}
 
-! vim:nospell foldmethod=marker:foldmarker={{{,}}}:foldlevel=0
+! vim:nospell foldmethod=marker:foldmarker={,}:foldlevel=0
