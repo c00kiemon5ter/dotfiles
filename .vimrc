@@ -140,10 +140,12 @@ set smartindent
 
 " Color Scheme {{{
 "colorscheme dante
-colorscheme ristoink
+"colorscheme benmabey
+colorscheme ristoink_cookies
 "colorscheme miromiro
 "colorscheme Mustang
 "colorscheme vibrantink
+"colorscheme ir_black_mod
 "colorscheme gmarik
 "colorscheme asmdev2
 "colorscheme molokai

@@ -53,7 +53,7 @@ alias rtd="sudo pacman -Rsn $(pacman -Qqdt)" # unreq deps [!]
 
 ## git
 alias g="git"
-alias gst="git status"
+alias gst="git status -sb"
 alias gpl="git pull"
 alias gps="git push"
 alias gcm="git commit"
@@ -62,7 +62,8 @@ alias gcv="git commit -v"
 alias gbr="git branch"
 alias gco="git checkout"
 alias gdf="git diff"
-alias glg="git log --graph --oneline --parents --name-status"
+alias glf="git log --graph --oneline --parents --name-status"
+alias glc="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
 ## files
 #tint
@@ -79,7 +80,7 @@ alias vprof="$EDITOR $HOME/.bash_profile && source $HOME/.bash_profile"
 alias vbash="$EDITOR $HOME/.bashrc + && reload"
 alias valias="$EDITOR $HOME/.alias && reload"
 alias vfuncs="$EDITOR $HOME/.funcs && reload"
-alias vxdefs="$EDITOR $HOME/.Xdefaults && xrdb .Xdefaults"
+alias vxdefs="$EDITOR $HOME/.Xdefaults && xrdb $HOME/.Xdefaults"
 #other
 alias vmutt="$EDITOR $HOME/.mutt/muttrc"
 alias vxinit="$EDITOR $HOME/.xinitrc"

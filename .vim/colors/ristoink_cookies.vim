@@ -40,7 +40,8 @@ set t_Co=256
 if ((&t_Co == 256) || has("gui_running"))
 	"GUI / 256 colors
 	highlight Normal		  guifg=#EEEEEE guibg=Black ctermfg=White ctermbg=234
-	highlight Comment		  guifg=#AA66FF ctermfg=92
+	"highlight Comment		  guifg=#AA66FF ctermfg=92
+	highlight Comment		  guifg=#AA66FF ctermfg=DarkCyan
 	highlight Constant	  guifg=#339999 ctermfg=73 cterm=none
 	"highlight Cursor		   guifg=Black guibg=White ctermfg=Black ctermbg=White
 	highlight CursorColumn  guifg=NONE guibg=#1A1A8A ctermbg=DarkBlue
@@ -102,7 +103,8 @@ if ((&t_Co == 256) || has("gui_running"))
 	"highlight railsMethod		  guifg=#EE1122 ctermfg=1
 else
 	" cterm 16
-	highlight Comment		  ctermfg=DarkMagenta
+	"highlight Comment		  ctermfg=DarkMagenta
+	highlight Comment		  ctermfg=DarkCyan
 	highlight Constant	  ctermfg=Cyan		  cterm=none
 	highlight Cursor		  ctermfg=Black		  ctermbg=White
 	highlight CursorColumn  ctermbg=DarkBlue
