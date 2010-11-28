@@ -23,7 +23,7 @@ set langmap=ΑA,ΒB,ΨC,ΔD,ΕE,ΦF,ΓG,ΗH,ΙI,ΞJ,ΚK,ΛL,ΜM,ΝN,ΟO,ΠP,QQ,�
 " Keep backup of edited files
 set backup
 set writebackup
-set backupdir=~/.vim/backups/ ",/tmp/vimbackups/
+set backupdir=~/.backups/
 
 " Spell Checking
 setlocal spell spelllang=en,el
@@ -139,6 +139,7 @@ set smartindent
 "}}}
 
 " Color Scheme {{{
+"colorscheme dante
 colorscheme ristoink
 "colorscheme miromiro
 "colorscheme Mustang
