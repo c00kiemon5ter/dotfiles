@@ -28,10 +28,9 @@ if [ "$TERM" = "linux" ]; then
 fi
 
 CDPATH=".:${HOME}/projects/:${HOME}/data/"
-PMS="clyde" #"pacman"
-
-source "${HOME}"/.alias
-source "${HOME}"/.funcs
+test -r .dircolors && eval "export $(dircolors -b .dircolors)"
+source "$HOME"/.alias
+source "$HOME"/.funcs
 
 # set color variables {{{
 fgblk="$(tput setaf 0)"		# Black - Regular
