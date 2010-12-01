@@ -144,6 +144,7 @@ set smartindent
 colorscheme ristoink_cookies
 "colorscheme miromiro
 "colorscheme Mustang
+"colorscheme neverland2-darker
 "colorscheme vibrantink
 "colorscheme ir_black_mod
 "colorscheme gmarik
