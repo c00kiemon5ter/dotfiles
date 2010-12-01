@@ -30,11 +30,11 @@ alias lw="wmctrl -l | cut -d\" \" -f5- | sed \"s/^[[:space:]|\(].*$//\" | grep -
 alias h="history"
 
 ## package management
-alias pacman="pacman-color"	 # colors :D
+alias pacman="pacman-color"	# colors :D
 # pacman update
-alias syu="sudo pacman -Syu" # pacman upgrade
-alias i="sudo pacman -S"     # pacman install
-alias u="sudo pacman -U"     # makepkg install
+alias syu="sudo pacman-color -Syu" # pacman upgrade
+alias i="sudo pacman-color -S"     # pacman install
+alias u="sudo pacman-color -U"     # makepkg install
 # pacman search
 alias ?qs="pacman -Qs"	# query search
 alias ?qi="pacman -Qi"	# query info
