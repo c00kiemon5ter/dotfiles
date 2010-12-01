@@ -48,7 +48,7 @@ URxvt*buffered:true
 URxvt*saveLines:3000
 cutchars::@-./_~?&=%+#'"'()*,;<=>[]^{|}
 
-URxvt*perl-ext-common:default,matcher,mark-yank-urls
+URxvt*perl-ext-common:default,matcher
 URxvt*urlLauncher:chromium
 URxvt.matcher.button:1
 URxvt.underlineURLs:true
@@ -80,6 +80,7 @@ URXvt*mouseWheelScrollPage:false
 
 !URxvt Fonts {
 URxvt*font:			-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*boldfont:		-*-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
 
 !URxvt*font:			xft:DroidSansMonoSlashed:pixelsize=12:normal
 !URxvt.boldFont:		xft:DroidSansMono:pixelsize=12:bold
