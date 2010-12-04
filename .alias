@@ -40,6 +40,9 @@ alias ?qs="pacman -Qs"	# query search
 alias ?qi="pacman -Qi"	# query info
 alias ?ss="pacman -Ss"	# sync search
 alias ?si="pacman -Si"	# sync info
+# query listings
+alias ?ql="pacman -Ql"	# list files
+alias ?qo="pacman -Qo"	# check ownership
 # aur update
 alias sya="mkcdr /tmp/cower && cower -cudd"	# aur upgrade
 alias a="mkcdr /tmp/cower && cower -cdd"	# aur install
@@ -49,7 +52,8 @@ alias ?as="cower -cs"	# aur search
 alias ?ai="cower -ci"	# aur info
 # remove pkgs
 alias rsn="sudo pacman -Rsn"				 # clean, purge
-alias rtd="sudo pacman -Rsn $(pacman -Qqdt)" # unreq deps [!]
+alias rdt="sudo pacman -Rsn $(pacman -Qqdt)" # unreq deps [!]
+alias ra="rm -r /tmp/cower"
 
 ## git
 alias g="git"
