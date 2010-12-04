@@ -6,3 +6,5 @@ set page-completions Off
 
 "\C-j": "|less\C-m"
 
+"\e[B": history-search-forward
+"\e[A": history-search-backward
