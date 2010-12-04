@@ -39,6 +39,10 @@ endif
 set popt+=syntax:y
 " }}}
 
+" Gist
+let g:gist_clip_command = 'xclip'
+let g:gist_detect_filetype = 1
+
 " When scrolling off-screen do so 3 lines at a time, not 1
 set scrolloff=2
 
