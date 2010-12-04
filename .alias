@@ -1,7 +1,7 @@
 # c00kiemon5ter (ivan.kanak@gmail.com) $HOME under c00kie License
 
 ## Navigation:
-alias ~="cd ~"
+alias ~="cd $HOME"
 alias ..="cd .."
 alias ...="cd ../../"
 alias cd..="cd .."
@@ -12,6 +12,7 @@ alias grep="grep --color=auto -I" # skip binary files
 alias egrep="egrep --color=auto"
 
 ## Editors:
+alias sv="sudo $EDITOR"
 alias v="$EDITOR"
 alias g="geany"
 
@@ -53,10 +54,9 @@ alias ?ai="cower -ci"	# aur info
 # remove pkgs
 alias rsn="sudo pacman -Rsn"				 # clean, purge
 alias rdt="sudo pacman -Rsn $(pacman -Qqdt)" # unreq deps [!]
-alias ra="rm -r /tmp/cower"
+alias ra="cd && rm -r /tmp/cower"
 
 ## git
-alias g="git"
 alias gst="git status -sb"
 alias gpl="git pull"
 alias gps="git push"
@@ -90,7 +90,7 @@ alias vmutt="$EDITOR $HOME/.mutt/muttrc"
 alias vxinit="$EDITOR $HOME/.xinitrc"
 alias vvim="$EDITOR $HOME/.vimrc"
 alias vgit="$EDITOR $HOME/.gitconfig"
-#su-files
+#etc confs
 alias vmkconf="sudo $EDITOR /etc/make.conf"
 alias vxorg="sudo $EDITOR /etc/X11/xorg.conf"
 alias vgrub="sudo $EDITOR /boot/grub/menu.lst"
@@ -99,7 +99,7 @@ alias vssh="sudo $EDITOR /etc/ssh/sshd_config"
 #mpd
 alias ncmpcpp="ncmpcpp && tname"
 alias vmpd="sudo $EDITOR /etc/mpd.conf"
-alias vmpc="$EDITOR ${HOME}/.ncmpcpp/config"
+alias vmpc="$EDITOR $HOME/.ncmpcpp/config"
 alias mpcv="mpc volume"
 alias mpcm="mpc volume 0"
 alias mpcp="mpc play &>/dev/null && mpc volume 55"
@@ -123,8 +123,8 @@ alias sshloop="ssh c00kiemon5ter@c00kiemon5ter.ath.cx"
 ## Other
 alias irssi="dtach -A $HOME/.irssi/irssi.session irssi"
 alias notes="$HOME/.bin/tasklist/tasklist ls"
-alias vnotes="$EDITOR ${HOME}/.bin/tasklist/tasks + && notes"
-alias vquote="$EDITOR ${HOME}/.archquotes"
+alias vnotes="$EDITOR $HOME/.bin/tasklist/tasks + && notes"
+alias vquote="$EDITOR $HOME/.archquotes"
 alias netbeans="netbeans --laf com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 
 # music
@@ -132,7 +132,7 @@ alias c00kieradio="mplayer http://c00kiemon5ter.ath.cx:8000/mpdstream &>/dev/nul
 alias kaoradio="mplayer http://www.kaotonik.net:8000/playlist &>/dev/null </dev/null &"
 alias oggfossradio="mplayer http://foss.aueb.gr:8000/radio.ogg &>/dev/null </dev/null &"
 alias mp3fossradio="mplayer http://foss.aueb.gr:8000/radio.mp3 &>/dev/null </dev/null &"
-alias jsymphonic="cd ${HOME}/.JSymphonic && java -jar JSymphonic_v0.3.0.jar"
+alias jsymphonic="cd $HOME/.JSymphonic && java -jar JSymphonic_v0.3.0.jar"
 
 # fortune equality
 alias fortune="fortune -e -a"
