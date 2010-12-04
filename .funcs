@@ -24,6 +24,7 @@ function wazaaa() {
 	local arch="Arch" nix="Linux" # the logo
 	local say="$(shuf -n1 $qdb)"  # pick a random quote
 	local spc="$(( $(tput cols) - ${#arch} - ${#nix} ))"
+	clear						  # ohai, kthnxbye
 	printf "$mkbold$fgwht%s$bfgblu%s$fgwht%${spc}s$normal\n" "$arch" "$nix" "$say"
 }
 
