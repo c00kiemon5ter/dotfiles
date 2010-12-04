@@ -126,7 +126,7 @@ hdr_order from: to: cc: date: subject:
 source $alias_file
 source ${HOME}/.mutt/macros
 source ${HOME}/.mutt/colors.muttrc
-source ${HOME}/.mutt/sidebar.muttrc
+#source ${HOME}/.mutt/sidebar.muttrc
 
 ## bindings ~ vim like
 # these just give me headaches
