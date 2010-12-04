@@ -80,11 +80,9 @@ URXvt*mouseWheelScrollPage:false
 
 !URxvt Fonts {
 URxvt*font:			-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-!URxvt*boldfont:		-*-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
-
+URxvt.boldFont:		-*-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
+!URxvt.boldFont:         xft:DroidSansMonoSlashed:bold:size=10:antialias=false
 !URxvt*font:			xft:DroidSansMonoSlashed:pixelsize=12:normal
-!URxvt.boldFont:		xft:DroidSansMono:pixelsize=12:bold
-
 !URxvt*font:			xft:inconsolata:pixelsize=14
 !URxvt*font:			xft:DejaVuSansMono:size=9
 !}
@@ -100,7 +98,7 @@ URxvt*transparent:false
 !! when transparent is true
 !URxvt*shading:100 
 !URxvt*blurRadius:<num>
-!URxvt*fading:true
+URxvt*fading:40
 !URxvt*fadeColor:white
 !URxvt*tint:true
 !URxvt*tintColor:grey
