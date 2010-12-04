@@ -21,11 +21,10 @@ function prompt() {
 # display a random quote on top of every new shell
 function wazaaa() {
 	local qdb="$HOME/.archquotes" # quotes database
-	local arch="Arch"
-	local nix="Linux"
-	local say="$(shuf -n1 $qdb)" # pick a random quote
-	local spc="$(($(tput cols) -${#arch} -${#nix} -${#say}))"
-	clear && echo "$mkbold$fgwht$arch$bfgblu$nix$normal$(yes ' ' | head -${spc} | tr -d '\n')$fgwht$say$normal"
+	local arch="Arch" nix="Linux" # the logo
+	local say="$(shuf -n1 $qdb)"  # pick a random quote
+	local spc="$(( $(tput cols) - ${#arch} - ${#nix} ))"
+	printf "$mkbold$fgwht%s$bfgblu%s$fgwht%${spc}s$normal\n" "$arch" "$nix" "$say"
 }
 
 # cd helper
@@ -157,13 +156,11 @@ function metabox() {
 
 # paste text
 function sprunge() {
-	cat "$@" | curl -F 'sprunge=<-' http://sprunge.us
+	curl -F 'sprunge=<-' http://sprunge.us
 }
 function fsprunge() {
-	for file in "$@"
-	do
-		curl -F 'sprunge=<-' http://sprunge.us < "$file"
-	done
+	curl -sF 'sprunge=<-' http://sprunge.us < "$1" | xclip
+	xclip -o
 }
 
 function tname() {
