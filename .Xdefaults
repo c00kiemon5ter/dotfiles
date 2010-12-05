@@ -46,11 +46,13 @@ URxvt*visualBell:false
 URxvt*highlightSelection:True
 URxvt*buffered:true
 URxvt*saveLines:3000
-cutchars::@-./_~?&=%+#'"'()*,;<=>[]^{|}
+cutchars:"()*,<>[]{}|'"
 
 URxvt*perl-ext-common:default,matcher
 URxvt*urlLauncher:chromium
 URxvt.matcher.button:1
+URxvt.keysym.M-u: perl:mark-yank-urls:activate_mark_mode
+URxvt.perl-ext: selection,mark-yank-urls
 URxvt.underlineURLs:true
 
 URxvt*eightBitInput:true
