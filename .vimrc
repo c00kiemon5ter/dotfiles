@@ -145,8 +145,8 @@ set smartindent
 " Color Scheme {{{
 "colorscheme dante
 "colorscheme benmabey
-colorscheme ristoink_cookies
-"colorscheme miromiro
+"colorscheme ristoink_cookies
+colorscheme miromiro
 "colorscheme Mustang
 "colorscheme neverland2-darker
 "colorscheme vibrantink
