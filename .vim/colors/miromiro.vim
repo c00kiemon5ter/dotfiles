@@ -12,7 +12,8 @@ let g:color_name="miromiro"
 " Normal colors  --- 
 hi Normal          ctermfg=15
 hi Ignore          ctermfg=8
-hi Comment         ctermfg=7 
+"hi Comment         ctermfg=7 
+hi Comment         ctermfg=DarkCyan
 hi LineNr          ctermfg=8
 hi Float           ctermfg=3
 hi Include         ctermfg=5

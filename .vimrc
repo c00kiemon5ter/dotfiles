@@ -143,20 +143,20 @@ set smartindent
 "}}}
 
 " Color Scheme {{{
+colorscheme miromiro
 "colorscheme dante
 "colorscheme benmabey
-"colorscheme ristoink_cookies
-colorscheme miromiro
-"colorscheme Mustang
-"colorscheme neverland2-darker
-"colorscheme vibrantink
-"colorscheme ir_black_mod
 "colorscheme gmarik
-"colorscheme asmdev2
+
+"::256-colorshemes
+"colorscheme ristoink
+"colorscheme desert
+"colorscheme Mustang
+"colorscheme vibrantink
 "colorscheme molokai
 
 " Set colors "
-set t_Co=256
+"set t_Co=256
 "}}}
 
 " auto commands {{{
