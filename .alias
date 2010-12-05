@@ -82,7 +82,7 @@ alias oba="$EDITOR $HOME/.config/openbox/autostart.sh && obr"
 #bash
 alias reload="source $HOME/.bashrc"
 alias vprof="$EDITOR $HOME/.bash_profile && source $HOME/.bash_profile"
-alias vbash="$EDITOR $HOME/.bashrc + && reload"
+alias vbash="$EDITOR $HOME/.bashrc && reload"
 alias valias="$EDITOR $HOME/.alias && reload"
 alias vfuncs="$EDITOR $HOME/.funcs && reload"
 alias vxdefs="$EDITOR $HOME/.Xdefaults && xrdb $HOME/.Xdefaults"
@@ -124,7 +124,7 @@ alias sshloop="ssh c00kiemon5ter@c00kiemon5ter.ath.cx"
 ## Other
 alias irssi="dtach -A $HOME/.irssi/irssi.session irssi"
 alias notes="$HOME/.bin/tasklist/tasklist ls"
-alias vnotes="$EDITOR $HOME/.bin/tasklist/tasks + && notes"
+alias vnotes="$EDITOR $HOME/.bin/tasklist/tasks && notes"
 alias vquote="$EDITOR $HOME/.archquotes"
 alias netbeans="netbeans --laf com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 

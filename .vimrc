@@ -1,12 +1,9 @@
 " c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
-"
-" Ideas taken from :
-" briancarper --> http://briancarper.net/vim/vimrc
-" rsontech --> http://rsontech.net/dotfiles/.vimrc
-" ciaranm  --> http://github.com/ciaranm/dotfiles-ciaranm/blob/master/vimrc
-"
 
-" Enable filetype settings {{{
+" Don't be compatible with vi, this is Vim!
+set nocompatible 
+
+" Enable filetype settings
 if has("eval")
 	filetype on
 	filetype plugin on
@@ -27,9 +24,7 @@ set backupdir=~/.backups/
 
 " Spell Checking
 setlocal spell spelllang=en,el
-"}}}
 
-" Syntax {{{ 
 " Syntax Highlighting
 if has("syntax")
 	syntax on
@@ -37,7 +32,6 @@ endif
 
 " Syntax when printing
 set popt+=syntax:y
-" }}}
 
 " Gist
 let g:gist_clip_command = 'xclip'
@@ -54,25 +48,22 @@ set novisualbell
 set noerrorbells
 
 " Show line numbers
-"set number
+set number
 set numberwidth=2
-
-
 
 " Automatically save before commands like :next and :make
 set autowrite
 
 " do auto indentation
 set autoindent
+set cindent
+set smartindent
 
 " Wrap text
-set wrap
+set nowrap
 " Wrap in these
 set whichwrap+=<,>,[,]
 "set nowrapscan
-
-" Don't be compatible with vi, this is Vim!
-set nocompatible 
 
 " Make backspace delete lots of things
 set backspace=indent,eol,start
@@ -89,7 +80,7 @@ set splitright
 " Allow edit buffers to be hidden
 set hidden
 
-" Use the cool tab complete menu {{{
+" Use the cool tab complete menu
 set wildmenu
 set wildignore+=*.o,*~,.lo
 set suffixes+=.in,.a,.1
@@ -99,9 +90,7 @@ set dictionary=/usr/share/dict/words
 " Ignore case
 set ignorecase
 "set infercase
-"}}}
 
-" searching {{{
 " Highlight matching patterns
 set showmatch
 set matchpairs+=<:>
@@ -112,9 +101,7 @@ set incsearch
 set hlsearch
 " Show full tags when doing search completion
 set showfulltag
-" }}}
 
-" stausbar and window {{{
 " Minimum window height
 set winminheight=1
 
@@ -123,26 +110,22 @@ set laststatus=2
 
 " Statusline Format :P
 "set statusline=%f\ %2*%m\ %1*%h%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}\ %{getfperm(@%)}]\ 0x%B\ %12.(%c:%l/%L%)
-" }}}
 
-" Tab conf {{{
+" Tab conf 
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-"set expandtab
-set smartindent
-" }}}
+set expandtab
 
-" Enable mouse {{{
+" Enable mouse 
 "  [n]ormal
 "  [v]isual
 "  [i]nsert
 "  [c]ommand
 "  [a]ll
-"set mouse=a
-"}}}
+set mouse=a
 
-" Color Scheme {{{
+" Color Scheme 
 colorscheme miromiro
 "colorscheme dante
 "colorscheme benmabey
@@ -157,10 +140,8 @@ colorscheme miromiro
 
 " Set colors "
 "set t_Co=256
-"}}}
 
-" auto commands {{{
-
+" auto commands
 :ab #d #define
 :ab #i #include
 :ab #b /*******************************
@@ -178,7 +159,7 @@ if has("autocmd")
 endif
 "}}}
 
-" Tab-Completion {{{
+" Tab-Completion 
 "if has("eval")
 "    function! CleverTab()
 "        if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
@@ -190,9 +171,8 @@ endif
 "    inoremap <Tab> <C-R>=CleverTab()<CR>
 "    inoremap <S-Tab> <C-P>
 "endif
-"}}}
 
-" Special less/man/vimpager modes {{{
+" Special less/man/vimpager modes 
 if has("eval") && has("autocmd")
     fun! <SID>check_pager_mode()
         if exists("g:loaded_less") && g:loaded_less
@@ -214,9 +194,8 @@ if has("eval") && has("autocmd")
     endfun
     autocmd VimEnter * :call <SID>check_pager_mode()
 endif
-"}}}
 
-" [Un]Comment lines in a visual block {{{
+" [Un]Comment lines in a visual block 
 fun CommentLines()
     try
         execute ":s@^".g:StartComment." @\@g"
@@ -228,9 +207,8 @@ fun CommentLines()
 endfun
 " Set keymaps for [un]commenting
 vmap <Leader>c :call CommentLines()<CR>
-"}}}
 
-" Copy/Paste from Word*doc files is a mess {{{
+" Copy/Paste from Word*doc files is a mess 
 fun! FixInvisiblePunctuation()
     silent! %s/\%u2018/'/g
     silent! %s/\%u2019/'/g
@@ -245,13 +223,8 @@ fun! FixInvisiblePunctuation()
     silent! %s/\%ua0/ /g
     retab
 endfun
-"}}} 
 
-" Auto-change timestamp on closing irssi .pl scripts {{{
-autocmd BufWrite *.pl %s/changed     => '.*/\="changed     => '" . strftime("%c") . "',"/e
-" }}}
-
-" Mutt settings {{{
+" Mutt settings 
 " F1 through F3 rewraps paragraphs
 augroup MUTT
 	au BufRead ~/.mutt/temp/mutt* set spell 
@@ -262,13 +235,30 @@ augroup MUTT
 	au BufRead ~/.mutt/temp/mutt* map!  <F2>  <ESC>gqqji
 	au BufRead ~/.mutt/temp/mutt* map!  <F3>  <ESC>kgqji
 augroup END
-" }}}
 
-" folding {{{
+" When editing a file, always jump to the last known cursor position.
+" Don't do it when the position is invalid or when inside an event handler
+" (happens when dropping a file on gvim).
+" Also don't do it when the mark is in the first line, that is the
+" default position when opening a file.
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+  
+
+" folding
 set foldenable
 set foldmethod=marker
-set foldmarker={{{,}}}
+set foldmarker={,}
 set foldlevel=0
-"}}}
 
-" vim: nospell foldmethod=marker:foldmarker={{{,}}}:foldlevel=0
+" yank and copy to X clipboard
+set clipboard+=unnamed
+" Simulates copying to system clipboard
+vmap <C-c> y:call system("xclip -i -selection clipboard",getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
+
+" Allows writing to files with root priviledges
+cmap w!! %!sudo tee > /dev/null %
+
+" vim: nospell foldmethod=marker:foldmarker={,}:foldlevel=0
