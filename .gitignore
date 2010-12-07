@@ -17,6 +17,7 @@
 
 !.vimrc
 !.vim/
+.vim/.netrwhist
 
 !.irssi/
 .irssi/config
