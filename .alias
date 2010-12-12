@@ -20,8 +20,10 @@ alias g="geany"
 alias df="df -h -T"
 alias mkdir="mkdir -p -v"
 alias l="ls"
+alias l1="ls -1"
 alias ll="ls -l"
 alias la="ls -A"
+alias l1a="ls -a1"
 alias lla="ls -al"
 alias cp="cp -ir"
 alias mv="mv -i"
@@ -31,31 +33,30 @@ alias lw="wmctrl -l | cut -d\" \" -f5- | sed \"s/^[[:space:]|\(].*$//\" | grep -
 alias h="history"
 
 ## package management
-cwr="/tmp/cower"
 alias pacman="pacman-color"	# colors :D
+alias cower="cower -c -t /tmp/"
 # pacman update
 alias syu="sudo pacman-color -Syu"	# pacman upgrade
 alias i="sudo pacman-color -S"		# pacman install
 alias u="sudo pacman-color -U"		# makepkg install
 # pacman search
-alias ?qs="pacman -Qs"	# query search
-alias ?qi="pacman -Qi"	# query info
-alias ?ss="pacman -Ss"	# sync search
-alias ?si="pacman -Si"	# sync info
+alias ?qs="pacman -Qs" # query search
+alias ?qi="pacman -Qi" # query info
+alias ?ss="pacman -Ss" # sync search
+alias ?si="pacman -Si" # sync info
 # query listings
-alias ?ql="pacman -Ql"	# list files
-alias ?qo="pacman -Qo"	# check ownership
+alias ?ql="pacman -Ql" # list files
+alias ?qo="pacman -Qo" # check ownership
 # aur update
-alias sya="mkdir $cwr && cd $cwr && cower -cudd" # aur upgrade
-alias a="  mkdir $cwr && cd $cwr && cower -cdd"  # aur install
-alias ?au="cower -cu | pr -n -t"	# aur update
+alias sya="cower -udd" # aur upgrade
+alias a="cower -dd"    # aur install
+alias ?au="cower -u | pr -n -t #"	# aur update
 # aur search
-alias ?as="cower -cs"	# aur search
-alias ?ai="cower -ci"	# aur info
+alias ?as="cower -s"   # aur search
+alias ?ai="cower -i"   # aur info
 # remove pkgs
-alias rsn="sudo pacman -Rsn"				 # clean, purge
-alias rdt="sudo pacman -Rsn $(pacman -Qqdt)" # unreq deps [!]
-alias ra="cd && rm -r $cwr"
+alias rsn="sudo pacman -Rsn" # clean 'n purge
+alias qdt="pacman -Qqdt"     # unrequired deps
 
 ## git
 alias gst="git status -sb"
