@@ -9,6 +9,13 @@
 				</execute>
 			</action>
 		</item>
+		<item label="Chromium-dev">
+			<action name="Execute">
+				<execute>
+				    chromium-dev
+				</execute>
+			</action>
+		</item>
 		<item label="Rxvt-Unicode">
 			<action name="Execute">
 				<execute>
