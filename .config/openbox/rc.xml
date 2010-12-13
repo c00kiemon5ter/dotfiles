@@ -383,7 +383,7 @@
     <keybind key="W-grave">
       <action name="Execute">
         <!-- <command>~/.bin/app_focus.sh urxvt</command> -->
-        <command>~/.bin/urxvt_client.sh</command>
+        <command>~/.bin/urxvtc</command>
       </action>
     </keybind>
     <keybind key="XF86HomePage">

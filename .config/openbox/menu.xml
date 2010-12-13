@@ -19,7 +19,7 @@
 		<item label="Rxvt-Unicode">
 			<action name="Execute">
 				<execute>
-					~/.bin/urxvt_client.sh
+					~/.bin/urxvtc
 				</execute>
 			</action>
 		</item>
@@ -43,7 +43,7 @@
 				<item label="Sandbox">
 					<action name="Execute">
 						<execute>
-						~/.bin/urxvt_client.sh -e sandbox
+						~/.bin/urxvtc -e sandbox
 						</execute>
 					</action>
 				</item>
@@ -85,7 +85,7 @@
 				<item label="Python">
 					<action name="Execute">
 						<execute>
-						~/.bin/urxvt_client.sh -e python
+						~/.bin/urxvtc -e python
 						</execute>
 					</action>
 				</item>
@@ -110,7 +110,7 @@
 				<item label="ALSA mixer">
 					<action name="Execute">
 						<execute>
-						~/.bin/urxvt_client.sh alsamixer
+						~/.bin/urxvtc alsamixer
 						</execute>
 					</action>
 				</item>
@@ -126,7 +126,7 @@
 				<item label="Irssi">
 					<action name="Execute">
 						<execute>
-						~/.bin/urxvt_client.sh -e irssi
+						~/.bin/urxvtc -e irssi
 						</execute>
 					</action>
 				</item>
@@ -207,7 +207,7 @@
 				<item label="Rxvt-Unicode Client">
 					<action name="Execute">
 						<execute>
-						~/.bin/urxvt_client.sh
+						~/.bin/urxvtc
 						</execute>
 					</action>
 				</item>
@@ -260,21 +260,21 @@
 				<item label="pstree">
 					<action name="Execute">
 						<execute>
-						~/.bin/urxvt_client.sh -e /usr/bin/pstree.x11
+						~/.bin/urxvtc -e /usr/bin/pstree.x11
 						</execute>
 					</action>
 				</item>
 				<item label="pstree">
 					<action name="Execute">
 						<execute>
-						~/.bin/urxvt_client.sh -e pstree
+						~/.bin/urxvtc -e pstree
 						</execute>
 					</action>
 				</item>
 				<item label="pstree">
 					<action name="Execute">
 						<execute>
-						~/.bin/urxvt_client.sh -e pstree.x11
+						~/.bin/urxvtc -e pstree.x11
 						</execute>
 					</action>
 				</item>
