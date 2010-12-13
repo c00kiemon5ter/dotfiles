@@ -1,12 +1,15 @@
 #!/usr/bin/env bash
 
-xrdb $HOME/.Xdefaults
+# take into account local resources
+xrdb -merge $HOME/.Xdefaults &
 
 # urxvt daemon
 urxvtd -q -o -f
 
-# toogle keyboard layout with S-A
+# toogle keyboard layout with Shift-Alt
 setxkbmap -model evdev -layout us,gr -variant extended -option grp_led:scroll,eurosign:e,grp:alt_shift_toggle &
+# kill X with Ctrl-Alt-Bksp
+setxkbmap -option terminate:ctrl_alt_bksp
 
 # set the wallpaper
 display -window root data/pics/Wallpapers/arch/blue-1920x1080.png &
@@ -14,12 +17,18 @@ display -window root data/pics/Wallpapers/arch/blue-1920x1080.png &
 # hide mouse after some idle time
 unclutter &
 
-# have a termnal ready
-$HOME/.bin/urxvt_client.sh -geometry 98x28+54+52 & #90x24+54+52
+# get a terminal
+$HOME/.bin/urxvt_client &
 
-# nowplaying conky
-sleep 2 && conky -c $HOME/.conky/nowplaying.conkyrc &
+# show time
+while true
+do
+    vol="$(amixer get PCM | tail -1 | sed -r "s:.+\[(.+%)].+:\1:g")"
+    date="$(date +"%d/%m %R")"
+    xsetroot -name "$vol $date"
+    sleep 20s
+done &
 
 # start the X session
-exec openbox-session
-
+#exec openbox-session
+exec $HOME/.bin/startdwm

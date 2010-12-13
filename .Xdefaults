@@ -46,13 +46,14 @@ URxvt*visualBell:false
 URxvt*highlightSelection:True
 URxvt*buffered:true
 URxvt*saveLines:3000
-cutchars:"()*,<>[]{}|'"
 
-URxvt*perl-ext-common:default,matcher
+URxvt*perl-ext-common:default,matcher,selection,selection-autotransform,-searchable-scrollback,-readline
+URxvt.selection-autotransform.0: s/^([^:[:space:]]+):(\\d+):?$/vim +$2 \\Q$1\\E\\x0d/
+cutchars:"()*,<>[]{}|'"
 URxvt*urlLauncher:chromium-dev
 URxvt.matcher.button:1
 URxvt.keysym.M-u: perl:mark-yank-urls:activate_mark_mode
-URxvt.perl-ext: selection,mark-yank-urls
+URxvt.perl-ext: mark-yank-urls
 URxvt.underlineURLs:true
 
 URxvt*eightBitInput:true
