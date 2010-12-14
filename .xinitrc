@@ -29,6 +29,9 @@ do
     sleep 20s
 done &
 
+# fix misbehaving Java applications
+wmname LG3D
+
 # start the X session
 #exec openbox-session
 exec $HOME/.bin/startdwm

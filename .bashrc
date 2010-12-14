@@ -73,4 +73,4 @@ mkblnk="$(tput blink)"	# make blink
 revers="$(tput rev)"	# reverse
 # }}}
 PROMPT_COMMAND=prompt
-wazaaa
+#wazaaa

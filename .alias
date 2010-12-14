@@ -92,6 +92,7 @@ alias vmutt="$EDITOR $HOME/.mutt/muttrc"
 alias vxinit="$EDITOR $HOME/.xinitrc"
 alias vvim="$EDITOR $HOME/.vimrc"
 alias vgit="$EDITOR $HOME/.gitconfig"
+alias vconf="$EDITOR $HOME/.dwm/config.h"
 #etc confs
 alias vmkconf="sudo $EDITOR /etc/make.conf"
 alias vxorg="sudo $EDITOR /etc/X11/xorg.conf"
