@@ -20,7 +20,6 @@ xpdf*background:          #1f1f1f
 !white
 xpdf*paperColor:          #1f1f1f
 xpdf*urlCommand:          chromium-dev %s
-!xpdf*urlCommand:          firefox %s
 xpdf*viKeys:              true
 xpdf*continuousView:      true
 xpdf*initialZoom:		  width
@@ -47,13 +46,13 @@ URxvt*highlightSelection:True
 URxvt*buffered:true
 URxvt*saveLines:3000
 
-URxvt*perl-ext-common:default,matcher,selection,selection-autotransform,-searchable-scrollback,-readline
+URxvt*perl-ext-common:matcher,selection,selection-autotransform,-searchable-scrollback,-readline
 URxvt.selection-autotransform.0: s/^([^:[:space:]]+):(\\d+):?$/vim +$2 \\Q$1\\E\\x0d/
 cutchars:"()*,<>[]{}|'"
-URxvt*urlLauncher:chromium-dev
 URxvt.matcher.button:1
-URxvt.keysym.M-u: perl:mark-yank-urls:activate_mark_mode
-URxvt.perl-ext: mark-yank-urls
+URxvt*urlLauncher:chromium-dev
+URxvt.perl-ext: default,url-select
+URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.underlineURLs:true
 
 URxvt*eightBitInput:true
