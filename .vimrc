@@ -257,7 +257,7 @@ set foldlevel=0
 " yank and copy to X clipboard
 set clipboard+=unnamed
 " Simulates copying to system clipboard
-vmap <C-c> y:call system("xsel -i -b",getreg("\""))<CR>:call system("xsel -i", getreg("\""))<CR>
+vmap <C-c> y:call system("xclip -i -b",getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
 
 " Allows writing to files with root priviledges
 cmap w!! %!sudo tee > /dev/null %
