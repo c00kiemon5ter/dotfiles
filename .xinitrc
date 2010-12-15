@@ -18,14 +18,15 @@ display -window root data/pics/Wallpapers/arch/blue-1920x1080.png &
 unclutter &
 
 # get a terminal
-$HOME/.bin/urxvt_client &
+$HOME/.bin/urxvtc &
 
-# show time
+# show time and vol
 while true
 do
+    np="$(mpc current)"
     vol="$(amixer get PCM | tail -1 | sed -r "s:.+\[(.+%)].+:\1:g")"
-    date="$(date +"%d/%m %R")"
-    xsetroot -name "$vol $date"
+    date="$(date +"%a %d/%m %R")"
+    xsetroot -name "$np $vol $date"
     sleep 20s
 done &
 
