@@ -6,7 +6,7 @@ alias ..="cd .."
 alias ...="cd ../../"
 alias cd..="cd .."
 
-## always use color with ls and grep
+## use color where appropriate
 alias ls="ls --color=auto -h"
 alias grep="grep --color=auto -I" # skip binary files
 alias egrep="egrep --color=auto"
@@ -14,7 +14,6 @@ alias egrep="egrep --color=auto"
 ## Editors:
 alias sv="sudo $EDITOR"
 alias v="$EDITOR"
-alias g="geany"
 
 ## Common
 alias df="df -h -T"
@@ -36,10 +35,10 @@ alias h="history"
 alias pacman="pacman-color"	 # colors :D
 alias cower="cower -ct /tmp/"
 # pacman update
-alias syu="sudo pacman -Syu" # pacman upgrade
-alias i="sudo pacman -S"	 # pacman install
-alias u="sudo pacman -U"	 # makepkg install
-alias idep="sudo pacman -S --asdeps" # install deps
+alias syu="sudo pacman-color -Syu" # pacman upgrade
+alias i="sudo pacman-color -S"	   # pacman install
+alias u="sudo pacman-color -U"	   # makepkg install
+alias idep="sudo pacman-color -S --asdeps" # install as deps
 # pacman search
 alias ?qs="pacman -Qs" # query search
 alias ?qi="pacman -Qi" # query info
@@ -69,6 +68,7 @@ alias gcv="git commit -v"
 alias gbr="git branch"
 alias gco="git checkout"
 alias gdf="git diff"
+alias glg="git log"
 alias glf="git log --graph --oneline --parents --name-status"
 alias glc="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 

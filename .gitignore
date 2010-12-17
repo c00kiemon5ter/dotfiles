@@ -1,8 +1,11 @@
 /*
 !.bashrc
 !.bash_profile
+
 !.funcs
 !.alias
+!.completion
+
 !.color_schemes/
 !.inputrc*
 !.dircolors

@@ -3,7 +3,6 @@
 
 !URxvt*background: rgba:0000/0000/0000/c000
 *foreground: #DDEEDD
-!*background: #1C1C1C
 *background: #181818
 
 ! Black
@@ -12,7 +11,6 @@
 
 ! Red 
 *color1: #F60606
-!!*color1: #B22222
 *color9: #F60606
 
 ! Green
@@ -21,11 +19,9 @@
 
 ! Yellow
 *color3: #FF971F
-!!*color3: #FFD00A
 *color11:#FFBF00
 
 ! Blue
-!!*color4: #006EDC
 *color12:#0071FF
 *color4: #44A7EE
 

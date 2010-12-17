@@ -31,6 +31,7 @@ CDPATH=".:${HOME}/projects/:${HOME}/data/"
 test -r .dircolors && eval "export $(dircolors -b .dircolors)"
 source "$HOME"/.alias
 source "$HOME"/.funcs
+source "$HOME"/.completion
 
 # set color variables {{{
 fgblk="$(tput setaf 0)"		# Black - Regular

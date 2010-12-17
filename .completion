@@ -1,0 +1,12 @@
+# git aliases completion
+complete -o default -o nospace -F _git_pull gpl
+complete -o default -o nospace -F _git_push gps
+complete -o default -o nospace -F _git_commit gcm
+complete -o default -o nospace -F _git_commit gca
+complete -o default -o nospace -F _git_commit gcv
+complete -o default -o nospace -F _git_branch gbr
+complete -o default -o nospace -F _git_checkout gco
+complete -o default -o nospace -F _git_diff gdf
+complete -o default -o nospace -F _git_log glg
+complete -o default -o nospace -F _git_log glf
+complete -o default -o nospace -F _git_log glc
