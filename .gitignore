@@ -16,7 +16,9 @@
 !.archquotes
 !.fonts.conf*
 !.conky/
+
 !.shot.png
+!.cleanshot.png
 !.wallpaper.png
 !.irssi.shot.png
 
