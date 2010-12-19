@@ -18,7 +18,9 @@ display -window root $HOME/.wallpaper.png &
 unclutter &
 
 # get a terminal
-$HOME/.bin/urxvtc &
+#$HOME/.bin/urxvtdc &
+# get a hidden floating centered terminal
+$HOME/.bin/urxvtdc -name scratchpad -pe kuake -geometry +740+396 &
 
 # start the X session
 #exec openbox-session
