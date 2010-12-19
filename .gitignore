@@ -9,7 +9,7 @@
 !.color_schemes/
 !.inputrc*
 !.dircolors
-
+!.toprc
 !.xinitrc
 !.Xdefaults
 
