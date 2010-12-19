@@ -68,8 +68,8 @@ alias gcv="git commit -v"
 alias gbr="git branch"
 alias gco="git checkout"
 alias gdf="git diff"
-alias glg="git log"
-alias glf="git log --graph --oneline --parents --name-status"
+alias glg="git log --abbrev-commit --parents"
+alias glf="git log --graph --oneline --name-status --parents"
 alias glc="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
 ## files

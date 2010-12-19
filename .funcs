@@ -10,9 +10,9 @@ function prompt() {
 	then
 		git st|grep "not updated" &>/dev/null && ref="$ref\[$fggrn\]!"
 		git st|grep "Untracked" &>/dev/null && ref="$ref\[$fggrn\]?"
-		gpr="\[$fgwht\]:\[$fgpur\]${ref#refs/heads/}"
+		gpr="\[$fgwht\]:\[$fgylw\]${ref#refs/heads/}"
 	fi
-	PS1="\n$st\[$bfgblu\]\h \[$bfgylw\]\W$gpr \[$fgcyn\]>>\[$stclr\]> \[$normal\]"
+	PS1="\n$st\[$bfgblu\]\h \[$fggrn\]\W$gpr \[$fgcyn\]>>\[$stclr\]> \[$normal\]"
 	PS2=" \[$fgcyn\]> \[$normal\]"
 	PS3=" \[$bfgcyn\]> \[$normal\]"
 	PS4="[$LINENO]+"
