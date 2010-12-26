@@ -12,8 +12,9 @@ alias grep="grep --color=auto -I" # skip binary files
 alias egrep="egrep --color=auto"
 
 ## Editors:
-alias sv="sudo $EDITOR"
 alias v="$EDITOR"
+alias sv="sudo $EDITOR"
+alias svim="sudo $EDITOR"
 
 ## Common
 alias df="df -h -T"
@@ -118,11 +119,12 @@ alias sshloop="ssh c00kiemon5ter@c00kiemon5ter.ath.cx"
 
 ## Other
 alias irssi="dtach -A $HOME/.irssi/irssi.session irssi"
+alias minbif="minbif $HOME/.config/minbif/minbif.conf"
 alias notes="$HOME/.bin/tasklist/tasklist ls"
 alias vnotes="$EDITOR $HOME/.bin/tasklist/tasks && notes"
 alias vquote="$EDITOR $HOME/.archquotes"
 alias netbeans="netbeans --laf com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
-
+alias ssmem="smem -k -c 'pid uss pss rss name' -t"
 # music
 alias c00kieradio="mplayer http://c00kiemon5ter.ath.cx:8000/mpdstream &>/dev/null </dev/null &"
 alias kaoradio="mplayer http://www.kaotonik.net:8000/playlist &>/dev/null </dev/null &"
