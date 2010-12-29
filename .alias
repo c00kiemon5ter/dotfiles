@@ -109,7 +109,7 @@ alias mpcn="mpc next"
 alias mpcpr="mpc prev"
 alias mpct="mpc toggle"
 alias mpcs="mpc seek"
-alias nowplaying="mpc current"
+alias nowplaying="mpc current --format \"%artist% :: %title%\""
 
 ## remote ssh to uni servers
 alias dias="ssh -1 p3060190@dias.aueb.gr"
