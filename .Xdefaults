@@ -19,7 +19,7 @@ xpdf*foreground:          white
 xpdf*background:          #1f1f1f
 !white
 xpdf*paperColor:          #1f1f1f
-xpdf*urlCommand:          chromium-dev %s
+xpdf*urlCommand:          chromium %s
 xpdf*viKeys:              true
 xpdf*continuousView:      true
 xpdf*initialZoom:		  width
@@ -50,7 +50,7 @@ URxvt*perl-ext-common:matcher,selection,selection-autotransform,-searchable-scro
 URxvt.selection-autotransform.0: s/^([^:[:space:]]+):(\\d+):?$/vim +$2 \\Q$1\\E\\x0d/
 cutchars:"()*,<>[]{}|'"
 URxvt.matcher.button:1
-URxvt*urlLauncher:chromium-dev
+URxvt*urlLauncher:chromium
 URxvt.perl-ext: default,url-select
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.underlineURLs:true

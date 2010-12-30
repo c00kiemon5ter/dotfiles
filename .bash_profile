@@ -3,7 +3,7 @@ export PATH=/usr/share/perl5/vendor_perl/auto/share/dist/Cope:/usr/bin:/bin:/usr
 export HISTCONTROL=erasedups
 export HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
 
-export BROWSER=chromium-dev
+export BROWSER=chromium
 export EDITOR=vim
 export PAGER=less
 export LESS_TERMCAP_mb=$'\e[01;31m'
