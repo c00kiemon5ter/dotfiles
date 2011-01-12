@@ -1,4 +1,6 @@
-export PATH=/usr/share/perl5/vendor_perl/auto/share/dist/Cope:/usr/bin:/bin:/usr/sbin:/sbin:/usr/lib/perl5/site_perl/bin:/usr/lib/perl5/vendor_perl/bin:/usr/bin/perlbin/vendor:/usr/lib/perl5/core_perl/bin:/home/c00kiemon5ter/.bin
+export PATH=/usr/share/perl5/vendor_perl/auto/share/dist/Cope:/usr/bin:/bin:/usr/sbin:/sbin:\
+/usr/lib/perl5/site_perl/bin:/usr/lib/perl5/vendor_perl/bin:/usr/bin/perlbin/vendor:/usr/lib/perl5/core_perl/bin:\
+/home/c00kiemon5ter/.bin
 
 export HISTCONTROL=erasedups
 export HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
