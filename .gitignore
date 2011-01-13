@@ -37,7 +37,11 @@
 !.config/tint2/
 
 !.ncmpcpp/
-.ncmpcpp/error.log
+.ncmpcpp/*
+!.ncmpcpp/config
+!.moc
+.moc/*
+!.moc/config
 
 !.mutt/
 .mutt/gmail_account

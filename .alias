@@ -110,6 +110,9 @@ alias mpcpr="mpc prev"
 alias mpct="mpc toggle"
 alias mpcs="mpc seek"
 alias nowplaying="mpc current --format \"%artist% :: %title%\""
+#moc
+#alias mocp="mocp -m $HOME/music/ksena"
+alias vmoc="$EDITOR $HOME/.moc/config"
 
 ## remote ssh to uni servers
 alias dias="ssh -1 dias.aueb.gr"
