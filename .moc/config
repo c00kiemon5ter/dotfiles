@@ -22,7 +22,7 @@ AutoNext = yes
 #                   config interpreter). man zshmisc for more info.
 FormatString = "%(n:%n :)%(a:%a - :)%(t:%t:)%(A: \(%A\):)"
 
-OutputBuffer = 1024
+OutputBuffer = 2048
 InputBuffer  = 512
 Prebuffering = 64
  
@@ -33,7 +33,7 @@ UseMmap     = yes
 
 ResampleMethod   = SincFastest
 ForceSampleRate  = 48000
-Allow24bitOutput = yes
+Allow24bitOutput = no
 TagsCacheSize    = 256
 
 StartInMusicDir   = yes
