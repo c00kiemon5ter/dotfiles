@@ -1,0 +1,37 @@
+! c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License 
+
+*foreground: #DDEEDD
+*background: #181818
+
+! Black
+*color0: #222222
+*color8: #454545
+
+! Red 
+*color1: #c5000b
+*color9: #ff0000
+
+! Green
+*color2: #579d1c
+*color10:#aecf00
+
+! Yellow
+*color3: #ff420e
+*color11:#ff950e
+
+! Blue
+*color4: #004586
+*color12:#0066cc
+
+! Magneta
+*color5: #9932CC
+*color13:#d11793
+
+! Cyan
+*color6: #5E7175
+*color14:#A3BABF
+
+! White
+*color7: #FFFFFF
+*color15:#FFFFFF
+
