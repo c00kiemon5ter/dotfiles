@@ -92,7 +92,6 @@ URxvt.boldFont:		-*-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
 !URxvt Color Settings {
 ! Color Scheme
 #include "/home/c00kiemon5ter/.color_schemes/librec00kiez"
-!#include "/home/c00kiemon5ter/.color_schemes/c00kiez"
 
 URxvt*depth:16
 URxvt*dynamicColors:on
