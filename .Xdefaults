@@ -91,7 +91,8 @@ URxvt.boldFont:		-*-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
 
 !URxvt Color Settings {
 ! Color Scheme
-#include "/home/c00kiemon5ter/.color_schemes/c00kiez"
+#include "/home/c00kiemon5ter/.color_schemes/librec00kiez"
+!#include "/home/c00kiemon5ter/.color_schemes/c00kiez"
 
 URxvt*depth:16
 URxvt*dynamicColors:on
@@ -100,7 +101,7 @@ URxvt*transparent:false
 !! when transparent is true
 !URxvt*shading:100 
 !URxvt*blurRadius:<num>
-URxvt*fading:40
+!!!URxvt*fading:40
 !URxvt*fadeColor:white
 !URxvt*tint:true
 !URxvt*tintColor:grey

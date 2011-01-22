@@ -3,16 +3,16 @@
 
 # the prompt
 function prompt() {
-	local st="$?" stclr="$fggrn" gpr=""
+	local st="$?" stclr="$bfggrn" gpr=""
 	local ref="$(git symbolic-ref HEAD 2>/dev/null)"
-	(($st)) && stclr="$fgred" st="\[$fgwht\][\[$stclr\]$st\[$fgwht\]]" || st=""
+	(($st)) && stclr="$bfgred" st="\[$fgwht\][\[$stclr\]$st\[$fgwht\]]" || st=""
 	if [ -n "$ref" ]
 	then
 		git st|grep "not updated" &>/dev/null && ref="$ref\[$fggrn\]!"
 		git st|grep "Untracked" &>/dev/null && ref="$ref\[$fggrn\]?"
 		gpr="\[$fgwht\]:\[$fgylw\]${ref#refs/heads/}"
 	fi
-	PS1="\n$st\[$bfgblu\]\h \[$fggrn\]\W$gpr \[$fgcyn\]>>\[$stclr\]> \[$normal\]"
+	PS1="\n$st\[$bfgblu\]\h \[$bfggrn\]\W$gpr \[$fgcyn\]>>\[$stclr\]> \[$normal\]"
 	PS2=" \[$fgcyn\]> \[$normal\]"
 	PS3=" \[$bfgcyn\]> \[$normal\]"
 	PS4="[$LINENO]+"
