@@ -1,6 +1,9 @@
-export PATH=/usr/share/perl5/vendor_perl/auto/share/dist/Cope:/usr/bin:/bin:/usr/sbin:/sbin:\
-/usr/lib/perl5/site_perl/bin:/usr/lib/perl5/vendor_perl/bin:/usr/bin/perlbin/vendor:/usr/lib/perl5/core_perl/bin:\
-/home/c00kiemon5ter/.bin
+pathdirs=(  "/usr/share/perl5/vendor_perl/auto/share/dist/Cope" 
+            "/usr/bin" "/bin" "/usr/sbin" "/sbin"
+            "/usr/bin/*_perl" "/usr/bin/perlbin/vendor"
+            "/usr/lib/perl5/*_perl/bin" "/usr/share/perl5/*_perl"
+            "/home/c00kiemon5ter/.bin" )
+export PATH="$(echo ${pathdirs[@]} | sed "s.\s.:.g")" && unset pathdirs
 
 export HISTCONTROL=erasedups
 export HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
@@ -8,6 +11,7 @@ export HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
 export BROWSER=chromium
 export EDITOR=vim
 export PAGER=less
+
 export LESS_TERMCAP_mb=$'\e[01;31m'
 export LESS_TERMCAP_md=$'\e[01;34m'
 export LESS_TERMCAP_me=$'\e[0m' 
@@ -31,10 +35,8 @@ shopt -s nocaseglob
 . $HOME/.bashrc
 
 pkill -u "$USER" lsyncd
-MUSIC_SYNC_LOG="$HOME/.lsyncd/music.sync.log"
-lsyncd --logfile "$MUSIC_SYNC_LOG" -rsync "$HOME/music/" "$HOME/data/music/syncd/"
-PROJECTS_SYNC_LOG="$HOME/.lsyncd/projects.sync.log"
-lsyncd --logfile "$PROJECTS_SYNC_LOG" -rsync "$HOME/projects/" "$HOME/data/projects/syncd/"
+lsyncd --logfile "$HOME/.lsyncd/music.sync.log" -rsync "$HOME/music/" "$HOME/data/music/syncd/"
+lsyncd --logfile "$HOME/.lsyncd/projects.sync.log" -rsync "$HOME/projects/" "$HOME/data/projects/syncd/"
 
 if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]
 then
