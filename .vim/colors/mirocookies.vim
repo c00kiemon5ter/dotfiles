@@ -1,5 +1,5 @@
 " mirocookies colours
-" Author:   Kanakarakis Ivan
+" Author:   Kanakarakis c00kiemon5ter Ivan
 " URL:      http://github.com/c00kiemon5ter
 "
 " Based on miromiro colours
