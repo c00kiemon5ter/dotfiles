@@ -17,6 +17,9 @@ display -window root $HOME/.wallpaper.png &
 # hide mouse after some idle time
 unclutter &
 
+# collect selections
+clipbored &
+
 # get a terminal
 #urxvtdc &
 # get a hidden floating centered terminal
