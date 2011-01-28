@@ -96,7 +96,7 @@ alias vssh="sudo $EDITOR /etc/ssh/sshd_config"
 #mpd
 alias ncmpcpp="ncmpcpp && tname"
 alias vmpd="sudo $EDITOR /etc/mpd.conf"
-alias vmpc="$EDITOR $HOME/.ncmpcpp/config"
+alias vncmpcpp="$EDITOR $HOME/.ncmpcpp/config"
 alias mpcv="mpc volume"
 alias mpcm="mpc volume 0"
 alias mpcp="mpc play &>/dev/null && mpc volume 55"

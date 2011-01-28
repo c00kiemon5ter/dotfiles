@@ -39,7 +39,7 @@ color2 = "white"
 main_window_highlight_color = "green"
 
 mpd_crossfade_time = "5"
-mpd_music_dir = "music"
+mpd_music_dir = "/home/c00kiemon5ter/music"
 external_editor = "vim"
 use_console_editor = "yes"
 
