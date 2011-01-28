@@ -10,8 +10,14 @@ export HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
 
 export BROWSER="chromium"
 export EDITOR="vim"
-export PAGER="less -FXRS"
+export PAGER="less"
 
+export MOST_SWITCHES="-s"
+export MOST_EDITOR="$EDITOR"
+export SLANG_EDITOR="$EDITOR"
+
+export LESS="-FXRS"
+export LESSHISTFILE="/tmp/.lesshst"
 export LESS_TERMCAP_mb=$'\e[01;31m'
 export LESS_TERMCAP_md=$'\e[01;34m'
 export LESS_TERMCAP_me=$'\e[0m' 
