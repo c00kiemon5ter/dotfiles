@@ -71,8 +71,8 @@ set backspace=indent,eol,start
 " Show us the command we're typing
 set showcmd
 
-" Speed up macros
-set lazyredraw
+" Speed up macros <-- causes problems updating the screen
+"""set lazyredraw
 
 " Place new window right of the current
 set splitright
@@ -145,8 +145,6 @@ colorscheme mirocookies
 " auto commands
 :ab #d #define
 :ab #i #include
-:ab #b /*******************************
-:ab #e *******************************/
 
 if has("autocmd")
     " Set comment characters for common languages
@@ -158,7 +156,6 @@ if has("autocmd")
     " turn off any existing search on exit
     au VimEnter * nohls
 endif
-"}}}
 
 " Tab-Completion 
 "if has("eval")
@@ -174,40 +171,40 @@ endif
 "endif
 
 " Special less/man/vimpager modes 
-if has("eval") && has("autocmd")
-    fun! <SID>check_pager_mode()
-        if exists("g:loaded_less") && g:loaded_less
-        " we're in vimpager / less.sh / man mode
-            set laststatus=0
-            set ruler
-            "set foldmethod=manual
-            "set foldlevel=99
-            set nowrap
-            set nonumber
-            " Remove weird keybindings from vimpagr
-            set nofoldenable
-            set nolist
-            unmap <Space>
-            unmap z
-            "unmap q
-            unmap d
-        endif
-    endfun
-    autocmd VimEnter * :call <SID>check_pager_mode()
-endif
+"if has("eval") && has("autocmd")
+"    fun! <SID>check_pager_mode()
+"        if exists("g:loaded_less") && g:loaded_less
+"        " we're in vimpager / less.sh / man mode
+"            set laststatus=0
+"            set ruler
+"            "set foldmethod=manual
+"            "set foldlevel=99
+"            set nowrap
+"            set nonumber
+"            " Remove weird keybindings from vimpagr
+"            set nofoldenable
+"            set nolist
+"            unmap <Space>
+"            unmap z
+"            "unmap q
+"            unmap d
+"        endif
+"    endfun
+"    autocmd VimEnter * :call <SID>check_pager_mode()
+"endif
 
-" [Un]Comment lines in a visual block 
-fun CommentLines()
-    try
-        execute ":s@^".g:StartComment." @\@g"
-        execute ":s@ ".g:EndComment."$@@g"
-    catch
-        execute ":s@^@".g:StartComment." @g"
-        execute ":s@$@ ".g:EndComment."@g"
-    endtry
-endfun
+"" [Un]Comment lines in a visual block 
+"fun CommentLines()
+"    try
+"        execute ":s@^".g:StartComment." @\@g"
+"        execute ":s@ ".g:EndComment."$@@g"
+"    catch
+"        execute ":s@^@".g:StartComment." @g"
+"        execute ":s@$@ ".g:EndComment."@g"
+"    endtry
+"endfun
 " Set keymaps for [un]commenting
-vmap <Leader>c :call CommentLines()<CR>
+"vmap <Leader>c :call CommentLines()<CR>
 
 " Copy/Paste from Word*doc files is a mess 
 fun! FixInvisiblePunctuation()
@@ -227,15 +224,15 @@ endfun
 
 " Mutt settings 
 " F1 through F3 rewraps paragraphs
-augroup MUTT
-	au BufRead ~/.mutt/temp/mutt* set spell 
-	au BufRead ~/.mutt/temp/mutt* nmap  <F1>  gqap
-	au BufRead ~/.mutt/temp/mutt* nmap  <F2>  gqqj
-	au BufRead ~/.mutt/temp/mutt* nmap  <F3>  kgqj
-	au BufRead ~/.mutt/temp/mutt* map!  <F1>  <ESC>gqapi
-	au BufRead ~/.mutt/temp/mutt* map!  <F2>  <ESC>gqqji
-	au BufRead ~/.mutt/temp/mutt* map!  <F3>  <ESC>kgqji
-augroup END
+"augroup MUTT
+"	au BufRead ~/.mutt/temp/mutt* set spell 
+"	au BufRead ~/.mutt/temp/mutt* nmap  <F1>  gqap
+"	au BufRead ~/.mutt/temp/mutt* nmap  <F2>  gqqj
+"	au BufRead ~/.mutt/temp/mutt* nmap  <F3>  kgqj
+"	au BufRead ~/.mutt/temp/mutt* map!  <F1>  <ESC>gqapi
+"	au BufRead ~/.mutt/temp/mutt* map!  <F2>  <ESC>gqqji
+"	au BufRead ~/.mutt/temp/mutt* map!  <F3>  <ESC>kgqji
+"augroup END
 
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler
@@ -254,10 +251,10 @@ set foldmethod=marker
 set foldmarker={,}
 set foldlevel=0
 
-" yank and copy to X clipboard
+" yank and copy to system clipboard
 set clipboard+=unnamed
 " Simulates copying to system clipboard
-vmap <C-c> y:call system("xclip -i -b",getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
+"vmap <C-c> y:call system("xclip -i -b",getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
 
 " Allows writing to files with root priviledges
 cmap w!! %!sudo tee > /dev/null %
