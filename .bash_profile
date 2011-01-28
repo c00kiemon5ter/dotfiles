@@ -8,9 +8,9 @@ export PATH="$(echo ${pathdirs[@]} | sed "s.\s.:.g")" && unset pathdirs
 export HISTCONTROL=erasedups
 export HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
 
-export BROWSER=chromium
-export EDITOR=vim
-export PAGER=less
+export BROWSER="chromium"
+export EDITOR="vim"
+export PAGER="less -FXRS"
 
 export LESS_TERMCAP_mb=$'\e[01;31m'
 export LESS_TERMCAP_md=$'\e[01;34m'
