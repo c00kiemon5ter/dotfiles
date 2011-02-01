@@ -33,31 +33,32 @@ alias lw="wmctrl -l | cut -d\" \" -f5- | sed \"s/^[[:space:]|\(].*$//\" | grep -
 alias h="history"
 
 ## package management
-alias pacman="pacman-color"	 # colors :D
-alias cower="cower -ct /tmp/"
+alias pac="pacman-color"
+alias spac="sudo pacman-color"
+alias cow="cower -ct /tmp/"
 # pacman update
-alias syu="sudo pacman-color -Syu" # pacman upgrade
-alias i="sudo pacman-color -S"	   # pacman install
-alias u="sudo pacman-color -U"	   # makepkg install
-alias idep="sudo pacman-color -S --asdeps" # install as deps
+alias ?syu="spac -Syu"  # pacman upgrade
+alias ?i="spac -S"      # pacman install
+alias ?u="spac -U"      # makepkg install
+alias ?idep="spac -S --asdeps" # install as deps
 # pacman search
-alias ?qs="pacman -Qs" # query search
-alias ?qi="pacman -Qi" # query info
-alias ?ss="pacman -Ss" # sync search
-alias ?si="pacman -Si" # sync info
+alias ?qs="pac -Qs"     # query search
+alias ?qi="pac -Qi"     # query info
+alias ?ss="pac -Ss"     # sync search
+alias ?si="pac -Si"     # sync info
 # query listings
-alias ?ql="pacman -Ql" # list files
-alias ?qo="pacman -Qo" # check ownership
+alias ?ql="pac -Ql"     # list files
+alias ?qo="pac -Qo"     # check ownership
 # aur update
-alias sya="cower -udd" # aur upgrade
-alias a="cower -dd"    # aur install
-alias ?au="cower -u | pr -n -t #"	# aur update
+alias ?sya="cow -udd"   # aur upgrade
+alias ?a="cow -dd"      # aur install
+alias ?au="cow -u"      # aur update
 # aur search
-alias ?as="cower -s"   # aur search
-alias ?ai="cower -i"   # aur info
+alias ?as="cow -s"      # aur search
+alias ?ai="cow -i"      # aur info
 # remove pkgs
-alias rsn="sudo pacman -Rsn" # clean 'n purge
-alias qdt="pacman -Qqdt"     # unrequired deps
+alias ?rsn="spac -Rsn"  # clean 'n purge
+alias ?qdt="pac -Qqdt"  # unrequired deps
 
 ## git
 alias gst="git status -sb"
