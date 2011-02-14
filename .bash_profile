@@ -5,8 +5,8 @@ pathdirs=(  "/usr/share/perl5/vendor_perl/auto/share/dist/Cope"
             "/home/c00kiemon5ter/.bin" )
 export PATH="$(echo ${pathdirs[@]} | sed "s.\s.:.g")" && unset pathdirs
 
-export HISTCONTROL=erasedups:ignorespace
-export HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
+HISTCONTROL=erasedups:ignorespace
+HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
 
 export BROWSER="chromium"
 export EDITOR="vim"
