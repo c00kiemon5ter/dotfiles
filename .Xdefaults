@@ -1,4 +1,5 @@
-! c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
+! c00kiemon5ter (ivan.kanak@gmail.com) 
+! All cookies reserved (C)
 
 !xft settings {
 Xft.antialias: 	true
@@ -7,36 +8,20 @@ Xft.hintstyle: 	hintfull
 !Xft.hintstyle: 	hintmedium
 !Xft.hintstyle: 	hintslight
 Xft.rgba:		rgb
-!Xft.dpi:		96 
 Xft.lcdfilter:	lcddefault
 !}
 
-!xpdf settings {
-xpdf*enableFreetype:	  true
-xpdf*antialias:           true
-xpdf*foreground:          white
-!black
-xpdf*background:          #1f1f1f
-!white
-xpdf*paperColor:          #1f1f1f
-xpdf*urlCommand:          chromium %s
-xpdf*viKeys:              true
-xpdf*continuousView:      true
-xpdf*initialZoom:		  width
-!}
-
-!Cursor theme {
+!X Cursor theme {
 Xcursor*theme:          Vanilla-DMZ
 Xcursor.size:           16
 !}
 
 !URxvt Settings {
 URxvt*title:rxvt-unicode
-URxvt*iconName:urxvt
 URxvt*termName:rxvt-unicode
+URxvt*font:-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
 
 URxvt*geometry:98x28 
-!90x24+369+436
 URxvt*borderLess:false
 URxvt*externalBorder:1
 URxvt*internalBorder:0
@@ -44,10 +29,8 @@ URxvt*internalBorder:0
 URxvt*visualBell:false
 URxvt*highlightSelection:True
 URxvt*buffered:true
-URxvt*saveLines:3000
 
-URxvt*perl-ext-common:matcher,selection,selection-autotransform,-searchable-scrollback,-readline
-URxvt.selection-autotransform.0: s/^([^:[:space:]]+):(\\d+):?$/vim +$2 \\Q$1\\E\\x0d/
+URxvt*perl-ext-common:matcher,selection,-searchable-scrollback,-readline
 cutchars:"()*,<>[]{}|'"
 URxvt.matcher.button:1
 URxvt*urlLauncher:chromium
@@ -60,18 +43,13 @@ URxvt*inputMethod:SCIM
 URxvt*multichar_encoding:utf-8
 URxvt*preeditType:OverTheSpot,Root
 URxvt*imLocale:en_US.UTF-8
-
 modifier:meta
 !alt, meta, hyper, super, mod1..5
-!}
 
-!Scroll and mousewheel {
-XTerm*jumpScroll:true
-XTerm*multiScroll:true
+URxvt*saveLines:3000
 URxvt*jumpScroll:true
 URxvt*skipScroll:true
 URxvt*scrollBar:false
-URxvt*scrollBar_right:false
 URxvt*scrollstyle:plain
 URxvt*secondaryScroll:true 
 URxvt*scrollTtyOutput:false
@@ -80,70 +58,20 @@ URxvt*scrollTtyKeypress:true
 URXvt*mouseWheelScrollPage:false
 !}
 
-!URxvt Fonts {
-URxvt*font:			-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-URxvt.boldFont:		-*-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
-!URxvt.boldFont:         xft:DroidSansMonoSlashed:bold:size=10:antialias=false
-!URxvt*font:			xft:DroidSansMonoSlashed:pixelsize=12:normal
-!URxvt*font:			xft:inconsolata:pixelsize=14
-!URxvt*font:			xft:DejaVuSansMono:size=9
-!}
-
 !URxvt Color Settings {
-! Color Scheme
 #include "/home/c00kiemon5ter/.color_schemes/librec00kiez"
 
 URxvt*depth:16
 URxvt*dynamicColors:on
 URxvt*transparent:false
 
-!! when transparent is true
-!URxvt*shading:100 
-!URxvt*blurRadius:<num>
-!!!URxvt*fading:40
-!URxvt*fadeColor:white
-!URxvt*tint:true
-!URxvt*tintColor:grey
-
 URxvt*cursorColor:#888888
 URxvt*cursorBlink:true
 URxvt*cursorUnderline:false
-!#DCDCCC
 URxvt*pointerColor:gray
 URxvt*pointerColorBackground:black
 URxvt*pointerBlank:false
 URxvt*pointerBlankDelay:2
-
-! --- URxvt Tab Colors --- !
-!URxvt*tabbed.tabbar-fg:#F60606
-!URxvt*tabbed.tabbar-bg:#F60606
-!URxvt*tabbed.tab-fg:#F60606
-!URxvt*tabbed.tab-bg:#F60606
 !}
 
-!xscreensaver {
-xscreensaver.Dialog.headingFont:        -*-droid sans-bold-r-*-*-14-*-*-*-*-*-*-*
-xscreensaver.Dialog.bodyFont:           -*-droid sans-medium-r-*-*-14-*-*-*-*-*-*-*
-xscreensaver.Dialog.labelFont:          -*-droid sans-medium-r-*-*-14-*-*-*-*-*-*-*
-xscreensaver.Dialog.unameFont:          -*-droid sans-medium-r-*-*-14-*-*-*-*-*-*-*
-xscreensaver.Dialog.buttonFont:         -*-droid sans-bold-r-*-*-14-*-*-*-*-*-*-*
-xscreensaver.Dialog.dateFont:           -*-droid sans-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.passwd.passwdFont:         -*-droid sans-bold-r-*-*-14-*-*-*-*-*-*-* 
-xscreensaver.Dialog.foreground:         #ffffff
-xscreensaver.Dialog.background:         #111111
-xscreensaver.Dialog.topShadowColor:     #111111
-xscreensaver.Dialog.bottomShadowColor:  #111111
-xscreensaver.Dialog.Button.foreground:  #666666
-xscreensaver.Dialog.Button.background:  #ffffff
-xscreensaver.Dialog.text.foreground:    #666666
-xscreensaver.Dialog.text.background:    #ffffff
-xscreensaver.Dialog.internalBorderWidth:24
-xscreensaver.Dialog.borderWidth:        20
-xscreensaver.Dialog.shadowThickness:    2
-xscreensaver.passwd.thermometer.foreground:  #ff0000
-xscreensaver.passwd.thermometer.background:  #000000
-xscreensaver.passwd.thermometer.width:       8
-xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
-!}
-
-! vim:nospell foldmethod=marker:foldmarker={,}:foldlevel=0
+! vim: nospell foldmethod=marker:foldmarker={,}:foldlevel=0
