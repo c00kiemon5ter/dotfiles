@@ -123,8 +123,8 @@ formats = {
     pubmsg_me_channel = "{pubmsgmenick $3 {menick $[-12]0}{msgchannel $1}}$2";
     pubmsg_hilight = "{pubmsghinick $0 $3 $[-12]1%n}$2";
     pubmsg_hilight_channel = "{pubmsghinick $0 $4 $[-12]1{msgchannel $2}}$3";
-    pubmsg = "{pubmsgnick $2 {pubnick %R$[-12]0}}$1";
-    pubmsg_channel = "{pubmsgnick $2 {pubnick %R$[-12]0}}$1";
+    pubmsg = "{pubmsgnick $2 {pubnick %B$[-12]0}}$1";
+    pubmsg_channel = "{pubmsgnick $2 {pubnick %B$[-12]0}}$1";
     set_item = "$0 %K=%N $1";
     own_msg_private_query = "{ownprivmsgnick {ownprivnick $[-12]2}}$1";
     msg_private_query = "{privmsgnick $[-12]0}$2";

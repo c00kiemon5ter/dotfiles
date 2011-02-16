@@ -1,0 +1,1 @@
+../bitlbee_blist.pl
