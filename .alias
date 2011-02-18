@@ -40,7 +40,7 @@ alias cow="cower -ct /tmp/"
 alias ?syu="spac -Syu"  # pacman upgrade
 alias ?i="spac -S"      # pacman install
 alias ?u="spac -U"      # makepkg install
-alias ?idep="spac -S --asdeps" # install as deps
+alias ?id="spac -S --asdeps" # install as deps
 # pacman search
 alias ?qs="pac -Qs"     # query search
 alias ?qi="pac -Qi"     # query info
