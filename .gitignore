@@ -1,26 +1,21 @@
 /*
 !.bashrc
 !.bash_profile
-
 !.funcs
 !.alias
 !.completion
+!.?pacman
 
 !.color_schemes/
-!.inputrc*
+!.inputrc
 !.dircolors
 !.toprc
 !.xinitrc
 !.Xdefaults
 
 !.archquotes
-!.fonts.conf*
-!.conky/
-
-!.shot.png
-!.cleanshot.png
+!.fonts.conf
 !.wallpaper.png
-!.irssi.shot.png
 
 !.vimrc
 !.vim/
@@ -31,21 +26,8 @@
 .irssi/saved_colors
 .irssi/away.log
 
-!.config/
-.config/*
-!.config/openbox/
-!.config/tint2/
-
 !.ncmpcpp/
 .ncmpcpp/*
 !.ncmpcpp/config
-!.moc
-.moc/*
-!.moc/config
-
-!.mutt/
-.mutt/gmail_account
-.mutt/cache/
-.mutt/certificates
 
 !.gitignore
