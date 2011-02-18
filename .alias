@@ -121,7 +121,7 @@ alias foss="ssh foss.aueb.gr"
 
 ## Other
 alias irssi="dtach -A $HOME/.irssi/irssi.session irssi"
-alias notes="$PAGER $HOME/.notes"
+alias notes="grep \"==>\" $HOME/.notes"
 alias vnotes="$EDITOR $HOME/.notes && notes"
 alias vquote="$EDITOR $HOME/.archquotes"
 alias netbeans="netbeans --laf com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
