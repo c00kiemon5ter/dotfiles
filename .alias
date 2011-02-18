@@ -32,21 +32,6 @@ alias du="du -h"
 alias lw="wmctrl -l | cut -d\" \" -f5- | sed \"s/^[[:space:]|\(].*$//\" | grep -v ^$"
 alias h="history"
 
-## git
-alias gst="git status -sb"
-alias gpl="git pull"
-alias gps="git push"
-alias gcm="git commit"
-alias gca="git commit -a"
-alias gcv="git commit -v"
-alias gbr="git branch"
-alias gco="git checkout"
-alias gdf="git diff"
-alias glg="git log --abbrev-commit --parents"
-alias glf="git log --graph --oneline --name-status --parents"
-alias glc="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-alias vignr="$EDITOR ./.gitignore"
-
 ## files
 #bash
 alias reload="source $HOME/.bashrc"

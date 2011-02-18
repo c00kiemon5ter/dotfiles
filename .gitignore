@@ -5,6 +5,7 @@
 !.alias
 !.completion
 !.pacman.alias
+!.git.alias
 
 !.color_schemes/
 !.inputrc
