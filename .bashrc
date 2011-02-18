@@ -32,6 +32,7 @@ test -r .dircolors && eval "export $(dircolors -b .dircolors)"
 source "$HOME"/.alias
 source "$HOME"/.funcs
 source "$HOME"/.completion
+source "$HOME"/.pacman.alias
 
 # set color variables {{{
 fgblk="$(tput setaf 0)"		# Black - Regular

@@ -4,7 +4,7 @@
 !.funcs
 !.alias
 !.completion
-!.?pacman
+!.pacman.alias
 
 !.color_schemes/
 !.inputrc
