@@ -67,10 +67,6 @@ alias mpcp="mpdpiped previous"
 alias mpcs="mpdpiped seek"
 alias nowplaying="mpdpiped currentsong | sed -nr 's/.*\s(Artist|Title): (.+)/\2/p' | sed ':a;N;\$!ba;s/\n/ ~ /g'"
 
-#moc
-#alias mocp="mocp -m $HOME/music/ksena"
-alias vmoc="$EDITOR $HOME/.moc/config"
-
 ## remote ssh to uni servers
 alias niovi="ssh niovi.aueb.gr"
 alias alex="telnet alexandros.ccslab.aueb.gr"
@@ -83,32 +79,21 @@ alias vnotes="$EDITOR $HOME/.notes && notes"
 alias vquote="$EDITOR $HOME/.archquotes"
 alias netbeans="netbeans --laf com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 alias ssmem="smem -k -c 'pid uss pss rss name' -t"
-# music
-alias c00kieradio="mplayer http://c00kiemon5ter.ath.cx:8000/mpdstream &>/dev/null </dev/null &"
-alias kaoradio="mplayer http://www.kaotonik.net:8000/playlist &>/dev/null </dev/null &"
-alias oggfossradio="mplayer http://foss.aueb.gr:8000/radio.ogg &>/dev/null </dev/null &"
-alias mp3fossradio="mplayer http://foss.aueb.gr:8000/radio.mp3 &>/dev/null </dev/null &"
-alias jsymphonic="cd $HOME/.JSymphonic && java -jar JSymphonic_v0.3.0.jar"
 
 # fortune equality
 alias fortune="fortune -e -a"
 # Gets a random Futurama quote from slashdot.org(/.)
 alias futurama="curl -Is slashdot.org | egrep '^X-(F|B|L)' | cut -d \- -f 2"
-
 # Shows your WAN IP, when you`re sitting behind a router
 #alias myIp="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 alias getmyip="curl ifconfig.me"
-
 # the 'tree' command ..revisited
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-
 # the matrix
 alias matrix="tr -c \"[:digit:]\" \" \" < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR=\"1;32\" grep --color \"[^ ]\""
-
 # binary clock
 alias binclock="watch -n 1 'echo \"obase=2;\`date +%s\`\" | bc'"
-
-# randomers
+# randomizers
 #echo $(shuf -i 1-49 | head -n6 | sort -n)'
 alias lotto="shuf -i 1-49 | head -n6 | sort -n | xargs"
 
