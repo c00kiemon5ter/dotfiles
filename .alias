@@ -115,7 +115,7 @@ alias nowplaying="mpdpiped currentsong | sed -nr 's/.*\s(Artist|Title): (.+)/\2/
 alias vmoc="$EDITOR $HOME/.moc/config"
 
 ## remote ssh to uni servers
-alias dias="ssh -1 dias.aueb.gr"
+alias niovi="ssh niovi.aueb.gr"
 alias alex="telnet alexandros.ccslab.aueb.gr"
 alias foss="ssh foss.aueb.gr"
 
