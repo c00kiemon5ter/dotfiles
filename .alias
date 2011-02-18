@@ -84,7 +84,6 @@ alias valias="$EDITOR $HOME/.alias && reload"
 alias vfuncs="$EDITOR $HOME/.funcs && reload"
 alias vxdefs="$EDITOR $HOME/.Xdefaults && xrdb $HOME/.Xdefaults"
 #other
-alias vmutt="$EDITOR $HOME/.mutt/muttrc"
 alias vxinit="$EDITOR $HOME/.xinitrc"
 alias vvim="$EDITOR $HOME/.vimrc"
 alias vgit="$EDITOR $HOME/.gitconfig"
