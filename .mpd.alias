@@ -1,6 +1,3 @@
-alias ncmpcpp="ncmpcpp && tname"
-alias vmpd="sudo $EDITOR /etc/mpd.conf"
-alias vncmpcpp="$EDITOR $HOME/.ncmpcpp/config"
 alias mpcv="mpdpiped setvol"
 alias mpcm="mpdpipe setvol 0"
 alias mpct="mpdpiped pause"

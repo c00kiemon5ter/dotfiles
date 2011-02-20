@@ -34,7 +34,7 @@ source "$HOME"/.funcs
 source "$HOME"/.completion
 source "$HOME"/.pacman.alias
 source "$HOME"/.git.alias
-#source "$HOME"/.mpd.alias
+source "$HOME"/.mpd.alias
 
 # set color variables {{{
 fgblk="$(tput setaf 0)"		# Black - Regular

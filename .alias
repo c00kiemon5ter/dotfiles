@@ -40,6 +40,10 @@ alias vbash="$EDITOR $HOME/.bashrc && reload"
 alias valias="$EDITOR $HOME/.alias && reload"
 alias vfuncs="$EDITOR $HOME/.funcs && reload"
 alias vxdefs="$EDITOR $HOME/.Xdefaults && xrdb $HOME/.Xdefaults"
+#mpd
+alias ncmpcpp="ncmpcpp && tname"
+alias vmpd="sudo $EDITOR /etc/mpd.conf"
+alias vncmpcpp="$EDITOR $HOME/.ncmpcpp/config"
 #other
 alias vxinit="$EDITOR $HOME/.xinitrc"
 alias vvim="$EDITOR $HOME/.vimrc"
