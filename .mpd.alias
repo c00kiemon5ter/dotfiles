@@ -8,5 +8,4 @@ alias mpcr="mpdpiped random"
 alias mpcn="mpdpiped next"
 alias mpcp="mpdpiped previous"
 alias mpcs="mpdpiped seek"
-alias nowplaying="mpdpiped currentsong | sed -nr 's/.*\s(Artist|Title): (.+)/\2/p' | sed ':a;N;\$!ba;s/\n/ ~ /g'"
 
