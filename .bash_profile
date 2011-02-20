@@ -1,9 +1,10 @@
-pathdirs=(  "/usr/share/perl5/vendor_perl/auto/share/dist/Cope" 
-            "/usr/bin" "/bin" "/usr/sbin" "/sbin"
-            "/usr/bin/*_perl" "/usr/bin/perlbin/vendor"
-            "/usr/lib/perl5/*_perl/bin" "/usr/share/perl5/*_perl"
-            "/home/c00kiemon5ter/.bin" )
-export PATH="$(echo ${pathdirs[@]} | sed "s.\s.:.g")" && unset pathdirs
+pathdirs=( "/usr/share/perl5/vendor_perl/auto/share/dist/Cope"
+           "/usr/bin" "/bin" "/usr/sbin" "/sbin"
+           "/usr/bin/*_perl" "/usr/bin/perlbin/vendor"
+           "/usr/lib/perl5/*_perl/bin" "/usr/share/perl5/*_perl"
+           "/home/c00kiemon5ter/.bin" )
+pathdirs="${pathdirs[@]}"
+export PATH="${pathdirs// /:}" && unset pathdirs
 
 HISTCONTROL=erasedups:ignorespace
 HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
