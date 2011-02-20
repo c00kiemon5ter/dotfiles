@@ -12,5 +12,5 @@ display -window root $HOME/.wallpaper.png &
 unclutter &
 clipbored &
 
-exec $HOME/.bin/startdwm
+exec $HOME/.bin/dwm_run
 
