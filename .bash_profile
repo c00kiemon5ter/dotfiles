@@ -6,8 +6,8 @@ pathdirs=( "/usr/share/perl5/vendor_perl/auto/share/dist/Cope"
 pathdirs="${pathdirs[@]}"
 export PATH="${pathdirs// /:}" && unset pathdirs
 
-HISTCONTROL=erasedups:ignorespace
-HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
+export HISTCONTROL=erasedups:ignorespace
+export HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
 
 export BROWSER="chromium"
 export EDITOR="vim"
