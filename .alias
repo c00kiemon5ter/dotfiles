@@ -73,6 +73,8 @@ alias ssmem="smem -k -c 'pid uss pss rss name' -t"
 alias fortune="fortune -e -a"
 # Gets a random Futurama quote from slashdot.org(/.)
 alias futurama="curl -Is slashdot.org | egrep '^X-(F|B|L)' | cut -d \- -f 2"
+# star wars movie on ascii
+alias starwars="telnet towel.blinkenlights.nl"
 # Shows your WAN IP, when you`re sitting behind a router
 #alias myIp="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 alias getmyip="curl ifconfig.me"
