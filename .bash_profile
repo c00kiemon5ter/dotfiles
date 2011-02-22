@@ -1,8 +1,8 @@
-pathdirs=( "/usr/share/perl5/vendor_perl/auto/share/dist/Cope"
-           "/usr/bin" "/bin" "/usr/sbin" "/sbin"
-           "/usr/bin/*_perl" "/usr/bin/perlbin/vendor"
-           "/usr/lib/perl5/*_perl/bin" "/usr/share/perl5/*_perl"
-           "/home/c00kiemon5ter/.bin" )
+pathdirs=( /usr/share/perl5/vendor_perl/auto/share/dist/Cope
+           /usr/bin /bin /usr/sbin /sbin
+           /usr/bin/*_perl /usr/bin/perlbin/vendor
+           /usr/lib/perl5/*_perl/bin /usr/share/perl5/*_perl
+           /home/c00kiemon5ter/.bin )
 pathdirs="${pathdirs[@]}"
 export PATH="${pathdirs// /:}" && unset pathdirs
 
