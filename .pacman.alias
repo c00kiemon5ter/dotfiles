@@ -1,6 +1,6 @@
 ## package management
-alias pac="pacman-color"
-alias spac="sudo pacman-color"
+alias pac="pacman" #-color"
+alias spac="sudo pacman" #-color"
 alias cow="cower -ct /tmp/"
 # pacman update
 alias ?syu="spac -Syu"  # pacman upgrade
