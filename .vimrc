@@ -269,4 +269,7 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
+" turn off highlighting for a searched term once you hit return
+nnoremap <CR> :noh<CR>/<BS>
+
 "vim: nospell foldmethod=marker:foldmarker={,}:foldlevel=0
