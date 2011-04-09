@@ -272,4 +272,12 @@ inoremap <right> <nop>
 " turn off highlighting for a searched term once you hit return
 nnoremap <CR> :noh<CR>/<BS>
 
+" yanking history settings
+let g:yankring_enabled = 1
+let g:yankring_share_between_instances = 1
+let g:yankring_ignore_duplicate = 1
+let g:yankring_max_history = 100
+let g:yankring_history_dir = "/tmp"
+let g:yankring_history_file = ".yankring_history"
+
 "vim: nospell foldmethod=marker:foldmarker={,}:foldlevel=0
