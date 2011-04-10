@@ -68,6 +68,7 @@ alias vnotes="$EDITOR $HOME/.notes && notes"
 alias vquote="$EDITOR $HOME/.archquotes"
 alias netbeans="netbeans --laf com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 alias ssmem="smem -k -c 'pid uss pss rss name' -t"
+alias sscrot="scrot -s /tmp/shot.png"
 
 # fortune equality
 alias fortune="fortune -e -a"
