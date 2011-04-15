@@ -131,6 +131,7 @@ colorscheme mirocookies
 "colorscheme dante
 "colorscheme benmabey
 "colorscheme gmarik
+"colorscheme shady
 
 "::256-colorshemes
 "colorscheme ristoink
