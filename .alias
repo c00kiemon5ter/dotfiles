@@ -63,8 +63,7 @@ alias foss="ssh foss.aueb.gr"
 
 ## Other
 alias irssi="dtach -A $HOME/.irssi/irssi.session irssi"
-alias notes="grep \"^[[:alpha:]]\{3\}:\" $HOME/.notes"
-alias vnotes="$EDITOR $HOME/.notes && notes"
+alias vnotes="$EDITOR $HOME/.notes.yml"
 alias vquote="$EDITOR $HOME/.archquotes"
 alias netbeans="netbeans --laf com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 alias ssmem="smem -k -c 'pid uss pss rss name' -t"
