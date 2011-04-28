@@ -42,9 +42,9 @@ shopt -s nocaseglob
 . $HOME/.bashrc
 
 pkill -u "$USER" lsyncd
-lsyncd --logfile "$HOME/.lsyncd/music.sync.log" -rsync "$HOME/music/" "$HOME/data/music/msyncd/"
-lsyncd --logfile "$HOME/.lsyncd/projects.sync.log" -rsync "$HOME/projects/" "$HOME/data/projects/psyncd/"
-lsyncd --logfile "$HOME/.lsyncd/scripts.sync.log" -rsync "$HOME/.bin/" "$HOME/data/projects/bsyncd/"
+lsyncd --logfile "$HOME/.lsyncd/music.sync.log" -rsync "$HOME/music/" "$HOME/data/music/syncd_music/"
+lsyncd --logfile "$HOME/.lsyncd/projects.sync.log" -rsync "$HOME/projects/" "$HOME/data/projects/syncd_projects/"
+lsyncd --logfile "$HOME/.lsyncd/scripts.sync.log" -rsync "$HOME/.bin/" "$HOME/data/projects/syncd_scripts/"
 
 if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]
 then
