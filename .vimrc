@@ -1,213 +1,27 @@
 " c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
+" stole some cookies from meqif and rezza
 
-" Don't be compatible with vi, this is Vim!
-set nocompatible 
+"""""""""""""
+" Functions "
+"""""""""""""
 
-" Enable filetype settings
-if has("eval")
-	filetype on
-	filetype plugin on
-	filetype plugin indent on
-endif
+" Add timestamp to rc files
+fun! <SID>UpdateRcHeader()
+    let l:c=col(".")
+    let l:l=line(".")
+    1,10s-\(Most recent update:\).*-\="Most recent update: ".strftime("%c")-
+    call cursor(l:l, l:c)
+endfun
 
-" Default encoding
-set encoding=utf-8
-set fileencoding=utf-8
-scriptencoding utf-8
-set langmap=ΑA,ΒB,ΨC,ΔD,ΕE,ΦF,ΓG,ΗH,ΙI,ΞJ,ΚK,ΛL,ΜM,ΝN,ΟO,ΠP,QQ,ΡR,ΣS,ΤT,ΘU,ΩV,WW,ΧX,ΥY,ΖZ,αa,βb,ψc,δd,εe,φf,γg,ηh,ιi,ξj,κk,λl,μm,νn,οo,πp,qq,ρr,σs,τt,θu,ωv,ςw,χx,υy,ζz
-"set keymap=greek_utf-8 "switch with 'Ctrl+^' 
+" Set up the status line
+fun! <SID>SetStatusLine()
+    let l:s1="%-3.3n\\ %f\\ %h%m%r%w"
+    let l:s2="[%{strlen(&filetype)?&filetype:'?'},%{&encoding},%{&fileformat}]"
+    let l:s3="%=\\ 0x%-8B\\ \\ %-14.(%l,%c%V%)\\ %<%P"
+    execute "set statusline=" . l:s1 . l:s2 . l:s3
+endfun
 
-" Keep backup of edited files
-set backup
-set writebackup
-set backupdir=~/.backups/
-
-" Spell Checking
-setlocal spell spelllang=en,el
-
-" Syntax Highlighting
-if has("syntax")
-	syntax on
-endif
-
-" Syntax when printing
-set popt+=syntax:y
-
-" Gist
-let g:gist_clip_command = 'xclip'
-let g:gist_detect_filetype = 1
-
-" When scrolling off-screen do so 3 lines at a time, not 1
-set scrolloff=2
-
-" assume the /g flag on :s substitutions to replace all matches in a line:
-"set gdefault
-
-" No visual bell
-set novisualbell
-set noerrorbells
-
-" Show line numbers
-set number
-set numberwidth=2
-
-" Automatically save before commands like :next and :make
-set autowrite
-
-" do auto indentation
-set autoindent
-set cindent
-set smartindent
-
-" Wrap text
-set nowrap
-" Wrap in these
-set whichwrap+=<,>,[,]
-"set nowrapscan
-
-" Make backspace delete lots of things
-set backspace=indent,eol,start
-
-" Show us the command we're typing
-set showcmd
-
-" Speed up macros <-- causes problems updating the screen
-"""set lazyredraw
-
-" Place new window right of the current
-set splitright
-
-" Allow edit buffers to be hidden
-set hidden
-
-" Use the cool tab complete menu
-set wildmenu
-set wildignore+=*.o,*~,.lo
-set suffixes+=.in,.a,.1
-
-set dictionary=/usr/share/dict/words
-
-" Ignore case
-set ignorecase
-"set infercase
-
-" Highlight matching patterns
-set showmatch
-set matchpairs+=<:>
-set matchtime=3
-
-" Search conf : incremental, highlight
-set incsearch
-set hlsearch
-" Show full tags when doing search completion
-set showfulltag
-
-" Minimum window height
-set winminheight=1
-
-" Always show statusbar
-set laststatus=2
-
-" Statusline Format :P
-"set statusline=%f\ %2*%m\ %1*%h%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}\ %{getfperm(@%)}]\ 0x%B\ %12.(%c:%l/%L%)
-
-" Tab conf 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-
-" Enable mouse 
-"  [n]ormal
-"  [v]isual
-"  [i]nsert
-"  [c]ommand
-"  [a]ll
-"set mouse=a
-
-" Color Scheme 
-colorscheme mirocookies
-"colorscheme miromiro
-"colorscheme dante
-"colorscheme benmabey
-"colorscheme gmarik
-"colorscheme shady
-
-"::256-colorshemes
-"colorscheme ristoink
-"colorscheme desert
-"colorscheme Mustang
-"colorscheme vibrantink
-"colorscheme molokai
-
-" Set colors "
-"set t_Co=256
-
-" auto commands
-:ab #d #define
-:ab #i #include
-
-if has("autocmd")
-    " Set comment characters for common languages
-    autocmd FileType python,sh,bash,zsh,ruby,perl let StartComment="#" | let EndComment=""
-    autocmd FileType html let StartComment="<!--" | let EndComment="-->"
-    autocmd FileType php,c,javascript let StartComment="//" | let EndComment=""
-    autocmd FileType cpp,java let StartComment="/*" | let EndComment="*/"
-    autocmd FileType vim let StartComment="\"" | let EndComment=""
-    " turn off any existing search on exit
-    au VimEnter * nohls
-endif
-
-" Tab-Completion 
-"if has("eval")
-"    function! CleverTab()
-"        if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
-"            return "\<Tab>"
-"        else
-"            return "\<C-N>"
-"        endif
-"    endfun
-"    inoremap <Tab> <C-R>=CleverTab()<CR>
-"    inoremap <S-Tab> <C-P>
-"endif
-
-" Special less/man/vimpager modes 
-"if has("eval") && has("autocmd")
-"    fun! <SID>check_pager_mode()
-"        if exists("g:loaded_less") && g:loaded_less
-"        " we're in vimpager / less.sh / man mode
-"            set laststatus=0
-"            set ruler
-"            "set foldmethod=manual
-"            "set foldlevel=99
-"            set nowrap
-"            set nonumber
-"            " Remove weird keybindings from vimpagr
-"            set nofoldenable
-"            set nolist
-"            unmap <Space>
-"            unmap z
-"            "unmap q
-"            unmap d
-"        endif
-"    endfun
-"    autocmd VimEnter * :call <SID>check_pager_mode()
-"endif
-
-"" [Un]Comment lines in a visual block 
-"fun CommentLines()
-"    try
-"        execute ":s@^".g:StartComment." @\@g"
-"        execute ":s@ ".g:EndComment."$@@g"
-"    catch
-"        execute ":s@^@".g:StartComment." @g"
-"        execute ":s@$@ ".g:EndComment."@g"
-"    endtry
-"endfun
-" Set keymaps for [un]commenting
-"vmap <Leader>c :call CommentLines()<CR>
-
-" Copy/Paste from Word*doc files is a mess 
+" Copy/Paste from Word*doc files is a mess
 fun! FixInvisiblePunctuation()
     silent! %s/\%u2018/'/g
     silent! %s/\%u2019/'/g
@@ -223,28 +37,39 @@ fun! FixInvisiblePunctuation()
     retab
 endfun
 
-" Mutt settings 
-" F1 through F3 rewraps paragraphs
-"augroup MUTT
-"	au BufRead ~/.mutt/temp/mutt* set spell 
-"	au BufRead ~/.mutt/temp/mutt* nmap  <F1>  gqap
-"	au BufRead ~/.mutt/temp/mutt* nmap  <F2>  gqqj
-"	au BufRead ~/.mutt/temp/mutt* nmap  <F3>  kgqj
-"	au BufRead ~/.mutt/temp/mutt* map!  <F1>  <ESC>gqapi
-"	au BufRead ~/.mutt/temp/mutt* map!  <F2>  <ESC>gqqji
-"	au BufRead ~/.mutt/temp/mutt* map!  <F3>  <ESC>kgqji
-"augroup END
+""""""""""""
+" Settings "
+""""""""""""
 
-" When editing a file, always jump to the last known cursor position.
-" Don't do it when the position is invalid or when inside an event handler
-" (happens when dropping a file on gvim).
-" Also don't do it when the mark is in the first line, that is the
-" default position when opening a file.
-autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
-  
+" Setup a funky statusline
+set laststatus=2
+call <SID>SetStatusLine()
+
+" Encoding
+set termencoding=utf-8
+set encoding=utf-8
+set fileencoding=utf-8
+scriptencoding utf-8
+set langmap=ΑA,ΒB,ΨC,ΔD,ΕE,ΦF,ΓG,ΗH,ΙI,ΞJ,ΚK,ΛL,ΜM,ΝN,ΟO,ΠP,QQ,ΡR,ΣS,ΤT,ΘU,ΩV,WW,ΧX,ΥY,ΖZ,αa,βb,ψc,δd,εe,φf,γg,ηh,ιi,ξj,κk,λl,μm,νn,οo,πp,qq,ρr,σs,τt,θu,ωv,ςw,χx,υy,ζz
+
+" No visual bell
+set novisualbell
+set noerrorbells
+
+" Basic options
+set nocompatible
+set history=50
+set viminfo='1000,f1,:1000,/1000
+set shortmess+=aI
+set showmode
+set showcmd
+set modeline
+set wildmenu
+set wildignore+=*.o,*~,.lo
+set suffixes+=.in,.a,.1
+
+" Spell Checking
+set spell spelllang=en,el
 
 " folding
 set foldenable
@@ -252,13 +77,163 @@ set foldmethod=marker
 set foldmarker={,}
 set foldlevel=0
 
-" yank and copy to system clipboard
-set clipboard+=unnamed
-" Simulates copying to system clipboard
-"vmap <C-c> y:call system("xclip -i -b",getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
+" turn off highlighting for a searched term once you hit return
+nnoremap <CR> :noh<CR>/<BS>
 
-" Allows writing to files with root priviledges
+" Indent, tab, and wrap settings
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set expandtab
+set shiftround
+set autoindent
+set smartindent
+set textwidth=80
+set nowrap
+set formatoptions+=nl
+set whichwrap=h,l,~,<,>,[,]
+set backspace=eol,start,indent
+
+" When scrolling off-screen do so 3 lines at a time
+set scrolloff=2
+
+" show line numbers
+set number
+
+" Search options
+set hlsearch
+set ignorecase
+set incsearch
+set showmatch
+set dictionary=/usr/share/dict/words
+
+" Show full tags when doing search completion
+set showfulltag
+
+" Set bracket matching and comment formats
+set matchpairs+=<:>
+set comments-=s1:/*,mb:*,ex:*/
+set comments+=s:/*,mb:**,ex:*/
+set comments+=fb:*
+set comments+=b:\"
+set comments+=n::
+
+" Keep backup of edited files
+set backup
+set writebackup
+set backupdir=~/.backups/
+
+" Use css for generated html files
+let html_use_css=1
+
+" Set taglist plugin options
+let Tlist_Use_Right_Window = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Enable_Fold_Column = 0
+let Tlist_Compact_Format = 1
+let Tlist_File_Fold_Auto_Close = 0
+let Tlist_Inc_Winwidth = 1
+
+" yanking history settings
+let g:yankring_enabled = 1
+let g:yankring_share_between_instances = 1
+let g:yankring_ignore_duplicate = 1
+let g:yankring_max_history = 100
+let g:yankring_history_dir = "/tmp"
+let g:yankring_history_file = ".yankring_history"
+
+" Gist
+let g:gist_clip_command = 'xclip'
+let g:gist_detect_filetype = 1
+
+" Basic abbreviations
+abbreviate teh the
+iab DATE <C-R>=strftime("%B %d, %Y (%A, %H:%Mh)")<CR>
+
+" Allows writing to files with root privileges
 cmap w!! %!sudo tee > /dev/null %
+
+" Enable filetype detection
+filetype on
+filetype plugin on
+filetype indent on
+
+""""""""""""""""
+" Autocommands "
+""""""""""""""""
+
+" Clear previous autocmds, stops a few errors creeping in.
+autocmd!
+
+" When editing a file, always jump to the last known cursor
+" position. Don't do it when the position is invalid or when
+" inside an event handler (happens when dropping a file on gvim).
+" Also don't do it when the mark is in the first line, that is
+" the default position when opening a file.
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+
+"Clean trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
+" Set comment characters for common languages
+autocmd FileType python,sh,bash,zsh,ruby,perl let StartComment="#" | let EndComment=""
+autocmd FileType html let StartComment="<!--" | let EndComment="-->"
+autocmd FileType php,c,javascript let StartComment="//" | let EndComment=""
+autocmd FileType cpp,java let StartComment="/*" | let EndComment="*/"
+autocmd FileType vim let StartComment="\"" | let EndComment=""
+
+" C file specific options
+autocmd FileType c,cpp set cindent
+autocmd FileType c,cpp set formatoptions+=ro
+"autocmd FileType c,cpp set makeprg=gcc\ -Wall\ -O2\ -o\ %<\ %
+
+" HTML abbreviations
+autocmd FileType html,php imap bbb <br />
+
+" Compile and run keymappings
+autocmd FileType c,cpp map <F5> :!./%:r<CR>
+autocmd FileType c,cpp :ab #d #define
+autocmd FileType c,cpp :ab #i #include
+autocmd FileType sh,php,perl,python map <F5> :!./%<CR>
+autocmd FileType c,cpp map <F6> :make %:r<CR>
+autocmd FileType php map <F6> :!php &<CR>
+autocmd FileType python map <F6> :!python %<CR>
+autocmd FileType perl map <F6> :!perl %<CR>
+autocmd FileType html,xhtml map <F5> :!chromium%<CR>
+autocmd FileType java map <F6> :!javac %<CR>
+autocmd FileType tex map <F5> :!evince "%:r".pdf<CR>
+autocmd FileType tex map <F6> :!pdflatex %<CR>
+
+" MS Word document reading
+autocmd BufReadPre *.doc set ro
+autocmd BufReadPost *.doc %!antiword "%"
+
+" Arduino stuff
+autocmd BufReadPre *.pde set filetype=c
+
+" nasm
+autocmd BufReadPre *.nasm set filetype=asm
+
+" SVG
+autocmd BufReadPre *.svg set filetype=svg
+
+" Ragel
+autocmd BufRead,BufNewFile *.rl set filetype=ragel
+
+" turn off any existing search on exit
+autocmd VimEnter * nohlsearch
+
+"""""""""""""""
+" Keymappings "
+"""""""""""""""
+
+" match open closing braces
+:inoremap ( ()<ESC>i
+:inoremap { {}<ESC>i
+:inoremap [ []<ESC>i
 
 " hardcore mode
 nnoremap <up> <nop>
@@ -270,15 +245,67 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
-" turn off highlighting for a searched term once you hit return
-nnoremap <CR> :noh<CR>/<BS>
+" Omni-completion with Ctrl-Space
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+\ "\<lt>C-n>" :
+\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
 
-" yanking history settings
-let g:yankring_enabled = 1
-let g:yankring_share_between_instances = 1
-let g:yankring_ignore_duplicate = 1
-let g:yankring_max_history = 100
-let g:yankring_history_dir = "/tmp"
-let g:yankring_history_file = ".yankring_history"
+" Easy pasting from the X clipboard
+imap <C-V> <ESC>:r!xclip -sel clipboard -o<CR>i
 
-"vim: nospell foldmethod=marker:foldmarker={,}:foldlevel=0
+" Easy help
+map! <F1> <C-C><F1>
+vmap <F1> <C-C><F1>
+omap <F1> <C-C><F1>
+nnoremap <F1> :help<Space>
+map <F7> :!python -c 'help()'<left><left>
+
+" Show nonprinting characters
+map <F2> :set list!<CR>
+inoremap <F2> <ESC>:set list!<CR>a
+
+" Toggle between windows
+nnoremap <F3> <C-W>W
+nnoremap <F4> <C-W>w
+
+" Easy tabswitch
+map <C-Tab> :tabNext<cr>
+
+" Swap around between buffers
+nnoremap <C-N> :bn<CR>
+nnoremap <C-I> :bn<CR>
+nnoremap <C-P> :bp<CR>
+
+" Toggle taglist script
+map <F8> :Tlist<CR>
+
+" Toggle line numbers
+map <F9> :set number!<CR>
+
+" Toggle dark/light default colour theme for shitty terms
+map <F11> :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
+
+" Leave insert mode without reaching for the esc key
+imap jj <ESC>
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+" colorscheme selection and syntax hilighting "
+"""""""""""""""""""""""""""""""""""""""""""""""
+syntax on
+set synmaxcol=80
+set popt+=syntax:y
+
+if (&term =~ 'linux')
+    set nocursorline
+    set t_Co=16
+    colorscheme darktango
+else
+    "set mouse=a
+    set t_Co=256
+    colorscheme mirocookies
+endif
+
+" vim: nofoldenable
