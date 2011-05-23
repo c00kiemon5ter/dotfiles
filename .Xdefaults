@@ -1,4 +1,4 @@
-! c00kiemon5ter (ivan.kanak@gmail.com) 
+! c00kiemon5ter (ivan.kanak@gmail.com)
 ! All cookies reserved (C)
 
 !xft settings {
@@ -21,7 +21,7 @@ URxvt*title:rxvt-unicode
 URxvt*termName:rxvt-unicode
 URxvt*font:-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
 
-URxvt*geometry:98x28 
+URxvt*geometry:98x28
 URxvt*borderLess:false
 URxvt*externalBorder:1
 URxvt*internalBorder:0
@@ -51,7 +51,7 @@ URxvt*jumpScroll:true
 URxvt*skipScroll:true
 URxvt*scrollBar:false
 URxvt*scrollstyle:plain
-URxvt*secondaryScroll:true 
+URxvt*secondaryScroll:true
 URxvt*scrollTtyOutput:false
 URxvt*scrollWithBuffer:true
 URxvt*scrollTtyKeypress:true
