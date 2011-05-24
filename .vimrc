@@ -102,7 +102,7 @@ set number
 
 " Search options
 set hlsearch
-set ignorecase
+set smartcase
 set incsearch
 set showmatch
 set dictionary=/usr/share/dict/words
