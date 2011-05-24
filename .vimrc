@@ -41,6 +41,10 @@ endfun
 " Settings "
 """"""""""""
 
+" show invisible chars
+set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
+set nolist
+
 " Setup a funky statusline
 set laststatus=2
 call <SID>SetStatusLine()
