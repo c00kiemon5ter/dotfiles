@@ -172,3 +172,5 @@ EXEC 01;32
 .o   00;33
 .so  00;33
 
+# redo alternative to make
+.do  00;35
