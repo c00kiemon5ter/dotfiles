@@ -238,6 +238,8 @@ autocmd VimEnter * nohlsearch
 :inoremap ( ()<ESC>i
 :inoremap { {}<ESC>i
 :inoremap [ []<ESC>i
+:inoremap " ""<ESC>i
+:inoremap ' ''<ESC>i
 
 " hardcore mode
 nnoremap <up> <nop>
