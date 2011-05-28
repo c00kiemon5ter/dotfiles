@@ -9,12 +9,12 @@ set completion-ignore-case on
 # user if he wants to see all of them
 set completion-query-items 50
 
-# Adding this will result in a character  being appended to 
+# Adding this will result in a character  being appended to
 # any file-names returned by completion, in much the same
 # way as ls -F works.
 set visible-stats on
 
-# If you have this, you will no longer have to hit the <Tab> 
+# If you have this, you will no longer have to hit the <Tab>
 # key twice to produce a list of all possible completions.
 # A single <Tab>  will suffice.
 set show-all-if-ambiguous on
@@ -25,6 +25,9 @@ set mark-symlinked-directories on
 
 # edit mode is vi like
 set editing-mode vi
+
+# completion as list
+set completion-display-width 0
 
 #set echo-control-characters Off
 #set expand-tilde Off
