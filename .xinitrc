@@ -10,7 +10,6 @@ urxvtd -q -o -f &
 
 display -window root $HOME/.wallpaper.png &
 unclutter &
-clipbored &
 
 exec $HOME/.bin/dwm_run
 
