@@ -230,16 +230,19 @@ autocmd BufRead,BufNewFile *.rl set filetype=ragel
 " turn off any existing search on exit
 autocmd VimEnter * nohlsearch
 
+" autocomplete python functions for python file types
+autocmd FileType python set completefunc=pythoncomplete#Complete
+
 """""""""""""""
 " Keymappings "
 """""""""""""""
 
 " match open closing braces
-:inoremap ( ()<ESC>i
-:inoremap { {}<ESC>i
-:inoremap [ []<ESC>i
-:inoremap " ""<ESC>i
-:inoremap ' ''<ESC>i
+":inoremap ( ()<ESC>i
+":inoremap { {}<ESC>i
+":inoremap [ []<ESC>i
+":inoremap " ""<ESC>i
+":inoremap ' ''<ESC>i
 
 " hardcore mode
 nnoremap <up> <nop>
