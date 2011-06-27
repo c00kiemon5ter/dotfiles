@@ -45,7 +45,7 @@ sub beep_beep() {
 	}
 }
 
-Irssi::settings_add_str("lookandfeel", "beep_cmd", "aplay -q /usr/share/sounds/purple/receive.wav > /dev/null &");
+Irssi::settings_add_str("lookandfeel", "beep_cmd", "aplay -q /usr/share/opensonic/samples/bumper.wav &> /dev/null &");
 Irssi::settings_add_int("lookandfeel", "beep_flood", 250);
 Irssi::signal_add("beep", "beep_beep");
 
