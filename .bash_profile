@@ -1,4 +1,4 @@
-pathdirs=( /usr/lib/cw /usr/bin /bin /usr/sbin /sbin
+pathdirs=( /usr/bin /bin /usr/sbin /sbin
            /usr/bin/*_perl /usr/bin/perlbin/vendor
            /usr/lib/perl5/*_perl/bin /usr/share/perl5/*_perl
            /home/c00kiemon5ter/.bin )
