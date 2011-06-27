@@ -1,0 +1,25 @@
+!black
+*color0            : #2E2E34343636
+*color8            : #555557575353
+! red
+*color1            : #CCCC00000000
+*color9            : #EFEF29292929
+! green
+*color2            : #4E4E9A9A0606
+*color10           : #8A8AE2E23434
+! yellow
+*color3            : #C4C4A0A00000
+*color11           : #FCFCE9E94F4F
+! blue
+*color4            : #34346565A4A4
+*color12           : #72729F9FCFCF
+! magenta
+*color5            : #757550507B7B
+*color13           : #ADAD7F7FA8A8
+! cyan
+*color6            : #060698209A9A
+*color14           : #3434E2E2E2E2
+! white
+*color7            : #D3D3D7D7CFCF
+*color15           : #EEEEEEEEECEC
+
