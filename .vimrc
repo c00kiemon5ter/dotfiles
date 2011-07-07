@@ -106,6 +106,7 @@ set number
 
 " Search options
 set hlsearch
+set ignorecase
 set smartcase
 set incsearch
 set showmatch
