@@ -31,7 +31,7 @@ progressbar_color = "yellow"
 statusbar_color = "black"
 active_column_color = "red"
 visualizer_color = "yellow"
-# Othersl
+# Others
 song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
 search_engine_display_mode = "columns" (classic/columns)
 follow_now_playing_lyrics = "yes"
@@ -53,3 +53,8 @@ statusbar_color = "black"
 active_column_color = "red"
 visualizer_color = "yellow"
 song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
+mpd_crossfade_time = "5"
+# foo
+mpd_music_dir = "/home/c00kiemon5ter/music"
+external_editor = "vim"
+use_console_editor = "yes"
