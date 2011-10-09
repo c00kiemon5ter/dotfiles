@@ -23,22 +23,22 @@ function wazaaa() {
 	local qdb="$HOME/.archquotes" # quotes database
 	local arch="Arch" nix="Linux" # the logo
 	local say="$(shuf -n1 $qdb)"  # pick a random quote
-	local spc="$(( $(tput cols) - ${#arch} - ${#nix} ))"
+	local spc="$(( COLUMNS - ${#arch} - ${#nix} ))"
 	clear						  # ohai, kthnxbye
 	printf "$mkbold$fgwht%s$bfgblu%s$fgwht%${spc}s$normal\n" "$arch" "$nix" "$say"
 }
 
 # cd helper
-function goto() { 
-	[ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; 
+function goto() {
+	[ -d "$1" ] && cd "$1" || cd "$(dirname "$1")";
 }
 # copy and follow
-function cpf() { 
-	cp "$@" && goto "$_"; 
+function cpf() {
+	cp "$@" && goto "$_";
 }
 # move and follow
-function mvf() { 
-	mv "$@" && goto "$_"; 
+function mvf() {
+	mv "$@" && goto "$_";
 }
 
 ## services handling
