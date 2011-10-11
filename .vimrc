@@ -92,7 +92,8 @@ set expandtab
 set shiftround
 set autoindent
 set smartindent
-set textwidth=80
+"set textwidth=80
+set textwidth=160
 set nowrap
 set formatoptions+=nl
 set whichwrap=h,l,~,<,>,[,]
@@ -305,7 +306,8 @@ imap jj <ESC>
 " colorscheme selection and syntax hilighting "
 """""""""""""""""""""""""""""""""""""""""""""""
 syntax on
-set synmaxcol=80
+"set synmaxcol=80
+set synmaxcol=160
 set popt+=syntax:y
 
 if (&term =~ 'linux')
