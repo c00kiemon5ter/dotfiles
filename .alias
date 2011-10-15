@@ -8,8 +8,6 @@ alias cd..="cd .."
 
 ## use color where appropriate
 alias ls="ls --color=auto -h"
-alias grep="grep --color=auto -I" # skip binary files
-alias egrep="egrep --color=auto"
 
 ## Editors:
 alias v="$EDITOR"

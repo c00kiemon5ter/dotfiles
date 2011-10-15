@@ -16,6 +16,8 @@ export MOST_SWITCHES="-s"
 export MOST_EDITOR="$EDITOR"
 export SLANG_EDITOR="$EDITOR"
 
+export GREP_OPTIONS='--color=auto -I'
+
 export LESS="-FXRS"
 export LESSHISTFILE="/tmp/.lesshst"
 export LESS_TERMCAP_mb=$'\e[01;31m'
