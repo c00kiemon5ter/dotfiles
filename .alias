@@ -74,8 +74,9 @@ alias futurama="curl -Is slashdot.org | egrep '^X-(F|B|L)' | cut -d \- -f 2"
 # star wars movie on ascii
 alias starwars="telnet towel.blinkenlights.nl"
 # Shows your WAN IP, when you`re sitting behind a router
-#alias myIp="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
-alias getmyip="curl ifconfig.me"
+#alias myip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
+#alias myip="curl ifconfig.me"
+alias myip="curl icanhazip.com"
 # the 'tree' command ..revisited
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 # the matrix
