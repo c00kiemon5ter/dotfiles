@@ -14,7 +14,7 @@ if exists("syntax on")
 endif
 
 let g:color_name="mirocookies"
-" Normal colors  --- 
+" Normal colors  ---
 hi Normal          ctermfg=15
 hi Ignore          ctermfg=8
 hi Comment         ctermfg=DarkCyan
@@ -32,27 +32,27 @@ hi Type            ctermfg=DarkCyan
 hi String          ctermfg=Green
 hi Constant        ctermfg=Cyan
 hi Special         ctermfg=DarkGreen
-hi SpecialChar     ctermfg=DarkRed 
+hi SpecialChar     ctermfg=DarkRed
 hi Number          ctermfg=14
 hi Identifier      ctermfg=Cyan
 hi Conditional     ctermfg=14
-hi Repeat          ctermfg=DarkRed 
+hi Repeat          ctermfg=DarkRed
 hi Statement       ctermfg=Blue
 hi Label           ctermfg=Cyan
 hi Operator        ctermfg=Yellow
-hi Keyword         ctermfg=DarkRed   
-hi StorageClass    ctermfg=DarkYellow  
+hi Keyword         ctermfg=DarkRed
+hi StorageClass    ctermfg=DarkYellow
 hi Structure       ctermfg=Magenta
 hi Typedef         ctermfg=DarkCyan
 hi Function        ctermfg=DarkYellow
 hi Exception       ctermfg=Red
 hi Underlined      ctermfg=Blue
-hi Title           ctermfg=Yellow   
+hi Title           ctermfg=Yellow
 hi Tag             ctermfg=DarkYellow
-hi Delimiter       ctermfg=DarkBlue  
-hi SpecialComment  ctermfg=DarkRed 
+hi Delimiter       ctermfg=DarkBlue
+hi SpecialComment  ctermfg=DarkRed
 hi Boolean         ctermfg=Yellow
-hi Todo            ctermfg=DarkRed 
+hi Todo            ctermfg=DarkRed
 hi MoreMsg         ctermfg=Cyan
 hi ModeMsg         ctermfg=Cyan
 hi Debug           ctermfg=Red
@@ -67,45 +67,46 @@ hi WarningMsg      ctermfg=White        ctermbg=Red
 hi Question        ctermfg=DarkGreen    ctermbg=15
 hi Pmenu           ctermfg=Green        ctermbg=DarkCyan
 hi PmenuSel        ctermfg=Red          ctermbg=Cyan
-hi Visual          ctermfg=DarkGrey     ctermbg=15
+"hi Visual          ctermfg=DarkGrey     ctermbg=15
+hi Visual          ctermfg=White        ctermbg=DarkRed
 hi StatusLine      ctermfg=Black        ctermbg=White
 hi StatusLineNC    ctermfg=8            ctermbg=Black
 
-" Specific for Vim script  --- 
+" Specific for Vim script  ---
 hi vimCommentTitle ctermfg=DarkGreen
 hi vimFold         ctermfg=Black    ctermbg=15
 
-" Specific for help files  --- 
+" Specific for help files  ---
 hi helpHyperTextJump ctermfg=DarkYellow
 
 " JS numbers only ---
-hi javaScriptNumber ctermfg=DarkYellow 
+hi javaScriptNumber ctermfg=DarkYellow
 
 " Special for HTML ---
 hi htmlTag        ctermfg=DarkCyan
 hi htmlEndTag     ctermfg=DarkCyan
 hi htmlTagName    ctermfg=DarkYellow
 
-" Specific for Perl  --- 
+" Specific for Perl  ---
 hi perlSharpBang  ctermfg=DarkGreen  term=standout
 hi perlStatement  ctermfg=Cyan
 hi perlStatementStorage ctermfg=Red
 hi perlVarPlain   ctermfg=Yellow
 hi perlVarPlain2  ctermfg=DarkYellow
 
-" Specific for Ruby  --- 
+" Specific for Ruby  ---
 hi rubySharpBang  ctermfg=DarkGreen  term=standout
 
-" Specific for diff  --- 
-hi diffLine       ctermfg=DarkGreen 
-hi diffOldLine    ctermfg=Green      
-hi diffOldFile    ctermfg=Green      
-hi diffNewFile    ctermfg=Green      
-hi diffAdded      ctermfg=Blue 
-hi diffRemoved    ctermfg=Red        
-hi diffChanged    ctermfg=DarkCyan       
+" Specific for diff  ---
+hi diffLine       ctermfg=DarkGreen
+hi diffOldLine    ctermfg=Green
+hi diffOldFile    ctermfg=Green
+hi diffNewFile    ctermfg=Green
+hi diffAdded      ctermfg=Blue
+hi diffRemoved    ctermfg=Red
+hi diffChanged    ctermfg=DarkCyan
 
-" Spell checking  --- 
+" Spell checking  ---
 if version >= 700
     hi clear SpellBad
     hi clear SpellCap
