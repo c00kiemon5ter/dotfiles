@@ -112,8 +112,8 @@ if version >= 700
     hi clear SpellCap
     hi clear SpellRare
     hi clear SpellLocal
-    hi SpellBad    cterm=underline
-    hi SpellCap    cterm=underline
+    hi SpellBad    cterm=underline ctermfg=Red
+    hi SpellCap    cterm=underline ctermfg=Cyan
     hi SpellRare   cterm=underline
     hi SpellLocal  cterm=underline
 endif
