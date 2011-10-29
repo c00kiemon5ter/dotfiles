@@ -6,9 +6,6 @@ alias ..="cd .."
 alias ...="cd ../../"
 alias cd..="cd .."
 
-## use color where appropriate
-alias ls="ls --color=auto -h"
-
 ## Editors:
 alias v="$EDITOR"
 alias sv="sudo $EDITOR"
@@ -17,12 +14,12 @@ alias svim="sudo $EDITOR"
 ## Common
 alias df="df -h -T"
 alias mkdir="mkdir -p -v"
-alias l="ls"
-alias l1="ls -1"
-alias ll="ls -l"
+alias ls="ls --color=auto -h"
+alias l="ls -1"
 alias la="ls -A"
-alias l1a="ls -a1"
-alias lla="ls -al"
+alias ll="ls -l"
+alias l1a="ls -A1"
+alias lla="ls -Al"
 alias cp="cp -ir"
 alias mv="mv -i"
 alias rm="rm -I -v"
