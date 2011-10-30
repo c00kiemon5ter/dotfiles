@@ -1,77 +1,79 @@
 ! c00kiemon5ter (ivan.kanak@gmail.com)
 ! All cookies reserved (C)
 
-!xft settings {
-Xft.antialias: 	true
-Xft.hinting: 	true
-Xft.hintstyle: 	hintfull
-!Xft.hintstyle: 	hintmedium
-!Xft.hintstyle: 	hintslight
-Xft.rgba:		rgb
-Xft.lcdfilter:	lcddefault
-!}
+! xft settings {
+Xft.antialias:true
+Xft.hinting:true
+Xft.hintstyle:hintfull
+!Xft.hintstyle:hintmedium
+!Xft.hintstyle:	hintslight
+Xft.rgba:rgb
+Xft.lcdfilter:lcddefault
+! ------------ }
 
-!X Cursor theme {
-Xcursor*theme:          Vanilla-DMZ
-Xcursor.size:           16
-!}
+! X Cursor theme {
+Xcursor.theme:Vanilla-DMZ
+Xcursor.size:16
+! -------------- }
 
-!URxvt Settings {
-URxvt*title:rxvt-unicode
-URxvt*termName:rxvt-unicode
-URxvt*font:-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+! URxvt Settings {
+URxvt.title:rxvt-unicode
+URxvt.termName:rxvt-unicode
+URxvt.iconFile:/usr/share/icons/scalable/apps/terminal.svg
+URxvt.font:-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt.visualBell:false
+URxvt.highlightSelection:True
+URxvt.geometry:98x28
+URxvt.borderLess:false
+URxvt.externalBorder:1
+URxvt.internalBorder:0
 
-URxvt*geometry:98x28
-URxvt*borderLess:false
-URxvt*externalBorder:1
-URxvt*internalBorder:0
-
-URxvt*visualBell:false
-URxvt*highlightSelection:True
-URxvt*buffered:true
-
-URxvt*perl-ext-common:matcher,selection,-searchable-scrollback,-readline
-cutchars:"()*,<>[]{}|'"
+URxvt.perl-ext-common:matcher,selection,-readline,-selection-popup,-option-popup,-option-popup,-tabbed,-searchable-scrollback
+URxvt.cutchars:"()*,<>[]{}|'"
 URxvt.matcher.button:1
-URxvt*urlLauncher:chromium
+URxvt.urlLauncher:chromium
 URxvt.underlineURLs:true
 URxvt.perl-ext:url-select
 URxvt.keysym.M-u:perl:url-select:select_next
 
-URxvt*eightBitInput:true
-URxvt*inputMethod:SCIM
-URxvt*multichar_encoding:utf-8
-URxvt*preeditType:OverTheSpot,Root
-URxvt*imLocale:en_US.UTF-8
+URxvt.eightBitInput:true
+URxvt.inputMethod:SCIM
+URxvt.multichar_encoding:utf-8
+URxvt.preeditType:OverTheSpot,Root
+URxvt.imLocale:en_US.UTF-8
 modifier:meta
 !alt, meta, hyper, super, mod1..5
 
-URxvt*saveLines:3000
-URxvt*jumpScroll:true
-URxvt*skipScroll:true
-URxvt*scrollBar:false
-URxvt*scrollstyle:plain
-URxvt*secondaryScroll:true
-URxvt*scrollTtyOutput:false
-URxvt*scrollWithBuffer:true
-URxvt*scrollTtyKeypress:true
-URXvt*mouseWheelScrollPage:false
-!}
+URxvt.buffered:true
+URxvt.saveLines:500
+URxvt.scrollstyle:plain
+URxvt.secondaryScroll:true
+URxvt.jumpScroll:true
+URxvt.skipScroll:false
+URxvt.scrollBar:false
+URxvt.scrollTtyOutput:false
+URxvt.scrollWithBuffer:true
+URxvt.scrollTtyKeypress:true
+URxvt.mouseWheelScrollPage:false
 
-!URxvt Color Settings {
+URxvt.iso14755:false
+URxvt.iso14755_52:false
+! -------------- }
+
+! URxvt Color Settings {
 #include "/home/c00kiemon5ter/.color_schemes/librec00kiez"
 
-URxvt*depth:16
-URxvt*dynamicColors:on
-URxvt*transparent:false
+URxvt.depth:16
+URxvt.dynamicColors:on
+URxvt.transparent:false
 
-URxvt*cursorColor:#888888
-URxvt*cursorBlink:true
-URxvt*cursorUnderline:false
-URxvt*pointerColor:gray
-URxvt*pointerColorBackground:black
-URxvt*pointerBlank:false
-URxvt*pointerBlankDelay:2
-!}
+URxvt.cursorColor:#888888
+URxvt.cursorBlink:true
+URxvt.cursorUnderline:false
+URxvt.pointerColor:gray
+URxvt.pointerColorBackground:black
+URxvt.pointerBlank:false
+URxvt.pointerBlankDelay:2
+! -------------------- }
 
 ! vim: nospell foldmethod=marker:foldmarker={,}:foldlevel=0
