@@ -29,6 +29,7 @@ fi
 
 CDPATH=".:${HOME}/projects/:${HOME}/data/"
 test -r .dircolors && eval "export $(dircolors -b .dircolors)"
+shopt -s no_empty_cmd_completion
 
 source "$HOME"/.alias
 source "$HOME"/.funcs
