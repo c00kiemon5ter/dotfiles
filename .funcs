@@ -41,32 +41,6 @@ function mvf() {
 	mv "$@" && goto "$_";
 }
 
-## services handling
-function start() {
-	for arg in $@
-	do
-		sudo /etc/rc.d/$arg start
-	done
-}
-function stop() {
-	for arg in $@
-	do
-		sudo /etc/rc.d/$arg stop
-	done
-}
-function restart() {
-	for arg in $@
-	do
-		sudo /etc/rc.d/$arg restart
-	done
-}
-function status() {
-	for	arg in $@
-	do
-		sudo /etc/rc.d/$arg status
-	done
-}
-
 # funny quotes from bash.org @irc
 function bashfortune() {
 	curl -s http://bash.org/?random1 \
