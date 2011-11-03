@@ -3,7 +3,7 @@
 
 # the prompt
 function prompt() {
-	local st="$?" stclr="$bfggrn" gpr=""
+	local st="$?" stclr="$fggrn" gpr=""
 	local ref="$(git symbolic-ref HEAD 2>/dev/null)"
 	(($st)) && stclr="$bfgred" st="\[$fgwht\][\[$stclr\]$st\[$fgwht\]]" || st=""
 	if [ -n "$ref" ]
