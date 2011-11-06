@@ -1,21 +1,21 @@
 ! -- by Square -- !
-*background: #1a1a1a
-*foreground: #acacab
-*color0: #171717
-*color1: #ea6868
-*color2: #b6e77d
-*color3: #dbbb4b
-*color4:  #66d9ef
-*color5: #75507b
-*color6:  #5e7175
-*color7: #f2f2f2
-*color8: #554444
-*color9: #ff7272
-*color10: #9ead72
-*color11: #e7db52
-*color12: #66d9ef
-*color13: #ad7fa8
-*color14: #a3babf
-*color15: #e2e2e2
+*foreground:    #bdbdbd
+*background: #131013
 
+*color0:    #151517
+*color1:    #ea6868
+*color2:    #5cb247
+*color3:    #dbbb4b
+*color4:    #4385ee
+*color5:    #75507b
+*color6:    #5E7175
+*color7:    #f2f2f2
+*color8:    #554444
+*color9:    #e05050
+*color10:   #9ead72
+*color11:   #dd7d33
+*color12:   #41a6be
+*color13:   #666690
+*color14:   #107080
+*color15:   #e2e2e2
 
