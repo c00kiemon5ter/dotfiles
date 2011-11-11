@@ -25,4 +25,8 @@ alias ?ai="cow -i"      # aur info
 # remove pkgs
 alias ?rsn="spac -Rsn"  # clean 'n purge
 alias ?qdt="pac -Qqdt"  # unrequired deps
+## AUR ~ makepkg
+alias ?mki="makepkg -csirf"
+alias ?mkg="makepkg -g"
+alias ?mks="makepkg --source -f"
 
