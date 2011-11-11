@@ -29,8 +29,8 @@ function wazaaa() {
 }
 
 # cd helper
-function goto() {
-	[ -d "$1" ] && cd "$1" || cd "$(dirname "$1")";
+function cd() {
+	[ -d "$1" ] && builtin cd "$1" || builtin cd "$(dirname "$1")";
 }
 # copy and follow
 function cpf() {
@@ -39,6 +39,10 @@ function cpf() {
 # move and follow
 function mvf() {
 	mv "$@" && goto "$_";
+}
+# make dir and follow
+function mkf() {
+    mkdir -vp "$1" && cd "$_";
 }
 
 # funny quotes from bash.org @irc
@@ -54,11 +58,6 @@ function bashfortune() {
 # change terminal title
 function tname() {
 	echo -ne "\033]0;${1:-$TERM}\007";
-}
-
-# Makes directory then moves into it
-function mkcdr() {
-	    mkdir -vp "$1" && cd "$_";
 }
 
 # vim: nospell
