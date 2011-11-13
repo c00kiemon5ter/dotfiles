@@ -1,7 +1,8 @@
 # c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
 
 # Shell is non-interactive.  Be done now!
-[ -z "$PS1" ] && return
+[[ "$-" != *i* ]] && return
+#[ -z "$PS1" ] && return
 
 # view current command as title
 #if [ "$SHELL" = '/bin/bash' ]; then
