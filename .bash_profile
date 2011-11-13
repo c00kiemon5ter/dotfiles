@@ -31,15 +31,6 @@ export LESS_TERMCAP_us=$'\e[01;32m'
 export MPD_HOST=127.0.0.1
 export MPD_PORT=6600
 
-shopt -s cdspell
-shopt -s checkwinsize
-shopt -s cmdhist
-shopt -s dirspell
-shopt -s histappend
-shopt -s hostcomplete
-shopt -s no_empty_cmd_completion
-shopt -s nocaseglob
-
 . $HOME/.bashrc
 
 pkill -u "$USER" lsyncd
