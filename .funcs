@@ -15,7 +15,7 @@ function prompt() {
 	PS1="\n$st\[$bfgblu\]\h \[$bfggrn\]\W$gpr \[$fgcyn\]>>\[$stclr\]> \[$normal\]"
 	PS2=" \[$fgcyn\]> \[$normal\]"
 	PS3=" \[$bfgcyn\]> \[$normal\]"
-	PS4="[$LINENO]+"
+	PS4="[$LINENO]+ "
 }
 
 # display a random quote on top of every new shell
@@ -30,7 +30,10 @@ function wazaaa() {
 
 # cd helper
 function cd() {
-	[ -d "$1" ] && builtin cd "$1" || builtin cd "$(dirname "$1")";
+    { [ -z "$1" ] && builtin cd "$HOME"; }           || \
+    { [ -d "$1" ] && builtin cd "$1"; }              || \
+    { [ -f "$1" ] && builtin cd "$(dirname "$1")"; } || \
+    builtin cd "$1"
 }
 # copy and follow
 function cpf() {
