@@ -58,6 +58,11 @@ function bashfortune() {
         | head -1
 }
 
+# slow output
+slow_output() {
+    while IFS= read -r -N1; do printf "%c" "$REPLY"; sleep ${1:-.02}; done;
+}
+
 # change terminal title
 function tname() {
 	echo -ne "\033]0;${1:-$TERM}\007";
