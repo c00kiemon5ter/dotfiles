@@ -2,8 +2,7 @@ pathdirs=( /usr/bin /bin /usr/sbin /sbin
            /usr/bin/*_perl /usr/bin/perlbin/vendor
            /usr/lib/perl5/*_perl/bin /usr/share/perl5/*_perl
            /home/c00kiemon5ter/.bin )
-pathdirs="${pathdirs[@]}"
-export PATH="${pathdirs// /:}" && unset pathdirs
+IFS=:; export PATH="${pathdirs[*]}" && unset pathdirs
 
 export HISTCONTROL=erasedups:ignorespace
 export HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
@@ -28,9 +27,6 @@ export LESS_TERMCAP_so=$'\e[01;46;37m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[01;32m'
 
-export MPD_HOST=127.0.0.1
-export MPD_PORT=6600
-
 . $HOME/.bashrc
 
 pkill -u "$USER" lsyncd
@@ -40,7 +36,7 @@ lsyncd --logfile "$HOME/.lsyncd/scripts.sync.log" -rsync "$HOME/.bin/" "$HOME/da
 
 if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]
 then
-	. startx
+	startx
 	logout
 fi
 
