@@ -20,7 +20,7 @@ Xcursor.size:16
 URxvt.title:rxvt-unicode
 URxvt.termName:rxvt-unicode
 URxvt.iconFile:/usr/share/icons/scalable/apps/terminal.svg
-URxvt.font:-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt.font:-*-terminus-*-*-normal-*-12-*-*-*-*-*-*-*
 URxvt.visualBell:false
 URxvt.highlightSelection:True
 URxvt.geometry:98x28
