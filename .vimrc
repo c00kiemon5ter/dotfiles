@@ -42,7 +42,7 @@ endfun
 """"""""""""
 
 " show invisible chars
-set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
+set listchars=eol:¬,tab:»\ ,trail:·,extends:>,precedes:<
 set nolist
 
 " Setup a funky statusline
