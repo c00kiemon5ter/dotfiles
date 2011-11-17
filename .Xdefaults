@@ -2,13 +2,14 @@
 ! All cookies reserved (C)
 
 ! xft settings {
-Xft.antialias:true
-Xft.hinting:true
-Xft.hintstyle:hintfull
-!Xft.hintstyle:hintmedium
-!Xft.hintstyle:	hintslight
-Xft.rgba:rgb
+Xft.autohint:false
 Xft.lcdfilter:lcddefault
+Xft.hintstyle:hintfull
+Xft.hinting:true
+Xft.antialias:true
+Xft.dpi:96
+Xft.rgba:rgb
+
 ! ------------ }
 
 ! X Cursor theme {
