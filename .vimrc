@@ -265,7 +265,7 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 imap <C-@> <C-Space>
 
 " Easy pasting from the X clipboard
-imap <C-V> <ESC>:r!xclip -sel clipboard -o<CR>i
+imap <C-I> <ESC>:r!xclip -sel clipboard -o<CR>i
 
 " Easy help
 map! <F1> <C-C><F1>
