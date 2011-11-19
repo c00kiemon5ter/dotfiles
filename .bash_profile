@@ -7,7 +7,6 @@ IFS=:; export PATH="${pathdirs[*]}" && unset pathdirs
 export LC_COLLATE="C"
 export LC_CTYPE="el_GR.UTF-8"
 export LC_MONETARY="el_GR.UTF-8"
-export LC_TIME="el_GR.UTF-8"
 
 export HISTCONTROL=erasedups:ignorespace
 export HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
