@@ -37,11 +37,11 @@ function cd() {
 }
 # copy and follow
 function cpf() {
-	cp "$@" && goto "$_";
+	cp "$@" && cd "$_";
 }
 # move and follow
 function mvf() {
-	mv "$@" && goto "$_";
+	mv "$@" && cd "$_";
 }
 # make dir and follow
 function mkf() {
