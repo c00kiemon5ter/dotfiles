@@ -1,16 +1,36 @@
 alias gst="git status -sb"
-alias gsh="git show"
-alias gbr="git branch -vv"
-alias gco="git checkout"
-alias gdf="git diff -w"
-alias gad="git add"
-alias gcm="git commit -m"
-alias gpl="git pull"
-alias gps="git push"
-alias gcp="git cherry-pick"
+alias glc="git log --abbrev-commit --graph --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+alias glf="git log --abbrev-commit --parents --graph --oneline --name-status"
 
-alias vignr="$EDITOR ./.gitignore"
+__define_git_completion () {
+    eval "
+        _git_$2_shortcut () {
+            COMP_LINE=\"git $2\${COMP_LINE#$1}\"
+                let COMP_POINT+=$((4+${#2}-${#1}))
+                COMP_WORDS=(git $2 \"\${COMP_WORDS[@]:1}\")
+                let COMP_CWORD+=1
 
-alias glg="git log --abbrev-commit --parents"
-alias glf="git log --graph --oneline --name-status --parents"
-alias glc="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+                local cur words cword prev
+                _get_comp_words_by_ref -n =: cur words cword prev
+                _git_$2
+        }
+    "
+}
+
+__git_shortcut () {
+    type _git_$2_shortcut &>/dev/null || __define_git_completion $1 $2
+        alias $1="git $2 $3"
+        complete -o default -o nospace -F _git_$2_shortcut $1
+}
+
+__git_shortcut gsh show
+__git_shortcut gbr branch -vv
+__git_shortcut gco checkout
+__git_shortcut gdf diff -w
+__git_shortcut gad add
+__git_shortcut gcm commit -v
+__git_shortcut gpl pull
+__git_shortcut gps push
+__git_shortcut gcp cherry pick
+__git_shortcut glg log --abbrev-commit --parents
+
