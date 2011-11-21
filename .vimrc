@@ -74,6 +74,7 @@ set suffixes+=.in,.a,.1
 
 " Spell Checking
 set spell spelllang=en,el
+set nospell
 
 " folding
 set foldenable
