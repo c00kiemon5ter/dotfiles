@@ -17,11 +17,15 @@ Xcursor.theme:Vanilla-DMZ
 Xcursor.size:16
 ! -------------- }
 
+! URxvt Fonts {
+!URxvt.font:-misc-tamsyn-medium-r-normal--12-87-100-100-c-70-iso8859-1
+URxvt.font:-xos4-terminus-medium-r-normal--12-120-72-72-c-60-*-*
+! ----------- }
+
 ! URxvt Settings {
 URxvt.title:rxvt-unicode
 URxvt.termName:rxvt-unicode
 URxvt.iconFile:/usr/share/icons/scalable/apps/terminal.svg
-URxvt.font:-*-terminus-*-*-normal-*-12-*-*-*-*-*-*-*
 URxvt.visualBell:false
 URxvt.highlightSelection:True
 URxvt.geometry:98x28
