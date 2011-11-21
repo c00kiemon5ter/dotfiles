@@ -19,7 +19,7 @@ if [ "$TERM" = "linux" ]; then
 	## set the theme name
 	local THEME="console_c00kiez"
 	## read the theme, remove comments
-	local colors=($(cat $HOME/.color_schemes/$THEME | sed "s/#.*//"))
+	local colors=($(cut -d' ' -f1 "$HOME/.color_schemes/$THEME"))
 	## apply the colors
 	for index in ${!colors[@]}
 	do
