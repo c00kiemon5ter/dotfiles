@@ -47,6 +47,5 @@ source "$HOME"/.shell.colors
 PROMPT_COMMAND=prompt
 
 source "$HOME"/.pacman.alias
-#source "$HOME"/.mpd.alias
 source "$HOME"/.git.alias
 
