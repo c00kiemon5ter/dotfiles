@@ -1,4 +1,4 @@
-! c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License 
+! c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
 !
 
 !URxvt*background: rgba:0000/0000/0000/c000
@@ -9,7 +9,7 @@
 *color0: #222222
 *color8: #454545
 
-! Red 
+! Red
 *color1: #F60606
 *color9: #F60606
 
@@ -22,16 +22,16 @@
 *color11:#FFBF00
 
 ! Blue
-*color12:#0071FF
 *color4: #44A7EE
+*color12:#0071FF
 
 ! Magneta
 *color5: #9E6FFE
-*color13: #B18CFE
+*color13:#B18CFE
 
 ! Cyan
 *color6: #5E7175
-*color14: #A3BABF
+*color14:#A3BABF
 
 ! White
 *color7: #FFFFFF
