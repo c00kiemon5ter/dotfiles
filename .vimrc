@@ -77,7 +77,7 @@ set spell spelllang=en,el
 set nospell
 
 " folding
-set foldenable
+set nofoldenable
 set foldmethod=marker
 set foldmarker={,}
 set foldlevel=0
