@@ -9,6 +9,7 @@ urxvtd -q -o -f &
     setxkbmap -option terminate:ctrl_alt_bksp
 } &
 
+xsetroot -cursor_name left_ptr
 display -window root $HOME/.wallpaper.png &
 unclutter &
 dropbox start &
