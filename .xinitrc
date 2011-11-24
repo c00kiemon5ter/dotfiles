@@ -14,6 +14,5 @@ display -window root $HOME/.wallpaper.png &
 unclutter &
 dropbox start &
 
-#exec $HOME/.bin/dwm_run
-exec $HOME/.bin/dminiwm_run
+exec $HOME/.bin/wmrun
 
