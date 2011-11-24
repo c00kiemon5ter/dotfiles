@@ -17,6 +17,12 @@ Xcursor.theme:Vanilla-DMZ
 Xcursor.size:16
 ! -------------- }
 
+! dzen2 settings {
+dzen2.foreground:#efefef
+dzen2.background:#262626
+dzen2.font:-*-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
+! -------------- }
+
 ! URxvt Fonts {
 !URxvt.font:-misc-tamsyn-medium-r-normal--12-87-100-100-c-70-iso8859-1
 URxvt.font:-xos4-terminus-medium-r-normal--12-120-72-72-c-60-*-*
