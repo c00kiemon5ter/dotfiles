@@ -3,16 +3,15 @@
 
 # the prompt
 function prompt() {
-	local st="$?" stclr="$fggrn" gpr=""
-	local ref="$(git symbolic-ref HEAD 2>/dev/null)"
-	(($st)) && stclr="$bfgred" st="\[$fgwht\][\[$stclr\]$st\[$fgwht\]]" || st=""
-	if [ -n "$ref" ]
-	then
-		git status -s | grep "\\s*[MD]" &>/dev/null && ref="$ref\[$fggrn\]!"
-		git status -s | grep "\\s*[?]"  &>/dev/null && ref="$ref\[$fggrn\]?"
-		gpr="\[$fgwht\]:\[$fgylw\]${ref#refs/heads/}"
+	local s="$?" sc="$bfggrn" g= b=
+	((s)) && sc="$fgylw" s="\[$bfgcyn\][\[$sc\]$s\[$bfgcyn\]]" || s=
+    if b="$(git symbolic-ref HEAD 2>/dev/null)\[$fggrn\]"; then
+        g="$(git status -s 2>/dev/null)"
+		grep "^ \?[MADRCU]" <<< "$g" &>/dev/null && b+="!"
+		grep "^??"          <<< "$g" &>/dev/null && b+="?"
+		g="\[$fgwht\]:\[$fgylw\]${b#refs/heads/}"
 	fi
-	PS1="\n$st\[$bfgblu\]\h \[$bfggrn\]\W$gpr \[$fgcyn\]>>\[$stclr\]> \[$normal\]"
+	PS1="\n\[$fgcyn\]┐$s \[$bfgblu\]\h \[$fggrn\]\w$g\n\[$fgcyn\]└\[$sc\]─ \[$normal\]"
 	PS2=" \[$fgcyn\]> \[$normal\]"
 	PS3=" \[$bfgcyn\]> \[$normal\]"
 	PS4="[$LINENO]+ "
