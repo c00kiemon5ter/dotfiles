@@ -15,17 +15,12 @@
 #fi
 
 # set tty color theme
-if [ "$TERM" = "linux" ]; then
-	## set the theme name
-	local THEME="console_c00kiez"
-	## read the theme, remove comments
-	local colors=($(cut -d' ' -f1 "$HOME/.color_schemes/$THEME"))
-	## apply the colors
-	for index in ${!colors[@]}
-	do
-        printf "\e]P%x%s" $index "${colors[$index]}"
-    done
-	clear #for background artifacting
+if [[ "${TERM}" = "linux" ]]; then
+	theme="console_c00kiez" idx=0
+    while read -r; do
+        printf "\e]P%x%s" "$((idx++))" "${REPLY}"
+    done < <(sed -n '/^[[:alnum:]]/s: *#.*::p' "${HOME}/.color_schemes/${theme}")
+    clear
 fi
 
 CDPATH=".:${HOME}/projects/:${HOME}/data/"
