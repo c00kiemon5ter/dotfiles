@@ -314,11 +314,9 @@ set popt+=syntax:y
 if (&term =~ 'linux')
     set nocursorline
     set t_Co=16
-    colorscheme darktango
 else
-    "set mouse=a
     set t_Co=256
-    colorscheme mirocookies
 endif
+colorscheme mirocookies
 
 " vim: nofoldenable
