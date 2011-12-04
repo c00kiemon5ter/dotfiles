@@ -37,7 +37,7 @@ shopt -s nocaseglob
 
 source "$HOME"/.alias
 source "$HOME"/.funcs
-source "$HOME"/.shell.colors
+source "$HOME"/.shell.colors.tput
 
 PROMPT_COMMAND=prompt
 
