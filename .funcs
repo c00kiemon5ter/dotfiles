@@ -64,7 +64,12 @@ slow_output() {
 
 # change terminal title
 function tname() {
-	echo -ne "\033]0;${1:-$TERM}\007";
+    printf "%b" "\e]0;${1:-$TERM}\a"
+}
+
+# alternative clear
+cls() {
+    printf "%b" "\ec"
 }
 
 # vim: nospell
