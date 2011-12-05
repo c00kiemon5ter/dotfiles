@@ -2,7 +2,7 @@
 # c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kiez License
 
 # the prompt
-function prompt() {
+prompt() {
 	local s="$?" sc="$bfggrn" g= b=
 	((s)) && sc="$fgylw" s="\[$bfgcyn\][\[$sc\]$s\[$bfgcyn\]]" || s=
     if b="$(git symbolic-ref HEAD 2>/dev/null)\[$fggrn\]"; then
@@ -18,7 +18,7 @@ function prompt() {
 }
 
 # display a random quote on top of every new shell
-function wazaaa() {
+wazaaa() {
 	local qdb="$HOME/.archquotes" # quotes database
 	local arch="Arch" nix="Linux" # the logo
 	local say="$(shuf -n1 $qdb)"  # pick a random quote
@@ -28,27 +28,27 @@ function wazaaa() {
 }
 
 # cd helper
-function cd() {
+cd() {
     { [ -z "$1" ] && builtin cd "$HOME"; }           || \
     { [ -d "$1" ] && builtin cd "$1"; }              || \
     { [ -f "$1" ] && builtin cd "$(dirname "$1")"; } || \
     builtin cd "$1"
 }
 # copy and follow
-function cpf() {
+cpf() {
 	cp "$@" && cd "$_";
 }
 # move and follow
-function mvf() {
+mvf() {
 	mv "$@" && cd "$_";
 }
 # make dir and follow
-function mkf() {
+mkf() {
     mkdir -vp "$1" && cd "$_";
 }
 
 # funny quotes from bash.org @irc
-function bashfortune() {
+bashfortune() {
 	curl -s http://bash.org/?random1 \
         | grep -oE "<p class=\"quote\">.*</p>.*</p>" \
         | grep -oE "<p class=\"qt.*?</p>" \
@@ -63,7 +63,7 @@ slow_output() {
 }
 
 # change terminal title
-function tname() {
+tname() {
     printf "%b" "\e]0;${1:-$TERM}\a"
 }
 
