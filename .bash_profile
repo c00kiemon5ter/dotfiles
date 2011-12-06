@@ -38,6 +38,11 @@ lsyncd --logfile "$HOME/.lsyncd/music.sync.log" -rsync "$HOME/music/" "$HOME/dat
 lsyncd --logfile "$HOME/.lsyncd/projects.sync.log" -rsync "$HOME/projects/" "$HOME/data/projects/syncd_projects/"
 lsyncd --logfile "$HOME/.lsyncd/scripts.sync.log" -rsync "$HOME/.bin/" "$HOME/data/projects/syncd_scripts/"
 
+[[ -e "${ff:=/tmp/statusbar}" ]] || /bin/mkfifo -m 600 "${ff}"
+while sleep 1; do
+    "$HOME/.bin/statusbar.out"
+done > "${ff}" &
+
 if [[ -z "$DISPLAY" ]] && [[ "$(tty)" = "/dev/tty1" ]]; then
     startx
     logout
