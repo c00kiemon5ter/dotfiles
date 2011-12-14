@@ -53,7 +53,7 @@ statusbar_color = "black"
 active_column_color = "red"
 visualizer_color = "yellow"
 song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
-mpd_crossfade_time = "5"
+mpd_crossfade_time = "10"
 # foo
 mpd_music_dir = "/home/c00kiemon5ter/music"
 external_editor = "vim"
