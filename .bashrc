@@ -44,3 +44,11 @@ PROMPT_COMMAND=prompt
 source "$HOME"/.pacman.alias
 source "$HOME"/.git.alias
 
+classify() {
+    local _term="urxvtc" _classopt="-name"
+    for app in "$@"; do
+        alias $app="${_term} ${_classopt} ${app} -e ${app}"
+    done
+}
+classify ncmpcpp
+
