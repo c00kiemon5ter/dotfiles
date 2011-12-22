@@ -50,5 +50,4 @@ classify() {
         alias $app="${_term} ${_classopt} ${app} -e ${app}"
     done
 }
-classify ncmpcpp
 

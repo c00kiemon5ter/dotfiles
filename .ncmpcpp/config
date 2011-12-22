@@ -12,7 +12,7 @@ autocenter_mode = "yes"
 centered_cursor = "yes"
 # Bars
 song_status_format = "$2%a $1• $3%t $1• $4%b {(Disc %d) }$1• $5%y$1"
-progressbar_look = "─╼·"
+progressbar_look = "─━╶"
 titles_visibility = "no"
 # Browser
 browser_playlist_prefix = "$2plist »$9 "
