@@ -35,6 +35,7 @@ URxvt.title:rxvt-unicode
 URxvt.termName:rxvt-unicode
 URxvt.iconFile:/usr/share/icons/scalable/apps/terminal.svg
 URxvt.visualBell:false
+URxvt.urgentOnBell:true
 URxvt.highlightSelection:True
 URxvt.geometry:98x28
 URxvt.borderLess:false
