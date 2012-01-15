@@ -55,6 +55,7 @@ alias alex="telnet alexandros.ccslab.aueb.gr"
 alias foss="ssh foss.aueb.gr"
 
 ## Other
+alias mutt="dtach -A $HOME/.mutt/mutt.session mutt"
 alias irssi="dtach -A $HOME/.irssi/irssi.session irssi"
 alias vnotes="$EDITOR $HOME/.notes.yml"
 alias vquote="$EDITOR $HOME/.archquotes"
