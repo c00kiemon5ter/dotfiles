@@ -1,6 +1,4 @@
-###
 # options specific to mutt's sidebar patch
-###
 
 # settings
 set sidebar_delim='│'
