@@ -1,51 +1,36 @@
-## main settings
-set mbox_type=Maildir
-# use another service to grab mail at intervals
-#set folder=${HOME}/Mail
-#set spoolfile="+/INBOX"
-# do not store mail locally
-set folder=imaps://imap.gmail.com:993/
-set spoolfile=imaps://imap.gmail.com:993/[Gmail]/All\ Mail
-# specify where to save and/or look for postponed messages
+set folder=imaps://imap.gmail.com/
+set mbox=+[Gmail]/All\ Mail
+set spoolfile=+[Gmail]/All\ Mail
 set postponed=+[Gmail]/Drafts
-set alias_file=${HOME}/.mutt/alias
 
-## IMAP settings
-# allow mutt to open new imap connection automatically
-set imap_passive=no
-# keep imap connection alive by polling intermittently (time in seconds)
+unset imap_passive
 set imap_keepalive=300
-# how often to check for new mail (time in seconds)
 set mail_check=120
 
-## authentication
-# set imap_user=..
-# set imap_pass=
 source ${HOME}/.mutt/gmail_account
+set realname="Ivan c00kiemon5ter V Kanakarakis"
 
-## SMTP settings
 set smtp_url=smtps://${imap_user}:${imap_pass}@smtp.gmail.com
 set ssl_force_tls=yes
 
-## boxes
-mailboxes +---GMail-- +[Gmail]/All\ Mail +[Gmail]/Sent\ Mail +[Gmail]/Drafts
-#mailboxes +[Gmail]/Bin +INBOX +AUEB +FOSS +Linux +Git +ArchLinux
-#mailboxes +Admin +ACM +Family +mrJesusSuperstar +PureAsxetos
+set mbox_type=Maildir
 
-## cached files
+#mailboxes =[Gmail]/All\ Mail =[Gmail]/Sent\ Mail =[Gmail]/Drafts
+set imap_check_subscribed
+
 set header_cache=${HOME}/.mutt/cache/headers
 set message_cachedir=${HOME}/.mutt/cache/bodies
 
+set tmpdir=/tmp
 set certificate_file=${HOME}/.mutt/certificates
 set mailcap_path=${HOME}/.mutt/mailcap
 set signature=${HOME}/.mutt/sig
-set tmpdir=/tmp
+set sig_dashes
 
-## editor settings
 set editor="vim +:silent+?^$"
 set ispell="aspell -e -c"
 
-## commands
+unset record
 # use utf8
 set charset=UTF8
 # hide host details
@@ -101,9 +86,6 @@ set index_format        = "%3C [%Z] %D %-15.15F %s"
 set status_format       = "-%r- %v ---[ Folder: %f, Msgs: %m%?n? New: %n?%?d? Del: %d?%?t? Tag: %t?%?l? %l? ]%?p?---- .: %p waiting to send :. ?--%>- (%P) ---"
 set alias_format        = "%4n %t %-20a  %r"
 
-## composing mail
-set realname="Ivan c00kiemon5ter V Kanakarakis"
-set sig_dashes
 # show headers when composing
 set edit_headers
 # skip to compose when replying
@@ -132,7 +114,6 @@ set forward_quote
 
 ## headers to show
 ignore *
-# FIXME unignore from: to: cc: date: subject:
 unignore From:
 unignore To:
 unignore Reply-To:
@@ -149,21 +130,16 @@ unignore User-Agent:
 unignore X-Junked-Because:
 unignore X-SpamProbe:
 unignore X-Virus-hagbard:
-# header order
-# FIXME hdr_order from: to: cc: date: subject:
 hdr_order From: Subject: To: CC: BCC: Reply-To: Mail-Followup-To: Date: Organization: User-Agent: X-Mailer:
 
 ## sources
-source ${HOME}/.mutt/colors.muttrc
-#source ${HOME}/.mutt/colors.davep
+source ${HOME}/.mutt/colors.muttrc  # dark
+#source ${HOME}/.mutt/colors.davep  # bright
+#set alias_file=${HOME}/.mutt/alias
 #source $alias_file
-#source ${HOME}/.mutt/macros
 #source ${HOME}/.mutt/sidebar.muttrc
 
 ## bindings ~ vim like
-# these just give me headaches
-#bind index,pager \#     noop
-#bind index i            noop
 bind pager i            exit
 bind pager /            search
 bind pager <up>         previous-line
@@ -181,4 +157,11 @@ bind index J            next-unread
 bind index,pager R      group-reply
 bind index "^"          imap-fetch-mail
 
-# vim: nospell
+## macros
+macro index gi "<change-folder>=INBOX<enter>"            "Go to inbox"
+macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gs "<change-folder>=[Gmail]/Starred<enter>"  "Go to starred messages"
+macro index gd "<change-folder>=[Gmail]/Drafts<enter>"   "Go to drafts"
+# to delete a message in gmail, place it under [Gmail]/Trash label
+macro index,pager d "<save-message>=[Gmail]/Trash<enter><refresh>" "Trash"
+
