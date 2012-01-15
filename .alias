@@ -33,7 +33,7 @@ alias vprof="$EDITOR $HOME/.bash_profile && source $HOME/.bash_profile"
 alias vbash="$EDITOR $HOME/.bashrc && reload"
 alias valias="$EDITOR $HOME/.alias && reload"
 alias vfuncs="$EDITOR $HOME/.funcs && reload"
-alias vxdefs="$EDITOR $HOME/.Xdefaults && xrdb $HOME/.Xdefaults"
+alias vxdefs="$EDITOR $HOME/.Xresources && xrdb $HOME/.Xresources"
 #mpd
 alias ncmpcpp="ncmpcpp && tname"
 alias vmpd="sudo $EDITOR /etc/mpd.conf"
