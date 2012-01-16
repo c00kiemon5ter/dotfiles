@@ -165,3 +165,4 @@ macro index gd "<change-folder>=[Gmail]/Drafts<enter>"   "Go to drafts"
 # to delete a message in gmail, place it under [Gmail]/Trash label
 macro index,pager d "<save-message>=[Gmail]/Trash<enter><enter><refresh>" "Trash"
 
+push 1<enter>
