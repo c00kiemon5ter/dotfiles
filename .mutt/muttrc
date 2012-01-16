@@ -163,5 +163,5 @@ macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
 macro index gs "<change-folder>=[Gmail]/Starred<enter>"  "Go to starred messages"
 macro index gd "<change-folder>=[Gmail]/Drafts<enter>"   "Go to drafts"
 # to delete a message in gmail, place it under [Gmail]/Trash label
-macro index,pager d "<save-message>=[Gmail]/Trash<enter><refresh>" "Trash"
+macro index,pager d "<save-message>=[Gmail]/Trash<enter><enter><refresh>" "Trash"
 
