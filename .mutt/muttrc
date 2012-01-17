@@ -38,7 +38,7 @@ set hidden_host
 # ask before quit
 set quit=ask-no
 # ask before deleting
-set delete=ask-yes
+set delete=yes
 # do not mark unread or new messages as old
 set nomark_old
 # beep on new events
@@ -60,7 +60,7 @@ set reply_regexp        = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
 
 ## pager stuff
 # number of index lines to show
-set pager_index_lines=5
+set pager_index_lines=8
 # number of context lines to show
 set pager_context=5
 # don't go to next message automatically
@@ -133,8 +133,7 @@ unignore X-Virus-hagbard:
 hdr_order From: Subject: To: CC: BCC: Reply-To: Mail-Followup-To: Date: Organization: User-Agent: X-Mailer:
 
 ## sources
-source ${HOME}/.mutt/colors.muttrc  # dark
-#source ${HOME}/.mutt/colors.davep  # bright
+source ${HOME}/.mutt/colors.muttrc
 #set alias_file=${HOME}/.mutt/alias
 #source $alias_file
 #source ${HOME}/.mutt/sidebar.muttrc
