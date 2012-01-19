@@ -43,7 +43,7 @@ URxvt.internalBorder:0
 URxvt.perl-ext-common:matcher,selection,-readline,-selection-popup,-option-popup,-option-popup,-tabbed,-searchable-scrollback
 URxvt.cutchars:"()*,<>[]{}|'"
 URxvt.matcher.button:1
-URxvt.urlLauncher:chromium
+URxvt.urlLauncher:dwb
 URxvt.underlineURLs:true
 URxvt.perl-ext:url-select
 URxvt.keysym.M-u:perl:url-select:select_next
