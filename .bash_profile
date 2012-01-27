@@ -34,8 +34,3 @@ export LESS_TERMCAP_us=$'\e[01;32m'
 source "$HOME/.bashrc"
 syncdirs &>/dev/null &
 
-if [[ -z "$DISPLAY" ]] && [[ "$(tty)" = "/dev/tty1" ]]; then
-    startx
-    logout
-fi
-
