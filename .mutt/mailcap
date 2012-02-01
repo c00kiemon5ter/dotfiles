@@ -1,2 +1,4 @@
-text/html; lynx -dump %s; nametemplate=%s.html; copiousoutput
-
+text/html; links -dump %s; nametemplate=%s.html; copiousoutput
+images/jpeg; meh %s;
+images/jpg; meh %s;
+images/png; meh %s;

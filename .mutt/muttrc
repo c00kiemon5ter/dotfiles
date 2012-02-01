@@ -9,6 +9,7 @@ set mail_check=120
 
 source ${HOME}/.mutt/gmail_account
 set realname="Ivan c00kiemon5ter V Kanakarakis"
+set from="c00kiemon5ter@suicidemachine.com"
 
 set smtp_url=smtps://${imap_user}:${imap_pass}@smtp.gmail.com
 set ssl_force_tls=yes
@@ -39,8 +40,6 @@ set hidden_host
 set quit=ask-no
 # ask before deleting
 set delete=yes
-# do not mark unread or new messages as old
-set nomark_old
 # beep on new events
 set beep_new
 # continue on bg when suspended
