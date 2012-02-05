@@ -36,6 +36,6 @@ bbgwht="\e[1;47m"       # White
 
 normal="\e[0m"          # text reset
 mkbold="\e[1m"          # make bold
-undrln="\e[4m""         # underline
+undrln="\e[4m"          # underline
 mkblnk="\e[5m"          # make blink
 revers="\e[7m"          # reverse
