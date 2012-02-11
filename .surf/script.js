@@ -1,7 +1,6 @@
 /* ******************************
  * SimplyRead -- use with Alt-R *
- * ******************************
- * */
+ * ******************************/
 
 /* See COPYING file for copyright, license and warranty details. */
 (function() {
@@ -95,8 +94,7 @@ function simplyread(nostyle, nolinks)
 
 /* *************************************************
  * Open links in new tab with Middle click or Ctrl *
- * *************************************************
- * */
+ * *************************************************/
 (function() {
 	window.addEventListener("click", function(e) {
 		if (e.button == 1 || e.ctrlKey) {
@@ -112,8 +110,7 @@ function simplyread(nostyle, nolinks)
 
 /* ***********************
  * link hints - ^f ^F ^c *
- * ***********************
- * */
+ * ***********************/
 
 /* based on chromium plugin code, adapted by Nibble<.gs@gmail.com> */
 var hint_num_str = '';
@@ -240,11 +237,14 @@ function setHints() {
 				'left: ', elem_left, 'px;',
 				'top: ', elem_top, 'px;',
 				'position: absolute;',
+				'text-align: center;',
 				'font-size: 13px;',
-				'background-color: ' + (hint_open_in_new_tab ? '#ff6600' : 'red') + ';',
-				'color: white;',
 				'font-weight: bold;',
-				'padding: 0px 1px;',
+				'font: monospace;',
+				'background-color: ' + (hint_open_in_new_tab ? '#036' : '#057') + ';',
+				'color: white;',
+				'padding: 1px 2px;',
+				'border: 1px solid white;',
 				'z-index: 100000;'
 					].join('');
 			span.innerHTML = hint_elems.length;
@@ -421,7 +421,7 @@ function get_key(evt){
 	return ctrl+meta+key;
 }
 
-/* *************************************************
- * *************************************************
- * */
+/* **********************************************
+ *												*
+ * **********************************************/
 
