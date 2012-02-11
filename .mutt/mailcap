@@ -1,4 +1,3 @@
-text/html; links -dump %s; nametemplate=%s.html; copiousoutput
-images/jpeg; meh %s;
-images/jpg; meh %s;
-images/png; meh %s;
+text/html; links -html-numbered-links 1 -dump %s; copiousoutput
+images/*; meh %s;
+application/pdf; mupdf %s;
