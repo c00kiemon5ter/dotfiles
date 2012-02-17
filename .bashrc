@@ -30,7 +30,6 @@ shopt -s checkwinsize
 shopt -s cmdhist
 shopt -s dirspell
 shopt -s histappend
-shopt -s hostcomplete
 shopt -s no_empty_cmd_completion
 shopt -s nocaseglob
 
