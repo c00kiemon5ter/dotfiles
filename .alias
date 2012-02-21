@@ -74,7 +74,9 @@ alias starwars="telnet towel.blinkenlights.nl"
 #alias myip="curl ifconfig.me"
 alias myip="curl icanhazip.com"
 # the 'tree' command ..revisited
-alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+alias tree="find . -print | sed -e 's;[^/]*/;|---- ;g;s;---- |;   |;g'"
+alias stree="find . -print | sed -e 's;[^/]*/;|---- ;g;s;---- |;   |;g;s;|   |;  |;g;'"
+alias sstree="find . -print | sed -e 's;[^/]*/;|---- ;g;s;---- |;   |;g;s;| ;  ;g'"
 # the matrix
 alias matrix="tr -c \"[:digit:]\" \" \" < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR=\"1;32\" grep --color \"[^ ]\""
 # binary clock

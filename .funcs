@@ -35,17 +35,11 @@ cd() {
     builtin cd "$1"
 }
 # copy and follow
-cpf() {
-	cp "$@" && cd "$_";
-}
+cpf() { cp "$@" && cd "$_"; }
 # move and follow
-mvf() {
-	mv "$@" && cd "$_";
-}
+mvf() { mv "$@" && cd "$_"; }
 # make dir and follow
-mkf() {
-    mkdir -vp "$1" && cd "$_";
-}
+mkf() { mkdir -vp "$1" && cd "$_"; }
 
 # funny quotes from bash.org @irc
 bashfortune() {
@@ -58,18 +52,15 @@ bashfortune() {
 }
 
 # slow output
-slow_output() {
-    while IFS= read -r -N1; do printf "%c" "$REPLY"; sleep ${1:-.02}; done;
-}
+slow_output() { while IFS= read -r -N1; do printf "%c" "$REPLY"; sleep ${1:-.02}; done; }
 
 # change terminal title
-tname() {
-    printf "%b" "\e]0;${1:-$TERM}\a"
-}
+tname() { printf "%b" "\e]0;${1:-$TERM}\a"; }
 
 # alternative clear
-cls() {
-    printf "%b" "\ec"
-}
+cls() { printf "%b" "\ec"; }
+
+# a tree alternative
+t() { find "${1:-.}" -print | sed -e '2,$s;[^/]*/;|---- ;g;s;---- |;   |;g;s;|   |;  |;g;'; }
 
 # vim: nospell
