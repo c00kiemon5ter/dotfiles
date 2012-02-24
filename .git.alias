@@ -1,5 +1,6 @@
 alias gst="git status -sb"
 alias glc="git log --abbrev-commit --graph --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+alias gla="glc --branches -20"
 alias glf="git log --abbrev-commit --parents --graph --oneline --name-status"
 
 __define_git_completion () {
