@@ -1,0 +1,5 @@
+]:exja (function(){var e=document.querySelector("[rel='next']");if(e){location=e.href;}else{var f=document.getElementsByTagName("a");var i=f.length;while((e=f[--i])){if(e.text.search(/(\b(next|more|newer)\b|^(>|>>|»|→)$|^(>|>>|»|→)|(>|>>|»|→)$)/i)>-1){location=e.href; break;}}}})();
+
+[:exja (function(){var e=document.querySelector("[rel='prev']");if(e){location=e.href;}else{var f=document.getElementsByTagName("a");var i=f.length;while((e=f[--i])){if(e.text.search(/(\b(prev|previous|older)\b|^(<|<<|«|←)$|^(<|<<|«|←)|(<|<<|«|←)$)/i)>-1){location=e.href;break;}}}})();
+
+t:exja (function(){var e=document.createElement('script');e.setAttribute('language','javascript');e.setAttribute('src','//bitly.com/bookmarklet/load.js');document.body.appendChild(e);void(0);})();

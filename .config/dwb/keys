@@ -141,5 +141,4 @@ tab_move_right= gr
 tab_move_left= gl
 tab_move= gm
 reload_userscripts= 
-dwb_custom_keys_area=]:exja (function(){var e=document.querySelector("[rel='next']");if(e){location=e.href;}else{var f=document.getElementsByTagName("a");var i=f.length;while((e=f[--i])){if(e.text.search(/(\b(next|more|newer)\b|^(>|>>|»|→)$|^(>|>>|»|→)|(>|>>|»|→)$)/i)>-1){location=e.href; break;}}}})();
 
