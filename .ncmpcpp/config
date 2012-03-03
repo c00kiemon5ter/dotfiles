@@ -4,8 +4,9 @@
 ####################################################
 
 # Playlist
-song_columns_list_format = "(6)[blue]{l} (25)[red]{a} (40)[green]{t|f} (30)[yellow]{b}"
-now_playing_prefix = "$b$5»$7»$1» "
+#song_columns_list_format = "(6)[blue]{l} (25)[red]{a} (40)[green]{t|f} (30)[yellow]{b}"
+song_columns_list_format = "(6)[black]{l} (25)[green]{a} (40)[cyan]{t|f} (30)[blue]{b}"
+now_playing_prefix = "$b$4»$7»$1» "
 now_playing_suffix = "$/b"
 playlist_display_mode = "columns" (classic/columns)
 autocenter_mode = "yes"
