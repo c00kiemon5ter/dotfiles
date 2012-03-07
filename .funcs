@@ -61,6 +61,11 @@ tname() { printf "%b" "\e]0;${1:-$TERM}\a"; }
 cls() { printf "%b" "\ec"; }
 
 # a tree alternative
-t() { find "${1:-.}" -print | sed -e '2,$s;[^/]*/;|---- ;g;s;---- |;   |;g;s;|   |;  |;g;'; }
+t() {
+    path="${1:-.}"
+    shift
+    find "$path" "$@" -print | \
+    sed -e '2,$s;[^/]*/;|---- ;g;s;---- |;   |;g;s;|   |;  |;g;'
+}
 
 # vim: nospell
