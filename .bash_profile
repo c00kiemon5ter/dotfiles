@@ -1,7 +1,6 @@
-pathdirs=( /usr/bin /bin /usr/sbin /sbin
-           /usr/bin/*_perl /usr/bin/perlbin/vendor
-           /usr/lib/perl5/*_perl/bin /usr/share/perl5/*_perl
-           /home/c00kiemon5ter/.bin /usr/local/bin )
+pathdirs=( /usr/local/bin /sbin /usr/sbin /bin /usr/bin
+           /usr/bin/*_perl /usr/bin/perlbin/vendor /usr/lib/perl5/*_perl/bin /usr/share/perl5/*_perl
+           /home/c00kiemon5ter/.bin /home/c00kiemon5ter/.bin/f )
 IFS=:; export PATH="${pathdirs[*]}" && unset pathdirs
 
 export LC_COLLATE="C"
