@@ -144,7 +144,7 @@ reload_userscripts=
 
 cancel_download= ad
 clear_tab= gc
-show_bookmarks= Sb
-show_downloads= Sd
-show_quickmarks= Sq
-show_history= Sh
+show_bookmarks= sb
+show_downloads= sd
+show_quickmarks= sq
+show_history= sh
