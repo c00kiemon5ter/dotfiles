@@ -63,23 +63,23 @@ alias vquote="$EDITOR $HOME/.archquotes"
 alias netbeans="netbeans --laf com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 alias ssmem="smem -k -c 'pid uss pss rss name' -t"
 alias sscrot="scrot -s /tmp/shot.png"
-
-# starx and do more stuff
+alias htop="htop -u $USER"
 alias x="startx &"
+# Shows your WAN IP, when you`re sitting behind a router
+#alias myip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
+#alias myip="curl ifconfig.me"
+alias myip="curl icanhazip.com"
 # the 'tree' command ..revisited
 alias tree="find . -print | sed -e 's;[^/]*/;|---- ;g;s;---- |;   |;g'"
 alias stree="find . -print | sed -e 's;[^/]*/;|---- ;g;s;---- |;   |;g;s;|   |;  |;g;'"
 alias sstree="find . -print | sed -e 's;[^/]*/;|---- ;g;s;---- |;   |;g;s;| ;  ;g'"
+
 # fortune equality
 alias fortune="fortune -e -a"
 # Gets a random Futurama quote from slashdot.org(/.)
 alias futurama="curl -Is slashdot.org | egrep '^X-(F|B|L)' | cut -d \- -f 2"
 # star wars movie on ascii
 alias starwars="telnet towel.blinkenlights.nl"
-# Shows your WAN IP, when you`re sitting behind a router
-#alias myip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
-#alias myip="curl ifconfig.me"
-alias myip="curl icanhazip.com"
 # the matrix
 alias matrix="tr -c \"[:digit:]\" \" \" < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR=\"1;32\" grep --color \"[^ ]\""
 # binary clock
