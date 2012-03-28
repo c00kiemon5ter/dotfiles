@@ -10,7 +10,7 @@ export LC_MONETARY="el_GR.UTF-8"
 export HISTCONTROL=erasedups:ignorespace
 export HISTIGNORE="&:pwd:cd:~:[bf]g:history *:l:l[wsla]:lla:exit:\:q"
 
-export BROWSER="dwb"
+export BROWSER="chromium"
 export EDITOR="vim"
 export PAGER="less"
 
