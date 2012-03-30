@@ -10,6 +10,7 @@ alias cd..="cd .."
 alias v="$EDITOR"
 alias sv="sudo $EDITOR"
 alias svim="sudo $EDITOR"
+alias vs="vim -S .vim.session"
 
 ## Common
 alias df="df -h -T"
