@@ -60,6 +60,11 @@ tname() { printf "%b" "\e]0;${1:-$TERM}\a"; }
 # alternative clear
 cls() { printf "%b" "\ec"; }
 
+# pastebin
+sprunge() {
+    curl -sF "sprunge=<${1:--}" 'http://sprunge.us' | tee -a /tmp/saved.urls | xclip && xclip -o
+}
+
 # a tree alternative
 t() {
     path="${1:-.}"
