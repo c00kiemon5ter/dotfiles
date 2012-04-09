@@ -1,13 +1,13 @@
-! c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License 
+! c00kiemon5ter (ivan.kanak@gmail.com) ~ under c00kie License
 
 *foreground: #DDEEDD
-*background: #181818
+*background: #111111
 
 ! Black
 *color0: #222222
 *color8: #454545
 
-! Red 
+! Red
 *color1: #c5000b
 *color9: #ff0000
 

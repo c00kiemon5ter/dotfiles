@@ -1,0 +1,36 @@
+
+*background: #1f1912
+*foreground: #d5fac8
+
+! (black: dark_brown / light_brown)
+*color0: #0a0806
+*color8: #816749
+
+! (red: red / pink)
+*color1: #d80450
+*color9: #ec6c99
+
+! (green: green / lime_green)
+*color2: #76bc20
+*color10: #94d900
+
+! (yellow: orange / yellow)
+*color3: #fbb32f
+*color11: #e5e339
+
+! (blue: blue / pastel_green)
+*color4: #3f91f1
+*color12: #d8ff84
+
+! (magenta: burnt_orange / lavender)
+*color5: #f63f05
+*color13: #e6a2f3
+
+! (cyan: pastel_blue / pastel_blue)
+*color6: #8ccdea
+*color14: #8ccdea
+
+! (white: brown / tan)
+*color7: #1f1912
+*color15: #fee3b4
+
