@@ -24,7 +24,7 @@ set show-all-if-ambiguous on
 set mark-symlinked-directories on
 
 # edit mode is vi like
-set editing-mode vi
+#set editing-mode vi
 
 # completion as list
 set completion-display-width 0
