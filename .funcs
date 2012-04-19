@@ -67,10 +67,9 @@ sprunge() {
 
 # a tree alternative
 t() {
-    path="${1:-.}"
-    shift
-    find "$path" "$@" -print | \
-    sed -e '2,$s;[^/]*/;|---- ;g;s;---- |;   |;g;s;|   |;  |;g;'
+    path="$(readlink -m "${1:-$PWD}")"
+    [[ -n $1 ]] && shift
+    find "$path" "$@" -print | sed "2,\$s;${path%/*}/;;;2,\$s;[^/]*/;|---- ;g;s;---- |;   |;g"
 }
 
 # vim: nospell

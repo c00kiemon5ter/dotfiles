@@ -70,10 +70,6 @@ alias x="startx &"
 #alias myip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 #alias myip="curl ifconfig.me"
 alias myip="curl icanhazip.com"
-# the 'tree' command ..revisited
-alias tree="find . -print | sed -e 's;[^/]*/;|---- ;g;s;---- |;   |;g'"
-alias stree="find . -print | sed -e 's;[^/]*/;|---- ;g;s;---- |;   |;g;s;|   |;  |;g;'"
-alias sstree="find . -print | sed -e 's;[^/]*/;|---- ;g;s;---- |;   |;g;s;| ;  ;g'"
 
 # fortune equality
 alias fortune="fortune -e -a"
