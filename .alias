@@ -56,6 +56,7 @@ alias alex="telnet alexandros.ccslab.aueb.gr"
 alias foss="ssh foss.aueb.gr"
 
 ## Other
+alias chromium="chromium --enable-seccomp-sandbox --memory-model=low --purge-memory-button --disk-cache-dir=/tmp/chromium"
 alias mutt="dtach -A $HOME/.mutt/mutt.session mutt"
 alias irssi="dtach -A $HOME/.irssi/irssi.session irssi"
 alias irc="dtach -A $HOME/.weechat/weechat.session weechat-curses"
