@@ -1,0 +1,37 @@
+! c00kiemon5ter (ivan.kanak@gmail.com) ~ under cookie License (C)
+
+*foreground: #ddeedd
+*background: #131313
+
+! black
+*color0: #222222
+*color8: #454545
+
+! red
+*color1: #c5000b
+*color9: #ff0000
+
+! green
+*color2:  #579d1c
+*color10: #a6cd07
+
+! yellow
+*color3:  #ff420e
+*color11: #ff950e
+
+! blue
+*color4:  #0066cc
+*color12: #4bb5c1
+
+! magneta
+*color5:  #9c3885
+*color13: #d11793
+
+! cyan
+*color6:  #426870
+*color14: #6e7c75
+
+! white
+*color7:  #e2e2e5
+*color15: #ffffff
+

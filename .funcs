@@ -4,14 +4,14 @@
 # the prompt
 prompt() {
 	local s="$?" sc="$bfggrn" g= b=
-	((s)) && sc="$fgylw" s="\[$bfgcyn\][\[$sc\]$s\[$bfgcyn\]]" || s=
+	((s)) && sc="$fgylw" s="\[$sc\]$s" || s=
     if b="$(git symbolic-ref HEAD 2>/dev/null)\[$fggrn\]"; then
         g="$(git status -s 2>/dev/null)"
 		grep "^ \?[MADRCU]" <<< "$g" &>/dev/null && b+="!"
 		grep "^??"          <<< "$g" &>/dev/null && b+="?"
 		g="\[$fgwht\]:\[$fgylw\]${b#refs/heads/}"
 	fi
-	PS1="\n\[$fgcyn\]┐$s \[$bfgblu\]\h \[$fggrn\]\w$g\n\[$fgcyn\]└\[$sc\]─ \[$normal\]"
+	PS1="\n\[$bfgcyn\]┐$s \[$fgcyn\]\h \[$fggrn\]\w$g\n\[$bfgcyn\]└\[$sc\]─ \[$normal\]"
 	PS2=" \[$fgcyn\]> \[$normal\]"
 	PS3=" \[$bfgcyn\]> \[$normal\]"
 	PS4="[$LINENO]+ "

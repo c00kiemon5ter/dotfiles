@@ -74,7 +74,7 @@ URxvt.iso14755_52:false
 ! -------------- }
 
 ! URxvt Color Settings {
-#include "/home/c00kiemon5ter/.color_schemes/librec00kiez"
+#include "/home/c00kiemon5ter/.color_schemes/cookierati"
 
 URxvt.depth:16
 URxvt.dynamicColors:on
