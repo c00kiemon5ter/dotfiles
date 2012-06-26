@@ -35,7 +35,7 @@ shopt -s nocaseglob
 
 case $TERM in
     linux)
-        idx=0 theme="${HOME}/.color_schemes/console_librec00kiez"
+        idx=0 theme="${HOME}/.color_schemes/console_cookierati"
         while read -r; do
             printf "\e]P%x%s" "$((idx++))" "${REPLY}"
         done < <(sed '/^[[:alnum:]]/s: *#.*::' "${theme}")
