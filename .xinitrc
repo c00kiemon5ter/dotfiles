@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+xrandr --output DVI-I-1 --right-of DVI-I-2
+xrandr --output DVI-I-1 --auto
+xrandr --output DVI-I-2 --auto
+xrandr --output DVI-I-1 --primary
+
 xset +fp /usr/share/fonts/local
 xset fp rehash
 
