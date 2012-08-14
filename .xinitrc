@@ -15,8 +15,7 @@ xrdb -merge "${HOME}/.Xresources"
 setxkbmap -model evdev -layout us,gr -variant extended \
     -option grp_led:scroll,grp:shifts_toggle,eurosign:e,terminate:ctrl_alt_bksp &
 
-#display -window root "${HOME}/.wallpaper.png" &
-feh --no-fehbg --bg-center "${HOME}/.wallpaper.png"
+bgs -c "${HOME}/.wallpaper.png"
 xsetroot -cursor_name left_ptr
 
 exec "${HOME}/.bin/wmrun.sh"
