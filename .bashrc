@@ -22,7 +22,7 @@
 #    clear
 #fi
 
-CDPATH=".:${HOME}/projects/:${HOME}/data/"
+CDPATH=".:${HOME}:${HOME}/projects:/mnt/data"
 test -r .dircolors && eval "export $(dircolors -b .dircolors)"
 
 shopt -s cdspell
