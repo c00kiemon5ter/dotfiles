@@ -1,0 +1,8 @@
+
+[ui]
+username = Ivan c00kiemon5ter Kanakarakis <ivan.kanak@gmail.com>
+
+[extensions]
+hgext.bookmarks =
+hggit =
+
