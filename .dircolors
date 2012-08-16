@@ -165,6 +165,7 @@ EXEC 01;32
 .py   00;36
 .sh   00;36
 .vim  00;36
+.diff 00;35
 
 # objects
 .a   00;33
@@ -172,5 +173,9 @@ EXEC 01;32
 .o   00;33
 .so  00;33
 
-# redo alternative to make
+# man pages
+.1   01;36
+
+# build systems
+.mk  00;35
 .do  00;35
