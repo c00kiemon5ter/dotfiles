@@ -72,4 +72,23 @@ t() {
     find "$path" "$@" -print | sed "2,\$s;${path%/*}/;;;2,\$s;[^/]*/; |- ;g;s;-  |;   |;g"
 }
 
+irc() {
+    clear && while true; do notifiii.sh; done | grep "#[^[:space:]]\+"
+}
+
+ircon() {
+    local passwd=
+    read -rsp "enter passwd: " passwd
+    freenode="$passwd" oftc="$passwd" connect.sh && unset passwd
+    printf '\n'
+}
+
+ircoff() {
+    ps -C sh -opid,cmd | grep connect.sh | awk '{print $1}' | xargs kill
+    # how do I know if the network is connected ?
+    #for network in $HOME/irc/*
+    #do [[ -p $network/in ]] && echo '/quit' > "$network/in"
+    #done
+}
+
 # vim: nospell
