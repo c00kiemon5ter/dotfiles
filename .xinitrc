@@ -18,4 +18,4 @@ setxkbmap -model evdev -layout us,gr -variant extended \
 bgs -c "${HOME}/.wallpaper.png"
 xsetroot -cursor_name left_ptr
 
-exec "${HOME}/.bin/wmrun.sh"
+exec "${HOME}/bin/wmrun.sh"
