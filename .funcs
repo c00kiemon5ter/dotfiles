@@ -79,8 +79,9 @@ irc() {
 ircon() {
     local passwd=
     read -rsp "enter passwd: " passwd
-    freenode="$passwd" oftc="$passwd" connect.sh && unset passwd
-    printf '\n'
+    freenode="$passwd" oftc="$passwd" connect.sh
+    unset passwd
+    while true; do notifiii.sh ; done | grep "#[^ ]*"
 }
 
 ircoff() {
