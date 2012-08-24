@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-xrandr --output DVI-I-1 --primary
-xrandr --output DVI-I-1 --auto
-xrandr --output DVI-I-2 --auto
-xrandr --output DVI-I-1 --right-of DVI-I-2
+xrandr --output DVI-I-1 --primary --auto --right-of DVI-I-2 --auto
 
 xsetroot -cursor_name watch
 which warpcursor && warpcursor 1
