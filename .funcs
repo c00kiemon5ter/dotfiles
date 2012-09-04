@@ -81,7 +81,7 @@ ircon() {
     read -rsp "enter passwd: " passwd
     freenode="$passwd" oftc="$passwd" connect.sh
     unset passwd
-    while true; do notifiii.sh ; done | grep "#[^ ]*"
+    while true; do notifiii.sh; sleep 1; done
 }
 
 ircoff() {
