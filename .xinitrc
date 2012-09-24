@@ -3,7 +3,7 @@
 xrandr --output DVI-I-1 --primary --auto --right-of DVI-I-2 --auto
 
 xsetroot -cursor_name watch
-which warpcursor && warpcursor 1
+command -v warpcursor && warpcursor 1
 
 xset +fp /usr/share/fonts/local
 xset fp rehash
