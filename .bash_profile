@@ -2,7 +2,7 @@ pathdirs=(
     /sbin /usr/sbin
     /usr/local/bin
     /bin /usr/bin/{,*_perl}
-    $HOME/bin/{,f,iii}
+    $HOME/bin/{,f,v,iii}
 )
 IFS=:; export PATH="${pathdirs[*]}" && unset pathdirs
 
