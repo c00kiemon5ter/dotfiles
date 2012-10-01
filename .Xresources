@@ -1,7 +1,7 @@
 ! c00kiemon5ter (ivan.kanak@gmail.com)
 ! All cookies reserved (C)
 
-! xft settings {
+! xft settings
 Xft.autohint:false
 Xft.lcdfilter:lcddefault
 Xft.hintstyle:hintfull
@@ -10,27 +10,16 @@ Xft.antialias:true
 Xft.dpi:96
 Xft.rgba:rgb
 
-! ------------ }
-
-! X Cursor theme {
+! X Cursor theme
 Xcursor.theme:Vanilla-DMZ
 Xcursor.size:16
-! -------------- }
 
-! dzen2 settings {
-dzen2.foreground:#efefef
-dzen2.background:#262626
-dzen2.font:-misc-terminusmod.icons-medium-r-normal--12-120-72-72-c-60-*-*
-
-! -------------- }
-
-! Fonts {
+! Fonts
 XTerm*font:      -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 URxvt.font:      -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 URxvt.bold.font: -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
-! ----------- }
 
-! URxvt Settings {
+! URxvt Settings
 URxvt.title:rxvt-unicode
 URxvt.termName:rxvt-unicode
 URxvt.iconFile:/usr/share/icons/scalable/apps/terminal.svg
@@ -47,7 +36,7 @@ URxvt.cutchars:"()*,<>[]{}|'"
 URxvt.matcher.button:1
 
 ! urxvt-perls
-URxvt.perl-ext:             default,clipboard,url-select,keyboard-select
+URxvt.perl-ext:             clipboard,url-select,keyboard-select
 ! url-select
 URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.url-select.autocopy:  true
@@ -67,9 +56,8 @@ modifier:meta
 !alt, meta, hyper, super, mod1..5
 
 URxvt.buffered:true
-URxvt.saveLines:500
+URxvt.saveLines:1000
 URxvt.scrollstyle:plain
-URxvt.secondaryScroll:true
 URxvt.jumpScroll:true
 URxvt.skipScroll:false
 URxvt.scrollBar:false
@@ -80,9 +68,8 @@ URxvt.mouseWheelScrollPage:false
 
 URxvt.iso14755:false
 URxvt.iso14755_52:false
-! -------------- }
 
-! URxvt Color Settings {
+! URxvt Color Settings
 #include "/home/c00kiemon5ter/.color_schemes/cookierati"
 
 URxvt.depth:16
@@ -96,6 +83,4 @@ URxvt.pointerColor:gray
 URxvt.pointerColorBackground:black
 URxvt.pointerBlank:false
 URxvt.pointerBlankDelay:2
-! -------------------- }
 
-! vim: nospell foldmethod=marker:foldmarker={,}:foldlevel=0
