@@ -28,8 +28,8 @@ URxvt.urgentOnBell:true
 URxvt.highlightSelection:True
 URxvt.geometry:98x28
 URxvt.borderLess:false
-URxvt.externalBorder:1
-URxvt.internalBorder:0
+URxvt.externalBorder:2
+URxvt.internalBorder:2
 
 URxvt.perl-ext-common:matcher,selection,-readline,-selection-popup,-option-popup,-option-popup,-tabbed,-searchable-scrollback
 URxvt.cutchars:"()*,<>[]{}|'"
