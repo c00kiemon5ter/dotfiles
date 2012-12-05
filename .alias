@@ -35,13 +35,14 @@ alias vprof="$EDITOR $HOME/.bash_profile && source $HOME/.bash_profile"
 alias vbash="$EDITOR $HOME/.bashrc && reload"
 alias valias="$EDITOR $HOME/.alias && reload"
 alias vfuncs="$EDITOR $HOME/.funcs && reload"
+#x
 alias vxdefs="$EDITOR $HOME/.Xresources && xrdb $HOME/.Xresources"
+alias vxinit="$EDITOR $HOME/.xinitrc"
 #mpd
 alias ncmpcpp="ncmpcpp && tname"
 alias vmpd="sudo $EDITOR /etc/mpd.conf"
 alias vncmpcpp="$EDITOR $HOME/.ncmpcpp/config"
 #other
-alias vxinit="$EDITOR $HOME/.xinitrc"
 alias vvim="$EDITOR $HOME/.vimrc"
 alias vgit="$EDITOR $HOME/.gitconfig"
 #etc confs
@@ -57,6 +58,7 @@ alias alex="telnet alexandros.ccslab.aueb.gr"
 alias foss="ssh foss.aueb.gr"
 
 ## Other
+alias tmux="tmux -2"
 alias chromium="chromium --enable-seccomp-sandbox --memory-model=low --purge-memory-button --disk-cache-dir=/tmp/chromium"
 alias mutt="dtach -A $HOME/.mutt/mutt.session mutt"
 alias vnotes="$EDITOR $HOME/.notes.yml"
