@@ -34,5 +34,4 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[01;32m'
 
 source "$HOME/.bashrc"
-#syncdirs &>/dev/null &
 
