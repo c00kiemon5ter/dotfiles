@@ -45,6 +45,7 @@ alias vncmpcpp="$EDITOR $HOME/.ncmpcpp/config"
 #other
 alias vvim="$EDITOR $HOME/.vimrc"
 alias vgit="$EDITOR $HOME/.gitconfig"
+alias vmux="$EDITOR $HOME/.tmux.conf"
 #etc confs
 alias vmkconf="sudo $EDITOR /etc/make.conf"
 alias vxorg="sudo $EDITOR /etc/X11/xorg.conf"
@@ -58,7 +59,7 @@ alias alex="telnet alexandros.ccslab.aueb.gr"
 alias foss="ssh foss.aueb.gr"
 
 ## Other
-alias tmux="tmux -2"
+alias tmux="tmux -2u"
 alias chromium="chromium --enable-seccomp-sandbox --memory-model=low --purge-memory-button --disk-cache-dir=/tmp/chromium"
 alias mutt="dtach -A $HOME/.mutt/mutt.session mutt"
 alias vnotes="$EDITOR $HOME/.notes.yml"
@@ -68,6 +69,7 @@ alias ssmem="smem -k -c 'pid uss pss rss name' -t"
 alias sscrot="scrot -s /tmp/shot.png"
 alias htop="htop -u $USER"
 alias x="startx &"
+
 # Shows your WAN IP, when you`re sitting behind a router
 #alias myip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 #alias myip="curl ifconfig.me"
