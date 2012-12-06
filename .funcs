@@ -4,8 +4,8 @@
 # the prompt
 prompt() {
 	(($?)) && sc="$fgylw" s='!' || sc="$bfggrn" s=' '
-    if b="$(git symbolic-ref HEAD 2>/dev/null)\[$fggrn\]"; then
-        g="$(git status -s 2>/dev/null)"
+	if b="$(git symbolic-ref HEAD 2>/dev/null)\[$fggrn\]"; then
+		g="$(git status -s 2>/dev/null)"
 		grep "^ \?[MADRCU]" <<< "$g" &>/dev/null && b+="!"
 		grep "^??"          <<< "$g" &>/dev/null && b+="?"
 		g="\[$fgwht\]:\[$fgylw\]${b#refs/heads/}"
@@ -29,10 +29,10 @@ wazaaa() {
 
 # cd helper
 cd() {
-    { [ -z "$1" ] && builtin cd "$HOME"; }           || \
-    { [ -d "$1" ] && builtin cd "$1"; }              || \
-    { [ -f "$1" ] && builtin cd "$(dirname "$1")"; } || \
-    builtin cd "$1"
+	{ [ -z "$1" ] && builtin cd "$HOME"; }           || \
+	{ [ -d "$1" ] && builtin cd "$1"; }              || \
+	{ [ -f "$1" ] && builtin cd "$(dirname "$1")"; } || \
+	builtin cd "$1"
 }
 # copy and follow
 cpf() { cp "$@" && cd "$_"; }
@@ -44,11 +44,11 @@ mkf() { mkdir -vp "$1" && cd "$_"; }
 # funny quotes from bash.org @irc
 bashfortune() {
 	curl -s http://bash.org/?random1 \
-        | grep -oE "<p class=\"quote\">.*</p>.*</p>" \
-        | grep -oE "<p class=\"qt.*?</p>" \
-        | sed -e 's/<\/p>/\n/g' -e 's/<p class=\"qt\">//g' -e 's/<p class=\"qt\">//g' \
-        | perl -ne 'use HTML::Entities;print decode_entities($_),"\n"' \
-        | head -1
+		| grep -oE "<p class=\"quote\">.*</p>.*</p>" \
+		| grep -oE "<p class=\"qt.*?</p>" \
+		| sed -e 's/<\/p>/\n/g' -e 's/<p class=\"qt\">//g' -e 's/<p class=\"qt\">//g' \
+		| perl -ne 'use HTML::Entities;print decode_entities($_),"\n"' \
+		| head -1
 }
 
 # slow output
@@ -62,34 +62,34 @@ cls() { printf "%b" "\ec"; }
 
 # pastebin
 sprunge() {
-    curl -sF "sprunge=<${1:--}" 'http://sprunge.us' | tee -a /tmp/saved.urls | xclip && xclip -o
+	curl -sF "sprunge=<${1:--}" 'http://sprunge.us' | tee -a /tmp/saved.urls | xclip && xclip -o
 }
 
 # a tree alternative
 t() {
-    path="$(readlink -m "${1:-$PWD}")"
-    [[ -n $1 ]] && shift
-    find "$path" "$@" -print | sed "2,\$s;${path%/*}/;;;2,\$s;[^/]*/; |- ;g;s;-  |;   |;g"
+	path="$(readlink -m "${1:-$PWD}")"
+	[[ -n $1 ]] && shift
+	find "$path" "$@" -print | sed "2,\$s;${path%/*}/;;;2,\$s;[^/]*/; |- ;g;s;-  |;   |;g"
 }
 
 irc() {
-    clear && while true; do notifiii.sh; done | grep "#[^[:space:]]\+"
+	clear && while true; do notifiii.sh; done
 }
 
 ircon() {
-    local passwd=
-    read -rsp "enter passwd: " passwd
-    freenode="$passwd" oftc="$passwd" connect.sh
-    unset passwd
-    while true; do notifiii.sh; sleep 1; done
+	local passwd=
+	read -rsp "enter passwd: " passwd
+	freenode="$passwd" oftc="$passwd" connect.sh
+	unset passwd
+	irc
 }
 
 ircoff() {
-    ps -C sh -opid,cmd | grep connect.sh | awk '{print $1}' | xargs kill
-    # how do I know if the network is connected ?
-    #for network in $HOME/irc/*
-    #do [[ -p $network/in ]] && echo '/quit' > "$network/in"
-    #done
+	# how do I know if the network is connected ?
+	#for network in $HOME/irc/*
+	#do [[ -p $network/in ]] && echo '/quit' > "$network/in"
+	#done
+	ps -C sh -opid,cmd | grep connect.sh | awk '{print $1}' | xargs kill
 }
 
 # vim: nospell
