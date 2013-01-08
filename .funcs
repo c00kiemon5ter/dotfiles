@@ -81,15 +81,12 @@ ircon() {
 	read -rsp "enter passwd: " passwd
 	freenode="$passwd" oftc="$passwd" connect.sh
 	unset passwd
+	spawnchannels.sh
 	irc
 }
 
 ircoff() {
-	# how do I know if the network is connected ?
-	#for network in $HOME/irc/*
-	#do [[ -p $network/in ]] && echo '/quit' > "$network/in"
-	#done
-	ps -C sh -opid,cmd | grep connect.sh | awk '{print $1}' | xargs kill
+	ps -C sh -opid,cmd | awk 'index($3, "connect.sh") {print $1}' | xargs kill
 }
 
 # vim: nospell
