@@ -81,7 +81,9 @@ ircon() {
 }
 
 ircoff() {
-	ps -C sh -opid,cmd | awk 'index($3, "connect.sh") {print $1}' | xargs kill
+	ps -C sh -opid,cmd \
+		| awk 'index($3, "connect.sh") || index($3, "notifiii.sh") {print $1}' \
+		| xargs kill
 }
 
 d() {
