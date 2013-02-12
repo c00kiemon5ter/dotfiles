@@ -3,18 +3,12 @@
 
 # the prompt
 prompt() {
-	(($?)) && sc="$fgylw" s='!' || sc="$bfggrn" s=' '
-	if b="$(git symbolic-ref HEAD 2>/dev/null)\[$fggrn\]"; then
-		g="$(git status -s 2>/dev/null)"
-		grep "^ \?[MADRCU]" <<< "$g" &>/dev/null && b+="!"
-		grep "^??"          <<< "$g" &>/dev/null && b+="?"
-		g="\[$fgwht\]:\[$fgylw\]${b#refs/heads/}"
-	fi
-	PS1="\n\[$bfgcyn\]┐$sc$s\[$fgcyn\]\h \[$fggrn\]\w$g\n\[$bfgcyn\]└\[$sc\]─ \[$normal\]"
-	PS2=" \[$fgcyn\]> \[$normal\]"
-	PS3=" \[$bfgcyn\]> \[$normal\]"
-	PS4="[$LINENO]+ "
-	unset g b s sc
+	[ $? -ne 0 ] && sc="$fgylw" s='!' || sc="$bfggrn" s=' '
+	g="$(git symbolic-ref --short HEAD 2>/dev/null)" &&      \
+	    g="\[$fgwht\]:\[$fgcyn\]$g\[$bfgylw\]$(git status -s \
+	    | awk '!q&&$1=="??"{q="?"} !e&&$1!="??"{e="!"} q&&e{exit} END{printf e q}')"
+	PS1="\n\[$bfgcyn\]┐$sc$s\[$fggrn\]\w$g\n\[$bfgcyn\]└\[$sc\]─ \[$normal\]"
+	unset g s sc
 }
 
 # display a random quote on top of every new shell
