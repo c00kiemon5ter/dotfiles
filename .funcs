@@ -67,10 +67,11 @@ t() {
 }
 
 irc() {
-	clear && while true; do notifiii.sh; done
+	while true; do notifiii.sh; done
 }
 
 ircon() {
+	[ -e "/tmp/.stunnel.pid" ] || stunnel "$HOME/.stunnel/stunnel.conf"
 	local passwd=
 	read -rsp "enter passwd: " passwd
 	freenode="$passwd" oftc="$passwd" connect.sh
