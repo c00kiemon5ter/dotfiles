@@ -84,4 +84,8 @@ ircoff() {
 	ps -C sh -opid,cmd | awk 'index($3, "connect.sh") {print $1}' | xargs kill
 }
 
+d() {
+	dtach -A ~/.term.sock -r winch bash
+}
+
 # vim: nospell
