@@ -11,25 +11,31 @@ Xft.dpi:96
 Xft.rgba:rgb
 
 ! X Cursor theme
-Xcursor.theme:Vanilla-DMZ
-Xcursor.size:16
+Xcursor.theme: Vanilla-DMZ
+Xcursor.size:  16
 
 ! Fonts
-XTerm*font:      -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-URxvt.font:      -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-URxvt.bold.font: -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
+*font:      -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+*bold.font: -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
+! runtime resize -- printf '\033]710;%s\007' "xft:terminus:pixelsize=12"
+URxvt.keysym.M-C-1:command:\033]710;xft:terminus:pixelsize=12\007
+URxvt.keysym.M-C-2:command:\033]710;xft:terminus:pixelsize=14\007
+URxvt.keysym.M-C-3:command:\033]710;xft:terminus:pixelsize=16\007
+URxvt.keysym.M-C-4:command:\033]710;xft:terminus:pixelsize=18\007
+URxvt.keysym.M-C-5:command:\033]710;xft:terminus:pixelsize=20\007
+URxvt.keysym.M-C-6:command:\033]710;xft:terminus:pixelsize=22\007
+URxvt.keysym.M-C-7:command:\033]710;xft:terminus:pixelsize=24\007
+URxvt.keysym.M-C-8:command:\033]710;xft:terminus:pixelsize=28\007
+URxvt.keysym.M-C-9:command:\033]710;xft:terminus:pixelsize=32\007
 
 ! URxvt Settings
 URxvt.title:rxvt-unicode
 URxvt.termName:rxvt-unicode
-URxvt.iconFile:/usr/share/icons/scalable/apps/terminal.svg
 URxvt.visualBell:false
 URxvt.urgentOnBell:true
-URxvt.highlightSelection:True
 URxvt.geometry:98x28
-URxvt.borderLess:false
 URxvt.externalBorder:2
-URxvt.internalBorder:2
+URxvt.internalBorder:1
 
 URxvt.perl-ext-common:matcher,selection,-readline,-selection-popup,-option-popup,-option-popup,-tabbed,-searchable-scrollback
 URxvt.cutchars:"()*,<>[]{}|'"
@@ -47,19 +53,16 @@ URxvt.url-select.underline: true
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym.M-s:           perl:keyboard-select:search
 
-URxvt.eightBitInput:true
-URxvt.inputMethod:SCIM
-URxvt.multichar_encoding:utf-8
-URxvt.preeditType:OverTheSpot,Root
+!URxvt.inputMethod:SCIM
+!URxvt.preeditType:OverTheSpot,Root
 URxvt.imLocale:en_US.UTF-8
 modifier:meta
 !alt, meta, hyper, super, mod1..5
 
-URxvt.buffered:true
-URxvt.saveLines:1000
+URxvt.saveLines:2000
 URxvt.scrollstyle:plain
 URxvt.jumpScroll:true
-URxvt.skipScroll:false
+URxvt.skipScroll:true
 URxvt.scrollBar:false
 URxvt.scrollTtyOutput:false
 URxvt.scrollWithBuffer:true
@@ -73,14 +76,11 @@ URxvt.iso14755_52:false
 #include "/home/c00kiemon5ter/.color_schemes/cookierati"
 
 URxvt.depth:16
-URxvt.dynamicColors:on
 URxvt.transparent:false
 
 URxvt.cursorColor:#888888
-URxvt.cursorBlink:true
-URxvt.cursorUnderline:false
+URxvt.cursorBlink:false
 URxvt.pointerColor:gray
-URxvt.pointerColorBackground:black
 URxvt.pointerBlank:false
 URxvt.pointerBlankDelay:2
 
