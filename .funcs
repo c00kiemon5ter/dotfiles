@@ -56,7 +56,8 @@ cls() { printf "%b" "\ec"; }
 
 # pastebin
 sprunge() {
-	curl -sF "sprunge=<${1:--}" 'http://sprunge.us' | tee -a /tmp/saved.urls | xclip && xclip -o
+	curl -sF "sprunge=<${1:--}" 'http://sprunge.us' | tee -a /tmp/saved.urls \
+		| { [ -n "$DISPLAY" ] && xclip && xclip -o || cat; }
 }
 
 # a tree alternative
