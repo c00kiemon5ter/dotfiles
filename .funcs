@@ -17,17 +17,18 @@ wazaaa() {
 	local arch="Arch" nix="Linux" # the logo
 	local say="$(shuf -n1 $qdb)"  # pick a random quote
 	local spc="$(( COLUMNS - ${#arch} - ${#nix} ))"
-	clear						  # ohai, kthnxbye
+	clear                         # ohai, kthnxbye
 	printf "$mkbold$fgwht%s$bfgblu%s$fgwht%${spc}s$normal\n" "$arch" "$nix" "$say"
 }
 
 # cd helper
 cd() {
-	{ [ -z "$1" ] && builtin cd "$HOME"; }           || \
-	{ [ -d "$1" ] && builtin cd "$1"; }              || \
+	{ [ -z "$1" ] && builtin cd "$HOME";           } || \
+	{ [ -d "$1" ] && builtin cd "$1";              } || \
 	{ [ -f "$1" ] && builtin cd "$(dirname "$1")"; } || \
 	builtin cd "$1"
 }
+
 # copy and follow
 cpf() { cp "$@" && cd "$_"; }
 # move and follow
@@ -67,9 +68,7 @@ t() {
 	find "$path" "$@" -print | sed "2,\$s;${path%/*}/;;;2,\$s;[^/]*/; |- ;g;s;-  |;   |;g"
 }
 
-irc() {
-	while true; do notifiii.sh; done
-}
+irc() { while true; do notifiii.sh; done; }
 
 ircon() {
 	[ -e "/tmp/.stunnel.pid" ] || stunnel "$HOME/.stunnel/stunnel.conf"
@@ -87,8 +86,6 @@ ircoff() {
 		| xargs kill
 }
 
-d() {
-	dtach -A ~/.term.sock -r winch bash
-}
+d() { dtach -A ~/.term.sock -r winch bash; }
 
 # vim: nospell
