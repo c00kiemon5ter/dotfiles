@@ -15,8 +15,8 @@ Xcursor.theme: Vanilla-DMZ
 Xcursor.size:  16
 
 ! Fonts
-*font:      -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-*bold.font: -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt.font:      -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt.bold.font: -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
 ! runtime resize -- printf '\033]710;%s\007' "xft:terminus:pixelsize=12"
 URxvt.keysym.M-C-1:command:\033]710;xft:terminus:pixelsize=12\007
 URxvt.keysym.M-C-2:command:\033]710;xft:terminus:pixelsize=14\007
@@ -73,14 +73,18 @@ URxvt.iso14755:false
 URxvt.iso14755_52:false
 
 ! URxvt Color Settings
-#include "/home/c00kiemon5ter/.color_schemes/cookierati"
+#include "/home/c00kiemon5ter/.color_schemes/solarcookies"
+!#include "/home/c00kiemon5ter/.color_schemes/cookierati"
+!#include "/home/c00kiemon5ter/.color_schemes/solarized"
 
-URxvt.depth:16
-URxvt.transparent:false
-
-URxvt.cursorColor:#888888
 URxvt.cursorBlink:false
-URxvt.pointerColor:gray
-URxvt.pointerBlank:false
-URxvt.pointerBlankDelay:2
+URxvt.transparent:false
+URxvt.depth:16
+
+! Misc Programs
+XFontSel*font:-misc-dejavu sans mono-medium-r-normal--17-*-*-*-*-*-*-*
+Mumble*background:default
+Mumble*foreground:default
+XFontSel*background:#FAFAFA
+XFontSel*foreground:#454545
 
