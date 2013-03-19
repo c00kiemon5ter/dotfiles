@@ -1,0 +1,71 @@
+! Solarized color scheme with cookies
+
+#define C_bg            #0e1116
+#define C_fg            #e2ded0
+
+#define C_black         #262626
+#define C_gray          #426870
+#define C_grey          #666666
+#define C_red           #c5000b
+#define C_green         #579d1c
+#define C_br_green      #a6cd07
+#define C_yellow        #ff950e
+#define C_br_yellow     #f5d63d
+#define C_blue          #007091
+#define C_sky           #4bb5c1
+#define C_crimson       #960050
+#define C_magenta       #d11793
+
+! -------------------------------
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+! -------------------------------
+
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+! -------------------------------
+
+*background:              C_bg
+*foreground:              C_fg
+
+!*fading:                  40
+*fadeColor:               S_base03
+
+*cursorColor:             S_base0
+*pointerColorBackground:  S_base01
+*pointerColorForeground:  S_base1
+
+! -------------------------------
+
+*color0:                  C_black
+*color1:                  C_red
+*color2:                  C_green
+*color3:                  C_yellow
+*color4:                  S_base02
+*color5:                  C_crimson
+*color6:                  S_cyan
+*color7:                  S_base2
+*color8:                  C_gray
+*color9:                  S_orange
+*color10:                 C_br_green
+*color11:                 C_br_yellow
+*color12:                 C_blue
+*color13:                 S_magenta
+*color14:                 C_sky
+*color15:                 S_base3
+
