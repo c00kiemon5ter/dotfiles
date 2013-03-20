@@ -25,13 +25,13 @@ export GREP_OPTIONS='--color=auto -I'
 
 export LESS="-FXRS"
 export LESSHISTFILE="/tmp/.lesshst"
-export LESS_TERMCAP_mb=$'\e[01;31m'
-export LESS_TERMCAP_md=$'\e[0;34m'
-export LESS_TERMCAP_me=$'\e[0m'
-export LESS_TERMCAP_se=$'\e[0m'
-export LESS_TERMCAP_so=$'\e[01;46;37m'
-export LESS_TERMCAP_ue=$'\e[0m'
-export LESS_TERMCAP_us=$'\e[01;32m'
+export LESS_TERMCAP_mb=$'\e[01;31m'      # begin blinking
+export LESS_TERMCAP_md=$'\e[01;34m'      # begin bold
+export LESS_TERMCAP_me=$'\e[0m'          # end
+export LESS_TERMCAP_so=$'\e[00;44;33m'   # begin standout
+export LESS_TERMCAP_se=$'\e[0m'          # end standout
+export LESS_TERMCAP_us=$'\e[01;32m'      # begin underline
+export LESS_TERMCAP_ue=$'\e[0m'          # end underline
 
 source "$HOME/.bashrc"
 
