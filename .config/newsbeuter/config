@@ -1,0 +1,17 @@
+browser "chromium %u"
+
+bind-key k up
+bind-key j down
+#bind-key K prev-feed
+#bind-key J next-feed
+bind-key T clear-tag
+
+goto-next-feed no
+
+#color <element>  <fgcolor> <bgcolor> [<attr> ...]
+color  listnormal default   default
+color  listfocus  yellow    blue
+color  info       yellow    blue
+color  background default   default
+color  article    default   default
+
