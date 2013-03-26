@@ -74,8 +74,6 @@ URxvt.iso14755_52:false
 
 ! URxvt Color Settings
 #include "/home/c00kiemon5ter/.color_schemes/solarcookies"
-!#include "/home/c00kiemon5ter/.color_schemes/cookierati"
-!#include "/home/c00kiemon5ter/.color_schemes/solarized"
 
 URxvt.cursorBlink:false
 URxvt.transparent:false
