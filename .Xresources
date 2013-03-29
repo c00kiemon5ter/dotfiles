@@ -81,8 +81,12 @@ URxvt.depth:16
 
 ! Misc Programs
 XFontSel*font:-misc-dejavu sans mono-medium-r-normal--17-*-*-*-*-*-*-*
-Mumble*background:default
-Mumble*foreground:default
 XFontSel*background:#FAFAFA
 XFontSel*foreground:#454545
+
+Mumble*background:default
+Mumble*foreground:default
+
+Vlc*background:default
+Vlc*foreground:default
 
