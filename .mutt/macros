@@ -1,9 +1,0 @@
-macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
-macro index D "<save-message>+GMail/trash<enter>""move message to the trash"
-macro index S "<save-message>+GMail/spam<enter>" "mark message as spam"
-macro index \Cr "<tag-prefix><clear-flag>N" "mark tagged messages as read"
-macro index B   "<limit>~b "                "search message bodies"
-macro index I   "<change-folder>!<enter>"   "go to Inbox"
-macro index P   "<pipe-message>cat > ~/"    "save message as"
-
-# vim: nospell

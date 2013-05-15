@@ -1,3 +1,0 @@
-text/html; links -html-numbered-links 1 -dump %s; copiousoutput
-images/*; meh %s;
-application/pdf; mupdf %s;
