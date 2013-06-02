@@ -38,10 +38,6 @@ alias vfuncs="$EDITOR $HOME/.funcs && reload"
 #x
 alias vxdefs="$EDITOR $HOME/.Xresources && xrdb $HOME/.Xresources"
 alias vxinit="$EDITOR $HOME/.xinitrc"
-#mpd
-alias ncmpcpp="ncmpcpp && tname"
-alias vmpd="sudo $EDITOR /etc/mpd.conf"
-alias vncmpcpp="$EDITOR $HOME/.ncmpcpp/config"
 #other
 alias vvim="$EDITOR $HOME/.vimrc"
 alias vgit="$EDITOR $HOME/.gitconfig"
