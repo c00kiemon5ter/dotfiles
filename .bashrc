@@ -13,7 +13,7 @@ shopt -s nocaseglob
 
 CDPATH=".:$HOME:$HOME/projects:/mnt/data"
 test -r "$HOME/.dircolors" && eval "export $(dircolors -b "$HOME/.dircolors")"
-[ "$TERM" == 'linux' ] && xcolors2console.awk "$HOME/.color_schemes/solarcookies"
+[ "$TERM" == 'linux' ] && awk -f "$HOME/bin/xcolors2console.awk" "$HOME/.color_schemes/solarcookies"
 
 . "$HOME/.shell.colors.escapes"
 . "$HOME/.alias"
