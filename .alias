@@ -64,7 +64,6 @@ alias netbeans="netbeans --laf com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 alias ssmem="smem -k -c 'pid uss pss rss name' -t"
 alias sscrot="scrot -s /tmp/shot.png"
 alias htop="htop -u $USER"
-alias x="startx &"
 
 # Shows your WAN IP, when you`re sitting behind a router
 #alias myip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
