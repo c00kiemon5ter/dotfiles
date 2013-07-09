@@ -16,7 +16,7 @@ alias vs="vim -S .vim.session"
 ## Common
 alias df="df -h -T"
 alias mkdir="mkdir -p -v"
-alias ls="ls --color=auto -h"
+alias ls="ls --color=auto -h -v"
 alias l="ls -1F"
 alias la="l -A"
 alias ll="l -l"
