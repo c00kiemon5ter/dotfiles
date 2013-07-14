@@ -1,10 +1,6 @@
-pathdirs=(
-    /sbin /usr/sbin
-    /usr/local/bin
-    /bin /usr/bin/{,*_perl}
-    $HOME/bin/{,f,v,iii}
-)
-IFS=:; export PATH="${pathdirs[*]}" && unset pathdirs
+_path=":$HOME/bin:$HOME/bin/iii"
+case "$PATH" in *"${_path}"*) false ;; esac && export PATH="${PATH}${_path}"
+unset _path
 
 export LC_COLLATE="C"
 export LC_CTYPE="el_GR.UTF-8"
