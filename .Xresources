@@ -36,7 +36,7 @@ URxvt.keysym.M-C-9:command:\033]710;xft:terminus:pixelsize=32\007
 URxvt.title:rxvt-unicode
 URxvt.visualBell:false
 URxvt.urgentOnBell:true
-URxvt.geometry:98x28
+URxvt.geometry:110x40
 URxvt.externalBorder:2
 URxvt.internalBorder:4
 
