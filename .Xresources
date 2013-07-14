@@ -15,8 +15,12 @@ Xcursor.theme: Vanilla-DMZ
 Xcursor.size:  16
 
 ! Fonts
-URxvt.font:      -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-URxvt.bold.font: -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt.font:           xft:Consolas:pixelsize=12
+URxvt.boldFont:       xft:Consolas:bold:pixelsize=12
+URxvt.italicFont:     xft:Consolas:italic:pixelsize=12
+URxvt.boldItalicFont: xft:Consolas:bold:italic:pixelsize=12
+!URxvt.font:      -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+!URxvt.bold.font: -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
 ! runtime resize -- printf '\033]710;%s\007' "xft:terminus:pixelsize=12"
 URxvt.keysym.M-C-1:command:\033]710;xft:terminus:pixelsize=12\007
 URxvt.keysym.M-C-2:command:\033]710;xft:terminus:pixelsize=14\007
