@@ -1,14 +1,14 @@
 ! c00kiemon5ter (ivan.kanak@gmail.com)
 ! All cookies reserved (C)
 
-! xft settings
-Xft.autohint:false
-Xft.lcdfilter:lcddefault
-Xft.hintstyle:hintfull
-Xft.hinting:true
-Xft.antialias:true
-Xft.dpi:96
-Xft.rgba:rgb
+!! xft settings
+!Xft.autohint:false
+!Xft.lcdfilter:lcddefault
+!Xft.hintstyle:hintfull
+!Xft.hinting:true
+!Xft.antialias:true
+!Xft.dpi:96
+!Xft.rgba:rgb
 
 ! X Cursor theme
 Xcursor.theme: Vanilla-DMZ
@@ -79,7 +79,9 @@ URxvt.transparent:false
 URxvt.depth:16
 
 ! Misc Programs
-XFontSel*font:-misc-dejavu sans mono-medium-r-normal--17-*-*-*-*-*-*-*
+*font:     -*-fixed-medium-r-normal-*-*-130-*-*-*-*-iso10646-1
+*boldFont: -*-fixed-medium-r-normal-*-*-130-*-*-*-*-iso10646-1
+
 XFontSel*background:#FAFAFA
 XFontSel*foreground:#454545
 
