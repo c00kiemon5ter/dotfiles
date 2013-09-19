@@ -83,15 +83,15 @@ URxvt.transparent:false
 URxvt.depth:16
 
 ! Misc Programs
-*font:     -*-fixed-medium-r-normal-*-*-130-*-*-*-*-iso10646-1
-*boldFont: -*-fixed-medium-r-normal-*-*-130-*-*-*-*-iso10646-1
+!*font:     -*-fixed-medium-r-normal-*-*-130-*-*-*-*-iso10646-1
+!*boldFont: -*-fixed-medium-r-normal-*-*-130-*-*-*-*-iso10646-1
 
-XFontSel*background:#FAFAFA
-XFontSel*foreground:#454545
+!XFontSel*background:#FAFAFA
+!XFontSel*foreground:#454545
 
-Mumble*background:default
-Mumble*foreground:default
+!Mumble*background:default
+!Mumble*foreground:default
 
-Vlc*background:default
-Vlc*foreground:default
+!Vlc*background:default
+!Vlc*foreground:default
 
