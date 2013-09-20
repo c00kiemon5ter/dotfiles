@@ -31,7 +31,7 @@ alias h="history"
 ## files
 #bash
 alias reload="source $HOME/.bashrc"
-alias vprof="$EDITOR $HOME/.bash_profile && source $HOME/.bash_profile"
+alias vprof="$EDITOR $HOME/.profile && source $HOME/.profile"
 alias vbash="$EDITOR $HOME/.bashrc && reload"
 alias valias="$EDITOR $HOME/.alias && reload"
 alias vfuncs="$EDITOR $HOME/.funcs && reload"

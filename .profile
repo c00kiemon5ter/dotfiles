@@ -30,5 +30,5 @@ export LESS_TERMCAP_se=$'\e[0m'          # end standout
 export LESS_TERMCAP_us=$'\e[01;32m'      # begin underline
 export LESS_TERMCAP_ue=$'\e[0m'          # end underline
 
-source "$HOME/.bashrc"
+. "$HOME/.bashrc"
 
