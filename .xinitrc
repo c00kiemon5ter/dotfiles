@@ -21,4 +21,7 @@ xset r rate 250 50
 # end of loading - reset cursor
 xsetroot -cursor_name left_ptr
 
+# make java apps happy <.<
+wmname LG3D
+
 exec "$HOME/bin/wmrun.sh"
