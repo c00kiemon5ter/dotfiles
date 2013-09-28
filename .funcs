@@ -3,11 +3,11 @@
 
 # the prompt
 prompt() {
-	[ $? -ne 0 ] && sc="$fgred" s='!' || sc="$fggrn" s=' '
-	g="$(git symbolic-ref --short HEAD 2>/dev/null)" &&      \
+	s=$? && [ $s -eq 0 ] && sc="$fggrn" s="─" || sc="$fgred" s="─|$s|─"
+	g="$(git symbolic-ref --short HEAD 2>/dev/null)" &&       \
 	    g="\[$fgwht\]:\[$bfgred\]$g\[$bfgylw\]$(git status -s \
 	    | awk '!q&&$1=="??"{q="?"} !e&&$1!="??"{e=":±"} q&&e{exit} END{printf e q}')"
-	PS1="\n\[$bfgblk\]┐$sc$s\[$fggrn\]\w$g\n\[$bfgblk\]└\[$sc\]─ \[$normal\]"
+	PS1="\n\[$bfgblk\]┐$sc\[$fggrn\]\w$g\n\[$bfgblk\]└\[$sc\]$s \[$normal\]"
 	unset g s sc
 }
 
