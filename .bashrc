@@ -15,7 +15,7 @@ shopt -s histappend
 shopt -s no_empty_cmd_completion
 shopt -s nocaseglob
 
-CDPATH=".:$HOME:$HOME/projects:$HOME/thinking.gr:$HOME/grobotronics"
+CDPATH=".:$HOME:$HOME/projects:$HOME/irc"
 test -r "$HOME/.dircolors" && eval "export $(dircolors -b "$HOME/.dircolors")"
 [ "$TERM" == 'linux' ] && awk -f "$HOME/bin/xcolors2console.awk" "$HOME/.color_schemes/solarcookies"
 
