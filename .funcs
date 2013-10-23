@@ -7,7 +7,7 @@ prompt() {
 	g="$(git symbolic-ref --short HEAD 2>/dev/null)" &&       \
 	    g="\[$fgwht\]:\[$bfgred\]$g\[$bfgylw\]$(git status -s \
 	    | awk '!q&&$1=="??"{q="?"} !e&&$1!="??"{e=":±"} q&&e{exit} END{printf e q}')"
-	PS1="\n\[$bfgblk\]┐$sc\[$fggrn\]\w$g\n\[$bfgblk\]└\[$sc\]$s \[$normal\]"
+	PS1="\n\[$bfgblk\]┐ $fgred\h $sc\[$fggrn\]\w$g\n\[$bfgblk\]└\[$sc\]$s \[$normal\]"
 	unset g s sc
 }
 
