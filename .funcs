@@ -68,24 +68,22 @@ t() {
 	find "$path" "$@" -print | sed "2,\$s;${path%/*}/;;;2,\$s;[^/]*/; |- ;g;s;-  |;   |;g"
 }
 
-irc() { while true; do notifiii.sh; done; }
-
-ircon() {
-	[ -e "/tmp/.stunnel.pid" ] || stunnel "$HOME/.stunnel/stunnel.conf"
-	local passwd=
-	read -rsp "enter passwd: " passwd
-	freenode="$passwd" oftc="$passwd" connect.sh
-	unset passwd
-	spawnchannels.sh
-	irc
-}
-
-ircoff() {
-	ps -C sh -opid,cmd \
-		| awk 'index($3, "connect.sh") || index($3, "notifiii.sh") {print $1}' \
-		| xargs kill
-}
-
-d() { dtach -A ~/.term.sock -r winch bash; }
+#irc() { while true; do notifiii.sh; done; }
+#ircon() {
+#	[ -e "/tmp/.stunnel.pid" ] || stunnel "$HOME/.stunnel/stunnel.conf"
+#	local passwd=
+#	read -rsp "enter passwd: " passwd
+#	freenode="$passwd" oftc="$passwd" connect.sh
+#	unset passwd
+#	spawnchannels.sh
+#	irc
+#}
+#ircoff() {
+#	ps -C sh -opid,cmd \
+#		| awk 'index($3, "connect.sh") || index($3, "notifiii.sh") {print $1}' \
+#		| xargs kill
+#}
+#
+#d() { dtach -A ~/.term.sock -r winch bash; }
 
 # vim: nospell
