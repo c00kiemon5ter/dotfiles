@@ -56,7 +56,7 @@ alias foss="ssh foss.aueb.gr"
 
 ## Other
 alias tmux="tmux -2u"
-alias chromium="chromium --enable-seccomp-sandbox --memory-model=low --purge-memory-button --disk-cache-dir=/tmp/chromium"
+alias chromium="chromium-browser --enable-seccomp-sandbox --memory-model=low --purge-memory-button --disk-cache-dir=/tmp/chromium"
 alias mutt="dtach -A $HOME/.mutt/mutt.session mutt"
 alias vnotes="$EDITOR $HOME/.notes.mkdn"
 alias vquote="$EDITOR $HOME/.archquotes"
