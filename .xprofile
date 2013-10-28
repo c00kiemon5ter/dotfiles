@@ -1,0 +1,2 @@
+pactl upload-sample /usr/share/sounds/gnome/default/alerts/drip.ogg bell.ogg
+
