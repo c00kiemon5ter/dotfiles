@@ -1,0 +1,52 @@
+[include]
+	path = ~/.gitconfig.priv
+[color]
+	ui = auto
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+[core]
+	editor = vim
+	autocrlf = input
+[format]
+	subjectprefix = PATCH
+	suffix = .patch.txt
+	numbered = true
+[alias]
+	br = branch -vv
+	co = checkout
+	st = status -bs
+	df = diff
+	dc = diff --cached
+	cm = commit -v
+	sh = show
+	cp = cherry-pick
+	# log aliase
+	lc = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	la = !git lc --branches
+	lf = log --abbrev-commit --parents --graph --oneline --name-status
+	# commands
+	whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
+	whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+[push]
+	default = current #matching current tracking
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[rerere]
+	enabled = 1
+[apply]
+	whitespace = fix
+[color "diff"]
+	commit = yellow
+	meta = blue bold
+	frag = yellow
+	func = red bold
+	#plain =
+	old = red
+	new = green
+	#whitespace =
+[gui]
+
